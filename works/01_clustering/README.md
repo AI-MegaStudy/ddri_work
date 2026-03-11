@@ -8,10 +8,11 @@
 
 - baseline 노트북: [ddri_station_clustering_baseline.ipynb](/Users/cheng80/Desktop/ddri_work/works/01_clustering/01_baseline/ddri_station_clustering_baseline.ipynb)
 - baseline 스크립트: [ddri_station_clustering_baseline.py](/Users/cheng80/Desktop/ddri_work/works/01_clustering/01_baseline/ddri_station_clustering_baseline.py)
-- 전처리 설명 노트북: [ddri_preprocessing_explainer.ipynb](/Users/cheng80/Desktop/ddri_work/works/01_clustering/02_preprocessing/ddri_preprocessing_explainer.ipynb)
-- 환경 feature 설명 노트북: [ddri_environment_feature_explainer.ipynb](/Users/cheng80/Desktop/ddri_work/works/01_clustering/03_environment/ddri_environment_feature_explainer.ipynb)
-- 군집화 요약 발표 자료: [ddri_clustering_presentation_summary.md](/Users/cheng80/Desktop/ddri_work/works/01_clustering/05_presentation/ddri_clustering_presentation_summary.md)
-- 군집화 발표 스크립트: [ddri_clustering_slide_script.md](/Users/cheng80/Desktop/ddri_work/works/01_clustering/05_presentation/ddri_clustering_slide_script.md)
+- 전처리 설명 노트북: [01_ddri_preprocessing_explainer.ipynb](/Users/cheng80/Desktop/ddri_work/works/01_clustering/02_preprocessing/01_ddri_preprocessing_explainer.ipynb)
+- 환경 feature 설명 노트북: [01_ddri_environment_feature_explainer.ipynb](/Users/cheng80/Desktop/ddri_work/works/01_clustering/03_environment/01_ddri_environment_feature_explainer.ipynb)
+- folium 지도 설명 노트북: [01_ddri_cluster_folium_map_explainer.ipynb](/Users/cheng80/Desktop/ddri_work/works/01_clustering/04_maps/01_ddri_cluster_folium_map_explainer.ipynb)
+- 군집화 요약 발표 자료: [01_ddri_clustering_presentation_summary.md](/Users/cheng80/Desktop/ddri_work/works/01_clustering/05_presentation/01_ddri_clustering_presentation_summary.md)
+- 군집화 발표 스크립트: [02_ddri_clustering_slide_script.md](/Users/cheng80/Desktop/ddri_work/works/01_clustering/05_presentation/02_ddri_clustering_slide_script.md)
 
 권장 열람 순서:
 

@@ -2,6 +2,7 @@ from pathlib import Path
 import time
 
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.safari.options import Options as SafariOptions
 
 
@@ -11,8 +12,18 @@ OUTPUT_IMAGE_PATH = PROJECT_ROOT / "works" / "04_presentation" / "01_clustering"
 
 
 def capture_folium_map() -> None:
-    options = SafariOptions()
-    driver = webdriver.Safari(options=options)
+    driver = None
+    try:
+        chrome_options = ChromeOptions()
+        chrome_options.add_argument("--headless=new")
+        chrome_options.add_argument("--window-size=1800,1100")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--hide-scrollbars")
+        driver = webdriver.Chrome(options=chrome_options)
+    except Exception:
+        safari_options = SafariOptions()
+        driver = webdriver.Safari(options=safari_options)
+
     try:
         driver.set_window_size(1800, 1100)
         driver.get(MAP_HTML_PATH.resolve().as_uri())
@@ -21,7 +32,8 @@ def capture_folium_map() -> None:
         OUTPUT_IMAGE_PATH.parent.mkdir(parents=True, exist_ok=True)
         driver.save_screenshot(str(OUTPUT_IMAGE_PATH))
     finally:
-        driver.quit()
+        if driver is not None:
+            driver.quit()
 
 
 if __name__ == "__main__":

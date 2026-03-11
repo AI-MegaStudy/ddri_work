@@ -12,13 +12,15 @@ import koreanize_matplotlib
 
 BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
 RAW_DIR = BASE_DIR / "3조 공유폴더"
-DATA_DIR = BASE_DIR / "works" / "01_clustering" / "06_data"
+CLUSTER_DATA_DIR = BASE_DIR / "works" / "01_clustering" / "06_data"
+DATA_DIR = BASE_DIR / "works" / "01_clustering" / "03_environment" / "data"
 IMG_DIR = BASE_DIR / "works" / "01_clustering" / "03_environment" / "images"
 
 warnings.filterwarnings("ignore")
+sns.set_theme(style="whitegrid", font="AppleGothic")
 plt.rcParams["font.family"] = "AppleGothic"
+plt.rcParams["font.sans-serif"] = ["AppleGothic", "Malgun Gothic", "NanumGothic", "DejaVu Sans"]
 plt.rcParams["axes.unicode_minus"] = False
-sns.set_theme(style="whitegrid")
 
 
 def haversine_matrix(lat1, lon1, lat2, lon2):
@@ -35,8 +37,8 @@ def haversine_matrix(lat1, lon1, lat2, lon2):
 
 
 def load_sources():
-    stations = pd.read_csv(DATA_DIR / "ddri_common_station_master.csv")
-    clusters = pd.read_csv(DATA_DIR / "ddri_station_cluster_features_train_with_labels.csv")
+    stations = pd.read_csv(CLUSTER_DATA_DIR / "ddri_common_station_master.csv")
+    clusters = pd.read_csv(CLUSTER_DATA_DIR / "ddri_station_cluster_features_train_with_labels.csv")
     park = pd.read_csv(RAW_DIR / "서울시 강남구 공원 정보.csv")
     subway = pd.read_csv(
         RAW_DIR / "[교통데이터] 지하철 정보/서울시 역사마스터 정보/서울시 역사마스터 정보.csv",

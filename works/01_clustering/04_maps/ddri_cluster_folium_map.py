@@ -6,7 +6,8 @@ from branca.element import Template, MacroElement
 
 
 BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
-DATA_DIR = BASE_DIR / "works" / "clustering" / "data"
+CLUSTER_DATA_DIR = BASE_DIR / "works" / "01_clustering" / "06_data"
+ENV_DATA_DIR = BASE_DIR / "works" / "01_clustering" / "03_environment" / "data"
 OUTPUT_DIR = BASE_DIR / "works" / "01_clustering" / "04_maps"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -45,12 +46,12 @@ def add_legend(fmap):
 
 
 def main():
-    env_path = DATA_DIR / "ddri_cluster_environment_features.csv"
+    env_path = ENV_DATA_DIR / "ddri_cluster_environment_features.csv"
     if env_path.exists():
         merged = pd.read_csv(env_path)
     else:
-        labels = pd.read_csv(DATA_DIR / "ddri_station_cluster_features_train_with_labels.csv")
-        master = pd.read_csv(DATA_DIR / "ddri_common_station_master.csv")
+        labels = pd.read_csv(CLUSTER_DATA_DIR / "ddri_station_cluster_features_train_with_labels.csv")
+        master = pd.read_csv(CLUSTER_DATA_DIR / "ddri_common_station_master.csv")
         merged = labels.merge(master, left_on="station_id", right_on="대여소번호", how="left")
         merged["cluster_name"] = merged["cluster"].map({0: "일반수요형", 1: "고수요형"})
 

@@ -17,9 +17,11 @@ BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
 DATA_DIR = BASE_DIR / "3조 공유폴더"
 OUTPUT_DATA_DIR = BASE_DIR / "works" / "01_clustering" / "06_data"
 OUTPUT_IMG_DIR = BASE_DIR / "works" / "01_clustering" / "07_images"
+PREP_DATA_DIR = BASE_DIR / "works" / "01_clustering" / "02_preprocessing" / "data"
 
 OUTPUT_DATA_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_IMG_DIR.mkdir(parents=True, exist_ok=True)
+PREP_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 sns.set_theme(style="whitegrid")
 warnings.filterwarnings("ignore", message="Could not find the number of physical cores")
@@ -312,7 +314,7 @@ def main():
 
     train_df = pd.concat([train_df_2023, train_df_2024], ignore_index=True)
     clean_stats = pd.concat([stats_2023, stats_2024, stats_2025], ignore_index=True)
-    clean_stats.to_csv(OUTPUT_DATA_DIR / "ddri_cleaning_log.csv", index=False)
+    clean_stats.to_csv(PREP_DATA_DIR / "ddri_cleaning_log.csv", index=False)
 
     train_features = build_station_features(train_df)
     test_features = build_station_features(test_df)

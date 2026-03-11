@@ -10,7 +10,7 @@ import koreanize_matplotlib
 
 
 BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
-DATA_DIR = BASE_DIR / "works" / "clustering" / "data"
+DATA_DIR = BASE_DIR / "works" / "01_clustering" / "02_preprocessing" / "data"
 IMG_DIR = BASE_DIR / "works" / "01_clustering" / "02_preprocessing" / "images"
 
 warnings.filterwarnings("ignore")

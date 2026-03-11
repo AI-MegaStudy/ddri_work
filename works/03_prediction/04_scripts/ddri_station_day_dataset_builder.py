@@ -94,7 +94,7 @@ def build_weather_daily():
         RAW_DIR / "2023-2024년 강남구 날씨데이터(00시-24시)" / "gangnam_weather_1year_2023.csv",
         RAW_DIR / "2023-2024년 강남구 날씨데이터(00시-24시)" / "gangnam_weather_1year_2024.csv",
     ]
-    extra_dir = BASE_DIR / "works" / "weather" / "data"
+    extra_dir = BASE_DIR / "works" / "02_data_collection" / "02_weather" / "data"
     extra_paths = sorted(extra_dir.glob("ddri_weather_*_hourly.csv"))
     weather_paths.extend(extra_paths)
     frames = []
