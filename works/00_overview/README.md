@@ -12,4 +12,12 @@
 4. `ddri_prediction_dataset_design.md`
 5. `ddri_workspace_structure_guide.md`
 
+직접 열람 링크:
+
+- [ddri_master_plan.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/ddri_master_plan.md)
+- [ddri_project_report_log.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/ddri_project_report_log.md)
+- [ddri_prediction_target_definition.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/ddri_prediction_target_definition.md)
+- [ddri_prediction_dataset_design.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/ddri_prediction_dataset_design.md)
+- [ddri_workspace_structure_guide.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/ddri_workspace_structure_guide.md)
+
 이 폴더를 프로젝트 전체 기준 문서의 실제 경로로 사용한다.
