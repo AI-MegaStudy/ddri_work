@@ -58,10 +58,10 @@
 
 ### 체크리스트
 
-- [x] `works/clustering/` 폴더 생성
-- [x] `works/clustering/data/` 폴더 생성
-- [x] `works/clustering/images/` 폴더 생성
-- [x] `works/clustering/ddri_station_clustering_baseline.ipynb` 생성
+- [x] `works/01_clustering/` 폴더 생성
+- [x] `works/01_clustering/06_data/` 폴더 생성
+- [x] `works/01_clustering/07_images/` 폴더 생성
+- [x] `works/01_clustering/01_baseline/ddri_station_clustering_baseline.ipynb` 생성
 - [x] 2023~2024 학습용 따릉이 이용 이력 로드 코드 작성
 - [x] 2025 테스트용 이용 이력 분리 로드 코드 작성
 - [x] 실제 한글 컬럼 기준 전처리 코드 작성

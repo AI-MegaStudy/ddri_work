@@ -7,7 +7,7 @@ pdf_options:
 
 <!-- markdownlint-disable MD013 -->
 
-<link rel="stylesheet" href="./ddri_presentation_a4_landscape.css">
+<link rel="stylesheet" href="../ddri_presentation_a4_landscape.css">
 
 # 강남구 따릉이 Station별 대여량 예측 프로젝트
 
@@ -103,8 +103,8 @@ pdf_options:
 - 극단치는 1차 군집화에서 임의 제거하지 않고 유지
 
 <div class="image-row tight">
-  <img class="half-image" src="../clustering/images/ddri_cleaning_before_after.png" alt="cleaning before after">
-  <img class="half-image" src="../clustering/images/ddri_cleaning_drop_reasons.png" alt="cleaning drop reasons">
+  <img class="half-image" src="../../01_clustering/02_preprocessing/images/ddri_cleaning_before_after.png" alt="cleaning before after">
+  <img class="half-image" src="../../01_clustering/02_preprocessing/images/ddri_cleaning_drop_reasons.png" alt="cleaning drop reasons">
 </div>
 
 <ul class="compact-list">
@@ -167,7 +167,7 @@ pdf_options:
 </ul>
 
 <div class="chart-block tight">
-  <img class="chart-image" src="../prediction/images/ddri_flow_metrics_summary.png" alt="flow metrics summary">
+  <img class="chart-image" src="../../03_prediction/03_images/ddri_flow_metrics_summary.png" alt="flow metrics summary">
 </div>
 
 ## 보류 항목
@@ -334,8 +334,8 @@ pdf_options:
 # 부록. 군집화 핵심 결과
 
 <div class="image-row tight">
-  <img class="half-image" src="../clustering/images/ddri_kmeans_pca_scatter.png" alt="pca scatter">
-  <img class="half-image" src="../clustering/images/ddri_cluster_environment_comparison.png" alt="environment comparison">
+  <img class="half-image" src="../../01_clustering/07_images/ddri_kmeans_pca_scatter.png" alt="pca scatter">
+  <img class="half-image" src="../../01_clustering/03_environment/images/ddri_cluster_environment_comparison.png" alt="environment comparison">
 </div>
 
 <ul class="compact-list">

@@ -219,16 +219,16 @@
 `works` 아래 군집화 전용 폴더 생성
 
 권장 예시:
-- `works/clustering/`
-- `works/clustering/images/`
-- `works/clustering/data/`
+- `works/01_clustering/`
+- `works/01_clustering/07_images/`
+- `works/01_clustering/06_data/`
 
 ### Step 2
 첫 번째 노트북 생성
 
 권장 파일명:
-- `works/clustering/01_station_clustering_baseline.ipynb`
-- 네이밍 규칙 통일 시 `works/clustering/ddri_station_clustering_baseline.ipynb`
+- `works/01_clustering/01_station_clustering_baseline.ipynb`
+- 네이밍 규칙 통일 시 `works/01_clustering/01_baseline/ddri_station_clustering_baseline.ipynb`
 
 ### Step 3
 노트북에서 먼저 구현할 것

@@ -7,7 +7,7 @@ pdf_options:
 
 <!-- markdownlint-disable MD013 -->
 
-<link rel="stylesheet" href="./ddri_presentation_a4_landscape.css">
+<link rel="stylesheet" href="../ddri_presentation_a4_landscape.css">
 
 # 강남구 따릉이 대여소 군집화 분석
 
@@ -52,7 +52,7 @@ pdf_options:
 <div class="callout compact">self-return 유지, 수요는 보존하고 재고 변동은 별도 해석</div>
 
 <div class="chart-block tight">
-  <img class="chart-image" src="../prediction/images/ddri_flow_metrics_summary.png" alt="flow metrics summary">
+  <img class="chart-image" src="../../03_prediction/03_images/ddri_flow_metrics_summary.png" alt="flow metrics summary">
 </div>
 
 <div class="page-break"></div>
@@ -91,7 +91,7 @@ pdf_options:
 | 6 | 328.87 | 0.2816 |
 
 <div class="chart-block tight">
-  <img class="chart-image" src="../clustering/images/ddri_kmeans_elbow_silhouette.png" alt="KMeans elbow silhouette chart">
+  <img class="chart-image" src="../../01_clustering/07_images/ddri_kmeans_elbow_silhouette.png" alt="KMeans elbow silhouette chart">
 </div>
 
 <ul class="compact-list">
@@ -110,8 +110,8 @@ pdf_options:
 | Cluster 1 | 고수요형 | 31.18 | 33.30 | 25.86 | 0.382 | 0.134 |
 
 <div class="image-row tight">
-  <img class="half-image" src="../clustering/images/ddri_kmeans_pca_scatter.png" alt="PCA scatter">
-  <img class="half-image" src="../clustering/images/ddri_cluster_feature_means.png" alt="cluster feature means">
+  <img class="half-image" src="../../01_clustering/07_images/ddri_kmeans_pca_scatter.png" alt="PCA scatter">
+  <img class="half-image" src="../../01_clustering/07_images/ddri_cluster_feature_means.png" alt="cluster feature means">
 </div>
 
 <ul class="compact-list">
@@ -130,7 +130,7 @@ pdf_options:
 | 고수요형 | 1170.43 | 387.75 | 32.56 | 31.18 |
 
 <div class="chart-block tight">
-  <img class="chart-image" src="../clustering/images/ddri_cluster_environment_comparison.png" alt="cluster environment comparison">
+  <img class="chart-image" src="../../01_clustering/03_environment/images/ddri_cluster_environment_comparison.png" alt="cluster environment comparison">
 </div>
 
 <ul class="compact-list">
@@ -153,7 +153,7 @@ pdf_options:
   <li>고수요형 대표: <code>매봉역 3번출구앞</code>, <code>수서역 5번출구</code>, <code>대모산입구역 4번 출구 앞</code></li>
   <li>일반수요형 대표: <code>압구정파출소 앞</code>, <code>도심공항타워 앞</code>, <code>천주교 대치 2동 교회 옆</code></li>
   <li>고수요형이 교통 접근성이 좋은 지점 주변에 상대적으로 분포</li>
-  <li>인터랙티브 원본: <code>works/clustering/maps/ddri_cluster_map_gangnam.html</code></li>
+  <li>인터랙티브 원본: <code>works/01_clustering/04_maps/ddri_cluster_map_gangnam.html</code></li>
 </ul>
 
 <div class="page-break"></div>

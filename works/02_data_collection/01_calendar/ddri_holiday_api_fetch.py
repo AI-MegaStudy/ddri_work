@@ -8,7 +8,7 @@ import requests
 
 BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
 API_DIR = BASE_DIR / "3조 공유폴더" / "[일정데이터] 특일 정보 API"
-OUTPUT_DIR = BASE_DIR / "works" / "calendar" / "data"
+OUTPUT_DIR = BASE_DIR / "works" / "02_data_collection" / "01_calendar" / "data"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 BASE_URL = "https://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo"

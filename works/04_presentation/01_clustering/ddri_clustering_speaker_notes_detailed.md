@@ -1,7 +1,7 @@
 # 따릉이 대여소 군집화 발표 상세 스피치 노트
 
 작성일: 2026-03-12  
-대상 문서: `works/presentation/ddri_clustering_presentation_a4_landscape.md`  
+대상 문서: `works/04_presentation/01_clustering/ddri_clustering_presentation_a4_landscape.md`  
 용도: 페이지별 발표용 상세 설명, 보충 멘트, 주의할 표현 정리
 
 ## 페이지 1. 표지 및 발표 목적

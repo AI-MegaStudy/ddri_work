@@ -5,9 +5,9 @@ import pandas as pd
 
 BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
 RAW_DIR = BASE_DIR / "3조 공유폴더"
-CLUSTER_DIR = BASE_DIR / "works" / "clustering" / "data"
-CALENDAR_DIR = BASE_DIR / "works" / "calendar" / "data"
-OUTPUT_DIR = BASE_DIR / "works" / "prediction" / "data"
+CLUSTER_DIR = BASE_DIR / "works" / "01_clustering" / "06_data"
+CALENDAR_DIR = BASE_DIR / "works" / "02_data_collection" / "01_calendar" / "data"
+OUTPUT_DIR = BASE_DIR / "works" / "03_prediction" / "02_data"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 RENTAL_COLS = [

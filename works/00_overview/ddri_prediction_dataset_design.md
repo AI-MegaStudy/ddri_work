@@ -99,9 +99,9 @@
 현재 생성 산출물:
 
 - 원천 API 결과:
-  - `works/calendar/data/ddri_holiday_api_raw_2023_2025.csv`
+  - `works/02_data_collection/01_calendar/data/ddri_holiday_api_raw_2023_2025.csv`
 - 일 단위 캘린더 테이블:
-  - `works/calendar/data/ddri_calendar_daily_2023_2025.csv`
+  - `works/02_data_collection/01_calendar/data/ddri_calendar_daily_2023_2025.csv`
 
 현재 사용 권장 컬럼:
 

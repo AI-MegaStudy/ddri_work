@@ -88,9 +88,9 @@
 
 #### 시각화 저장 경로
 
-- 표 데이터: `works/clustering/data/ddri_station_master_year_summary.csv`
-- coverage 요약: `works/clustering/data/ddri_station_coverage_summary.csv`
-- coverage 상세: `works/clustering/data/ddri_station_coverage_flags.csv`
+- 표 데이터: `works/01_clustering/06_data/ddri_station_master_year_summary.csv`
+- coverage 요약: `works/01_clustering/06_data/ddri_station_coverage_summary.csv`
+- coverage 상세: `works/01_clustering/06_data/ddri_station_coverage_flags.csv`
 
 ---
 
@@ -116,9 +116,9 @@
 #### 내부 확인 근거
 
 - 생성 파일:
-  - `works/clustering/ddri_station_clustering_baseline.ipynb`
+  - `works/01_clustering/01_baseline/ddri_station_clustering_baseline.ipynb`
 - 초기 산출물:
-  - `works/clustering/data/ddri_station_master_year_summary.csv`
+  - `works/01_clustering/06_data/ddri_station_master_year_summary.csv`
 
 #### 보고서/PPT에 넣을 수 있는 메시지
 
@@ -133,8 +133,8 @@
 
 #### 시각화 저장 경로
 
-- 노트북: `works/clustering/ddri_station_clustering_baseline.ipynb`
-- 표 데이터: `works/clustering/data/ddri_station_master_year_summary.csv`
+- 노트북: `works/01_clustering/01_baseline/ddri_station_clustering_baseline.ipynb`
+- 표 데이터: `works/01_clustering/06_data/ddri_station_master_year_summary.csv`
 
 ---
 
@@ -165,11 +165,11 @@ K 탐색 결과:
 
 현재 산출물:
 
-- `works/clustering/data/ddri_kmeans_search_metrics.csv`
-- `works/clustering/images/ddri_kmeans_elbow_silhouette.png`
-- `works/clustering/images/ddri_kmeans_pca_scatter.png`
-- `works/clustering/images/ddri_cluster_feature_means.png`
-- `works/clustering/data/ddri_cluster_summary.csv`
+- `works/01_clustering/06_data/ddri_kmeans_search_metrics.csv`
+- `works/01_clustering/07_images/ddri_kmeans_elbow_silhouette.png`
+- `works/01_clustering/07_images/ddri_kmeans_pca_scatter.png`
+- `works/01_clustering/07_images/ddri_cluster_feature_means.png`
+- `works/01_clustering/06_data/ddri_cluster_summary.csv`
 
 #### 보고서/PPT에 넣을 수 있는 메시지
 
@@ -185,10 +185,10 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/clustering/images/ddri_kmeans_elbow_silhouette.png`
-- `works/clustering/images/ddri_kmeans_pca_scatter.png`
-- `works/clustering/images/ddri_cluster_feature_means.png`
-- `works/clustering/data/ddri_cluster_summary.csv`
+- `works/01_clustering/07_images/ddri_kmeans_elbow_silhouette.png`
+- `works/01_clustering/07_images/ddri_kmeans_pca_scatter.png`
+- `works/01_clustering/07_images/ddri_cluster_feature_means.png`
+- `works/01_clustering/06_data/ddri_cluster_summary.csv`
 
 ---
 
@@ -218,8 +218,8 @@ K 탐색 결과:
 
 관련 파일:
 
-- `works/clustering/data/ddri_station_coverage_summary.csv`
-- `works/clustering/data/ddri_station_coverage_flags.csv`
+- `works/01_clustering/06_data/ddri_station_coverage_summary.csv`
+- `works/01_clustering/06_data/ddri_station_coverage_flags.csv`
 
 #### 보고서/PPT에 넣을 수 있는 메시지
 
@@ -233,8 +233,8 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/clustering/data/ddri_station_coverage_summary.csv`
-- `works/clustering/data/ddri_station_coverage_flags.csv`
+- `works/01_clustering/06_data/ddri_station_coverage_summary.csv`
+- `works/01_clustering/06_data/ddri_station_coverage_flags.csv`
 
 ---
 
@@ -259,11 +259,11 @@ K 탐색 결과:
 
 실행 스크립트:
 
-- `works/clustering/ddri_station_clustering_baseline.py`
+- `works/01_clustering/01_baseline/ddri_station_clustering_baseline.py`
 
 전처리 로그:
 
-- `works/clustering/data/ddri_cleaning_log.csv`
+- `works/01_clustering/02_preprocessing/data/ddri_cleaning_log.csv`
 
 집계 결과:
 
@@ -293,10 +293,10 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/clustering/data/ddri_cleaning_log.csv`
-- `works/clustering/data/ddri_cleaning_summary_by_group.csv`
-- `works/clustering/images/ddri_cleaning_before_after.png`
-- `works/clustering/images/ddri_cleaning_drop_reasons.png`
+- `works/01_clustering/02_preprocessing/data/ddri_cleaning_log.csv`
+- `works/01_clustering/02_preprocessing/data/ddri_cleaning_summary_by_group.csv`
+- `works/01_clustering/02_preprocessing/images/ddri_cleaning_before_after.png`
+- `works/01_clustering/02_preprocessing/images/ddri_cleaning_drop_reasons.png`
 
 ---
 
@@ -315,9 +315,9 @@ K 탐색 결과:
 #### 내부 실행 근거
 
 - 요약 파일:
-  - `works/clustering/data/ddri_duplicate_check_summary.csv`
+  - `works/01_clustering/02_preprocessing/data/ddri_duplicate_check_summary.csv`
 - 파일별 상세:
-  - `works/clustering/data/ddri_duplicate_check_by_file.csv`
+  - `works/01_clustering/02_preprocessing/data/ddri_duplicate_check_by_file.csv`
 
 요약:
 
@@ -337,8 +337,8 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/clustering/data/ddri_duplicate_check_summary.csv`
-- `works/clustering/data/ddri_duplicate_check_by_file.csv`
+- `works/01_clustering/02_preprocessing/data/ddri_duplicate_check_summary.csv`
+- `works/01_clustering/02_preprocessing/data/ddri_duplicate_check_by_file.csv`
 
 ---
 
@@ -358,9 +358,9 @@ K 탐색 결과:
 #### 내부 실행 근거
 
 - 분포 요약:
-  - `works/clustering/data/ddri_feature_distribution_summary.csv`
+  - `works/01_clustering/02_preprocessing/data/ddri_feature_distribution_summary.csv`
 - IQR 요약:
-  - `works/clustering/data/ddri_feature_iqr_outlier_summary.csv`
+  - `works/01_clustering/02_preprocessing/data/ddri_feature_iqr_outlier_summary.csv`
 
 대표 결과:
 
@@ -385,8 +385,8 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/clustering/data/ddri_feature_distribution_summary.csv`
-- `works/clustering/data/ddri_feature_iqr_outlier_summary.csv`
+- `works/01_clustering/02_preprocessing/data/ddri_feature_distribution_summary.csv`
+- `works/01_clustering/02_preprocessing/data/ddri_feature_iqr_outlier_summary.csv`
 
 ---
 
@@ -445,8 +445,8 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/clustering/data/ddri_cluster_summary.csv`
-- `works/clustering/images/ddri_cluster_feature_means.png`
+- `works/01_clustering/06_data/ddri_cluster_summary.csv`
+- `works/01_clustering/07_images/ddri_cluster_feature_means.png`
 
 ---
 
@@ -465,8 +465,8 @@ K 탐색 결과:
 
 #### 생성 파일
 
-- `works/clustering/ddri_cluster_folium_map.py`
-- `works/clustering/maps/ddri_cluster_map_gangnam.html`
+- `works/01_clustering/04_maps/ddri_cluster_folium_map.py`
+- `works/01_clustering/04_maps/ddri_cluster_map_gangnam.html`
 
 #### 보고서/PPT에 넣을 수 있는 메시지
 
@@ -480,7 +480,7 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/clustering/maps/ddri_cluster_map_gangnam.html`
+- `works/01_clustering/04_maps/ddri_cluster_map_gangnam.html`
 
 ---
 
@@ -501,13 +501,13 @@ K 탐색 결과:
 생성 파일:
 
 - 환경 feature 테이블:
-  - `works/clustering/data/ddri_cluster_environment_features.csv`
+  - `works/01_clustering/03_environment/data/ddri_cluster_environment_features.csv`
 - 군집별 요약:
-  - `works/clustering/data/ddri_cluster_environment_summary.csv`
+  - `works/01_clustering/03_environment/data/ddri_cluster_environment_summary.csv`
 - 대표 대여소:
-  - `works/clustering/data/ddri_cluster_representative_stations.csv`
+  - `works/01_clustering/03_environment/data/ddri_cluster_representative_stations.csv`
 - 비교 차트:
-  - `works/clustering/images/ddri_cluster_environment_comparison.png`
+  - `works/01_clustering/03_environment/images/ddri_cluster_environment_comparison.png`
 
 군집 평균 비교:
 
@@ -538,9 +538,9 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/clustering/images/ddri_cluster_environment_comparison.png`
-- `works/clustering/data/ddri_cluster_environment_summary.csv`
-- `works/clustering/data/ddri_cluster_representative_stations.csv`
+- `works/01_clustering/03_environment/images/ddri_cluster_environment_comparison.png`
+- `works/01_clustering/03_environment/data/ddri_cluster_environment_summary.csv`
+- `works/01_clustering/03_environment/data/ddri_cluster_representative_stations.csv`
 
 ---
 
@@ -549,13 +549,13 @@ K 탐색 결과:
 군집화 발표 직전 바로 사용할 수 있는 정리 파일:
 
 - 1페이지 요약:
-  - `works/clustering/ddri_clustering_presentation_summary.md`
+  - `works/01_clustering/05_presentation/ddri_clustering_presentation_summary.md`
 - 슬라이드 문구/발표 멘트:
-  - `works/clustering/ddri_clustering_slide_script.md`
+  - `works/01_clustering/05_presentation/ddri_clustering_slide_script.md`
 - 슬라이드용 수치표:
-  - `works/clustering/data/ddri_clustering_slide_tables.csv`
+  - `works/01_clustering/06_data/ddri_clustering_slide_tables.csv`
 - 지도:
-  - `works/clustering/maps/ddri_cluster_map_gangnam.html`
+  - `works/01_clustering/04_maps/ddri_cluster_map_gangnam.html`
 
 권장 발표 흐름:
 
@@ -691,13 +691,13 @@ K 탐색 결과:
 생성 파일:
 
 - 수집 노트북:
-  - `works/calendar/ddri_holiday_api_fetch.ipynb`
+  - `works/02_data_collection/01_calendar/ddri_holiday_api_fetch.ipynb`
 - 실행 스크립트:
-  - `works/calendar/ddri_holiday_api_fetch.py`
+  - `works/02_data_collection/01_calendar/ddri_holiday_api_fetch.py`
 - 원천 API 결과:
-  - `works/calendar/data/ddri_holiday_api_raw_2023_2025.csv`
+  - `works/02_data_collection/01_calendar/data/ddri_holiday_api_raw_2023_2025.csv`
 - 일 단위 캘린더:
-  - `works/calendar/data/ddri_calendar_daily_2023_2025.csv`
+  - `works/02_data_collection/01_calendar/data/ddri_calendar_daily_2023_2025.csv`
 
 수집 결과:
 
@@ -718,8 +718,8 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/calendar/data/ddri_holiday_api_raw_2023_2025.csv`
-- `works/calendar/data/ddri_calendar_daily_2023_2025.csv`
+- `works/02_data_collection/01_calendar/data/ddri_holiday_api_raw_2023_2025.csv`
+- `works/02_data_collection/01_calendar/data/ddri_calendar_daily_2023_2025.csv`
 
 ---
 
@@ -736,10 +736,10 @@ K 탐색 결과:
 
 #### 생성 파일
 
-- `works/prediction/data/ddri_station_day_target_train_2023_2024.csv`
-- `works/prediction/data/ddri_station_day_target_test_2025.csv`
-- `works/prediction/data/ddri_weather_daily_2023_2024.csv`
-- `works/prediction/data/ddri_station_day_train_baseline_dataset.csv`
+- `works/03_prediction/02_data/ddri_station_day_target_train_2023_2024.csv`
+- `works/03_prediction/02_data/ddri_station_day_target_test_2025.csv`
+- `works/03_prediction/02_data/ddri_weather_daily_2023_2024.csv`
+- `works/03_prediction/02_data/ddri_station_day_train_baseline_dataset.csv`
 
 #### 내부 실행 결과
 
@@ -771,10 +771,10 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/prediction/data/ddri_station_day_target_train_2023_2024.csv`
-- `works/prediction/data/ddri_station_day_target_test_2025.csv`
-- `works/prediction/data/ddri_weather_daily_2023_2024.csv`
-- `works/prediction/data/ddri_station_day_train_baseline_dataset.csv`
+- `works/03_prediction/02_data/ddri_station_day_target_train_2023_2024.csv`
+- `works/03_prediction/02_data/ddri_station_day_target_test_2025.csv`
+- `works/03_prediction/02_data/ddri_weather_daily_2023_2024.csv`
+- `works/03_prediction/02_data/ddri_station_day_train_baseline_dataset.csv`
 
 ---
 
@@ -790,18 +790,18 @@ K 탐색 결과:
 #### 생성 파일
 
 - 수집 노트북:
-  - `works/weather/ddri_openmeteo_fetch.ipynb`
+  - `works/02_data_collection/02_weather/ddri_openmeteo_fetch.ipynb`
 - 실행 스크립트:
-  - `works/weather/ddri_openmeteo_fetch.py`
+  - `works/02_data_collection/02_weather/ddri_openmeteo_fetch.py`
 - 추가 시간별 날씨:
-  - `works/weather/data/ddri_weather_2024_0101_hourly.csv`
-  - `works/weather/data/ddri_weather_2025_hourly.csv`
+  - `works/02_data_collection/02_weather/data/ddri_weather_2024_0101_hourly.csv`
+  - `works/02_data_collection/02_weather/data/ddri_weather_2025_hourly.csv`
 - 일 단위 날씨:
-  - `works/prediction/data/ddri_weather_daily_2023_2024.csv`
-  - `works/prediction/data/ddri_weather_daily_2025.csv`
+  - `works/03_prediction/02_data/ddri_weather_daily_2023_2024.csv`
+  - `works/03_prediction/02_data/ddri_weather_daily_2025.csv`
 - 최종 베이스라인 데이터셋:
-  - `works/prediction/data/ddri_station_day_train_baseline_dataset.csv`
-  - `works/prediction/data/ddri_station_day_test_baseline_dataset.csv`
+  - `works/03_prediction/02_data/ddri_station_day_train_baseline_dataset.csv`
+  - `works/03_prediction/02_data/ddri_station_day_test_baseline_dataset.csv`
 
 #### 내부 실행 결과
 
@@ -831,9 +831,9 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/weather/data/ddri_weather_2025_hourly.csv`
-- `works/prediction/data/ddri_weather_daily_2025.csv`
-- `works/prediction/data/ddri_station_day_test_baseline_dataset.csv`
+- `works/02_data_collection/02_weather/data/ddri_weather_2025_hourly.csv`
+- `works/03_prediction/02_data/ddri_weather_daily_2025.csv`
+- `works/03_prediction/02_data/ddri_station_day_test_baseline_dataset.csv`
 
 ---
 
@@ -885,7 +885,7 @@ K 탐색 결과:
 
 #### 시각화 저장 경로
 
-- `works/clustering/ddri_clustering_input_manifest.md`
+- `works/01_clustering/01_baseline/ddri_clustering_input_manifest.md`
 
 ---
 
@@ -920,8 +920,8 @@ K 탐색 결과:
 
 관련 코드:
 
-- `works/clustering/ddri_station_clustering_baseline.py`
-- `works/prediction/ddri_station_day_dataset_builder.py`
+- `works/01_clustering/01_baseline/ddri_station_clustering_baseline.py`
+- `works/03_prediction/04_scripts/ddri_station_day_dataset_builder.py`
 
 #### 프로젝트 적용 원칙
 
@@ -936,9 +936,9 @@ K 탐색 결과:
 
 생성 파일:
 
-- `works/prediction/data/ddri_station_day_flow_metrics_summary.csv`
-- `works/prediction/data/ddri_station_day_train_baseline_dataset.csv`
-- `works/prediction/data/ddri_station_day_test_baseline_dataset.csv`
+- `works/03_prediction/02_data/ddri_station_day_flow_metrics_summary.csv`
+- `works/03_prediction/02_data/ddri_station_day_train_baseline_dataset.csv`
+- `works/03_prediction/02_data/ddri_station_day_test_baseline_dataset.csv`
 
 요약:
 
@@ -969,13 +969,13 @@ K 탐색 결과:
 #### 반영 문서
 
 - `works/ddri_prediction_dataset_design.md`
-- `works/presentation/ddri_project_temp_presentation.md`
-- `works/presentation/ddri_clustering_presentation_a4_landscape.md`
+- `works/04_presentation/02_project/ddri_project_temp_presentation.md`
+- `works/04_presentation/01_clustering/ddri_clustering_presentation_a4_landscape.md`
 
 #### 시각화 저장 경로
 
-- `works/prediction/images/ddri_flow_metrics_summary.png`
-- `works/prediction/images/ddri_same_station_return_ratio_boxplot.png`
+- `works/03_prediction/03_images/ddri_flow_metrics_summary.png`
+- `works/03_prediction/03_images/ddri_same_station_return_ratio_boxplot.png`
 
 ---
 
@@ -1000,7 +1000,7 @@ K 탐색 결과:
 
 ### 5.1 차트 저장 규칙
 
-- 저장 기본 폴더: `works/clustering/images/`
+- 저장 기본 폴더: `works/01_clustering/07_images/`
 - 파일명 prefix: `ddri_`
 - 파일명 예시:
   - `ddri_station_count_by_year.png`
@@ -1069,9 +1069,9 @@ K 탐색 결과:
 #### 적용 파일 및 근거
 
 - 실행 스크립트:
-  - `works/clustering/ddri_station_clustering_baseline.py`
+  - `works/01_clustering/01_baseline/ddri_station_clustering_baseline.py`
 - 전처리 로그:
-  - `works/clustering/data/ddri_cleaning_log.csv`
+  - `works/01_clustering/02_preprocessing/data/ddri_cleaning_log.csv`
 
 ### 6.2 일반적으로 명시해야 하는 전처리 항목
 
@@ -1175,8 +1175,8 @@ K 탐색 결과:
 
 현재 상태:
 - coverage 요약 파일 생성 완료
-  - `works/clustering/data/ddri_station_coverage_summary.csv`
-  - `works/clustering/data/ddri_station_coverage_flags.csv`
+  - `works/01_clustering/06_data/ddri_station_coverage_summary.csv`
+  - `works/01_clustering/06_data/ddri_station_coverage_flags.csv`
 
 ### 6.3 보고서에 그대로 넣을 수 있는 전처리 요약 문장
 

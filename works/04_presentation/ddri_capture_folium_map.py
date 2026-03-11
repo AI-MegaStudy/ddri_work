@@ -6,8 +6,8 @@ from selenium.webdriver.safari.options import Options as SafariOptions
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-MAP_HTML_PATH = PROJECT_ROOT / "works" / "clustering" / "maps" / "ddri_cluster_map_gangnam.html"
-OUTPUT_IMAGE_PATH = PROJECT_ROOT / "works" / "presentation" / "ddri_cluster_map_gangnam.png"
+MAP_HTML_PATH = PROJECT_ROOT / "works" / "01_clustering" / "04_maps" / "ddri_cluster_map_gangnam.html"
+OUTPUT_IMAGE_PATH = PROJECT_ROOT / "works" / "04_presentation" / "01_clustering" / "ddri_cluster_map_gangnam.png"
 
 
 def capture_folium_map() -> None:

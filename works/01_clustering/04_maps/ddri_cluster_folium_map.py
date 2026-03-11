@@ -7,7 +7,7 @@ from branca.element import Template, MacroElement
 
 BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
 DATA_DIR = BASE_DIR / "works" / "clustering" / "data"
-OUTPUT_DIR = BASE_DIR / "works" / "clustering" / "maps"
+OUTPUT_DIR = BASE_DIR / "works" / "01_clustering" / "04_maps"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 

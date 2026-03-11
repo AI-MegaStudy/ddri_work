@@ -15,8 +15,8 @@ from sklearn.preprocessing import StandardScaler
 
 BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
 DATA_DIR = BASE_DIR / "3조 공유폴더"
-OUTPUT_DATA_DIR = BASE_DIR / "works" / "clustering" / "data"
-OUTPUT_IMG_DIR = BASE_DIR / "works" / "clustering" / "images"
+OUTPUT_DATA_DIR = BASE_DIR / "works" / "01_clustering" / "06_data"
+OUTPUT_IMG_DIR = BASE_DIR / "works" / "01_clustering" / "07_images"
 
 OUTPUT_DATA_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_IMG_DIR.mkdir(parents=True, exist_ok=True)

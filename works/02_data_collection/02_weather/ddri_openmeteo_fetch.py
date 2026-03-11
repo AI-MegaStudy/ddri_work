@@ -5,7 +5,7 @@ import requests
 
 
 BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
-OUTPUT_DIR = BASE_DIR / "works" / "weather" / "data"
+OUTPUT_DIR = BASE_DIR / "works" / "02_data_collection" / "02_weather" / "data"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 LATITUDE = 37.514557

@@ -12,8 +12,8 @@ import koreanize_matplotlib
 
 BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
 RAW_DIR = BASE_DIR / "3조 공유폴더"
-DATA_DIR = BASE_DIR / "works" / "clustering" / "data"
-IMG_DIR = BASE_DIR / "works" / "clustering" / "images"
+DATA_DIR = BASE_DIR / "works" / "01_clustering" / "06_data"
+IMG_DIR = BASE_DIR / "works" / "01_clustering" / "03_environment" / "images"
 
 warnings.filterwarnings("ignore")
 plt.rcParams["font.family"] = "AppleGothic"

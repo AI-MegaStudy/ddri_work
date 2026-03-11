@@ -1,1 +1,0 @@
-00_overview/ddri_workspace_structure_guide.md

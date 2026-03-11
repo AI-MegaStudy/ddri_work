@@ -9,8 +9,8 @@ import seaborn as sns
 
 
 BASE_DIR = Path("/Users/cheng80/Desktop/ddri_work")
-DATA_DIR = BASE_DIR / "works" / "prediction" / "data"
-IMG_DIR = BASE_DIR / "works" / "prediction" / "images"
+DATA_DIR = BASE_DIR / "works" / "03_prediction" / "02_data"
+IMG_DIR = BASE_DIR / "works" / "03_prediction" / "03_images"
 IMG_DIR.mkdir(parents=True, exist_ok=True)
 
 plt.rcParams["font.family"] = "AppleGothic"

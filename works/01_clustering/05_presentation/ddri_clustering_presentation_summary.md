@@ -96,8 +96,8 @@
 
 ## 10. 발표용 산출물 경로
 
-- 엘보우/실루엣: `works/clustering/images/ddri_kmeans_elbow_silhouette.png`
-- PCA 산점도: `works/clustering/images/ddri_kmeans_pca_scatter.png`
-- 군집별 feature 비교: `works/clustering/images/ddri_cluster_feature_means.png`
-- 군집별 환경 비교: `works/clustering/images/ddri_cluster_environment_comparison.png`
-- 군집 지도: `works/clustering/maps/ddri_cluster_map_gangnam.html`
+- 엘보우/실루엣: `works/01_clustering/07_images/ddri_kmeans_elbow_silhouette.png`
+- PCA 산점도: `works/01_clustering/07_images/ddri_kmeans_pca_scatter.png`
+- 군집별 feature 비교: `works/01_clustering/07_images/ddri_cluster_feature_means.png`
+- 군집별 환경 비교: `works/01_clustering/03_environment/images/ddri_cluster_environment_comparison.png`
+- 군집 지도: `works/01_clustering/04_maps/ddri_cluster_map_gangnam.html`
