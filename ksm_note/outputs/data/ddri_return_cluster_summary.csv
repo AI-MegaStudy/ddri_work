@@ -1,0 +1,4 @@
+﻿cluster_label,cluster_profile,total_returns,avg_daily_returns,weekday_avg_returns,weekend_avg_returns,weekday_weekend_gap,weekday_morning_ratio,weekday_evening_ratio,weekend_day_ratio,night_ratio,nearest_subway_m,bus_stop_count_300m,nearest_park_m,park_count_300m,station_count
+0,업무·학교 도착형,5972.058,16.869,19.239,10.888,8.35,0.269,0.181,0.096,0.17,528.235,84.404,983.856,0.0,52
+1,생활도착형,5436.368,15.363,16.002,13.761,2.241,0.115,0.259,0.13,0.225,542.435,84.298,1136.219,0.0,114
+2,교통거점형,3302.25,9.421,10.583,6.476,4.108,0.162,0.245,0.125,0.19,162.687,64.75,152.874,1.0,4
