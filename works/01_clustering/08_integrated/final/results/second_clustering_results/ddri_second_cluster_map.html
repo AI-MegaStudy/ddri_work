@@ -1,0 +1,3873 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_754ca1765e4392a5b82d662b5888283b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_754ca1765e4392a5b82d662b5888283b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_754ca1765e4392a5b82d662b5888283b = L.map(
+                "map_754ca1765e4392a5b82d662b5888283b",
+                {
+                    center: [37.49921938262195, 127.05756136280489],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2c775cd40fde222ae9ab1faa1639218d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2c775cd40fde222ae9ab1faa1639218d.addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+            var circle_marker_6d3e049521da6a6b70adb06204e80df9 = L.circleMarker(
+                [37.52407074, 127.02178955],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_03587b969c5d0db0cf5c665afa44491a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c3e7161fe3e4a1d63dfd834f04c851e7 = $(`<div id="html_c3e7161fe3e4a1d63dfd834f04c851e7" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2301<br>대여소명:  현대고등학교 건너편<br>07-10 비율: 0.074<br>11-14 비율: 0.126<br>17-20 비율: 0.375<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_03587b969c5d0db0cf5c665afa44491a.setContent(html_c3e7161fe3e4a1d63dfd834f04c851e7);
+            
+        
+
+        circle_marker_6d3e049521da6a6b70adb06204e80df9.bindPopup(popup_03587b969c5d0db0cf5c665afa44491a)
+        ;
+
+        
+    
+    
+            var circle_marker_a71472e2df85809be9cdc03bcbce4c8f = L.circleMarker(
+                [37.5055809, 127.02427673],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_5ac61cbf1ed352d681fcf13e7049423a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0f53d4ee2237bce323d186a028259c96 = $(`<div id="html_0f53d4ee2237bce323d186a028259c96" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2302<br>대여소명:  교보타워 버스정류장(신논현역 3번출구 후면)<br>07-10 비율: 0.131<br>11-14 비율: 0.165<br>17-20 비율: 0.380<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_5ac61cbf1ed352d681fcf13e7049423a.setContent(html_0f53d4ee2237bce323d186a028259c96);
+            
+        
+
+        circle_marker_a71472e2df85809be9cdc03bcbce4c8f.bindPopup(popup_5ac61cbf1ed352d681fcf13e7049423a)
+        ;
+
+        
+    
+    
+            var circle_marker_953e63715a0a5970232651a7c2287a93 = L.circleMarker(
+                [37.51137161, 127.02146149],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_55b94700cd32315a4da44c34f1dece7c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a6a919ece62e4a3651b54a1c393e36c6 = $(`<div id="html_a6a919ece62e4a3651b54a1c393e36c6" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2303<br>대여소명:  논현역 10번출구<br>07-10 비율: 0.117<br>11-14 비율: 0.158<br>17-20 비율: 0.359<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_55b94700cd32315a4da44c34f1dece7c.setContent(html_a6a919ece62e4a3651b54a1c393e36c6);
+            
+        
+
+        circle_marker_953e63715a0a5970232651a7c2287a93.bindPopup(popup_55b94700cd32315a4da44c34f1dece7c)
+        ;
+
+        
+    
+    
+            var circle_marker_72576be14a3c6ede305d0a6daf948374 = L.circleMarker(
+                [37.5116272, 127.03565216],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_0a897cce9b65b7dfc6d02a5495453306 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ee0f08ccbb943371d52f30265306ff96 = $(`<div id="html_ee0f08ccbb943371d52f30265306ff96" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2304<br>대여소명:  대현그린타워<br>07-10 비율: 0.161<br>11-14 비율: 0.183<br>17-20 비율: 0.319<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_0a897cce9b65b7dfc6d02a5495453306.setContent(html_ee0f08ccbb943371d52f30265306ff96);
+            
+        
+
+        circle_marker_72576be14a3c6ede305d0a6daf948374.bindPopup(popup_0a897cce9b65b7dfc6d02a5495453306)
+        ;
+
+        
+    
+    
+            var circle_marker_92ed24d3f2e110a672515569fc869532 = L.circleMarker(
+                [37.52064133, 127.03450775],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_3d2448990d6e2a1df6e8d36a9e9033b7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2862de7a751363d856aa9c01540631da = $(`<div id="html_2862de7a751363d856aa9c01540631da" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2305<br>대여소명:  MCM 본사 직영점 앞<br>07-10 비율: 0.422<br>11-14 비율: 0.205<br>17-20 비율: 0.170<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_3d2448990d6e2a1df6e8d36a9e9033b7.setContent(html_2862de7a751363d856aa9c01540631da);
+            
+        
+
+        circle_marker_92ed24d3f2e110a672515569fc869532.bindPopup(popup_3d2448990d6e2a1df6e8d36a9e9033b7)
+        ;
+
+        
+    
+    
+            var circle_marker_0ccfbdf0e4940bf3ff722fb0bdb47afc = L.circleMarker(
+                [37.5271225, 127.02871704],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_a0bc8061ba0dcff7dc777ef75d08b2c7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_290c3436852b0d7aae99a98401dd26a7 = $(`<div id="html_290c3436852b0d7aae99a98401dd26a7" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2306<br>대여소명:  압구정역 2번 출구 옆<br>07-10 비율: 0.102<br>11-14 비율: 0.186<br>17-20 비율: 0.423<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_a0bc8061ba0dcff7dc777ef75d08b2c7.setContent(html_290c3436852b0d7aae99a98401dd26a7);
+            
+        
+
+        circle_marker_0ccfbdf0e4940bf3ff722fb0bdb47afc.bindPopup(popup_a0bc8061ba0dcff7dc777ef75d08b2c7)
+        ;
+
+        
+    
+    
+            var circle_marker_e61ff42de010b5fb459348fc04c88580 = L.circleMarker(
+                [37.52838135, 127.03901672],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_11dd7e67db8f6b8b731b39d4f0116785 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1eb59dcc7ec49cc1594486a2a10cb03d = $(`<div id="html_1eb59dcc7ec49cc1594486a2a10cb03d" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2307<br>대여소명:  압구정 한양 3차 아파트<br>07-10 비율: 0.093<br>11-14 비율: 0.193<br>17-20 비율: 0.337<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_11dd7e67db8f6b8b731b39d4f0116785.setContent(html_1eb59dcc7ec49cc1594486a2a10cb03d);
+            
+        
+
+        circle_marker_e61ff42de010b5fb459348fc04c88580.bindPopup(popup_11dd7e67db8f6b8b731b39d4f0116785)
+        ;
+
+        
+    
+    
+            var circle_marker_98e7878cc6452648924b98d9237a9885 = L.circleMarker(
+                [37.52930069, 127.03559875],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_9720b1c62a529686364fa6fc18bc43e4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6febbb40d105b615b13c1f9162dfe7a5 = $(`<div id="html_6febbb40d105b615b13c1f9162dfe7a5" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2308<br>대여소명:  압구정파출소 앞<br>07-10 비율: 0.092<br>11-14 비율: 0.209<br>17-20 비율: 0.334<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_9720b1c62a529686364fa6fc18bc43e4.setContent(html_6febbb40d105b615b13c1f9162dfe7a5);
+            
+        
+
+        circle_marker_98e7878cc6452648924b98d9237a9885.bindPopup(popup_9720b1c62a529686364fa6fc18bc43e4)
+        ;
+
+        
+    
+    
+            var circle_marker_6dd74daefeadbc24dfc37785d19f1585 = L.circleMarker(
+                [37.51890182, 127.04938507],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_167d749ccd2963fa5875242008568a2b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9c9c2f54079cf744e0241f733601396c = $(`<div id="html_9c9c2f54079cf744e0241f733601396c" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2309<br>대여소명:  청담역(우리들병원 앞)<br>07-10 비율: 0.103<br>11-14 비율: 0.185<br>17-20 비율: 0.316<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_167d749ccd2963fa5875242008568a2b.setContent(html_9c9c2f54079cf744e0241f733601396c);
+            
+        
+
+        circle_marker_6dd74daefeadbc24dfc37785d19f1585.bindPopup(popup_167d749ccd2963fa5875242008568a2b)
+        ;
+
+        
+    
+    
+            var circle_marker_7712386f90b8286b9e4f04d5422f6ba7 = L.circleMarker(
+                [37.52361298, 127.04017639],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2a741579a8b8bfd267febe31de052911 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d76d12b893ab10662badc9720f63db79 = $(`<div id="html_d76d12b893ab10662badc9720f63db79" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2310<br>대여소명:  청담동 맥도날드 옆(위치)<br>07-10 비율: 0.147<br>11-14 비율: 0.184<br>17-20 비율: 0.229<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_2a741579a8b8bfd267febe31de052911.setContent(html_d76d12b893ab10662badc9720f63db79);
+            
+        
+
+        circle_marker_7712386f90b8286b9e4f04d5422f6ba7.bindPopup(popup_2a741579a8b8bfd267febe31de052911)
+        ;
+
+        
+    
+    
+            var circle_marker_9d3205317dc672c2f50fd01443b119b1 = L.circleMarker(
+                [37.51777267, 127.04302216],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_8c9103f390ff7c2a1108fac192f78e9e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3402ef397745c61fd9639418cc31de11 = $(`<div id="html_3402ef397745c61fd9639418cc31de11" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2311<br>대여소명:  학동로 래미안 아파트 앞<br>07-10 비율: 0.157<br>11-14 비율: 0.174<br>17-20 비율: 0.293<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_8c9103f390ff7c2a1108fac192f78e9e.setContent(html_3402ef397745c61fd9639418cc31de11);
+            
+        
+
+        circle_marker_9d3205317dc672c2f50fd01443b119b1.bindPopup(popup_8c9103f390ff7c2a1108fac192f78e9e)
+        ;
+
+        
+    
+    
+            var circle_marker_8ded3cbc042dde379a7a977cc0d7d74a = L.circleMarker(
+                [37.52058029, 127.05632782],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_7f68457434e25eded15c6a7665ddc907 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6606e52ff5a8e7f5087d487f503e2a41 = $(`<div id="html_6606e52ff5a8e7f5087d487f503e2a41" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2312<br>대여소명:  청담역 13번 출구 앞<br>07-10 비율: 0.108<br>11-14 비율: 0.139<br>17-20 비율: 0.359<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_7f68457434e25eded15c6a7665ddc907.setContent(html_6606e52ff5a8e7f5087d487f503e2a41);
+            
+        
+
+        circle_marker_8ded3cbc042dde379a7a977cc0d7d74a.bindPopup(popup_7f68457434e25eded15c6a7665ddc907)
+        ;
+
+        
+    
+    
+            var circle_marker_caa2b885299c14bda6635ccf980f9f3b = L.circleMarker(
+                [37.52511597, 127.05246735],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_e9b4cd6013054a289bc84ad837a55ef7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fe6c0169d425f99e17ef32aabcdecfdb = $(`<div id="html_fe6c0169d425f99e17ef32aabcdecfdb" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2313<br>대여소명:  금원빌딩 앞<br>07-10 비율: 0.331<br>11-14 비율: 0.128<br>17-20 비율: 0.202<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_e9b4cd6013054a289bc84ad837a55ef7.setContent(html_fe6c0169d425f99e17ef32aabcdecfdb);
+            
+        
+
+        circle_marker_caa2b885299c14bda6635ccf980f9f3b.bindPopup(popup_e9b4cd6013054a289bc84ad837a55ef7)
+        ;
+
+        
+    
+    
+            var circle_marker_5419c6b11ed1cc7ecd7d01bee85d8c42 = L.circleMarker(
+                [37.52101517, 127.06015015],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_c4df1bc1cf8521f2df80e61c1c4ed35c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1c201a79bcf87170885e7c5ae71cbf1e = $(`<div id="html_1c201a79bcf87170885e7c5ae71cbf1e" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2314<br>대여소명:  청담나들목입구<br>07-10 비율: 0.155<br>11-14 비율: 0.145<br>17-20 비율: 0.357<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_c4df1bc1cf8521f2df80e61c1c4ed35c.setContent(html_1c201a79bcf87170885e7c5ae71cbf1e);
+            
+        
+
+        circle_marker_5419c6b11ed1cc7ecd7d01bee85d8c42.bindPopup(popup_c4df1bc1cf8521f2df80e61c1c4ed35c)
+        ;
+
+        
+    
+    
+            var circle_marker_644d670a9190b1a720f82fe31558c8b0 = L.circleMarker(
+                [37.51424789, 127.06111908],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_1a5bf53dfac43070fb8c5197ec57ea02 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a0534e047b65f367f4435e5503fb43a8 = $(`<div id="html_a0534e047b65f367f4435e5503fb43a8" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2315<br>대여소명:  봉은사역 5번출구 옆<br>07-10 비율: 0.175<br>11-14 비율: 0.207<br>17-20 비율: 0.303<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_1a5bf53dfac43070fb8c5197ec57ea02.setContent(html_a0534e047b65f367f4435e5503fb43a8);
+            
+        
+
+        circle_marker_644d670a9190b1a720f82fe31558c8b0.bindPopup(popup_1a5bf53dfac43070fb8c5197ec57ea02)
+        ;
+
+        
+    
+    
+            var circle_marker_a34e77330861d56630a27fc0559f1643 = L.circleMarker(
+                [37.51588821, 127.06620026],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_bc930acd1945d5df0dacff7edae0070b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_26cfc483da859008f8c437f483a477ff = $(`<div id="html_26cfc483da859008f8c437f483a477ff" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2317<br>대여소명:  삼성도로공원<br>07-10 비율: 0.149<br>11-14 비율: 0.186<br>17-20 비율: 0.346<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_bc930acd1945d5df0dacff7edae0070b.setContent(html_26cfc483da859008f8c437f483a477ff);
+            
+        
+
+        circle_marker_a34e77330861d56630a27fc0559f1643.bindPopup(popup_bc930acd1945d5df0dacff7edae0070b)
+        ;
+
+        
+    
+    
+            var circle_marker_10b5dfe8ab44453ce0b96e88aaf93a99 = L.circleMarker(
+                [37.51357651, 127.05503082],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_ddd60e189c1bb26613c9bca44b8d6a97 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_24f3fa9e75b8e86c65a5f93094e059d0 = $(`<div id="html_24f3fa9e75b8e86c65a5f93094e059d0" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2318<br>대여소명:  삼성중앙역4번출구(문화센터더 리빌)<br>07-10 비율: 0.167<br>11-14 비율: 0.206<br>17-20 비율: 0.302<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_ddd60e189c1bb26613c9bca44b8d6a97.setContent(html_24f3fa9e75b8e86c65a5f93094e059d0);
+            
+        
+
+        circle_marker_10b5dfe8ab44453ce0b96e88aaf93a99.bindPopup(popup_ddd60e189c1bb26613c9bca44b8d6a97)
+        ;
+
+        
+    
+    
+            var circle_marker_b9b34ff84cbecfe7f95fe2c667025c6b = L.circleMarker(
+                [37.50660706, 127.05467987],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_0d302dc6e25f751194233e2500d3ddfb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_83c6a0fde315dfcd17993dfb7d5c7d2d = $(`<div id="html_83c6a0fde315dfcd17993dfb7d5c7d2d" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2319<br>대여소명:  포스코사거리 서측(수협 삼성동 지점)<br>07-10 비율: 0.331<br>11-14 비율: 0.228<br>17-20 비율: 0.180<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_0d302dc6e25f751194233e2500d3ddfb.setContent(html_83c6a0fde315dfcd17993dfb7d5c7d2d);
+            
+        
+
+        circle_marker_b9b34ff84cbecfe7f95fe2c667025c6b.bindPopup(popup_0d302dc6e25f751194233e2500d3ddfb)
+        ;
+
+        
+    
+    
+            var circle_marker_eadad2a8dba337803832899f69a53671 = L.circleMarker(
+                [37.4919281, 127.05696869],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_5a61c5e480db27e43970cfd471792533 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_31293a4c9368c9478beeb6f3accd6865 = $(`<div id="html_31293a4c9368c9478beeb6f3accd6865" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2320<br>대여소명:  도곡역 대치지구대 방향<br>07-10 비율: 0.136<br>11-14 비율: 0.211<br>17-20 비율: 0.295<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_5a61c5e480db27e43970cfd471792533.setContent(html_31293a4c9368c9478beeb6f3accd6865);
+            
+        
+
+        circle_marker_eadad2a8dba337803832899f69a53671.bindPopup(popup_5a61c5e480db27e43970cfd471792533)
+        ;
+
+        
+    
+    
+            var circle_marker_e3bae9387f3f11ca1f5582a7fb31840e = L.circleMarker(
+                [37.49611664, 127.06944275],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_568615ec0b51780b5a5a7c42dc52b6d0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_688502b9d4523cc053fd2f35a2d7e104 = $(`<div id="html_688502b9d4523cc053fd2f35a2d7e104" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2321<br>대여소명:  학여울역 사거리<br>07-10 비율: 0.116<br>11-14 비율: 0.191<br>17-20 비율: 0.314<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_568615ec0b51780b5a5a7c42dc52b6d0.setContent(html_688502b9d4523cc053fd2f35a2d7e104);
+            
+        
+
+        circle_marker_e3bae9387f3f11ca1f5582a7fb31840e.bindPopup(popup_568615ec0b51780b5a5a7c42dc52b6d0)
+        ;
+
+        
+    
+    
+            var circle_marker_7525f97ec9c1fbc59bcb718bf22a5112 = L.circleMarker(
+                [37.50221252, 127.06720734],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_fca9ad397ad016ee01496986b4e4f318 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_09e40892a9bcdc97504ed7ab684d199d = $(`<div id="html_09e40892a9bcdc97504ed7ab684d199d" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2323<br>대여소명:  주식회사 오뚜기 정문 앞<br>07-10 비율: 0.584<br>11-14 비율: 0.164<br>17-20 비율: 0.111<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_fca9ad397ad016ee01496986b4e4f318.setContent(html_09e40892a9bcdc97504ed7ab684d199d);
+            
+        
+
+        circle_marker_7525f97ec9c1fbc59bcb718bf22a5112.bindPopup(popup_fca9ad397ad016ee01496986b4e4f318)
+        ;
+
+        
+    
+    
+            var circle_marker_c90cd66721a0357e4f4de8eb5e294551 = L.circleMarker(
+                [37.50043869, 127.06622314],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_dc210b154eb25eb8e42dc230a355db98 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d156bfa911fd016b0b95a1f29a6ed3e5 = $(`<div id="html_d156bfa911fd016b0b95a1f29a6ed3e5" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2324<br>대여소명:  천주교 대치 2동 교회 옆<br>07-10 비율: 0.172<br>11-14 비율: 0.209<br>17-20 비율: 0.291<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_dc210b154eb25eb8e42dc230a355db98.setContent(html_d156bfa911fd016b0b95a1f29a6ed3e5);
+            
+        
+
+        circle_marker_c90cd66721a0357e4f4de8eb5e294551.bindPopup(popup_dc210b154eb25eb8e42dc230a355db98)
+        ;
+
+        
+    
+    
+            var circle_marker_0c8e0534028dc4f3f352db69d2c97ea2 = L.circleMarker(
+                [37.4986496, 127.05931854],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_0592366261b6a50116cdb6b5d9db430d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6ff047c9ed8c68e7870b1c3d3a6f8344 = $(`<div id="html_6ff047c9ed8c68e7870b1c3d3a6f8344" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2325<br>대여소명:  대치삼성아파트 앞 교차로<br>07-10 비율: 0.146<br>11-14 비율: 0.238<br>17-20 비율: 0.325<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_0592366261b6a50116cdb6b5d9db430d.setContent(html_6ff047c9ed8c68e7870b1c3d3a6f8344);
+            
+        
+
+        circle_marker_0c8e0534028dc4f3f352db69d2c97ea2.bindPopup(popup_0592366261b6a50116cdb6b5d9db430d)
+        ;
+
+        
+    
+    
+            var circle_marker_cb7a4aedfae77725f1f0f4e7728a7406 = L.circleMarker(
+                [37.50239563, 127.05879974],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_fce8e11dde87c0e45e7a3082c1a16b64 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_70abb77fd94993c4769c5eff72002506 = $(`<div id="html_70abb77fd94993c4769c5eff72002506" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2326<br>대여소명:  대치동 삼성로<br>07-10 비율: 0.141<br>11-14 비율: 0.187<br>17-20 비율: 0.317<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_fce8e11dde87c0e45e7a3082c1a16b64.setContent(html_70abb77fd94993c4769c5eff72002506);
+            
+        
+
+        circle_marker_cb7a4aedfae77725f1f0f4e7728a7406.bindPopup(popup_fce8e11dde87c0e45e7a3082c1a16b64)
+        ;
+
+        
+    
+    
+            var circle_marker_06c2ada5fa794516fc44db61020e7180 = L.circleMarker(
+                [37.49055099, 127.03146362],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_04c11447f2ac513d2db1346e5c1b91e5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1d897997ff0126b91051bf0cc9543947 = $(`<div id="html_1d897997ff0126b91051bf0cc9543947" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2327<br>대여소명:  뱅뱅사거리 랜드마크타워 앞<br>07-10 비율: 0.346<br>11-14 비율: 0.175<br>17-20 비율: 0.226<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_04c11447f2ac513d2db1346e5c1b91e5.setContent(html_1d897997ff0126b91051bf0cc9543947);
+            
+        
+
+        circle_marker_06c2ada5fa794516fc44db61020e7180.bindPopup(popup_04c11447f2ac513d2db1346e5c1b91e5)
+        ;
+
+        
+    
+    
+            var circle_marker_f32f613e603b52eea919a42fb8916227 = L.circleMarker(
+                [37.50321198, 127.04273224],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_39d370cbf0ac195ede068aeb4f6f9118 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ee853abe56c6a986df400c7d50f7b879 = $(`<div id="html_ee853abe56c6a986df400c7d50f7b879" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2328<br>대여소명:  르네상스 호텔 사거리 역삼지하보도 7번출구 앞<br>07-10 비율: 0.299<br>11-14 비율: 0.203<br>17-20 비율: 0.218<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_39d370cbf0ac195ede068aeb4f6f9118.setContent(html_ee853abe56c6a986df400c7d50f7b879);
+            
+        
+
+        circle_marker_f32f613e603b52eea919a42fb8916227.bindPopup(popup_39d370cbf0ac195ede068aeb4f6f9118)
+        ;
+
+        
+    
+    
+            var circle_marker_5e39262ba2f2b3e74687a8c9b094357f = L.circleMarker(
+                [37.50235748, 127.04319],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_8df5e29271b098e3377eaaa3db86c7f2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_da094e9c5902dd926588d5e7c9865095 = $(`<div id="html_da094e9c5902dd926588d5e7c9865095" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2329<br>대여소명:  르네상스호텔사거리 역삼지하보도 2번출구<br>07-10 비율: 0.279<br>11-14 비율: 0.226<br>17-20 비율: 0.199<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_8df5e29271b098e3377eaaa3db86c7f2.setContent(html_da094e9c5902dd926588d5e7c9865095);
+            
+        
+
+        circle_marker_5e39262ba2f2b3e74687a8c9b094357f.bindPopup(popup_8df5e29271b098e3377eaaa3db86c7f2)
+        ;
+
+        
+    
+    
+            var circle_marker_e7ed2d3287d7b7a00c48edee436b5b29 = L.circleMarker(
+                [37.49219894, 127.03945923],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_8e0b970551f80c4e443c1b3ed6d22148 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_39807265c7133b332bc2ab7ef0cf0cdc = $(`<div id="html_39807265c7133b332bc2ab7ef0cf0cdc" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2330<br>대여소명:  역삼월드메르디앙아파트 앞<br>07-10 비율: 0.158<br>11-14 비율: 0.191<br>17-20 비율: 0.306<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_8e0b970551f80c4e443c1b3ed6d22148.setContent(html_39807265c7133b332bc2ab7ef0cf0cdc);
+            
+        
+
+        circle_marker_e7ed2d3287d7b7a00c48edee436b5b29.bindPopup(popup_8e0b970551f80c4e443c1b3ed6d22148)
+        ;
+
+        
+    
+    
+            var circle_marker_35aa0310939a95fc52e2e7ab7ba37635 = L.circleMarker(
+                [37.49805069, 127.04460144],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_ef2e465b50d3b1376d64072886130a65 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8437e017f0ad433eb8dfde3228139100 = $(`<div id="html_8437e017f0ad433eb8dfde3228139100" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2331<br>대여소명:  동영문화센터앞<br>07-10 비율: 0.261<br>11-14 비율: 0.184<br>17-20 비율: 0.275<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_ef2e465b50d3b1376d64072886130a65.setContent(html_8437e017f0ad433eb8dfde3228139100);
+            
+        
+
+        circle_marker_35aa0310939a95fc52e2e7ab7ba37635.bindPopup(popup_ef2e465b50d3b1376d64072886130a65)
+        ;
+
+        
+    
+    
+            var circle_marker_de07acf3673e099f692194e3df17268a = L.circleMarker(
+                [37.50400925, 127.0490799],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_83f1191b17ee261b08ba90478d756229 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f7ccfe446a91ffa76a2f9a389a7f14fc = $(`<div id="html_f7ccfe446a91ffa76a2f9a389a7f14fc" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2332<br>대여소명:  선릉역3번출구<br>07-10 비율: 0.144<br>11-14 비율: 0.223<br>17-20 비율: 0.327<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_83f1191b17ee261b08ba90478d756229.setContent(html_f7ccfe446a91ffa76a2f9a389a7f14fc);
+            
+        
+
+        circle_marker_de07acf3673e099f692194e3df17268a.bindPopup(popup_83f1191b17ee261b08ba90478d756229)
+        ;
+
+        
+    
+    
+            var circle_marker_62d10efec852d07e542f4c8b183c9769 = L.circleMarker(
+                [37.48515701, 127.03407288],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_05275f6dd1d3fcd1b2eba69128959afd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ed16c56b2bdd7968e0ec50995d06e0a5 = $(`<div id="html_ed16c56b2bdd7968e0ec50995d06e0a5" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2333<br>대여소명:  양재역 3번출구 주변<br>07-10 비율: 0.116<br>11-14 비율: 0.165<br>17-20 비율: 0.391<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_05275f6dd1d3fcd1b2eba69128959afd.setContent(html_ed16c56b2bdd7968e0ec50995d06e0a5);
+            
+        
+
+        circle_marker_62d10efec852d07e542f4c8b183c9769.bindPopup(popup_05275f6dd1d3fcd1b2eba69128959afd)
+        ;
+
+        
+    
+    
+            var circle_marker_e21f8cb3834457e1aca09244fea435b3 = L.circleMarker(
+                [37.49375916, 127.04589844],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_80c74363c32e1effc92d2b20b8dbc2e4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e206fe03d22f069c08443b2c149b2f2f = $(`<div id="html_e206fe03d22f069c08443b2c149b2f2f" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2334<br>대여소명:  삼호아파트 2동 ( 간선도로)<br>07-10 비율: 0.321<br>11-14 비율: 0.221<br>17-20 비율: 0.192<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_80c74363c32e1effc92d2b20b8dbc2e4.setContent(html_e206fe03d22f069c08443b2c149b2f2f);
+            
+        
+
+        circle_marker_e21f8cb3834457e1aca09244fea435b3.bindPopup(popup_80c74363c32e1effc92d2b20b8dbc2e4)
+        ;
+
+        
+    
+    
+            var circle_marker_3a4f81949943f198da6cc378a398dc85 = L.circleMarker(
+                [37.48676682, 127.04676056],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_ee72f11a905b376bba7ec342e8a4668d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b79168f81e76322e1cfb6a6a0c646415 = $(`<div id="html_b79168f81e76322e1cfb6a6a0c646415" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2335<br>대여소명:  3호선 매봉역 3번출구앞<br>07-10 비율: 0.321<br>11-14 비율: 0.167<br>17-20 비율: 0.265<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_ee72f11a905b376bba7ec342e8a4668d.setContent(html_b79168f81e76322e1cfb6a6a0c646415);
+            
+        
+
+        circle_marker_3a4f81949943f198da6cc378a398dc85.bindPopup(popup_ee72f11a905b376bba7ec342e8a4668d)
+        ;
+
+        
+    
+    
+            var circle_marker_cba18244cd0b322474498ab4806c7d7c = L.circleMarker(
+                [37.49423599, 127.04746246],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_0d089bad0b370b340b622b23293b293f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8c80a548664e90528cfed7d86a631b94 = $(`<div id="html_8c80a548664e90528cfed7d86a631b94" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2336<br>대여소명:  강남세브란스교차로 래미안그레이튼 104동 앞<br>07-10 비율: 0.204<br>11-14 비율: 0.226<br>17-20 비율: 0.226<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_0d089bad0b370b340b622b23293b293f.setContent(html_8c80a548664e90528cfed7d86a631b94);
+            
+        
+
+        circle_marker_cba18244cd0b322474498ab4806c7d7c.bindPopup(popup_0d089bad0b370b340b622b23293b293f)
+        ;
+
+        
+    
+    
+            var circle_marker_b53954b04841d54996f58c3118b4f7ff = L.circleMarker(
+                [37.49207687, 127.07197571],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_48343dfbd2aa6efcc5e3dfd5dc9ec868 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8da54031cd5ab2aa74a80005eb84d850 = $(`<div id="html_8da54031cd5ab2aa74a80005eb84d850" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2337<br>대여소명:  대모산입구역 2번출구 앞<br>07-10 비율: 0.113<br>11-14 비율: 0.145<br>17-20 비율: 0.367<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_48343dfbd2aa6efcc5e3dfd5dc9ec868.setContent(html_8da54031cd5ab2aa74a80005eb84d850);
+            
+        
+
+        circle_marker_b53954b04841d54996f58c3118b4f7ff.bindPopup(popup_48343dfbd2aa6efcc5e3dfd5dc9ec868)
+        ;
+
+        
+    
+    
+            var circle_marker_13609de066a1d3721cc062daf0d4c89c = L.circleMarker(
+                [37.48326111, 127.0522995],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_96fab7c9965d0b3ee383d4b7652c52a5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ee1c5b947891396db36d51c94e89f2c4 = $(`<div id="html_ee1c5b947891396db36d51c94e89f2c4" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2339<br>대여소명:  현대아파트 정문 앞<br>07-10 비율: 0.096<br>11-14 비율: 0.152<br>17-20 비율: 0.384<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_96fab7c9965d0b3ee383d4b7652c52a5.setContent(html_ee1c5b947891396db36d51c94e89f2c4);
+            
+        
+
+        circle_marker_13609de066a1d3721cc062daf0d4c89c.bindPopup(popup_96fab7c9965d0b3ee383d4b7652c52a5)
+        ;
+
+        
+    
+    
+            var circle_marker_8e3068d0ae795d4c847391cc959f770a = L.circleMarker(
+                [37.47750854, 127.04517365],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_5704e6e02996519e2683b28ce5335c99 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_694da572d226ab7763edb8ddfd9d8540 = $(`<div id="html_694da572d226ab7763edb8ddfd9d8540" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2340<br>대여소명:  삼호물산버스정류장(23370) 옆<br>07-10 비율: 0.262<br>11-14 비율: 0.130<br>17-20 비율: 0.264<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_5704e6e02996519e2683b28ce5335c99.setContent(html_694da572d226ab7763edb8ddfd9d8540);
+            
+        
+
+        circle_marker_8e3068d0ae795d4c847391cc959f770a.bindPopup(popup_5704e6e02996519e2683b28ce5335c99)
+        ;
+
+        
+    
+    
+            var circle_marker_eda3e18ca56814c4c2ea9e863b686b9b = L.circleMarker(
+                [37.4833107, 127.08493805],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_83b4b88546b3797f846a3c990a49ff8b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_720e2bac6160b71a1602bb036fba6232 = $(`<div id="html_720e2bac6160b71a1602bb036fba6232" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2341<br>대여소명:  일원역 4~5번 출구 사이<br>07-10 비율: 0.213<br>11-14 비율: 0.181<br>17-20 비율: 0.284<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_83b4b88546b3797f846a3c990a49ff8b.setContent(html_720e2bac6160b71a1602bb036fba6232);
+            
+        
+
+        circle_marker_eda3e18ca56814c4c2ea9e863b686b9b.bindPopup(popup_83b4b88546b3797f846a3c990a49ff8b)
+        ;
+
+        
+    
+    
+            var circle_marker_2dc807b6aa3d89183370d0775a5e7aad = L.circleMarker(
+                [37.49400711, 127.07951355],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_523ea0ef673661735d3b487fbb744135 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_20fe34fe285da3ecd737b34798c8615a = $(`<div id="html_20fe34fe285da3ecd737b34798c8615a" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2342<br>대여소명:  대청역 1번출구 뒤<br>07-10 비율: 0.232<br>11-14 비율: 0.168<br>17-20 비율: 0.281<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_523ea0ef673661735d3b487fbb744135.setContent(html_20fe34fe285da3ecd737b34798c8615a);
+            
+        
+
+        circle_marker_2dc807b6aa3d89183370d0775a5e7aad.bindPopup(popup_523ea0ef673661735d3b487fbb744135)
+        ;
+
+        
+    
+    
+            var circle_marker_92a22ddb6de53b1140bf213ac5ef3f57 = L.circleMarker(
+                [37.46506119, 127.10119629],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2d9d083c55cf7de0336eaa29fc0c1168 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fa99047b2234a40258ac73e7431c00a3 = $(`<div id="html_fa99047b2234a40258ac73e7431c00a3" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2344<br>대여소명:  리엔파크 2단지 앞<br>07-10 비율: 0.126<br>11-14 비율: 0.159<br>17-20 비율: 0.306<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_2d9d083c55cf7de0336eaa29fc0c1168.setContent(html_fa99047b2234a40258ac73e7431c00a3);
+            
+        
+
+        circle_marker_92a22ddb6de53b1140bf213ac5ef3f57.bindPopup(popup_2d9d083c55cf7de0336eaa29fc0c1168)
+        ;
+
+        
+    
+    
+            var circle_marker_44038a23f62dee7220e447d3db8babfa = L.circleMarker(
+                [37.51863861, 127.03540039],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_0765e1cf646c98bb34da38004a673c9f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_44854d8325572148ade39e5a70a2a5a0 = $(`<div id="html_44854d8325572148ade39e5a70a2a5a0" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2347<br>대여소명:  두산건설 본사<br>07-10 비율: 0.240<br>11-14 비율: 0.149<br>17-20 비율: 0.251<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_0765e1cf646c98bb34da38004a673c9f.setContent(html_44854d8325572148ade39e5a70a2a5a0);
+            
+        
+
+        circle_marker_44038a23f62dee7220e447d3db8babfa.bindPopup(popup_0765e1cf646c98bb34da38004a673c9f)
+        ;
+
+        
+    
+    
+            var circle_marker_a9a034b00e9c1454d3b0b4e39462e81a = L.circleMarker(
+                [37.50723267, 127.05685425],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_be6db8720388b98b4d8ad1562ed0e0dd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_595a146703c1e41029279747d725485b = $(`<div id="html_595a146703c1e41029279747d725485b" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2348<br>대여소명:  포스코사거리(기업은행)<br>07-10 비율: 0.508<br>11-14 비율: 0.158<br>17-20 비율: 0.153<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_be6db8720388b98b4d8ad1562ed0e0dd.setContent(html_595a146703c1e41029279747d725485b);
+            
+        
+
+        circle_marker_a9a034b00e9c1454d3b0b4e39462e81a.bindPopup(popup_be6db8720388b98b4d8ad1562ed0e0dd)
+        ;
+
+        
+    
+    
+            var circle_marker_699f350ed39b0ba63151c51b9cf990ef = L.circleMarker(
+                [37.50154495, 127.03856659],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_00e36647ad6c802a3c343dab9a3c175b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ef627aa1b81a04da1ed1c99355b19c5e = $(`<div id="html_ef627aa1b81a04da1ed1c99355b19c5e" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2349<br>대여소명:  역삼빌딩 앞(하나은행 옆)<br>07-10 비율: 0.200<br>11-14 비율: 0.233<br>17-20 비율: 0.238<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_00e36647ad6c802a3c343dab9a3c175b.setContent(html_ef627aa1b81a04da1ed1c99355b19c5e);
+            
+        
+
+        circle_marker_699f350ed39b0ba63151c51b9cf990ef.bindPopup(popup_00e36647ad6c802a3c343dab9a3c175b)
+        ;
+
+        
+    
+    
+            var circle_marker_db59545b861ddb6ec6ca4eb3ee875428 = L.circleMarker(
+                [37.49482346, 127.04790497],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_98560360279a058de5fcfb9b5533dacb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0c8fdd1863db14d46ce05966d092e652 = $(`<div id="html_0c8fdd1863db14d46ce05966d092e652" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2350<br>대여소명:  래미안그레이튼102동앞<br>07-10 비율: 0.140<br>11-14 비율: 0.171<br>17-20 비율: 0.320<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_98560360279a058de5fcfb9b5533dacb.setContent(html_0c8fdd1863db14d46ce05966d092e652);
+            
+        
+
+        circle_marker_db59545b861ddb6ec6ca4eb3ee875428.bindPopup(popup_98560360279a058de5fcfb9b5533dacb)
+        ;
+
+        
+    
+    
+            var circle_marker_c849ba38048dc3cbf7b6032339c34603 = L.circleMarker(
+                [37.48387909, 127.0890274],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_33394bd7c016fb8b7c6868dd70a2cdf7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_846684758197cc47ea1677367df6ff23 = $(`<div id="html_846684758197cc47ea1677367df6ff23" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2351<br>대여소명:  청소년수련관(수영장)앞<br>07-10 비율: 0.154<br>11-14 비율: 0.151<br>17-20 비율: 0.382<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_33394bd7c016fb8b7c6868dd70a2cdf7.setContent(html_846684758197cc47ea1677367df6ff23);
+            
+        
+
+        circle_marker_c849ba38048dc3cbf7b6032339c34603.bindPopup(popup_33394bd7c016fb8b7c6868dd70a2cdf7)
+        ;
+
+        
+    
+    
+            var circle_marker_ac03354a87aec6b09fde36a1b59f1fdb = L.circleMarker(
+                [37.51758957, 127.03502655],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_62ffc75aadaa6011e7196811d7b79be1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1b950ea1740749292a6810c36233ef54 = $(`<div id="html_1b950ea1740749292a6810c36233ef54" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2352<br>대여소명:  서울본부세관(건설회관 앞)<br>07-10 비율: 0.278<br>11-14 비율: 0.264<br>17-20 비율: 0.219<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_62ffc75aadaa6011e7196811d7b79be1.setContent(html_1b950ea1740749292a6810c36233ef54);
+            
+        
+
+        circle_marker_ac03354a87aec6b09fde36a1b59f1fdb.bindPopup(popup_62ffc75aadaa6011e7196811d7b79be1)
+        ;
+
+        
+    
+    
+            var circle_marker_f196fb383724fb730e1b4d839b6c8f10 = L.circleMarker(
+                [37.51681137, 127.04047394],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_88040a4eec34ce7e73787e5ac49cdbeb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f57cd897f870f3891b382cf97642bb63 = $(`<div id="html_f57cd897f870f3891b382cf97642bb63" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2353<br>대여소명:  강남구청역 2번출구 뒤<br>07-10 비율: 0.093<br>11-14 비율: 0.195<br>17-20 비율: 0.357<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_88040a4eec34ce7e73787e5ac49cdbeb.setContent(html_f57cd897f870f3891b382cf97642bb63);
+            
+        
+
+        circle_marker_f196fb383724fb730e1b4d839b6c8f10.bindPopup(popup_88040a4eec34ce7e73787e5ac49cdbeb)
+        ;
+
+        
+    
+    
+            var circle_marker_6ea252c95e43fde510c03efaeb04bf01 = L.circleMarker(
+                [37.51978683, 127.0567627],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_470474ea3fa37cbc7486f65523e092fd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a20d421d2d89eb9dc606e154c6e0d628 = $(`<div id="html_a20d421d2d89eb9dc606e154c6e0d628" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2354<br>대여소명:  청담역 2번출구<br>07-10 비율: 0.117<br>11-14 비율: 0.153<br>17-20 비율: 0.376<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_470474ea3fa37cbc7486f65523e092fd.setContent(html_a20d421d2d89eb9dc606e154c6e0d628);
+            
+        
+
+        circle_marker_6ea252c95e43fde510c03efaeb04bf01.bindPopup(popup_470474ea3fa37cbc7486f65523e092fd)
+        ;
+
+        
+    
+    
+            var circle_marker_87aba01fe9e9c05dc42b4d63208dcebb = L.circleMarker(
+                [37.51807022, 127.04711914],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_79523b7550e76f509e8da7e4d426dbcc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_df523e1531bdcfb8dd4aa0fb9b91373d = $(`<div id="html_df523e1531bdcfb8dd4aa0fb9b91373d" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2356<br>대여소명:  강남구청<br>07-10 비율: 0.124<br>11-14 비율: 0.263<br>17-20 비율: 0.283<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_79523b7550e76f509e8da7e4d426dbcc.setContent(html_df523e1531bdcfb8dd4aa0fb9b91373d);
+            
+        
+
+        circle_marker_87aba01fe9e9c05dc42b4d63208dcebb.bindPopup(popup_79523b7550e76f509e8da7e4d426dbcc)
+        ;
+
+        
+    
+    
+            var circle_marker_32a61f713bf82490a60ddf53e6d9772b = L.circleMarker(
+                [37.50166321, 127.04297638],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_c3a0b6255ab57ca6161c7a3dcb4d7e82 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1ab228feb203970b9784f1a94aa25805 = $(`<div id="html_1ab228feb203970b9784f1a94aa25805" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2357<br>대여소명:  르네상스호텔사거리 역삼지하보도 3번출구 앞 (더 오번 빌딩 명동칼국수 앞)<br>07-10 비율: 0.293<br>11-14 비율: 0.210<br>17-20 비율: 0.229<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_c3a0b6255ab57ca6161c7a3dcb4d7e82.setContent(html_1ab228feb203970b9784f1a94aa25805);
+            
+        
+
+        circle_marker_32a61f713bf82490a60ddf53e6d9772b.bindPopup(popup_c3a0b6255ab57ca6161c7a3dcb4d7e82)
+        ;
+
+        
+    
+    
+            var circle_marker_0ba25cbfe6c7c75245e1af5d6372fdfe = L.circleMarker(
+                [37.48138428, 127.05391693],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_8876e370ba9172207cc8c835d1299ac6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_28467eb4aeb0553a78f75ddd3a7d657a = $(`<div id="html_28467eb4aeb0553a78f75ddd3a7d657a" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2358<br>대여소명:  구룡초사거리 (현대아파트10동 앞 )<br>07-10 비율: 0.132<br>11-14 비율: 0.137<br>17-20 비율: 0.344<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_8876e370ba9172207cc8c835d1299ac6.setContent(html_28467eb4aeb0553a78f75ddd3a7d657a);
+            
+        
+
+        circle_marker_0ba25cbfe6c7c75245e1af5d6372fdfe.bindPopup(popup_8876e370ba9172207cc8c835d1299ac6)
+        ;
+
+        
+    
+    
+            var circle_marker_0f947bf8a968e86a123b702ebe12a422 = L.circleMarker(
+                [37.47560501, 127.05037689],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_870e0aa4d005ecb5d9eb7c12af59926e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_04d076eb2cadb109e96b56e6d1ca1692 = $(`<div id="html_04d076eb2cadb109e96b56e6d1ca1692" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2359<br>대여소명:  국립국악중,고교 정문 맞은편<br>07-10 비율: 0.173<br>11-14 비율: 0.143<br>17-20 비율: 0.314<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_870e0aa4d005ecb5d9eb7c12af59926e.setContent(html_04d076eb2cadb109e96b56e6d1ca1692);
+            
+        
+
+        circle_marker_0f947bf8a968e86a123b702ebe12a422.bindPopup(popup_870e0aa4d005ecb5d9eb7c12af59926e)
+        ;
+
+        
+    
+    
+            var circle_marker_114cdf5cd56e5519ba37c7dcc83b09b0 = L.circleMarker(
+                [37.4928093, 127.04138947],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_c636b106fb4448eb60a163c49b5a26ed = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a19dfec98b9db549920a8b8b65830413 = $(`<div id="html_a19dfec98b9db549920a8b8b65830413" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2360<br>대여소명:  도곡1동 주민센터 교차로<br>07-10 비율: 0.231<br>11-14 비율: 0.197<br>17-20 비율: 0.259<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_c636b106fb4448eb60a163c49b5a26ed.setContent(html_a19dfec98b9db549920a8b8b65830413);
+            
+        
+
+        circle_marker_114cdf5cd56e5519ba37c7dcc83b09b0.bindPopup(popup_c636b106fb4448eb60a163c49b5a26ed)
+        ;
+
+        
+    
+    
+            var circle_marker_62954777904f9bfd22c1fde14d444e5f = L.circleMarker(
+                [37.51763535, 127.02245331],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_10c1541969ad0c147cf631095d151337 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_69fef632b0fded7866a79e1967438c94 = $(`<div id="html_69fef632b0fded7866a79e1967438c94" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2362<br>대여소명:  신사동 가로수길 입구<br>07-10 비율: 0.108<br>11-14 비율: 0.216<br>17-20 비율: 0.333<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_10c1541969ad0c147cf631095d151337.setContent(html_69fef632b0fded7866a79e1967438c94);
+            
+        
+
+        circle_marker_62954777904f9bfd22c1fde14d444e5f.bindPopup(popup_10c1541969ad0c147cf631095d151337)
+        ;
+
+        
+    
+    
+            var circle_marker_94bc924e69052381c21b31b4b80b5459 = L.circleMarker(
+                [37.51913834, 127.02751923],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_cb20dca346aadb2a12f9e47cec1e54c9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_be6240327a5b6b4027694fe99fb08384 = $(`<div id="html_be6240327a5b6b4027694fe99fb08384" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2363<br>대여소명:  강남 을지병원 교차로<br>07-10 비율: 0.210<br>11-14 비율: 0.197<br>17-20 비율: 0.223<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_cb20dca346aadb2a12f9e47cec1e54c9.setContent(html_be6240327a5b6b4027694fe99fb08384);
+            
+        
+
+        circle_marker_94bc924e69052381c21b31b4b80b5459.bindPopup(popup_cb20dca346aadb2a12f9e47cec1e54c9)
+        ;
+
+        
+    
+    
+            var circle_marker_702c531cd3e607d654edeb4e98b7398f = L.circleMarker(
+                [37.52124023, 127.0318985],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_236ce2fb0dc9bac285384d443758a172 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_090293f7d3be2dfc4ec0e13441538661 = $(`<div id="html_090293f7d3be2dfc4ec0e13441538661" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2364<br>대여소명:  도산공원교차로<br>07-10 비율: 0.262<br>11-14 비율: 0.199<br>17-20 비율: 0.215<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_236ce2fb0dc9bac285384d443758a172.setContent(html_090293f7d3be2dfc4ec0e13441538661);
+            
+        
+
+        circle_marker_702c531cd3e607d654edeb4e98b7398f.bindPopup(popup_236ce2fb0dc9bac285384d443758a172)
+        ;
+
+        
+    
+    
+            var circle_marker_f227fea408b311fedc22e82a3e83762d = L.circleMarker(
+                [37.52330017, 127.03847504],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_757820a02f591402fd74d2b5fea95463 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_aa439000b6127ad83a0eaffaf91e952f = $(`<div id="html_aa439000b6127ad83a0eaffaf91e952f" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2365<br>대여소명:  K+ 타워 앞<br>07-10 비율: 0.202<br>11-14 비율: 0.188<br>17-20 비율: 0.227<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_757820a02f591402fd74d2b5fea95463.setContent(html_aa439000b6127ad83a0eaffaf91e952f);
+            
+        
+
+        circle_marker_f227fea408b311fedc22e82a3e83762d.bindPopup(popup_757820a02f591402fd74d2b5fea95463)
+        ;
+
+        
+    
+    
+            var circle_marker_a364ab5a5fd2e6eb158824e24d352389 = L.circleMarker(
+                [37.48934174, 127.04129791],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2b432f0fc979d690c79479253e743ddf = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_13fc063aa1f9ea956f1febc724069e73 = $(`<div id="html_13fc063aa1f9ea956f1febc724069e73" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2368<br>대여소명:  도곡동 경남아파트 건너편<br>07-10 비율: 0.135<br>11-14 비율: 0.242<br>17-20 비율: 0.305<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_2b432f0fc979d690c79479253e743ddf.setContent(html_13fc063aa1f9ea956f1febc724069e73);
+            
+        
+
+        circle_marker_a364ab5a5fd2e6eb158824e24d352389.bindPopup(popup_2b432f0fc979d690c79479253e743ddf)
+        ;
+
+        
+    
+    
+            var circle_marker_32e74e7938807a4572bd20eb57c40cc8 = L.circleMarker(
+                [37.50542831, 127.0528717],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_272b03b02f4c9cb30da599d0d46881ca = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_658176379763585f921dceeba994ac2d = $(`<div id="html_658176379763585f921dceeba994ac2d" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2369<br>대여소명:  KT선릉타워<br>07-10 비율: 0.210<br>11-14 비율: 0.210<br>17-20 비율: 0.264<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_272b03b02f4c9cb30da599d0d46881ca.setContent(html_658176379763585f921dceeba994ac2d);
+            
+        
+
+        circle_marker_32e74e7938807a4572bd20eb57c40cc8.bindPopup(popup_272b03b02f4c9cb30da599d0d46881ca)
+        ;
+
+        
+    
+    
+            var circle_marker_4fc24c159672476ced5fe3d63e58db9f = L.circleMarker(
+                [37.49655151, 127.0542984],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2118f70403a88be45a7bcea70e3370a7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4cfdb1c4281b2d13ae51bb41b3d75780 = $(`<div id="html_4cfdb1c4281b2d13ae51bb41b3d75780" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2370<br>대여소명:  한티역 3번출구<br>07-10 비율: 0.192<br>11-14 비율: 0.190<br>17-20 비율: 0.320<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_2118f70403a88be45a7bcea70e3370a7.setContent(html_4cfdb1c4281b2d13ae51bb41b3d75780);
+            
+        
+
+        circle_marker_4fc24c159672476ced5fe3d63e58db9f.bindPopup(popup_2118f70403a88be45a7bcea70e3370a7)
+        ;
+
+        
+    
+    
+            var circle_marker_7a8141b711d43fdde1b058a414f9e164 = L.circleMarker(
+                [37.51474762, 127.03513336],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_639171f8fba9833519f0c50bcd609d36 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_252ec2ea3d60d9c7103528d0ffd87bbb = $(`<div id="html_252ec2ea3d60d9c7103528d0ffd87bbb" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2371<br>대여소명:  한국우편사업진흥원<br>07-10 비율: 0.189<br>11-14 비율: 0.197<br>17-20 비율: 0.271<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_639171f8fba9833519f0c50bcd609d36.setContent(html_252ec2ea3d60d9c7103528d0ffd87bbb);
+            
+        
+
+        circle_marker_7a8141b711d43fdde1b058a414f9e164.bindPopup(popup_639171f8fba9833519f0c50bcd609d36)
+        ;
+
+        
+    
+    
+            var circle_marker_881a4fe1bc8b17bb26503b65ee52121b = L.circleMarker(
+                [37.49449921, 127.063797],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_e58a9bd002b52b816071a4f5c5d13053 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c3f078b269608be67267cf0383103a46 = $(`<div id="html_c3f078b269608be67267cf0383103a46" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2372<br>대여소명:  대치역 사거리<br>07-10 비율: 0.170<br>11-14 비율: 0.218<br>17-20 비율: 0.289<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_e58a9bd002b52b816071a4f5c5d13053.setContent(html_c3f078b269608be67267cf0383103a46);
+            
+        
+
+        circle_marker_881a4fe1bc8b17bb26503b65ee52121b.bindPopup(popup_e58a9bd002b52b816071a4f5c5d13053)
+        ;
+
+        
+    
+    
+            var circle_marker_17355fe04db24f549970ade3d3117a07 = L.circleMarker(
+                [37.48927689, 127.06557465],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_66a354a81deb9ecf3da47440a6120c85 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8a7da6163af6db290ddb7eaca3974daf = $(`<div id="html_8a7da6163af6db290ddb7eaca3974daf" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2373<br>대여소명:  개포동역 사거리<br>07-10 비율: 0.127<br>11-14 비율: 0.241<br>17-20 비율: 0.305<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_66a354a81deb9ecf3da47440a6120c85.setContent(html_8a7da6163af6db290ddb7eaca3974daf);
+            
+        
+
+        circle_marker_17355fe04db24f549970ade3d3117a07.bindPopup(popup_66a354a81deb9ecf3da47440a6120c85)
+        ;
+
+        
+    
+    
+            var circle_marker_fffa791fd2aee97284ffea7c4ccf6bd8 = L.circleMarker(
+                [37.48735046, 127.10099792],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_9031ff868533a951ea9d0862816024e7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e9734294def9729fe5e0a042dd59b678 = $(`<div id="html_e9734294def9729fe5e0a042dd59b678" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2375<br>대여소명:  수서역 1번출구 앞<br>07-10 비율: 0.319<br>11-14 비율: 0.156<br>17-20 비율: 0.236<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_9031ff868533a951ea9d0862816024e7.setContent(html_e9734294def9729fe5e0a042dd59b678);
+            
+        
+
+        circle_marker_fffa791fd2aee97284ffea7c4ccf6bd8.bindPopup(popup_9031ff868533a951ea9d0862816024e7)
+        ;
+
+        
+    
+    
+            var circle_marker_680d08e6013f47f791dc0df39fb20a85 = L.circleMarker(
+                [37.48677826, 127.10051727],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_c9822c21c3ed16de23eb90473f8ee095 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3f97826d3a798de2008a642bea78fe4d = $(`<div id="html_3f97826d3a798de2008a642bea78fe4d" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2376<br>대여소명:  수서역 6번출구 앞<br>07-10 비율: 0.329<br>11-14 비율: 0.171<br>17-20 비율: 0.225<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_c9822c21c3ed16de23eb90473f8ee095.setContent(html_3f97826d3a798de2008a642bea78fe4d);
+            
+        
+
+        circle_marker_680d08e6013f47f791dc0df39fb20a85.bindPopup(popup_c9822c21c3ed16de23eb90473f8ee095)
+        ;
+
+        
+    
+    
+            var circle_marker_eb55b4ea141053a0d954199fbfaa44b7 = L.circleMarker(
+                [37.48735046, 127.10232544],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_0415639e2063fb713c1d47b617424594 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_88f0714bc72bd370369456bfb534d9d9 = $(`<div id="html_88f0714bc72bd370369456bfb534d9d9" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2377<br>대여소명:  수서역 5번출구<br>07-10 비율: 0.366<br>11-14 비율: 0.158<br>17-20 비율: 0.221<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_0415639e2063fb713c1d47b617424594.setContent(html_88f0714bc72bd370369456bfb534d9d9);
+            
+        
+
+        circle_marker_eb55b4ea141053a0d954199fbfaa44b7.bindPopup(popup_0415639e2063fb713c1d47b617424594)
+        ;
+
+        
+    
+    
+            var circle_marker_311f17c2affefc26d949d9557e206eb1 = L.circleMarker(
+                [37.51169586, 127.04934692],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_23f6e7a9fdeae9aee6e5088abfd49a32 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f8f4434b7eddb7e15a6dd8877a7993e5 = $(`<div id="html_f8f4434b7eddb7e15a6dd8877a7993e5" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2380<br>대여소명:  삼성동베이직하우스앞<br>07-10 비율: 0.205<br>11-14 비율: 0.152<br>17-20 비율: 0.218<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_23f6e7a9fdeae9aee6e5088abfd49a32.setContent(html_f8f4434b7eddb7e15a6dd8877a7993e5);
+            
+        
+
+        circle_marker_311f17c2affefc26d949d9557e206eb1.bindPopup(popup_23f6e7a9fdeae9aee6e5088abfd49a32)
+        ;
+
+        
+    
+    
+            var circle_marker_c11d2b0878230e76fd223e46fa96b915 = L.circleMarker(
+                [37.50636673, 127.03452301],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_f7c54cb18de7d519934599362be688b1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_038f43d8fb9aa3231dbf3f96479ad851 = $(`<div id="html_038f43d8fb9aa3231dbf3f96479ad851" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2381<br>대여소명:  언주역 6번출구앞<br>07-10 비율: 0.146<br>11-14 비율: 0.167<br>17-20 비율: 0.289<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_f7c54cb18de7d519934599362be688b1.setContent(html_038f43d8fb9aa3231dbf3f96479ad851);
+            
+        
+
+        circle_marker_c11d2b0878230e76fd223e46fa96b915.bindPopup(popup_f7c54cb18de7d519934599362be688b1)
+        ;
+
+        
+    
+    
+            var circle_marker_3b9e8e7be45de085b1938b51bb25b05c = L.circleMarker(
+                [37.50122833, 127.05036163],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_b9edff9b1ac74372ee4c73674d989c99 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b329c3485feb625ba4dd8af5f4b7089c = $(`<div id="html_b329c3485feb625ba4dd8af5f4b7089c" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2382<br>대여소명:  역삼동 sk뷰 501동앞<br>07-10 비율: 0.135<br>11-14 비율: 0.175<br>17-20 비율: 0.338<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_b9edff9b1ac74372ee4c73674d989c99.setContent(html_b329c3485feb625ba4dd8af5f4b7089c);
+            
+        
+
+        circle_marker_3b9e8e7be45de085b1938b51bb25b05c.bindPopup(popup_b9edff9b1ac74372ee4c73674d989c99)
+        ;
+
+        
+    
+    
+            var circle_marker_102ab4edd4baa3031f0b1b0a61192544 = L.circleMarker(
+                [37.46632767, 127.09488678],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_838c1a35bee467f94bc54bc105bd269f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_13668d333b8251ca79ac6769ef4d9e02 = $(`<div id="html_13668d333b8251ca79ac6769ef4d9e02" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2383<br>대여소명:  보금자리정원<br>07-10 비율: 0.222<br>11-14 비율: 0.153<br>17-20 비율: 0.237<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_838c1a35bee467f94bc54bc105bd269f.setContent(html_13668d333b8251ca79ac6769ef4d9e02);
+            
+        
+
+        circle_marker_102ab4edd4baa3031f0b1b0a61192544.bindPopup(popup_838c1a35bee467f94bc54bc105bd269f)
+        ;
+
+        
+    
+    
+            var circle_marker_1b4ad44fd0b658972b0613b640f51b3a = L.circleMarker(
+                [37.47602844, 127.10594177],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_0a24f1fc90dc0ae49bb549c6e563eef7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_04a59bf57399031a2569299de18aed1b = $(`<div id="html_04a59bf57399031a2569299de18aed1b" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2384<br>대여소명:  자곡사거리<br>07-10 비율: 0.093<br>11-14 비율: 0.127<br>17-20 비율: 0.422<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_0a24f1fc90dc0ae49bb549c6e563eef7.setContent(html_04a59bf57399031a2569299de18aed1b);
+            
+        
+
+        circle_marker_1b4ad44fd0b658972b0613b640f51b3a.bindPopup(popup_0a24f1fc90dc0ae49bb549c6e563eef7)
+        ;
+
+        
+    
+    
+            var circle_marker_6aec6aea82d7c7fc82a4907389673fa8 = L.circleMarker(
+                [37.51395035, 127.03015137],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_49ee0388f38cfa2035057db9fb2d4fc7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bdba200d981092e14ed371b08084bfc1 = $(`<div id="html_bdba200d981092e14ed371b08084bfc1" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2385<br>대여소명:  학동역<br>07-10 비율: 0.117<br>11-14 비율: 0.190<br>17-20 비율: 0.316<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_49ee0388f38cfa2035057db9fb2d4fc7.setContent(html_bdba200d981092e14ed371b08084bfc1);
+            
+        
+
+        circle_marker_6aec6aea82d7c7fc82a4907389673fa8.bindPopup(popup_49ee0388f38cfa2035057db9fb2d4fc7)
+        ;
+
+        
+    
+    
+            var circle_marker_3b3141f068569f63a530122546b9367e = L.circleMarker(
+                [37.50958633, 127.04090881],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_ec69e30ce93b8937ab33d350d934719f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2e2b30ca8690d228fc88d25d3bdfd5f2 = $(`<div id="html_2e2b30ca8690d228fc88d25d3bdfd5f2" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2386<br>대여소명:  크린랩 본사<br>07-10 비율: 0.157<br>11-14 비율: 0.181<br>17-20 비율: 0.284<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_ec69e30ce93b8937ab33d350d934719f.setContent(html_2e2b30ca8690d228fc88d25d3bdfd5f2);
+            
+        
+
+        circle_marker_3b3141f068569f63a530122546b9367e.bindPopup(popup_ec69e30ce93b8937ab33d350d934719f)
+        ;
+
+        
+    
+    
+            var circle_marker_9024fac9436d7e4b3dc337f57b30eff1 = L.circleMarker(
+                [37.47245407, 127.09607697],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_ae761d91e2b6b4c0fe2098c0de844de4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_558745392a1554c5475dde2a5ccaa9cd = $(`<div id="html_558745392a1554c5475dde2a5ccaa9cd" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2387<br>대여소명:  래미안강남힐즈 사거리<br>07-10 비율: 0.146<br>11-14 비율: 0.170<br>17-20 비율: 0.355<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_ae761d91e2b6b4c0fe2098c0de844de4.setContent(html_558745392a1554c5475dde2a5ccaa9cd);
+            
+        
+
+        circle_marker_9024fac9436d7e4b3dc337f57b30eff1.bindPopup(popup_ae761d91e2b6b4c0fe2098c0de844de4)
+        ;
+
+        
+    
+    
+            var circle_marker_b0b8069ba6df807b748a8e18f29e72bd = L.circleMarker(
+                [37.51678467, 127.05161285],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_891b87abfc5126c7c9df1833f2ed0dc7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_389ea52fc63aa01c3ee9501a5630a1a8 = $(`<div id="html_389ea52fc63aa01c3ee9501a5630a1a8" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2388<br>대여소명:  강남구 도시관리공단<br>07-10 비율: 0.196<br>11-14 비율: 0.175<br>17-20 비율: 0.312<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_891b87abfc5126c7c9df1833f2ed0dc7.setContent(html_389ea52fc63aa01c3ee9501a5630a1a8);
+            
+        
+
+        circle_marker_b0b8069ba6df807b748a8e18f29e72bd.bindPopup(popup_891b87abfc5126c7c9df1833f2ed0dc7)
+        ;
+
+        
+    
+    
+            var circle_marker_6f22d94884f255748045e755c898fff5 = L.circleMarker(
+                [37.48616028, 127.06723785],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_d629abdee263864af5b512f7a1eef8ad = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cdf009f6c8cee32b31acf31542754fb1 = $(`<div id="html_cdf009f6c8cee32b31acf31542754fb1" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2389<br>대여소명:  경기여자고등학교 후문 (삼성로3길 입구)<br>07-10 비율: 0.139<br>11-14 비율: 0.156<br>17-20 비율: 0.316<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_d629abdee263864af5b512f7a1eef8ad.setContent(html_cdf009f6c8cee32b31acf31542754fb1);
+            
+        
+
+        circle_marker_6f22d94884f255748045e755c898fff5.bindPopup(popup_d629abdee263864af5b512f7a1eef8ad)
+        ;
+
+        
+    
+    
+            var circle_marker_5b104be139e4731da6dce150548cd8b6 = L.circleMarker(
+                [37.48088074, 127.06304169],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_6efb899fda2e3fae26e3c974d85c31a0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_432ff07b01630523c50d14dfd373a3d9 = $(`<div id="html_432ff07b01630523c50d14dfd373a3d9" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2390<br>대여소명:  구룡마을 입구 (래미안블레스티지 아파트)<br>07-10 비율: 0.130<br>11-14 비율: 0.111<br>17-20 비율: 0.373<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_6efb899fda2e3fae26e3c974d85c31a0.setContent(html_432ff07b01630523c50d14dfd373a3d9);
+            
+        
+
+        circle_marker_5b104be139e4731da6dce150548cd8b6.bindPopup(popup_6efb899fda2e3fae26e3c974d85c31a0)
+        ;
+
+        
+    
+    
+            var circle_marker_4faad505d92a7c13f1691533adb39102 = L.circleMarker(
+                [37.47598648, 127.05962372],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_79cfb9a87f8fe2835736022d5801aeb1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_081c1ffc512bcf0eb7acbe257160970e = $(`<div id="html_081c1ffc512bcf0eb7acbe257160970e" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2391<br>대여소명:  구룡터널 입구(개포1단지아파트)<br>07-10 비율: 0.175<br>11-14 비율: 0.200<br>17-20 비율: 0.258<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_79cfb9a87f8fe2835736022d5801aeb1.setContent(html_081c1ffc512bcf0eb7acbe257160970e);
+            
+        
+
+        circle_marker_4faad505d92a7c13f1691533adb39102.bindPopup(popup_79cfb9a87f8fe2835736022d5801aeb1)
+        ;
+
+        
+    
+    
+            var circle_marker_ab3a662edce6ada210e44250c67ba435 = L.circleMarker(
+                [37.47447205, 127.05545044],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_140904b2c8b135ba00d90dcc08a8f7b6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4252dc606ab82b20eef4e20a02415319 = $(`<div id="html_4252dc606ab82b20eef4e20a02415319" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2392<br>대여소명:  구룡산 입구 (구룡산 서울둘레길 입구)<br>07-10 비율: 0.214<br>11-14 비율: 0.142<br>17-20 비율: 0.275<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_140904b2c8b135ba00d90dcc08a8f7b6.setContent(html_4252dc606ab82b20eef4e20a02415319);
+            
+        
+
+        circle_marker_ab3a662edce6ada210e44250c67ba435.bindPopup(popup_140904b2c8b135ba00d90dcc08a8f7b6)
+        ;
+
+        
+    
+    
+            var circle_marker_bc946c5556588be1e195a5d4e3b2da3c = L.circleMarker(
+                [37.48025131, 127.05419159],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2c6b750682e0c08740d7a114c9619648 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_165cce96bb187256e646dbc235905700 = $(`<div id="html_165cce96bb187256e646dbc235905700" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2394<br>대여소명:  개포래미안포레스트아파트 107동 앞<br>07-10 비율: 0.083<br>11-14 비율: 0.122<br>17-20 비율: 0.425<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_2c6b750682e0c08740d7a114c9619648.setContent(html_165cce96bb187256e646dbc235905700);
+            
+        
+
+        circle_marker_bc946c5556588be1e195a5d4e3b2da3c.bindPopup(popup_2c6b750682e0c08740d7a114c9619648)
+        ;
+
+        
+    
+    
+            var circle_marker_44b906a2ea7f5a8557a6f6cdb9a29a69 = L.circleMarker(
+                [37.48574066, 127.05104828],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_42138b43bde24ad6ac065a164096afc3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_defd3151579bb02bf37324ab6fba9a2c = $(`<div id="html_defd3151579bb02bf37324ab6fba9a2c" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2396<br>대여소명:  영동3교 북단(우성캐릭터 앞 보도)<br>07-10 비율: 0.123<br>11-14 비율: 0.195<br>17-20 비율: 0.333<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_42138b43bde24ad6ac065a164096afc3.setContent(html_defd3151579bb02bf37324ab6fba9a2c);
+            
+        
+
+        circle_marker_44b906a2ea7f5a8557a6f6cdb9a29a69.bindPopup(popup_42138b43bde24ad6ac065a164096afc3)
+        ;
+
+        
+    
+    
+            var circle_marker_9558fbfc70a31887dc42afedbd6c06c6 = L.circleMarker(
+                [37.50811005, 127.0394516],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_d88f2501770448406be2a26aed57a473 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_426e9425560d43e9d897ff78d4910144 = $(`<div id="html_426e9425560d43e9d897ff78d4910144" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2398<br>대여소명:  더라움<br>07-10 비율: 0.255<br>11-14 비율: 0.156<br>17-20 비율: 0.208<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_d88f2501770448406be2a26aed57a473.setContent(html_426e9425560d43e9d897ff78d4910144);
+            
+        
+
+        circle_marker_9558fbfc70a31887dc42afedbd6c06c6.bindPopup(popup_d88f2501770448406be2a26aed57a473)
+        ;
+
+        
+    
+    
+            var circle_marker_b58a6210e54a51ffff5ba5cac375dc4c = L.circleMarker(
+                [37.48656082, 127.08267212],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_6675a285bda0a1aff6356f3649498bab = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b7288e864635a61a4042cbef6f68643b = $(`<div id="html_b7288e864635a61a4042cbef6f68643b" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2401<br>대여소명:  밀알학교 입구 (삼성서울병원 입구)<br>07-10 비율: 0.205<br>11-14 비율: 0.182<br>17-20 비율: 0.254<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_6675a285bda0a1aff6356f3649498bab.setContent(html_b7288e864635a61a4042cbef6f68643b);
+            
+        
+
+        circle_marker_b58a6210e54a51ffff5ba5cac375dc4c.bindPopup(popup_6675a285bda0a1aff6356f3649498bab)
+        ;
+
+        
+    
+    
+            var circle_marker_3f1c8cefbc4035346a4f9879d46ca765 = L.circleMarker(
+                [37.48871994, 127.07453918],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_204da012849ab800506113620da110d1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_80466ecc447f53aeb214c38086c58ab6 = $(`<div id="html_80466ecc447f53aeb214c38086c58ab6" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2403<br>대여소명:  공무원연금매점 교차로 (개포주공9단지 입구)<br>07-10 비율: 0.084<br>11-14 비율: 0.146<br>17-20 비율: 0.375<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_204da012849ab800506113620da110d1.setContent(html_80466ecc447f53aeb214c38086c58ab6);
+            
+        
+
+        circle_marker_3f1c8cefbc4035346a4f9879d46ca765.bindPopup(popup_204da012849ab800506113620da110d1)
+        ;
+
+        
+    
+    
+            var circle_marker_42c5142ebfa305360768fc87360b4105 = L.circleMarker(
+                [37.49180984, 127.07315826],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_e63187effa20beadc448f134f4d74e1b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3be41c9b108559d18fa01bb1c9407ef9 = $(`<div id="html_3be41c9b108559d18fa01bb1c9407ef9" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2404<br>대여소명:  대모산입구역 4번 출구 앞<br>07-10 비율: 0.145<br>11-14 비율: 0.143<br>17-20 비율: 0.328<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_e63187effa20beadc448f134f4d74e1b.setContent(html_3be41c9b108559d18fa01bb1c9407ef9);
+            
+        
+
+        circle_marker_42c5142ebfa305360768fc87360b4105.bindPopup(popup_e63187effa20beadc448f134f4d74e1b)
+        ;
+
+        
+    
+    
+            var circle_marker_11576dd7aa60d40caaf539de651e9033 = L.circleMarker(
+                [37.51871109, 127.05084991],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_4221f879941880ade9307dd6bd66041b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7b32e7e2c85785bfeff6d2155afb4dd5 = $(`<div id="html_7b32e7e2c85785bfeff6d2155afb4dd5" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2405<br>대여소명:  청담공원앞 교차로<br>07-10 비율: 0.061<br>11-14 비율: 0.109<br>17-20 비율: 0.496<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_4221f879941880ade9307dd6bd66041b.setContent(html_7b32e7e2c85785bfeff6d2155afb4dd5);
+            
+        
+
+        circle_marker_11576dd7aa60d40caaf539de651e9033.bindPopup(popup_4221f879941880ade9307dd6bd66041b)
+        ;
+
+        
+    
+    
+            var circle_marker_6ec3639f652bf7fc157677141b6f08de = L.circleMarker(
+                [37.5175705, 127.02364349],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_6200a104f6dd4fead414a2d934613374 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7b04222f0632e84fea58efeb6127f83c = $(`<div id="html_7b04222f0632e84fea58efeb6127f83c" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2406<br>대여소명:  논현동 광명빌딩 앞<br>07-10 비율: 0.169<br>11-14 비율: 0.262<br>17-20 비율: 0.283<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_6200a104f6dd4fead414a2d934613374.setContent(html_7b04222f0632e84fea58efeb6127f83c);
+            
+        
+
+        circle_marker_6ec3639f652bf7fc157677141b6f08de.bindPopup(popup_6200a104f6dd4fead414a2d934613374)
+        ;
+
+        
+    
+    
+            var circle_marker_c57688f43e0ba23ee6f9126ebd3ea9b7 = L.circleMarker(
+                [37.49847031, 127.03011322],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_56d9ebecb188fbf467b350e4b9b40472 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f591343bf3e5b09c9c2b24fbb3d0404b = $(`<div id="html_f591343bf3e5b09c9c2b24fbb3d0404b" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2407<br>대여소명:  역삼서초삼성 세무서 앞 (역삼빌딩 앞<br>07-10 비율: 0.184<br>11-14 비율: 0.223<br>17-20 비율: 0.300<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_56d9ebecb188fbf467b350e4b9b40472.setContent(html_f591343bf3e5b09c9c2b24fbb3d0404b);
+            
+        
+
+        circle_marker_c57688f43e0ba23ee6f9126ebd3ea9b7.bindPopup(popup_56d9ebecb188fbf467b350e4b9b40472)
+        ;
+
+        
+    
+    
+            var circle_marker_6d500779ac63cd55e7960bbd5e7e9a00 = L.circleMarker(
+                [37.4773407, 127.11327362],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_c260ef960fb747cec3415880eff19d82 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ad96bfb267340e0c9b444dffd0a35bcf = $(`<div id="html_ad96bfb267340e0c9b444dffd0a35bcf" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2408<br>대여소명:  강남한양수자인아파트<br>07-10 비율: 0.101<br>11-14 비율: 0.141<br>17-20 비율: 0.392<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_c260ef960fb747cec3415880eff19d82.setContent(html_ad96bfb267340e0c9b444dffd0a35bcf);
+            
+        
+
+        circle_marker_6d500779ac63cd55e7960bbd5e7e9a00.bindPopup(popup_c260ef960fb747cec3415880eff19d82)
+        ;
+
+        
+    
+    
+            var circle_marker_5949210e458b2ac4bcc673c03507a412 = L.circleMarker(
+                [37.49206161, 127.03074646],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_7ab00e8b261671c977857621b13b82be = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e0f47c5275bcc9780edba2cba3522e65 = $(`<div id="html_e0f47c5275bcc9780edba2cba3522e65" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2409<br>대여소명:  역삼동 디오슈페리움 (우성아파트 사거리)<br>07-10 비율: 0.183<br>11-14 비율: 0.180<br>17-20 비율: 0.320<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_7ab00e8b261671c977857621b13b82be.setContent(html_e0f47c5275bcc9780edba2cba3522e65);
+            
+        
+
+        circle_marker_5949210e458b2ac4bcc673c03507a412.bindPopup(popup_7ab00e8b261671c977857621b13b82be)
+        ;
+
+        
+    
+    
+            var circle_marker_38fcecb4eb84de648521be393ac03ebf = L.circleMarker(
+                [37.49959946, 127.03375244],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2ee91866ea69fc48cbc24ffe6a39d16b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_18c1bb1072ae0877d34ba432d0ea41a3 = $(`<div id="html_18c1bb1072ae0877d34ba432d0ea41a3" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2410<br>대여소명:  포스코피앤에스타워 (역삼역 3번출구 부근)<br>07-10 비율: 0.290<br>11-14 비율: 0.229<br>17-20 비율: 0.221<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_2ee91866ea69fc48cbc24ffe6a39d16b.setContent(html_18c1bb1072ae0877d34ba432d0ea41a3);
+            
+        
+
+        circle_marker_38fcecb4eb84de648521be393ac03ebf.bindPopup(popup_2ee91866ea69fc48cbc24ffe6a39d16b)
+        ;
+
+        
+    
+    
+            var circle_marker_5bc0b981d7fa00b873a48fc7716ccec0 = L.circleMarker(
+                [37.47296906, 127.11222839],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_fe92e0a8ae584abfea3a76486b9025c4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6c344726671d038f2e429773e8fa8fdf = $(`<div id="html_6c344726671d038f2e429773e8fa8fdf" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2411<br>대여소명:  세곡동 성당<br>07-10 비율: 0.139<br>11-14 비율: 0.163<br>17-20 비율: 0.358<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_fe92e0a8ae584abfea3a76486b9025c4.setContent(html_6c344726671d038f2e429773e8fa8fdf);
+            
+        
+
+        circle_marker_5bc0b981d7fa00b873a48fc7716ccec0.bindPopup(popup_fe92e0a8ae584abfea3a76486b9025c4)
+        ;
+
+        
+    
+    
+            var circle_marker_bbc599c2c76eeb824e6213367cbda2fc = L.circleMarker(
+                [37.49095917, 127.05498505],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_9cbc476e22bd947aa907229adf6eb957 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_227c12154fde221f69f19a6b170f3655 = $(`<div id="html_227c12154fde221f69f19a6b170f3655" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2413<br>대여소명: 도곡역 1번 출구<br>07-10 비율: 0.213<br>11-14 비율: 0.170<br>17-20 비율: 0.325<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_9cbc476e22bd947aa907229adf6eb957.setContent(html_227c12154fde221f69f19a6b170f3655);
+            
+        
+
+        circle_marker_bbc599c2c76eeb824e6213367cbda2fc.bindPopup(popup_9cbc476e22bd947aa907229adf6eb957)
+        ;
+
+        
+    
+    
+            var circle_marker_c19d81a94bdb0aabed09edaefb4c913d = L.circleMarker(
+                [37.48897171, 127.05182648],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_5948cca6c7787048f0d1880d40345e26 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ea3bb36c648b4978244d885e2ebc4453 = $(`<div id="html_ea3bb36c648b4978244d885e2ebc4453" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2414<br>대여소명:  도곡역 아카데미스위트 앞<br>07-10 비율: 0.302<br>11-14 비율: 0.221<br>17-20 비율: 0.221<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_5948cca6c7787048f0d1880d40345e26.setContent(html_ea3bb36c648b4978244d885e2ebc4453);
+            
+        
+
+        circle_marker_c19d81a94bdb0aabed09edaefb4c913d.bindPopup(popup_5948cca6c7787048f0d1880d40345e26)
+        ;
+
+        
+    
+    
+            var circle_marker_a3174e720c297983b329c0ffa78c89ee = L.circleMarker(
+                [37.49667358, 127.05342865],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_ded1eed3866b0572c5cdf26bc45b2186 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a54778260604dfa0ebcc1b0b54d1d99e = $(`<div id="html_a54778260604dfa0ebcc1b0b54d1d99e" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2415<br>대여소명: 한티역 롯데백화점 앞<br>07-10 비율: 0.117<br>11-14 비율: 0.228<br>17-20 비율: 0.335<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_ded1eed3866b0572c5cdf26bc45b2186.setContent(html_a54778260604dfa0ebcc1b0b54d1d99e);
+            
+        
+
+        circle_marker_a3174e720c297983b329c0ffa78c89ee.bindPopup(popup_ded1eed3866b0572c5cdf26bc45b2186)
+        ;
+
+        
+    
+    
+            var circle_marker_31bf7263de605d5f5f1dc5d36c836977 = L.circleMarker(
+                [37.4958992, 127.05219269],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_dd3c93769d77c2f21f6ea1d97447ec1c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d57b1a2d2f7db376f49285c5d47f31c6 = $(`<div id="html_d57b1a2d2f7db376f49285c5d47f31c6" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2416<br>대여소명: 한티역 6번 출구<br>07-10 비율: 0.146<br>11-14 비율: 0.186<br>17-20 비율: 0.363<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_dd3c93769d77c2f21f6ea1d97447ec1c.setContent(html_d57b1a2d2f7db376f49285c5d47f31c6);
+            
+        
+
+        circle_marker_31bf7263de605d5f5f1dc5d36c836977.bindPopup(popup_dd3c93769d77c2f21f6ea1d97447ec1c)
+        ;
+
+        
+    
+    
+            var circle_marker_acbf5bf5620c731afdfbac5463c2914b = L.circleMarker(
+                [37.50799942, 127.04524994],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_e98ea3d859c36c4848495c033bc82331 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4b727dac81b45d0f572ef065072aee78 = $(`<div id="html_4b727dac81b45d0f572ef065072aee78" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2417<br>대여소명: 선정릉 디캠프(D.CAMP)앞<br>07-10 비율: 0.177<br>11-14 비율: 0.154<br>17-20 비율: 0.290<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_e98ea3d859c36c4848495c033bc82331.setContent(html_4b727dac81b45d0f572ef065072aee78);
+            
+        
+
+        circle_marker_acbf5bf5620c731afdfbac5463c2914b.bindPopup(popup_e98ea3d859c36c4848495c033bc82331)
+        ;
+
+        
+    
+    
+            var circle_marker_405380b29bb7cc32e3612c2f8b22e97d = L.circleMarker(
+                [37.51393509, 127.05982208],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_a618deecbc21d6b9937de984979bad29 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0f8a1528c87109a5976fd061ea0df47b = $(`<div id="html_0f8a1528c87109a5976fd061ea0df47b" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2418<br>대여소명: 봉은사역 7번 출구<br>07-10 비율: 0.139<br>11-14 비율: 0.196<br>17-20 비율: 0.407<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_a618deecbc21d6b9937de984979bad29.setContent(html_0f8a1528c87109a5976fd061ea0df47b);
+            
+        
+
+        circle_marker_405380b29bb7cc32e3612c2f8b22e97d.bindPopup(popup_a618deecbc21d6b9937de984979bad29)
+        ;
+
+        
+    
+    
+            var circle_marker_17a59e59f79b16c8d4b6b9ef9e6445e0 = L.circleMarker(
+                [37.51430893, 127.05970001],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2bb83a85bb6ac61090e3c04cf48d2f2d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8cf0ce9343b1842966648a4c746e0994 = $(`<div id="html_8cf0ce9343b1842966648a4c746e0994" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2419<br>대여소명: 봉은사역 1,2번 출구<br>07-10 비율: 0.164<br>11-14 비율: 0.179<br>17-20 비율: 0.306<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_2bb83a85bb6ac61090e3c04cf48d2f2d.setContent(html_8cf0ce9343b1842966648a4c746e0994);
+            
+        
+
+        circle_marker_17a59e59f79b16c8d4b6b9ef9e6445e0.bindPopup(popup_2bb83a85bb6ac61090e3c04cf48d2f2d)
+        ;
+
+        
+    
+    
+            var circle_marker_384585c7fce15e7a97b168a1c2a5deb0 = L.circleMarker(
+                [37.49689484, 127.07013702],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_d3ea47b3efe13570486de2126875a6fc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cd585c401dfa133ea0e9db66eb55fcea = $(`<div id="html_cd585c401dfa133ea0e9db66eb55fcea" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2420<br>대여소명: 학여울역 사거리(LG베스트샵 앞)<br>07-10 비율: 0.107<br>11-14 비율: 0.142<br>17-20 비율: 0.445<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_d3ea47b3efe13570486de2126875a6fc.setContent(html_cd585c401dfa133ea0e9db66eb55fcea);
+            
+        
+
+        circle_marker_384585c7fce15e7a97b168a1c2a5deb0.bindPopup(popup_d3ea47b3efe13570486de2126875a6fc)
+        ;
+
+        
+    
+    
+            var circle_marker_f8a8b6daef2390d9cd847f863968bb69 = L.circleMarker(
+                [37.504673, 127.02579498],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_1d9347e099c0c638a445e7e1de042414 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e0d2d2e65ddbdca382a9cd611e192414 = $(`<div id="html_e0d2d2e65ddbdca382a9cd611e192414" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2421<br>대여소명:  신논현역 4번출구<br>07-10 비율: 0.090<br>11-14 비율: 0.194<br>17-20 비율: 0.447<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_1d9347e099c0c638a445e7e1de042414.setContent(html_e0d2d2e65ddbdca382a9cd611e192414);
+            
+        
+
+        circle_marker_f8a8b6daef2390d9cd847f863968bb69.bindPopup(popup_1d9347e099c0c638a445e7e1de042414)
+        ;
+
+        
+    
+    
+            var circle_marker_45e56ebbae3947c29424ab11d59a57b7 = L.circleMarker(
+                [37.48416901, 127.09484863],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_a4c4b25f600f3eae02e8290f3e3ff2e9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_50627f34f3363f897bae5ecc52f7a00b = $(`<div id="html_50627f34f3363f897bae5ecc52f7a00b" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2422<br>대여소명: 수서동 성당 맞은편<br>07-10 비율: 0.190<br>11-14 비율: 0.156<br>17-20 비율: 0.326<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_a4c4b25f600f3eae02e8290f3e3ff2e9.setContent(html_50627f34f3363f897bae5ecc52f7a00b);
+            
+        
+
+        circle_marker_45e56ebbae3947c29424ab11d59a57b7.bindPopup(popup_a4c4b25f600f3eae02e8290f3e3ff2e9)
+        ;
+
+        
+    
+    
+            var circle_marker_045e721120f4098e5709e4c05c3276f5 = L.circleMarker(
+                [37.4908371, 127.08065033],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_4ce64cb69026f4f416da6a2e4527ba90 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fda3be3f4d750978b7777e1be1a9c421 = $(`<div id="html_fda3be3f4d750978b7777e1be1a9c421" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2423<br>대여소명: 영희초교 사거리(래미안개포루체하임)<br>07-10 비율: 0.110<br>11-14 비율: 0.183<br>17-20 비율: 0.317<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_4ce64cb69026f4f416da6a2e4527ba90.setContent(html_fda3be3f4d750978b7777e1be1a9c421);
+            
+        
+
+        circle_marker_045e721120f4098e5709e4c05c3276f5.bindPopup(popup_4ce64cb69026f4f416da6a2e4527ba90)
+        ;
+
+        
+    
+    
+            var circle_marker_549f7c5be939fb035f9e715a2eebf809 = L.circleMarker(
+                [37.46461868, 127.10684967],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_0e91bf1b316d609c5d4b5aadfe1ec4a3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4fcec1f59c25002f4eb0e55aa5aab72f = $(`<div id="html_4fcec1f59c25002f4eb0e55aa5aab72f" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2425<br>대여소명: 세곡동 사거리(대왕초등학교 정류장)<br>07-10 비율: 0.191<br>11-14 비율: 0.170<br>17-20 비율: 0.259<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_0e91bf1b316d609c5d4b5aadfe1ec4a3.setContent(html_4fcec1f59c25002f4eb0e55aa5aab72f);
+            
+        
+
+        circle_marker_549f7c5be939fb035f9e715a2eebf809.bindPopup(popup_0e91bf1b316d609c5d4b5aadfe1ec4a3)
+        ;
+
+        
+    
+    
+            var circle_marker_653e43bdaa3cd3336b23ea79a897cff2 = L.circleMarker(
+                [37.46829605, 127.10469818],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_815901b4cfc011744f106d82ec5db9c9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bd2f28a9024e49434bd19acfe7501bc9 = $(`<div id="html_bd2f28a9024e49434bd19acfe7501bc9" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2426<br>대여소명: 강남한신휴플러스 6단지<br>07-10 비율: 0.085<br>11-14 비율: 0.127<br>17-20 비율: 0.362<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_815901b4cfc011744f106d82ec5db9c9.setContent(html_bd2f28a9024e49434bd19acfe7501bc9);
+            
+        
+
+        circle_marker_653e43bdaa3cd3336b23ea79a897cff2.bindPopup(popup_815901b4cfc011744f106d82ec5db9c9)
+        ;
+
+        
+    
+    
+            var circle_marker_763724cbb7991574353eb39c0b09cba1 = L.circleMarker(
+                [37.48485184, 127.0583725],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_362d3e24ddd8cf7d1f29fd1c6a24b892 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7d57eab29a9ad94f46a6e70a7fd20aeb = $(`<div id="html_7d57eab29a9ad94f46a6e70a7fd20aeb" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2427<br>대여소명: 개포고등학교 정문앞<br>07-10 비율: 0.170<br>11-14 비율: 0.162<br>17-20 비율: 0.289<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_362d3e24ddd8cf7d1f29fd1c6a24b892.setContent(html_7d57eab29a9ad94f46a6e70a7fd20aeb);
+            
+        
+
+        circle_marker_763724cbb7991574353eb39c0b09cba1.bindPopup(popup_362d3e24ddd8cf7d1f29fd1c6a24b892)
+        ;
+
+        
+    
+    
+            var circle_marker_c136cb43a3c79768abd6292e70133e63 = L.circleMarker(
+                [37.50024414, 127.03605652],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_825d520b9d6171bed6941024b5889ffb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e8b1520796f2ee9c59e1bef869c9c5e7 = $(`<div id="html_e8b1520796f2ee9c59e1bef869c9c5e7" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2430<br>대여소명: 강남파이낸스센터앞(역삼역2번출구)<br>07-10 비율: 0.198<br>11-14 비율: 0.253<br>17-20 비율: 0.264<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_825d520b9d6171bed6941024b5889ffb.setContent(html_e8b1520796f2ee9c59e1bef869c9c5e7);
+            
+        
+
+        circle_marker_c136cb43a3c79768abd6292e70133e63.bindPopup(popup_825d520b9d6171bed6941024b5889ffb)
+        ;
+
+        
+    
+    
+            var circle_marker_779c1d4e6a0ccb0639a6539e5b620e13 = L.circleMarker(
+                [37.49411774, 127.06290436],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_7772fe4f4098b2581a40dec63de40632 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_26f33d21f4ed8b07f0ffe170e77c34ab = $(`<div id="html_26f33d21f4ed8b07f0ffe170e77c34ab" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2431<br>대여소명: 대치역 7번출구<br>07-10 비율: 0.166<br>11-14 비율: 0.207<br>17-20 비율: 0.288<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_7772fe4f4098b2581a40dec63de40632.setContent(html_26f33d21f4ed8b07f0ffe170e77c34ab);
+            
+        
+
+        circle_marker_779c1d4e6a0ccb0639a6539e5b620e13.bindPopup(popup_7772fe4f4098b2581a40dec63de40632)
+        ;
+
+        
+    
+    
+            var circle_marker_6ef4503f31d765edb2bbc457b341a569 = L.circleMarker(
+                [37.49229431, 127.09433746],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_c7bed1e0401519896458728b4a15e760 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8ca650e2ab0b6abc6594a4ab71d232de = $(`<div id="html_8ca650e2ab0b6abc6594a4ab71d232de" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 3602<br>대여소명:  한국지역난방공사강남지사<br>07-10 비율: 0.484<br>11-14 비율: 0.121<br>17-20 비율: 0.195<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_c7bed1e0401519896458728b4a15e760.setContent(html_8ca650e2ab0b6abc6594a4ab71d232de);
+            
+        
+
+        circle_marker_6ef4503f31d765edb2bbc457b341a569.bindPopup(popup_c7bed1e0401519896458728b4a15e760)
+        ;
+
+        
+    
+    
+            var circle_marker_3bd3743d9c1c8efc806b6d8351c505c7 = L.circleMarker(
+                [37.51296234, 127.05386353],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_ebf68dbae45f940ba5646c042a0c2fec = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fb9847a5dc01fda31a92893ea3d2a5fd = $(`<div id="html_fb9847a5dc01fda31a92893ea3d2a5fd" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3604<br>대여소명:  삼성중앙역 5번출구<br>07-10 비율: 0.265<br>11-14 비율: 0.156<br>17-20 비율: 0.334<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_ebf68dbae45f940ba5646c042a0c2fec.setContent(html_fb9847a5dc01fda31a92893ea3d2a5fd);
+            
+        
+
+        circle_marker_3bd3743d9c1c8efc806b6d8351c505c7.bindPopup(popup_ebf68dbae45f940ba5646c042a0c2fec)
+        ;
+
+        
+    
+    
+            var circle_marker_f953ce1fbf22fbace0eaac9cf7fc568a = L.circleMarker(
+                [37.52422714, 127.02285004],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_d240fa53247869be6278439c83306ee1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_eb75612f43137a61060b2adfca83c7f0 = $(`<div id="html_eb75612f43137a61060b2adfca83c7f0" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3606<br>대여소명:  신사동주민센터 옆<br>07-10 비율: 0.204<br>11-14 비율: 0.196<br>17-20 비율: 0.292<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_d240fa53247869be6278439c83306ee1.setContent(html_eb75612f43137a61060b2adfca83c7f0);
+            
+        
+
+        circle_marker_f953ce1fbf22fbace0eaac9cf7fc568a.bindPopup(popup_d240fa53247869be6278439c83306ee1)
+        ;
+
+        
+    
+    
+            var circle_marker_84b441ea405610ef0cc2f7fb35752086 = L.circleMarker(
+                [37.48536682, 127.03849792],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_215fabf14932616a98db893f603ca3fc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0388bdc920d1d590d53fd8107acc26c4 = $(`<div id="html_0388bdc920d1d590d53fd8107acc26c4" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3609<br>대여소명:  언주초등학교 입구<br>07-10 비율: 0.202<br>11-14 비율: 0.185<br>17-20 비율: 0.272<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_215fabf14932616a98db893f603ca3fc.setContent(html_0388bdc920d1d590d53fd8107acc26c4);
+            
+        
+
+        circle_marker_84b441ea405610ef0cc2f7fb35752086.bindPopup(popup_215fabf14932616a98db893f603ca3fc)
+        ;
+
+        
+    
+    
+            var circle_marker_6dcf65f1e073cc964f5726ee2ac2d590 = L.circleMarker(
+                [37.46534729, 127.1088028],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_427d94e4ae382ddd4dc36f45b629553a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3765cb992fdc25b0e755814a4b956b8d = $(`<div id="html_3765cb992fdc25b0e755814a4b956b8d" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3610<br>대여소명:  윗반마을 입구<br>07-10 비율: 0.171<br>11-14 비율: 0.201<br>17-20 비율: 0.264<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_427d94e4ae382ddd4dc36f45b629553a.setContent(html_3765cb992fdc25b0e755814a4b956b8d);
+            
+        
+
+        circle_marker_6dcf65f1e073cc964f5726ee2ac2d590.bindPopup(popup_427d94e4ae382ddd4dc36f45b629553a)
+        ;
+
+        
+    
+    
+            var circle_marker_2730ac1b8b8d8ef43159991587584867 = L.circleMarker(
+                [37.47123337, 127.10721588],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_c95b8fb4c363fb14c5290e25e75139f0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_914af19a96ec6200566cc0b9de78b9fa = $(`<div id="html_914af19a96ec6200566cc0b9de78b9fa" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3611<br>대여소명:  방죽마을 입구<br>07-10 비율: 0.277<br>11-14 비율: 0.157<br>17-20 비율: 0.262<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_c95b8fb4c363fb14c5290e25e75139f0.setContent(html_914af19a96ec6200566cc0b9de78b9fa);
+            
+        
+
+        circle_marker_2730ac1b8b8d8ef43159991587584867.bindPopup(popup_c95b8fb4c363fb14c5290e25e75139f0)
+        ;
+
+        
+    
+    
+            var circle_marker_3a67273f2434ebd995e8620cb32b5bde = L.circleMarker(
+                [37.46726227, 127.09801483],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_054f974e8726a2d09e283e4d0b727aa2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2769ad7f5dc63a3210f086673f22d00e = $(`<div id="html_2769ad7f5dc63a3210f086673f22d00e" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3612<br>대여소명:  은곡마을<br>07-10 비율: 0.207<br>11-14 비율: 0.183<br>17-20 비율: 0.317<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_054f974e8726a2d09e283e4d0b727aa2.setContent(html_2769ad7f5dc63a3210f086673f22d00e);
+            
+        
+
+        circle_marker_3a67273f2434ebd995e8620cb32b5bde.bindPopup(popup_054f974e8726a2d09e283e4d0b727aa2)
+        ;
+
+        
+    
+    
+            var circle_marker_0207f2b3dc44ebd040a0c9b8d15dcd2d = L.circleMarker(
+                [37.49840164, 127.06093597],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_f44b271d6069ba8949d71a8ed9d82f39 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a441c38b9ac45981b8a93ce84d5753a1 = $(`<div id="html_a441c38b9ac45981b8a93ce84d5753a1" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3614<br>대여소명:  은마아파트 입구 사거리<br>07-10 비율: 0.188<br>11-14 비율: 0.224<br>17-20 비율: 0.289<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_f44b271d6069ba8949d71a8ed9d82f39.setContent(html_a441c38b9ac45981b8a93ce84d5753a1);
+            
+        
+
+        circle_marker_0207f2b3dc44ebd040a0c9b8d15dcd2d.bindPopup(popup_f44b271d6069ba8949d71a8ed9d82f39)
+        ;
+
+        
+    
+    
+            var circle_marker_8b984c7508dfdb351019b1a20fd4ea59 = L.circleMarker(
+                [37.51446152, 127.0326004],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_3e792d0617acd9c612f85c891599104c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c9b9b00639d6d50bc7607948715872ca = $(`<div id="html_c9b9b00639d6d50bc7607948715872ca" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3615<br>대여소명:  서울 논현동우체국 앞<br>07-10 비율: 0.098<br>11-14 비율: 0.210<br>17-20 비율: 0.351<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_3e792d0617acd9c612f85c891599104c.setContent(html_c9b9b00639d6d50bc7607948715872ca);
+            
+        
+
+        circle_marker_8b984c7508dfdb351019b1a20fd4ea59.bindPopup(popup_3e792d0617acd9c612f85c891599104c)
+        ;
+
+        
+    
+    
+            var circle_marker_6b8c6779fe912cebdc235c8ead89ca92 = L.circleMarker(
+                [37.49526215, 127.04950714],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_ab75a11ef83e62bd41b87d08933cd520 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_385bb4edd0a0a33e3bdd951c2f5c2b8d = $(`<div id="html_385bb4edd0a0a33e3bdd951c2f5c2b8d" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3616<br>대여소명:  역삼중학교 앞(체육관 방향)<br>07-10 비율: 0.095<br>11-14 비율: 0.202<br>17-20 비율: 0.321<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_ab75a11ef83e62bd41b87d08933cd520.setContent(html_385bb4edd0a0a33e3bdd951c2f5c2b8d);
+            
+        
+
+        circle_marker_6b8c6779fe912cebdc235c8ead89ca92.bindPopup(popup_ab75a11ef83e62bd41b87d08933cd520)
+        ;
+
+        
+    
+    
+            var circle_marker_f6f0160bb0218391c3fa89a24b41fe13 = L.circleMarker(
+                [37.47364044, 127.10702515],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_35dcbc03023d113b1a43bee99988f09e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bc1e7a3c3e2d4614766780b0cfdea27d = $(`<div id="html_bc1e7a3c3e2d4614766780b0cfdea27d" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3618<br>대여소명:  서울율현초교 삼거리<br>07-10 비율: 0.120<br>11-14 비율: 0.175<br>17-20 비율: 0.366<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_35dcbc03023d113b1a43bee99988f09e.setContent(html_bc1e7a3c3e2d4614766780b0cfdea27d);
+            
+        
+
+        circle_marker_f6f0160bb0218391c3fa89a24b41fe13.bindPopup(popup_35dcbc03023d113b1a43bee99988f09e)
+        ;
+
+        
+    
+    
+            var circle_marker_32c6b81089a1465f5b760c582b09b55f = L.circleMarker(
+                [37.51925659, 127.0515976],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_4a5d93caead11cd2a001149a054860fa = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d14046958c27ab74d8160cf2018e7179 = $(`<div id="html_d14046958c27ab74d8160cf2018e7179" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3620<br>대여소명:  청담역 11번 출구<br>07-10 비율: 0.061<br>11-14 비율: 0.142<br>17-20 비율: 0.437<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_4a5d93caead11cd2a001149a054860fa.setContent(html_d14046958c27ab74d8160cf2018e7179);
+            
+        
+
+        circle_marker_32c6b81089a1465f5b760c582b09b55f.bindPopup(popup_4a5d93caead11cd2a001149a054860fa)
+        ;
+
+        
+    
+    
+            var circle_marker_62df52cd2d79903ab89af965c4d11c6b = L.circleMarker(
+                [37.50286484, 127.06594086],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_98f12ef76587bab82962a509216cccc0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f891bc2d8ea2fb5ebc46d1f342b238d2 = $(`<div id="html_f891bc2d8ea2fb5ebc46d1f342b238d2" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 3621<br>대여소명:  휘문고교 사거리<br>07-10 비율: 0.313<br>11-14 비율: 0.229<br>17-20 비율: 0.214<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_98f12ef76587bab82962a509216cccc0.setContent(html_f891bc2d8ea2fb5ebc46d1f342b238d2);
+            
+        
+
+        circle_marker_62df52cd2d79903ab89af965c4d11c6b.bindPopup(popup_98f12ef76587bab82962a509216cccc0)
+        ;
+
+        
+    
+    
+            var circle_marker_2a52484896b74341cc5ae051c45a17ce = L.circleMarker(
+                [37.49986649, 127.0605011],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_892b71d8049ab73e24a7cf45ac33e51f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_aac94a256aa67c57bcabcdba9fcf08f7 = $(`<div id="html_aac94a256aa67c57bcabcdba9fcf08f7" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3622<br>대여소명:  은마아파트입구 사거리(1)<br>07-10 비율: 0.157<br>11-14 비율: 0.179<br>17-20 비율: 0.298<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_892b71d8049ab73e24a7cf45ac33e51f.setContent(html_aac94a256aa67c57bcabcdba9fcf08f7);
+            
+        
+
+        circle_marker_2a52484896b74341cc5ae051c45a17ce.bindPopup(popup_892b71d8049ab73e24a7cf45ac33e51f)
+        ;
+
+        
+    
+    
+            var circle_marker_e2e5f546c2acb0236c42ee38df918add = L.circleMarker(
+                [37.49587631, 127.08650208],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_31591abfba26848f9bcc4450ebd60a15 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_eaacf6c371388d533f4b1fe72cec034b = $(`<div id="html_eaacf6c371388d533f4b1fe72cec034b" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3623<br>대여소명:  일원에코파크 앞(개포로 방면)<br>07-10 비율: 0.133<br>11-14 비율: 0.162<br>17-20 비율: 0.389<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_31591abfba26848f9bcc4450ebd60a15.setContent(html_eaacf6c371388d533f4b1fe72cec034b);
+            
+        
+
+        circle_marker_e2e5f546c2acb0236c42ee38df918add.bindPopup(popup_31591abfba26848f9bcc4450ebd60a15)
+        ;
+
+        
+    
+    
+            var circle_marker_2596e050b986aa6f74071273342adf42 = L.circleMarker(
+                [37.49017715, 127.07305908],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_1b61310b907b148398ea30dd918284bb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e3bb2d4f4b5fd6e04d9b6544f70f7aed = $(`<div id="html_e3bb2d4f4b5fd6e04d9b6544f70f7aed" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3624<br>대여소명:  대모산입구역 7번 출구 앞<br>07-10 비율: 0.083<br>11-14 비율: 0.201<br>17-20 비율: 0.334<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_1b61310b907b148398ea30dd918284bb.setContent(html_e3bb2d4f4b5fd6e04d9b6544f70f7aed);
+            
+        
+
+        circle_marker_2596e050b986aa6f74071273342adf42.bindPopup(popup_1b61310b907b148398ea30dd918284bb)
+        ;
+
+        
+    
+    
+            var circle_marker_4980fbef7ee5ca00274914d0cec20f99 = L.circleMarker(
+                [37.53075027, 127.04160309],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_85f7ae0c357c964be03badfc1acff4a1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c3c40d1d9f43bb3253e587d8e7be5e51 = $(`<div id="html_c3c40d1d9f43bb3253e587d8e7be5e51" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3627<br>대여소명:  압구정나들목<br>07-10 비율: 0.094<br>11-14 비율: 0.141<br>17-20 비율: 0.375<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_85f7ae0c357c964be03badfc1acff4a1.setContent(html_c3c40d1d9f43bb3253e587d8e7be5e51);
+            
+        
+
+        circle_marker_4980fbef7ee5ca00274914d0cec20f99.bindPopup(popup_85f7ae0c357c964be03badfc1acff4a1)
+        ;
+
+        
+    
+    
+            var circle_marker_443e1679197345e517b8be57aa86400b = L.circleMarker(
+                [37.49521255, 127.03302765],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_d5096b549e77ba5bdb888d75f6e910fc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_994b8496bec739886e723be38e8e1409 = $(`<div id="html_994b8496bec739886e723be38e8e1409" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 3628<br>대여소명:  역삼1동 주민센터<br>07-10 비율: 0.304<br>11-14 비율: 0.207<br>17-20 비율: 0.216<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_d5096b549e77ba5bdb888d75f6e910fc.setContent(html_994b8496bec739886e723be38e8e1409);
+            
+        
+
+        circle_marker_443e1679197345e517b8be57aa86400b.bindPopup(popup_d5096b549e77ba5bdb888d75f6e910fc)
+        ;
+
+        
+    
+    
+            var circle_marker_22aeed0411517e15444ae2029c959249 = L.circleMarker(
+                [37.52416229, 127.0489502],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_5a454e72375af09139128306780e6d7f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fbea055ff48b869f8a970fcc07de0f3e = $(`<div id="html_fbea055ff48b869f8a970fcc07de0f3e" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 3629<br>대여소명:  청담사거리(신한오피스텔빌딩 앞)<br>07-10 비율: 0.279<br>11-14 비율: 0.159<br>17-20 비율: 0.194<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_5a454e72375af09139128306780e6d7f.setContent(html_fbea055ff48b869f8a970fcc07de0f3e);
+            
+        
+
+        circle_marker_22aeed0411517e15444ae2029c959249.bindPopup(popup_5a454e72375af09139128306780e6d7f)
+        ;
+
+        
+    
+    
+            var circle_marker_4cea8bb4c59c0aac38ad2be3d7c2d834 = L.circleMarker(
+                [37.47685623, 127.05536652],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_d52c514b3ed947db303b69e47ce2ef4f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c725f3f281412f215a25dfaf1e8c04bb = $(`<div id="html_c725f3f281412f215a25dfaf1e8c04bb" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3630<br>대여소명:  개포우성6차아파트 정문 앞<br>07-10 비율: 0.117<br>11-14 비율: 0.105<br>17-20 비율: 0.403<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_d52c514b3ed947db303b69e47ce2ef4f.setContent(html_c725f3f281412f215a25dfaf1e8c04bb);
+            
+        
+
+        circle_marker_4cea8bb4c59c0aac38ad2be3d7c2d834.bindPopup(popup_d52c514b3ed947db303b69e47ce2ef4f)
+        ;
+
+        
+    
+    
+            var circle_marker_34a404b619e5f179459ed3013744702d = L.circleMarker(
+                [37.47402191, 127.04844666],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_026546259efac556beb33f9fd6a6dad3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5794cc94bd0783adee29e62e8e811d87 = $(`<div id="html_5794cc94bd0783adee29e62e8e811d87" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3634<br>대여소명:  국악고교 앞 교차로<br>07-10 비율: 0.136<br>11-14 비율: 0.142<br>17-20 비율: 0.296<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_026546259efac556beb33f9fd6a6dad3.setContent(html_5794cc94bd0783adee29e62e8e811d87);
+            
+        
+
+        circle_marker_34a404b619e5f179459ed3013744702d.bindPopup(popup_026546259efac556beb33f9fd6a6dad3)
+        ;
+
+        
+    
+    
+            var circle_marker_8bfc9154d654570b88eca2a55013471c = L.circleMarker(
+                [37.51264191, 127.05156708],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_5af87776cb3854eb620e8063971ef7f7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f4bfd6544bdc285d9659ef275633e248 = $(`<div id="html_f4bfd6544bdc285d9659ef275633e248" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3636<br>대여소명:  삼성중앙역·플래티넘아파트 정류소<br>07-10 비율: 0.157<br>11-14 비율: 0.204<br>17-20 비율: 0.305<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_5af87776cb3854eb620e8063971ef7f7.setContent(html_f4bfd6544bdc285d9659ef275633e248);
+            
+        
+
+        circle_marker_8bfc9154d654570b88eca2a55013471c.bindPopup(popup_5af87776cb3854eb620e8063971ef7f7)
+        ;
+
+        
+    
+    
+            var circle_marker_53a8552cb61945b26241b2ef92f7bcce = L.circleMarker(
+                [37.46072388, 127.10287476],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_a5afead6a93535dadb1de3d2ff1884d2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_39f84d1c7a68828cd022592307216d04 = $(`<div id="html_39f84d1c7a68828cd022592307216d04" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3637<br>대여소명:  세곡데이케어센터<br>07-10 비율: 0.130<br>11-14 비율: 0.168<br>17-20 비율: 0.274<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_a5afead6a93535dadb1de3d2ff1884d2.setContent(html_39f84d1c7a68828cd022592307216d04);
+            
+        
+
+        circle_marker_53a8552cb61945b26241b2ef92f7bcce.bindPopup(popup_a5afead6a93535dadb1de3d2ff1884d2)
+        ;
+
+        
+    
+    
+            var circle_marker_633b9efb46a16e3f895b5ccbb1fc0554 = L.circleMarker(
+                [37.52796173, 127.05162811],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_cf67309c10f31e37c91847bcddd36fba = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_097a1ac83d335ac94504f127bf07902b = $(`<div id="html_097a1ac83d335ac94504f127bf07902b" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3638<br>대여소명:  신청담나들목<br>07-10 비율: 0.132<br>11-14 비율: 0.147<br>17-20 비율: 0.306<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_cf67309c10f31e37c91847bcddd36fba.setContent(html_097a1ac83d335ac94504f127bf07902b);
+            
+        
+
+        circle_marker_633b9efb46a16e3f895b5ccbb1fc0554.bindPopup(popup_cf67309c10f31e37c91847bcddd36fba)
+        ;
+
+        
+    
+    
+            var circle_marker_baaed711cfd32dc6bd7b0a9e5acb66d1 = L.circleMarker(
+                [37.4909668, 127.08836365],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_11430679e10b42d30c63ce5e901e2c10 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c6ef5e602876c7fe2caa3cd824120cab = $(`<div id="html_c6ef5e602876c7fe2caa3cd824120cab" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 3640<br>대여소명:  일원1동주민센터앞 사거리<br>07-10 비율: 0.231<br>11-14 비율: 0.179<br>17-20 비율: 0.250<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_11430679e10b42d30c63ce5e901e2c10.setContent(html_c6ef5e602876c7fe2caa3cd824120cab);
+            
+        
+
+        circle_marker_baaed711cfd32dc6bd7b0a9e5acb66d1.bindPopup(popup_11430679e10b42d30c63ce5e901e2c10)
+        ;
+
+        
+    
+    
+            var circle_marker_0e4b9ed32e3349e4ddac124e21ddf77d = L.circleMarker(
+                [37.49370575, 127.0799942],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_93ce9b11f042d3b47020915616b3927e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9bce7515ff5e77bf5dea7947804936bb = $(`<div id="html_9bce7515ff5e77bf5dea7947804936bb" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 3641<br>대여소명:  대청역<br>07-10 비율: 0.333<br>11-14 비율: 0.156<br>17-20 비율: 0.248<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_93ce9b11f042d3b47020915616b3927e.setContent(html_9bce7515ff5e77bf5dea7947804936bb);
+            
+        
+
+        circle_marker_0e4b9ed32e3349e4ddac124e21ddf77d.bindPopup(popup_93ce9b11f042d3b47020915616b3927e)
+        ;
+
+        
+    
+    
+            var circle_marker_6c2495d194563d3571ec06d0c080241d = L.circleMarker(
+                [37.47092819, 127.08970642],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_7cddb967782b659b52b45e8a0deaf06d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b9afee330a6caf05b97d66068a5f32da = $(`<div id="html_b9afee330a6caf05b97d66068a5f32da" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3642<br>대여소명:  LH강남힐스테이트아파트<br>07-10 비율: 0.058<br>11-14 비율: 0.116<br>17-20 비율: 0.407<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_7cddb967782b659b52b45e8a0deaf06d.setContent(html_b9afee330a6caf05b97d66068a5f32da);
+            
+        
+
+        circle_marker_6c2495d194563d3571ec06d0c080241d.bindPopup(popup_7cddb967782b659b52b45e8a0deaf06d)
+        ;
+
+        
+    
+    
+            var circle_marker_1577f1b2d778861796df7080d34d818b = L.circleMarker(
+                [37.47267914, 127.10375977],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_317503bc37d584a9c635adcb0b9769a2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a4fa0852d3d7596287cc828fb7ed33a7 = $(`<div id="html_a4fa0852d3d7596287cc828fb7ed33a7" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3643<br>대여소명:  더시그넘하우스 앞<br>07-10 비율: 0.179<br>11-14 비율: 0.162<br>17-20 비율: 0.325<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_317503bc37d584a9c635adcb0b9769a2.setContent(html_a4fa0852d3d7596287cc828fb7ed33a7);
+            
+        
+
+        circle_marker_1577f1b2d778861796df7080d34d818b.bindPopup(popup_317503bc37d584a9c635adcb0b9769a2)
+        ;
+
+        
+    
+    
+            var circle_marker_3eb13b483b98bbed256228be5009f78a = L.circleMarker(
+                [37.48276138, 127.08042145],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2fccc3137855c6102054fd925d5eda3f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bbb044ca808ff20f6e0ab9c89a2e23d6 = $(`<div id="html_bbb044ca808ff20f6e0ab9c89a2e23d6" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3644<br>대여소명:  상록수아파트<br>07-10 비율: 0.086<br>11-14 비율: 0.184<br>17-20 비율: 0.320<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_2fccc3137855c6102054fd925d5eda3f.setContent(html_bbb044ca808ff20f6e0ab9c89a2e23d6);
+            
+        
+
+        circle_marker_3eb13b483b98bbed256228be5009f78a.bindPopup(popup_2fccc3137855c6102054fd925d5eda3f)
+        ;
+
+        
+    
+    
+            var circle_marker_cddb6848b7fdd5caff6208b6d82f0b40 = L.circleMarker(
+                [37.5097847, 127.04277039],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_84aa0cd9819865c4cacd82067680dafc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a7e39997ae66101295fc5b5400eb72e3 = $(`<div id="html_a7e39997ae66101295fc5b5400eb72e3" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3646<br>대여소명:  선정릉역 4번 출구<br>07-10 비율: 0.105<br>11-14 비율: 0.178<br>17-20 비율: 0.377<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_84aa0cd9819865c4cacd82067680dafc.setContent(html_a7e39997ae66101295fc5b5400eb72e3);
+            
+        
+
+        circle_marker_cddb6848b7fdd5caff6208b6d82f0b40.bindPopup(popup_84aa0cd9819865c4cacd82067680dafc)
+        ;
+
+        
+    
+    
+            var circle_marker_05331563214c5e43f5934cafe7a7c297 = L.circleMarker(
+                [37.48642349, 127.05931854],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_46f7ec12224cade863b5ba642a4ef556 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_326115649837b542504193f7ed7fd064 = $(`<div id="html_326115649837b542504193f7ed7fd064" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 3647<br>대여소명:  구룡역 1번 출구<br>07-10 비율: 0.371<br>11-14 비율: 0.135<br>17-20 비율: 0.289<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_46f7ec12224cade863b5ba642a4ef556.setContent(html_326115649837b542504193f7ed7fd064);
+            
+        
+
+        circle_marker_05331563214c5e43f5934cafe7a7c297.bindPopup(popup_46f7ec12224cade863b5ba642a4ef556)
+        ;
+
+        
+    
+    
+            var circle_marker_d43c80ee12be6a59925ab0968c24d3bd = L.circleMarker(
+                [37.48670578, 127.0605011],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_c87e30fc37ce6f3e7108b089eb8b60ca = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2a23bac361a61f87057eea7d3f41d667 = $(`<div id="html_2a23bac361a61f87057eea7d3f41d667" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3648<br>대여소명:  구룡역 4번 출구<br>07-10 비율: 0.166<br>11-14 비율: 0.166<br>17-20 비율: 0.259<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_c87e30fc37ce6f3e7108b089eb8b60ca.setContent(html_2a23bac361a61f87057eea7d3f41d667);
+            
+        
+
+        circle_marker_d43c80ee12be6a59925ab0968c24d3bd.bindPopup(popup_c87e30fc37ce6f3e7108b089eb8b60ca)
+        ;
+
+        
+    
+    
+            var circle_marker_9fc17e2f5945540f850b447b279d611c = L.circleMarker(
+                [37.48607635, 127.05921936],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_145b873013acefa4e19f90f22559da91 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c4fb18d87b6ac4d9ae5cbcd142216c5d = $(`<div id="html_c4fb18d87b6ac4d9ae5cbcd142216c5d" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 3649<br>대여소명:  구룡역 5번 출구<br>07-10 비율: 0.362<br>11-14 비율: 0.124<br>17-20 비율: 0.323<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_145b873013acefa4e19f90f22559da91.setContent(html_c4fb18d87b6ac4d9ae5cbcd142216c5d);
+            
+        
+
+        circle_marker_9fc17e2f5945540f850b447b279d611c.bindPopup(popup_145b873013acefa4e19f90f22559da91)
+        ;
+
+        
+    
+    
+            var circle_marker_2731fe4c2faedacfb2fda04be3c1a4b1 = L.circleMarker(
+                [37.48929596, 127.06616974],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_9b2269c48c475aa1546d6e7b24680abc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2f20e67e59db3f91a26dc16db7c810d7 = $(`<div id="html_2f20e67e59db3f91a26dc16db7c810d7" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3651<br>대여소명:  개포동역 4번출구<br>07-10 비율: 0.090<br>11-14 비율: 0.184<br>17-20 비율: 0.361<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_9b2269c48c475aa1546d6e7b24680abc.setContent(html_2f20e67e59db3f91a26dc16db7c810d7);
+            
+        
+
+        circle_marker_2731fe4c2faedacfb2fda04be3c1a4b1.bindPopup(popup_9b2269c48c475aa1546d6e7b24680abc)
+        ;
+
+        
+    
+    
+            var circle_marker_fb734db053a5c06c0425f4783b1b3242 = L.circleMarker(
+                [37.50687408, 127.06473541],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_5a18c5fbd868bfee18cf1e240ca20ee9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_98e68e3cbe4bc06122945aefe011bc1d = $(`<div id="html_98e68e3cbe4bc06122945aefe011bc1d" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4901<br>대여소명: KT&G타워 옆(상상마당 대치아트홀)<br>07-10 비율: 0.349<br>11-14 비율: 0.220<br>17-20 비율: 0.218<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_5a18c5fbd868bfee18cf1e240ca20ee9.setContent(html_98e68e3cbe4bc06122945aefe011bc1d);
+            
+        
+
+        circle_marker_fb734db053a5c06c0425f4783b1b3242.bindPopup(popup_5a18c5fbd868bfee18cf1e240ca20ee9)
+        ;
+
+        
+    
+    
+            var circle_marker_ffa035d784a7706552e2093910133b7c = L.circleMarker(
+                [37.49524307, 127.03937531],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_bade0be4e2897b138f230ec29f642a30 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f40ef55e25d13aca85357aa772188cd1 = $(`<div id="html_f40ef55e25d13aca85357aa772188cd1" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4902<br>대여소명:  구역삼세무서 교차로<br>07-10 비율: 0.290<br>11-14 비율: 0.180<br>17-20 비율: 0.220<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_bade0be4e2897b138f230ec29f642a30.setContent(html_f40ef55e25d13aca85357aa772188cd1);
+            
+        
+
+        circle_marker_ffa035d784a7706552e2093910133b7c.bindPopup(popup_bade0be4e2897b138f230ec29f642a30)
+        ;
+
+        
+    
+    
+            var circle_marker_2a39c8e1f9722752bcb89f88e78b4a70 = L.circleMarker(
+                [37.51916885, 127.0189743],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_b994856d68bfef9f0073ee0d53effe48 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b926dbc4f40d9b66f5d297211aec17bc = $(`<div id="html_b926dbc4f40d9b66f5d297211aec17bc" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4903<br>대여소명:  신사스퀘어<br>07-10 비율: 0.254<br>11-14 비율: 0.205<br>17-20 비율: 0.276<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_b994856d68bfef9f0073ee0d53effe48.setContent(html_b926dbc4f40d9b66f5d297211aec17bc);
+            
+        
+
+        circle_marker_2a39c8e1f9722752bcb89f88e78b4a70.bindPopup(popup_b994856d68bfef9f0073ee0d53effe48)
+        ;
+
+        
+    
+    
+            var circle_marker_9bb75efb199b1815eae26112c8b18fce = L.circleMarker(
+                [37.50971985, 127.06679535],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_cd1c73d86c4bdbd95047bfa6e004c12f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_30d8fdef57c6b3a46ccc4622f5bcd0aa = $(`<div id="html_30d8fdef57c6b3a46ccc4622f5bcd0aa" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4905<br>대여소명:  강남경찰서<br>07-10 비율: 0.290<br>11-14 비율: 0.245<br>17-20 비율: 0.237<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_cd1c73d86c4bdbd95047bfa6e004c12f.setContent(html_30d8fdef57c6b3a46ccc4622f5bcd0aa);
+            
+        
+
+        circle_marker_9bb75efb199b1815eae26112c8b18fce.bindPopup(popup_cd1c73d86c4bdbd95047bfa6e004c12f)
+        ;
+
+        
+    
+    
+            var circle_marker_9f38413a7278224444c9d4a55a089287 = L.circleMarker(
+                [37.50767136, 127.06017303],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_ef41a71a4abe2e81e3580699c7a42327 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9273d4a2ca968c6c409ad9f9b22a512c = $(`<div id="html_9273d4a2ca968c6c409ad9f9b22a512c" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4906<br>대여소명:  섬유센터 앞<br>07-10 비율: 0.275<br>11-14 비율: 0.231<br>17-20 비율: 0.246<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_ef41a71a4abe2e81e3580699c7a42327.setContent(html_9273d4a2ca968c6c409ad9f9b22a512c);
+            
+        
+
+        circle_marker_9f38413a7278224444c9d4a55a089287.bindPopup(popup_ef41a71a4abe2e81e3580699c7a42327)
+        ;
+
+        
+    
+    
+            var circle_marker_39d4294153970294fd55b9273ec96ef3 = L.circleMarker(
+                [37.5257225, 127.02588654],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_23a3c29b49dd9288040acf3e76b75782 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c0a34b9115e33c986e6d24bbd11439f0 = $(`<div id="html_c0a34b9115e33c986e6d24bbd11439f0" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4907<br>대여소명:  극동스포츠 앞<br>07-10 비율: 0.136<br>11-14 비율: 0.171<br>17-20 비율: 0.336<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_23a3c29b49dd9288040acf3e76b75782.setContent(html_c0a34b9115e33c986e6d24bbd11439f0);
+            
+        
+
+        circle_marker_39d4294153970294fd55b9273ec96ef3.bindPopup(popup_23a3c29b49dd9288040acf3e76b75782)
+        ;
+
+        
+    
+    
+            var circle_marker_788c1db4a01228e0a930eedea1099999 = L.circleMarker(
+                [37.52210999, 127.03646088],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_40eda028f356f00b6a50e81a186a4b60 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_89d4f9403b93c307dc46a327fe63a82d = $(`<div id="html_89d4f9403b93c307dc46a327fe63a82d" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4908<br>대여소명:  SB타워 앞<br>07-10 비율: 0.280<br>11-14 비율: 0.192<br>17-20 비율: 0.218<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_40eda028f356f00b6a50e81a186a4b60.setContent(html_89d4f9403b93c307dc46a327fe63a82d);
+            
+        
+
+        circle_marker_788c1db4a01228e0a930eedea1099999.bindPopup(popup_40eda028f356f00b6a50e81a186a4b60)
+        ;
+
+        
+    
+    
+            var circle_marker_7967de20a4bad31737c79e1a9d0fbcea = L.circleMarker(
+                [37.50570297, 127.02919769],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_06be0af3193f41c83821b5466a802cc3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3eb2d2085667d32b010aae879760e5db = $(`<div id="html_3eb2d2085667d32b010aae879760e5db" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4909<br>대여소명:  노보텔 앰배서더 앞<br>07-10 비율: 0.127<br>11-14 비율: 0.156<br>17-20 비율: 0.298<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_06be0af3193f41c83821b5466a802cc3.setContent(html_3eb2d2085667d32b010aae879760e5db);
+            
+        
+
+        circle_marker_7967de20a4bad31737c79e1a9d0fbcea.bindPopup(popup_06be0af3193f41c83821b5466a802cc3)
+        ;
+
+        
+    
+    
+            var circle_marker_dcf2836d6527c9fec8b554ff11f982d7 = L.circleMarker(
+                [37.51292038, 127.056427],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_1651b3554f4fc4496567a2f14fe2fd37 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_61674c614fa971d556987a788f09fb5b = $(`<div id="html_61674c614fa971d556987a788f09fb5b" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4913<br>대여소명:  레베쌍트 빌딩 앞<br>07-10 비율: 0.255<br>11-14 비율: 0.195<br>17-20 비율: 0.230<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_1651b3554f4fc4496567a2f14fe2fd37.setContent(html_61674c614fa971d556987a788f09fb5b);
+            
+        
+
+        circle_marker_dcf2836d6527c9fec8b554ff11f982d7.bindPopup(popup_1651b3554f4fc4496567a2f14fe2fd37)
+        ;
+
+        
+    
+    
+            var circle_marker_d18111235bef61e83bd5e5d0c7e9b046 = L.circleMarker(
+                [37.50999069, 127.05847168],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2f35fa124aabf30f4b09ebbd5a73b281 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_730c8348c2457b5482959c1a7cd9fb2c = $(`<div id="html_730c8348c2457b5482959c1a7cd9fb2c" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4914<br>대여소명:  도심공항타워 앞<br>07-10 비율: 0.314<br>11-14 비율: 0.260<br>17-20 비율: 0.211<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_2f35fa124aabf30f4b09ebbd5a73b281.setContent(html_730c8348c2457b5482959c1a7cd9fb2c);
+            
+        
+
+        circle_marker_d18111235bef61e83bd5e5d0c7e9b046.bindPopup(popup_2f35fa124aabf30f4b09ebbd5a73b281)
+        ;
+
+        
+    
+    
+            var circle_marker_ac64fdd0a144439cdb793696eb77df95 = L.circleMarker(
+                [37.49775314, 127.03857422],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_43b5e2fcfe55c8542f26375d24ade2a7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ae3138fef252d4b47ed39b03e19494f6 = $(`<div id="html_ae3138fef252d4b47ed39b03e19494f6" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4915<br>대여소명:  영동중앙교회 버스정류장<br>07-10 비율: 0.210<br>11-14 비율: 0.190<br>17-20 비율: 0.230<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_43b5e2fcfe55c8542f26375d24ade2a7.setContent(html_ae3138fef252d4b47ed39b03e19494f6);
+            
+        
+
+        circle_marker_ac64fdd0a144439cdb793696eb77df95.bindPopup(popup_43b5e2fcfe55c8542f26375d24ade2a7)
+        ;
+
+        
+    
+    
+            var circle_marker_69b060952e413cc1505bbcea46d92455 = L.circleMarker(
+                [37.51973724, 127.05767822],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_55f29d0c9454d079de480b515731c413 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c5ceb775b8c2290e3028fc5392afde72 = $(`<div id="html_c5ceb775b8c2290e3028fc5392afde72" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 4916<br>대여소명:  청담역 1번출구<br>07-10 비율: 0.112<br>11-14 비율: 0.142<br>17-20 비율: 0.379<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_55f29d0c9454d079de480b515731c413.setContent(html_c5ceb775b8c2290e3028fc5392afde72);
+            
+        
+
+        circle_marker_69b060952e413cc1505bbcea46d92455.bindPopup(popup_55f29d0c9454d079de480b515731c413)
+        ;
+
+        
+    
+    
+            var circle_marker_599a1d3cc67f507a7b2bb693cbef11ad = L.circleMarker(
+                [37.49404526, 127.08678436],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_e33bfaf208ad9efe1f487aa71d55e0cd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2229ee64e81b46791397c0368078bc8e = $(`<div id="html_2229ee64e81b46791397c0368078bc8e" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 4917<br>대여소명: 일원에코파크 주차장<br>07-10 비율: 0.129<br>11-14 비율: 0.128<br>17-20 비율: 0.362<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_e33bfaf208ad9efe1f487aa71d55e0cd.setContent(html_2229ee64e81b46791397c0368078bc8e);
+            
+        
+
+        circle_marker_599a1d3cc67f507a7b2bb693cbef11ad.bindPopup(popup_e33bfaf208ad9efe1f487aa71d55e0cd)
+        ;
+
+        
+    
+    
+            var circle_marker_db6b812c0dd651a86312aba0dd46b341 = L.circleMarker(
+                [37.48661041, 127.04550934],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2c26b90dc938c58eae06e75bc4274723 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_455fa2ef69380b470e5f29e9a3cd81cb = $(`<div id="html_455fa2ef69380b470e5f29e9a3cd81cb" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4918<br>대여소명: 매봉역 1번출구<br>07-10 비율: 0.183<br>11-14 비율: 0.187<br>17-20 비율: 0.318<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_2c26b90dc938c58eae06e75bc4274723.setContent(html_455fa2ef69380b470e5f29e9a3cd81cb);
+            
+        
+
+        circle_marker_db6b812c0dd651a86312aba0dd46b341.bindPopup(popup_2c26b90dc938c58eae06e75bc4274723)
+        ;
+
+        
+    
+    
+            var circle_marker_b28e24538f7ddf76f788a7e1d3f85795 = L.circleMarker(
+                [37.49665833, 127.06938171],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_2bfd915f95ab2d57519efa8f4d8ea4c0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_11011f099079445d32a6bb8c5f2a30ab = $(`<div id="html_11011f099079445d32a6bb8c5f2a30ab" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4919<br>대여소명: 학여울역사거리(은마아파트)<br>07-10 비율: 0.085<br>11-14 비율: 0.167<br>17-20 비율: 0.301<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_2bfd915f95ab2d57519efa8f4d8ea4c0.setContent(html_11011f099079445d32a6bb8c5f2a30ab);
+            
+        
+
+        circle_marker_b28e24538f7ddf76f788a7e1d3f85795.bindPopup(popup_2bfd915f95ab2d57519efa8f4d8ea4c0)
+        ;
+
+        
+    
+    
+            var circle_marker_19a6ef51decc9f1d43f901e28e78ea15 = L.circleMarker(
+                [37.49861526, 127.0683136],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_6731eb352a2aef5578fb81cb61796cca = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4531e575bdefda7fdc3ceb71039a86d1 = $(`<div id="html_4531e575bdefda7fdc3ceb71039a86d1" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4923<br>대여소명: 수협대치동지점<br>07-10 비율: 0.135<br>11-14 비율: 0.187<br>17-20 비율: 0.333<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_6731eb352a2aef5578fb81cb61796cca.setContent(html_4531e575bdefda7fdc3ceb71039a86d1);
+            
+        
+
+        circle_marker_19a6ef51decc9f1d43f901e28e78ea15.bindPopup(popup_6731eb352a2aef5578fb81cb61796cca)
+        ;
+
+        
+    
+    
+            var circle_marker_7745c43593ccf75e13655adda8ef8731 = L.circleMarker(
+                [37.51280975, 127.02636719],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_bfa0a76c2e434f519c5fbc863fea50e1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2e8fb29504c4bf4394336a4a81b561ad = $(`<div id="html_2e8fb29504c4bf4394336a4a81b561ad" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4924<br>대여소명: 논현동가구거리<br>07-10 비율: 0.235<br>11-14 비율: 0.206<br>17-20 비율: 0.232<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_bfa0a76c2e434f519c5fbc863fea50e1.setContent(html_2e8fb29504c4bf4394336a4a81b561ad);
+            
+        
+
+        circle_marker_7745c43593ccf75e13655adda8ef8731.bindPopup(popup_bfa0a76c2e434f519c5fbc863fea50e1)
+        ;
+
+        
+    
+    
+            var circle_marker_8d318df9660d69ee931cf27d4d363667 = L.circleMarker(
+                [37.52390289, 127.04660797],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_f7d6455ac073fa11b509a381b8c76db7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ab8336253fbf052442fb05b5da315987 = $(`<div id="html_ab8336253fbf052442fb05b5da315987" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4925<br>대여소명: 청담백영빌딩 앞<br>07-10 비율: 0.321<br>11-14 비율: 0.182<br>17-20 비율: 0.184<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_f7d6455ac073fa11b509a381b8c76db7.setContent(html_ab8336253fbf052442fb05b5da315987);
+            
+        
+
+        circle_marker_8d318df9660d69ee931cf27d4d363667.bindPopup(popup_f7d6455ac073fa11b509a381b8c76db7)
+        ;
+
+        
+    
+    
+            var circle_marker_0ed6eefac1fd398ca0e1ae1870b33371 = L.circleMarker(
+                [37.50099564, 127.06803894],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_862dcc3cc1489b84dd5068a7ebafcaa6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_debbc902982d3a21b9932d294fa18c4e = $(`<div id="html_debbc902982d3a21b9932d294fa18c4e" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4926<br>대여소명: 대치우성아파트 사거리<br>07-10 비율: 0.254<br>11-14 비율: 0.154<br>17-20 비율: 0.282<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_862dcc3cc1489b84dd5068a7ebafcaa6.setContent(html_debbc902982d3a21b9932d294fa18c4e);
+            
+        
+
+        circle_marker_0ed6eefac1fd398ca0e1ae1870b33371.bindPopup(popup_862dcc3cc1489b84dd5068a7ebafcaa6)
+        ;
+
+        
+    
+    
+            var circle_marker_eaaf7c26006611cb8c3eb2808ddbd31b = L.circleMarker(
+                [37.4818573, 127.10456085],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_58c7b3a0c439b47fd472b3e30c0167d8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3495de00b12d877714314c5219f73e7e = $(`<div id="html_3495de00b12d877714314c5219f73e7e" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4928<br>대여소명: 교수마을 입구<br>07-10 비율: 0.264<br>11-14 비율: 0.148<br>17-20 비율: 0.267<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_58c7b3a0c439b47fd472b3e30c0167d8.setContent(html_3495de00b12d877714314c5219f73e7e);
+            
+        
+
+        circle_marker_eaaf7c26006611cb8c3eb2808ddbd31b.bindPopup(popup_58c7b3a0c439b47fd472b3e30c0167d8)
+        ;
+
+        
+    
+    
+            var circle_marker_4907e6e250152c3e7de031dfb07d3def = L.circleMarker(
+                [37.52464676, 127.04914856],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_30b313a1cdeaf9883f348b6b64660223 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_dd008d6c33be209333effceb8caacfa6 = $(`<div id="html_dd008d6c33be209333effceb8caacfa6" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 4929<br>대여소명: 파스쿠찌 청담사거리점 앞<br>07-10 비율: 0.168<br>11-14 비율: 0.150<br>17-20 비율: 0.231<br>지구 가설: 주거지구 후보</div>`)[0];
+                popup_30b313a1cdeaf9883f348b6b64660223.setContent(html_dd008d6c33be209333effceb8caacfa6);
+            
+        
+
+        circle_marker_4907e6e250152c3e7de031dfb07d3def.bindPopup(popup_30b313a1cdeaf9883f348b6b64660223)
+        ;
+
+        
+    
+    
+            var circle_marker_41701fe4d1cbc2b687bc621d5b11541c = L.circleMarker(
+                [37.49662018, 127.07099915],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_754ca1765e4392a5b82d662b5888283b);
+        
+    
+        var popup_e84b465fdd23efba154dc70f5c7c135a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8b81ec83a32bb6aab90b6b1410ba6a50 = $(`<div id="html_8b81ec83a32bb6aab90b6b1410ba6a50" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4930<br>대여소명: 학여울역 1번 출구<br>07-10 비율: 0.271<br>11-14 비율: 0.233<br>17-20 비율: 0.268<br>지구 가설: 업무/상업지구 후보</div>`)[0];
+                popup_e84b465fdd23efba154dc70f5c7c135a.setContent(html_8b81ec83a32bb6aab90b6b1410ba6a50);
+            
+        
+
+        circle_marker_41701fe4d1cbc2b687bc621d5b11541c.bindPopup(popup_e84b465fdd23efba154dc70f5c7c135a)
+        ;
+
+        
+    
+</script>
+</html>

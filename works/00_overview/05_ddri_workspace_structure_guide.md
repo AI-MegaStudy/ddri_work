@@ -28,23 +28,20 @@
 
 ### `works/01_clustering`
 
-- 군집화 파트를 처음부터 끝까지 따라가는 폴더
+- 현재 군집화 최신본은 `08_integrated` 기준으로 관리
+- 기존 1차 군집화 자료는 `archive_1st`로 보관
 
 세부 구조:
-- `01_baseline`
-  - 군집화 노트북, 실행 스크립트
-- `02_preprocessing`
-  - 전처리 관련 문서, 로그, 요약표
-- `03_environment`
-  - 환경 feature 생성 스크립트와 요약 결과
-- `04_maps`
-  - Folium 지도, 정적 지도
-- `05_presentation`
-  - 군집화 발표용 MD, PDF, 스피치 노트
-- `06_data`
-  - 군집화 결과 CSV
-- `07_images`
-  - 군집화 차트 PNG
+- `08_integrated/pipeline`
+  - 통합 군집화 생성 스크립트, 노트북, 작업 메모
+- `08_integrated/source_data`
+  - 통합 군집화 공통 기준표
+- `08_integrated/final`
+  - 최종 입력, 최종 결과, 최종 차트, 최종 지도
+- `08_integrated/intermediate`
+  - 반납 시간대/환경 보강/비교 실험 중간 산출물
+- `archive_1st`
+  - baseline, 전처리, 환경, 지도, 구 발표 자료 보관본
 
 ### `works/02_data_collection`
 
@@ -119,14 +116,15 @@
 현재는 실제 파일도 모두 번호 체계 폴더 기준으로 이동한 상태다.
 
 - 전체 기준 문서: `works/00_overview`
-- 군집화: `works/01_clustering`
+- 군집화 최신본: `works/01_clustering/08_integrated`
+- 군집화 보관본: `works/01_clustering/archive_1st`
 - 외부 데이터 수집: `works/02_data_collection`
 - 예측 데이터셋 및 스크립트: `works/03_prediction`
 - 발표 자료: `works/04_presentation`
 
 ## 6. 다음 정리 과제
 
-1. 군집화 파트 내부에서 `01_baseline ~ 07_images` 간 참조를 더 일관되게 정리
-2. 예측 파트의 `01_dataset_design` 활용 범위를 확장
-3. 발표 PDF를 새 경로 기준으로 다시 생성
+1. `03_prediction`에 통합 군집화 결과 결합 전략 반영
+2. 예측 파트의 active/archive 정리 여부 검토
+3. 발표 PDF를 최신 경로 기준으로 재생성
 4. 문서 내부 파일 경로를 최종 점검

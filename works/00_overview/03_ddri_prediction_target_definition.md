@@ -99,7 +99,7 @@
 - 공휴일 feature
 - 과거 수요 feature
 - 환경 feature
-- 군집 label(후보)
+- 군집 label / 군집 기반 파생 feature
 
 ### 예측 출력
 
@@ -116,10 +116,22 @@
 
 - `return_count`를 보조 지표로 같이 볼지 여부
 - 군집 label을 예측 feature에 포함할지 여부
+- 통합 군집화의 지구판단 feature를 예측 feature selection 기준으로 사용할지 여부
 - `보유 적정 대수`를 후처리 파생 지표로 계산할지 여부
 - 차후 2차 확장으로 `station-hour` 예측을 별도 수행할지 여부
 
-## 8. 보고서/PPT에 넣을 수 있는 문장
+## 8. 현재 연결 기준
+
+현재 군집화는 `works/01_clustering/08_integrated/final/results/second_clustering_results/`의 통합 결과를 기준으로 본다.
+
+예측 파트에서는 아래 연결이 가능하다.
+
+- `cluster` 또는 `district_hypothesis`
+- `life_pop_*`
+- `station_elevation_m`, `distance_naturepark_m`, `distance_river_boundary_m`
+- 반납 시간대 기반 비율/순유입 관련 요약값
+
+## 9. 보고서/PPT에 넣을 수 있는 문장
 
 예시:
 

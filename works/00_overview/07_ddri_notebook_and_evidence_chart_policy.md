@@ -94,6 +94,14 @@
 - `02_ddri_project_report_log.md`에는 차트 생성 이유와 해석 메시지를 함께 남긴다.
 - 대표 노트북과 대표 스크립트는 각 파트 `README.md`에서 바로 열 수 있게 유지한다.
 
+현재 군집화 대표 노트북:
+
+- `works/01_clustering/08_integrated/pipeline/12_ddri_integrated_clustering_report_builder.ipynb`
+
+현재 군집화 최종 산출물 경로:
+
+- `works/01_clustering/08_integrated/final/`
+
 ## 5. 앞으로의 적용 방식
 
 - 군집화, 전처리, 예측 데이터셋 노트북은 이 정책에 맞춰 지속 보강한다.

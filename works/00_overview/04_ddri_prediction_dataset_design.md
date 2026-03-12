@@ -132,19 +132,28 @@
 - `bus_stop_count_300m`
 - `cluster_label`
 
+현재 추가 후보:
+- `station_elevation_m`
+- `elevation_diff_nearest_subway_m`
+- `nearest_park_area_sqm`
+- `distance_naturepark_m`
+- `distance_river_boundary_m`
+
 ### 4.4 생활인구 데이터
 
 현재 상태:
 - 행정동 단위 데이터
-- 대여소 단위와 바로 결합되지 않음
+- 대여소 번호별 행정동 매핑 완료
+- 시간대별 생활인구 평균 피처 생성 완료
 
-결합 전 필요 작업:
-- 대여소 좌표 → 행정동 매핑
-- 날짜/시간 집계 기준 정리
+현재 사용 가능한 컬럼:
+- `life_pop_7_10_mean`
+- `life_pop_11_14_mean`
+- `life_pop_17_20_mean`
 
-현재 판단:
-- 1차 베이스라인에서는 제외 또는 보류
-- 2차 고도화 feature로 관리
+예측 파트 적용 판단:
+- station-day 예측에 직접 정적/준정적 feature로 넣을지 검토 대상
+- 군집화에서는 지구판단 보강용으로 이미 활용됨
 
 ## 5. feature 그룹 정의
 
@@ -183,6 +192,14 @@
 - `subway_distance`
 - `bus_stop_count_300m`
 - `cluster_label`
+- `life_pop_7_10_mean`
+- `life_pop_11_14_mean`
+- `life_pop_17_20_mean`
+- `station_elevation_m`
+- `elevation_diff_nearest_subway_m`
+- `nearest_park_area_sqm`
+- `distance_naturepark_m`
+- `distance_river_boundary_m`
 
 ### 5.5 운영 해석용 이동/재고 보조 지표
 
@@ -208,6 +225,10 @@
 주의:
 - 군집 label은 학습 데이터 기준으로 생성된 값을 사용해야 함
 - 테스트에도 동일 기준으로 매핑 가능해야 함
+
+현재 기준:
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/data/ddri_second_cluster_train_with_labels.csv`
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/data/ddri_second_cluster_test_with_labels.csv`
 
 ## 7. 1차 베이스라인 권장 스키마
 
