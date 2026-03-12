@@ -19,7 +19,7 @@
 ## 1. 전체 단계
 
 - [ ] Phase 1. 데이터 자산 확정
-- [x] Phase 2. 군집화 1차 산출물
+- [x] Phase 2. 군집화 통합 산출물
 - [ ] Phase 3. 예측용 데이터셋 설계
 - [ ] Phase 4. ML 베이스라인 구축
 - [ ] Phase 5. 웹/서비스 설계 문서화
@@ -55,51 +55,38 @@
 
 ---
 
-## 3. Phase 2. 군집화 1차 산출물
+## 3. Phase 2. 군집화 통합 산출물
 
-목표: 강남구 대여소 이용 패턴 기반 군집화 결과를 1차 시각화까지 완성한다.
+목표: 강남구 대여소 이용 패턴, 반납 시간대, 순유입, 교통 접근성, 생활인구, 환경 보강 실험을 포함한 통합 군집화 결과를 완성한다.
 
 ### 체크리스트
 
-- [x] `works/01_clustering/` 폴더 생성
-- [x] `works/01_clustering/06_data/` 폴더 생성
-- [x] `works/01_clustering/07_images/` 폴더 생성
-- [x] `works/01_clustering/01_baseline/ddri_station_clustering_baseline.ipynb` 생성
-- [x] 2023~2024 학습용 따릉이 이용 이력 로드 코드 작성
-- [x] 2025 테스트용 이용 이력 분리 로드 코드 작성
-- [x] 실제 한글 컬럼 기준 전처리 코드 작성
-- [x] 대여소별 군집화 feature 생성
-  - avg_rental
-  - weekday_avg
-  - weekend_avg
-  - peak_ratio
-  - night_ratio
-  - weekday_weekend_gap
-  - rental_std
-- [x] feature 저장 CSV 생성
-- [x] StandardScaler 적용
-- [x] KMeans 후보 K 탐색
-- [x] Elbow plot 생성
-- [x] Silhouette 비교 표 또는 그래프 생성
-- [x] 최종 K 선택 근거 기록
-- [x] PCA 2D 시각화 생성
-- [x] 군집별 feature 평균표 생성
-- [x] 군집 라벨 해석 초안 작성
+- [x] baseline 이용 패턴 군집화 수행
+- [x] 반납 시간대 기반 지구판단 피처 생성
+- [x] 순유입/교통 접근성 결합 입력 확정
+- [x] 생활인구 결합 완료
+- [x] Open-Meteo 표고 피처 생성
+- [x] 도시자연공원구역/하천경계 거리 기반 환경 보강 실험 수행
+- [x] 통합 군집화 K 탐색 및 최종 K 선택
+- [x] 통합 군집화 차트/지도/정적 이미지 생성
+- [x] 발표 문서와 스피치 노트 반영
+- [x] 작업물 구조를 `08_integrated/final/intermediate/pipeline` 기준으로 재정리
 
 ### 완료 기준
 
-- 군집 feature 테이블이 CSV로 저장됨
-- 최소 3종 시각화가 저장됨
-  - Elbow
-  - PCA
-  - 군집별 비교 차트
-- 어떤 K를 선택했는지 근거가 문서/노트북에 남아 있음
-- 발표용 지도 시각화 HTML이 생성됨
+- 최종 통합 피처와 군집 결과가 `works/01_clustering/08_integrated/final/` 아래 저장됨
+- 최종 통합 군집화 리포트와 차트가 생성됨
+- 환경 보강 실험 결과가 중간 산출물로 정리됨
+- 발표 문서와 스피치 노트가 최신 결과 기준으로 갱신됨
 
-### 막히면 요청할 자료
+### 현재 결과 위치
 
-- 군집 결과를 지도에 표시할 때 사용할 배경 지도/행정경계 기준
-- 군집 라벨 명칭에 대한 팀 내부 합의
+- 최종 통합 피처:
+  - `works/01_clustering/08_integrated/final/features/`
+- 최종 통합 군집화 결과:
+  - `works/01_clustering/08_integrated/final/results/second_clustering_results/`
+- 중간 실험 결과:
+  - `works/01_clustering/08_integrated/intermediate/`
 
 ---
 
@@ -215,9 +202,9 @@
 
 다음 작업은 아래 순서로 진행한다.
 
-1. `works/` 하위 폴더 구조 생성
-2. 군집화 1차 입력 파일 목록 고정
-3. `ddri_station_clustering_baseline.ipynb` 골격 생성
+1. `03_prediction`에 군집 결과 결합 전략 반영
+2. 예측용 station-day 데이터셋에 군집/환경 후보 피처 연결
+3. `RMSE`, `MAE`, `R²` 기준 베이스라인 모델 구축
 4. 학습용 2023~2024 데이터 로드 및 feature 생성 코드 작성
 
 ## 9. 현재 상태 메모

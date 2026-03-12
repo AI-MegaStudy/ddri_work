@@ -11,7 +11,8 @@
 3. `03_ddri_prediction_target_definition.md`
 4. `04_ddri_prediction_dataset_design.md`
 5. `05_ddri_workspace_structure_guide.md`
-6. `07_ddri_notebook_and_evidence_chart_policy.md`
+6. `06_ddareungi_project_inventory_2026-03-11.md`
+7. `07_ddri_notebook_and_evidence_chart_policy.md`
 
 직접 열람 링크:
 
@@ -20,6 +21,15 @@
 - [03_ddri_prediction_target_definition.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/03_ddri_prediction_target_definition.md)
 - [04_ddri_prediction_dataset_design.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/04_ddri_prediction_dataset_design.md)
 - [05_ddri_workspace_structure_guide.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/05_ddri_workspace_structure_guide.md)
+- [06_ddareungi_project_inventory_2026-03-11.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/06_ddareungi_project_inventory_2026-03-11.md)
 - [07_ddri_notebook_and_evidence_chart_policy.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/07_ddri_notebook_and_evidence_chart_policy.md)
 
 이 폴더를 프로젝트 전체 기준 문서의 실제 경로로 사용한다.
+
+현재 읽는 순서 권장:
+
+1. 프로젝트 전체 방향: `01_ddri_master_plan.md`
+2. 의사결정과 근거: `02_ddri_project_report_log.md`
+3. 예측 목표/데이터셋: `03`, `04`
+4. 현재 작업물 구조: `05`, `06`
+5. 노트북/차트 운영 기준: `07`

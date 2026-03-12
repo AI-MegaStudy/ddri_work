@@ -1,5 +1,5 @@
 ---
-title: "Ddri 강남구 따릉이 군집화 발표"
+title: "Ddri 강남구 따릉이 통합 군집화 발표"
 pdf_options:
   format: A4
   landscape: true
@@ -9,201 +9,253 @@ pdf_options:
 
 <link rel="stylesheet" href="../ddri_presentation_a4_landscape.css">
 
-# 강남구 따릉이 대여소 군집화 분석
+# 강남구 따릉이 대여소 통합 군집화 분석
 
-## 발표 목적
+## 분석 목적
 
-- 강남구 대여소를 이용 패턴 기준으로 유형화
-- 수요 예측 전 단계에서 대여소 성격을 설명 가능한 구조로 정리
-- 발표 기준으로는 군집 결과와 공간 해석까지 제시
+- 기초 이용 패턴 분석 위에 지구판단 중심 피처를 결합해 최종 통합 군집화 결과를 도출
+- 이후 날씨·생활인구·고저차 등 환경 피처를 선별해 `station-day` 수요 예측으로 연결
 
 ## 핵심 결과
 
-- 기준 기간: `2023~2024 학습`, `2025 테스트 기준`
-- 군집 수: `k = 2`
-- 군집 해석: `일반수요형`, `고수요형`
-- 고수요형은 지하철·버스 접근성이 상대적으로 더 우수
+- 기준 기간: `2023~2024 학습`, `2025 테스트`
+- 기본 통합 군집화: `k = 5`
+- 해석 중심: `업무/상업형`, `주거형`, `생활·상권 혼합형`, `외곽 주거형`
+- 환경 보강 실험은 해석 보강에는 유효했지만, 메인 군집 구조는 기본 통합 군집화가 더 안정적
 
-<div class="callout">군집화 결과 = 예측 모델용 보조 feature 기반</div>
+<div class="callout">군집화의 목표 = 지구 역할 분류 + 이후 수요 예측용 피처 선별</div>
 
 <div class="page-break"></div>
 
-# 1. 데이터 기준과 전처리
+# 1. 통합 군집화 접근
 
-## 데이터 기준
+## 분석 고도화 흐름
 
-- 대여 이력: 강남구 따릉이 이용정보
-- 공통 운영 대여소: `2023~2025 공통 운영 대여소`
-- 처리 원칙: 신규 스테이션은 메인 분석과 분리
+- 기초 이용 패턴 분석으로 대여량과 시간대 기본 구조를 먼저 확인
+- 반납 시간대 비율로 `도착 지구 역할`을 본다
+- 순유입으로 `출발 거점 / 도착 거점`을 본다
+- 교통 접근성으로 `환승/업무 접근성`을 본다
+
+## 이번 통합 군집화의 핵심
+
+- `수요 규모`만이 아니라 `업무지구`, `주거지구`, `상권`, `외곽 생활권` 같은 공간 역할을 함께 해석
+- 이후 예측 모델에서 군집별 환경 피처를 선별하기 위한 기준을 만든다
+
+<div class="callout compact">기초 패턴 분석 위에 지구판단 피처를 더해, 대여소의 공간 역할을 설명하는 최종 통합 군집화를 구성했다.</div>
+
+<div class="page-break"></div>
+
+# 2. 데이터 기준과 전처리
+
+## 분석 범위
+
+- 대여 이력: `서울 열린데이터광장 공공자전거 이용정보`
+- 대여소 정보: `서울 열린데이터광장 공공자전거 대여소 정보`
+- 기준 대여소: `2023~2025 공통 운영 대여소`
 
 ## 전처리 기준
 
-- 결측치 제거: `대여일시`, `반납일시`, `대여 대여소번호`, `반납대여소번호`, `이용시간(분)`, `이용거리(M)`
-- 이상치 제거: `이용시간(분) <= 0`, `이용거리(M) <= 0`, `동일 대여소 반납 + 5분 이하`
-- 운영 범위 정리: 공통 기준 밖 대여소, 강남구 외 반납 사례 제거
-- 나머지 동일 대여소 반납은 제거하지 않고 유지
+- 필수값 결측 행 제거:
+  - 아래 6개 항목 중 하나라도 비어 있으면 해당 이용 건(row)을 제거
+  - `대여일시`, `반납일시`: 대여/반납 시각이 없으면 시간대 반납 비율과 순유입 계산 불가
+  - `대여 대여소번호`, `반납대여소번호`: 출발/도착 대여소가 없으면 OD 흐름과 대여소별 집계 불가
+  - `이용시간(분)`, `이용거리(M)`: 이용 유효성 판단과 이상치 제거 기준 적용 불가
+- 이상치 제거:
+  - `이용시간(분) <= 0`: 비정상 이용 로그로 간주
+  - `이용거리(M) <= 0`: 비정상 이동 로그로 간주
+  - `동일 대여소 반납 && 이용시간(분) <= 5`: 즉시 반납·미사용 가능성이 높아 제거
+- 공통 기준 밖 대여소, 강남구 외 반납 제거
 
-## 전처리 및 해석 원칙
+## 전처리 영향도
 
-- 없는 자료는 임의 생성하지 않음
-- 메인 모델은 기존 운영 스테이션 중심으로 설계
-- `동일 대여소 + 5분 이하`만 제거하고, 나머지 self-return은 운영 해석용 보조 지표로 관리
+- 전체 원천 로그: `2,896,795건`
+- 최종 분석 사용 로그: `2,663,938건`
+- 전체 제외 행: `232,857건 (8.04%)`
 
-<div class="callout compact">5분 이하 즉시 반납만 제거, 나머지 self-return은 보존하고 재고 변동은 별도 해석</div>
+### 세부 제외 사유
+
+- 결측치 제거: `0건 (0.00%)`
+- 이상치 제거
+  - `이용시간/이용거리 <= 0`: `138,057건 (4.77%)`
+  - `동일 대여소 반납 && 5분 이하`: `22,394건 (0.77%)`
+- 분석 대상 제외
+  - 공통 기준 밖 대여소: `72,406건 (2.50%)`
+  - 강남구 외 반납: `0건`
+
+<div class="callout compact">5분 이하 즉시 반납만 제거하고, 나머지 self-return은 유지했다.</div>
+
+<div class="page-break"></div>
+
+# 3. 최종 군집화 입력과 원천
+
+## 메인 입력 7개
+
+- `arrival_7_10_ratio` (07~10시 반납 비율)
+- `arrival_11_14_ratio` (11~14시 반납 비율)
+- `arrival_17_20_ratio` (17~20시 반납 비율)
+- `morning_net_inflow` (아침 순유입)
+- `evening_net_inflow` (저녁 순유입)
+- `subway_distance_m` (최근접 지하철 거리)
+- `bus_stop_count_300m` (300m 내 버스정류장 수)
+
+## 지표 원천
+
+| 지표 | 원천 |
+|---|---|
+| `arrival_*_ratio` (시간대별 반납 비율) | `서울 열린데이터광장 공공자전거 이용정보`의 `반납일시`, `반납대여소번호` |
+| `morning_net_inflow`, `evening_net_inflow` (시간대별 순유입) | `서울 열린데이터광장 공공자전거 이용정보`의 대여/반납 시각, 대여소번호 |
+| `subway_distance_m` (최근접 지하철 거리) | `서울 열린데이터광장 서울시 역사마스터 정보` |
+| `bus_stop_count_300m` (300m 내 버스정류장 수) | `서울 열린데이터광장 서울시 버스정류소 위치정보` |
+| `life_pop_*` (시간대별 생활인구) | `서울 생활인구(내국인) 데이터` + `서울시 행정동코드 매핑표` |
+
+<div class="callout">핵심 입력은 수요 규모보다 도착 지구 역할을 설명하는 변수로 재구성했다.</div>
+
+<div class="page-break"></div>
+
+# 4. 반납 시간대 지도 근거
 
 <div class="chart-block tight">
-  <img class="chart-image" src="../../03_prediction/03_images/ddri_flow_metrics_summary.png" alt="flow metrics summary">
+  <img class="chart-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_hypothesis_crosstab.png" alt="cluster hypothesis crosstab">
 </div>
 
+## 해석 기준
+
+- `07~10시 반납 집중`: 출근 도착형, 업무/상업지구 후보
+- `11~14시 반납 집중`: 점심 상권/업무지구 후보
+- `17~20시 반납 집중`: 귀가 도착형, 주거지구 후보
+
+<div class="chart-block">
+  <img class="chart-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_7_10.png" alt="2025 07-10 return map">
+</div>
+
+<div class="chart-block">
+  <img class="chart-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_11_14.png" alt="2025 11-14 return map">
+</div>
+
+<div class="chart-block">
+  <img class="chart-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_17_20.png" alt="2025 17-20 return map">
+</div>
+
+## 인터랙티브 원본
+
+- `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_7_10.html`
+- `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_11_14.html`
+- `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_17_20.html`
+
 <div class="page-break"></div>
 
-# 2. 군집화 Feature와 방법
+# 5. 군집 수 선택 결과
 
-## 사용 Feature
-
-- 평균 대여량
-- 평일 평균 대여량
-- 주말 평균 대여량
-- 출퇴근 시간 비율
-- 야간 비율
-- 평일-주말 차이
-- 대여량 표준편차
-
-## 방법
-
-- 알고리즘: `K-Means`
-- 비교 범위: `k = 2 ~ 6`
-- 선택 기준: `silhouette score`
-- 최종 선택: `k = 2`
-
-<div class="callout">현재 군집의 핵심 분리축 = 이용 목적보다 수요 규모</div>
-
-<div class="page-break"></div>
-
-# 3. 군집 수 선택 결과
-
-| k | inertia | silhouette |
-|---|---:|---:|
-| 2 | 698.00 | 0.4389 |
-| 3 | 556.63 | 0.2758 |
-| 4 | 449.94 | 0.2927 |
-| 5 | 385.46 | 0.2853 |
-| 6 | 328.87 | 0.2816 |
+| k | silhouette |
+|---|---:|
+| 5 | 0.2033 |
+| 6 | 0.1795 |
+| 7 | 0.1708 |
 
 <div class="chart-block tight">
-  <img class="chart-image" src="../../01_clustering/07_images/ddri_kmeans_elbow_silhouette.png" alt="KMeans elbow silhouette chart">
+  <img class="chart-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_kmeans_elbow_silhouette.png" alt="integrated second clustering elbow silhouette">
 </div>
 
 <ul class="compact-list">
-  <li><code>k = 2</code>에서 silhouette가 가장 높음</li>
-  <li>1차 baseline에서는 분리도와 설명력이 가장 안정적임</li>
+  <li>`k = 5`에서 silhouette가 가장 높음</li>
+  <li>이번 군집화는 지구판단 해석력을 우선해 `k >= 5` 범위를 탐색함</li>
 </ul>
 
 <div class="page-break"></div>
 
-# 4. 입력 특성과 시간대 패턴
+# 6. 군집 결과와 분포
 
-<div class="image-row heatmap-row">
-  <img class="half-image" src="../../01_clustering/07_images/ddri_feature_correlation_heatmap.png" alt="feature correlation heatmap">
-  <img class="half-image" src="../../01_clustering/07_images/ddri_weekday_hour_heatmap.png" alt="weekday hour heatmap">
-</div>
-
-<ul class="compact-list">
-  <li>대여량 관련 feature끼리 높은 상관을 보이며, 수요 규모 축이 핵심 분리축임</li>
-  <li>시간대 패턴은 아침·퇴근 시간대 피크가 뚜렷해 강남구 수요 배경을 설명함</li>
-</ul>
-
-<div class="page-break"></div>
-
-# 5. 군집 결과와 분포
-
-| 군집 | 해석 | 평균 대여량 | 평일 평균 | 주말 평균 | 출퇴근 비율 | 야간 비율 |
-|---|---|---:|---:|---:|---:|---:|
-| Cluster 0 | 일반수요형 | 11.91 | 12.87 | 9.48 | 0.373 | 0.133 |
-| Cluster 1 | 고수요형 | 31.18 | 33.30 | 25.86 | 0.382 | 0.134 |
+| 군집 | station 수 | 07-10 비율 | 11-14 비율 | 17-20 비율 | 해석 초안 |
+|---|---:|---:|---:|---:|---|
+| Cluster 0 | 49 | 0.283 | 0.187 | 0.233 | 업무/상업 혼합형 |
+| Cluster 1 | 3 | 0.486 | 0.160 | 0.161 | 초강한 아침 도착 업무 거점형 |
+| Cluster 2 | 32 | 0.113 | 0.150 | 0.383 | 주거 도착형 |
+| Cluster 3 | 61 | 0.153 | 0.198 | 0.307 | 생활·상권 혼합형 |
+| Cluster 4 | 19 | 0.157 | 0.159 | 0.312 | 외곽 주거형 |
 
 <div class="image-row tight">
-  <img class="half-image" src="../../01_clustering/07_images/ddri_kmeans_pca_scatter.png" alt="PCA scatter">
-  <img class="half-image" src="../../01_clustering/07_images/ddri_cluster_feature_means.png" alt="cluster feature means">
+  <img class="half-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_kmeans_pca_scatter.png" alt="integrated pca scatter">
+  <img class="half-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_feature_means.png" alt="integrated cluster feature means">
 </div>
-
-<ul class="compact-list">
-  <li>고수요형은 평균 대여량 규모가 뚜렷하게 큼</li>
-  <li>평일과 주말 모두 고수요형이 우세</li>
-  <li>출퇴근·야간 비율 차이는 보조적 신호에 가까움</li>
-</ul>
 
 <div class="page-break"></div>
 
-# 6. 군집 프로파일
+# 7. 군집 프로파일
 
 <div class="chart-block">
-  <img class="chart-image" src="../../01_clustering/07_images/ddri_cluster_profile_heatmap.png" alt="cluster profile heatmap">
+  <img class="chart-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_profile_heatmap.png" alt="integrated cluster profile heatmap">
 </div>
-
-<ul class="compact-list">
-  <li>군집 1은 평균 대여량, 평일 평균, 주말 평균이 모두 높음</li>
-  <li>이번 baseline의 주된 분리축은 수요 규모 차이로 해석 가능</li>
-</ul>
-
-<div class="page-break"></div>
-
-# 7. 환경 기반 해석 고도화
-
-## 핵심 수치
-
-- 일반수요형: 지하철 거리 `551.64m`, 300m 버스정류장 수 `26.98`
-- 고수요형: 지하철 거리 `387.75m`, 300m 버스정류장 수 `32.56`
 
 <div class="chart-block">
-  <img class="chart-image" src="../../01_clustering/03_environment/images/ddri_cluster_environment_comparison.png" alt="cluster environment comparison">
-</div>
-
-<div class="callout compact">환경 해석의 현재 결론 = 고수요형은 교통 접근성이 더 우수한 대여소군</div>
-
-<div class="page-break"></div>
-
-# 8. 군집 분포 지도
-
-<div class="chart-block tight">
-  <img class="map-image" src="./ddri_cluster_static_map.png" alt="cluster static map">
+  <img class="chart-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_quadrant_views.png" alt="integrated cluster quadrant views">
 </div>
 
 <ul class="compact-list">
-  <li>고수요형 대표: <code>매봉역 3번출구앞</code>, <code>수서역 5번출구</code>, <code>대모산입구역 4번 출구 앞</code></li>
-  <li>일반수요형 대표: <code>압구정파출소 앞</code>, <code>도심공항타워 앞</code></li>
-  <li>고수요형이 교통 접근성이 좋은 지점 주변에 상대적으로 분포</li>
-  <li>인터랙티브 원본: <code>works/01_clustering/04_maps/ddri_cluster_map_gangnam.html</code></li>
+  <li>Cluster 1은 아침 도착 집중과 순유입이 매우 강한 업무 거점</li>
+  <li>Cluster 2와 4는 저녁 도착형으로 주거지 성격이 강함</li>
+  <li>Cluster 3은 점심 비율도 상대적으로 높아 생활·상권 혼합형으로 해석 가능</li>
 </ul>
 
 <div class="page-break"></div>
 
-# 부록. 강남구 따릉이 군집 분포 전체 지도
+# 8. 군집 대표 대여소와 군집 지도
 
-<div class="chart-block tight">
-  <img class="appendix-map-image" src="./ddri_cluster_map_capture.png" alt="captured folium cluster map">
+<div class="chart-block">
+  <img class="appendix-map-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_static_map.png" alt="integrated cluster static map">
 </div>
 
-<ul class="compact-list">
-  <li>발표 중 전체 분포를 크게 보여줄 때 사용하는 보조 슬라이드</li>
-  <li>본문 8페이지의 요약형 지도 설명 뒤에 이어서 제시</li>
-</ul>
+<div class="callout compact">배경 지도 위에 군집 마커와 범례를 함께 배치해, 강남구 내 공간 분포와 외곽 군집 위치를 한 장에서 확인할 수 있다.</div>
+
+## 대표 예시
+
+- 업무/상업 혼합형: `SB타워 앞`, `역삼지하보도 7번출구 앞`
+- 초강한 아침 도착 업무 거점형: `수서역 5번출구`, `포스코사거리(기업은행)`
+- 주거 도착형: `청담역 13번 출구 앞`, `현대아파트 정문 앞`
+- 외곽 주거형: `더시그넘하우스 앞`, `세곡동 사거리`
+
+## 인터랙티브 지도
+
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/ddri_second_cluster_map.html`
 
 <div class="page-break"></div>
 
-# 9. 결론과 다음 단계
+# 9. 환경 보강 실험
+
+## 추가한 환경 피처와 원천
+
+| 지표 | 원천 |
+|---|---|
+| `station_elevation_m` (대여소 표고) | `Open-Meteo Elevation API` |
+| `elevation_diff_nearest_subway_m` (최근접 지하철 대비 고도차) | `Open-Meteo Elevation API` + `서울 열린데이터광장 서울시 역사마스터 정보` |
+| `nearest_park_area_sqm` (최근접 공원 면적) | `강남구 공원 정보 공공데이터` |
+| `distance_naturepark_m` (도시자연공원구역 거리) | 서울 열린데이터광장 `도시자연공원구역` https://data.seoul.go.kr/dataList/OA-21135/S/1/datasetView.do |
+| `distance_river_boundary_m` (최근접 하천경계 거리) | 브이월드/국토정보지리원 `연속수치지형도 하천경계 데이터` https://www.vworld.kr/dtmk/dtmk_ntads_s002.do?svcCde=MK&dsId=30248 |
+
+## 환경 보강 결과
+
+- 보강 군집화 최고 silhouette: `0.1577`
+- 기본 통합 군집화(`0.2033`)보다 분리도는 낮음
+- 다만 `외곽 주거형`, `녹지/하천 인접형` 해석은 더 강해짐
+
+<div class="chart-block">
+  <img class="chart-image" src="../../01_clustering/08_integrated/intermediate/enriched_second_clustering_results/images/ddri_enriched_cluster_feature_means.png" alt="enriched standardized feature means">
+</div>
+
+<div class="callout compact">환경 피처는 메인 군집 구조를 대체하기보다 외곽성·녹지성 해석을 보강하는 근거로 유효했다.</div>
+
+<div class="page-break"></div>
+
+# 10. 결론과 다음 단계
 
 ## 결론
 
-- 강남구 따릉이 대여소는 1차 군집화 결과 `일반수요형`과 `고수요형`으로 구분됨
-- 고수요형은 평균 대여량이 높고, 지하철·버스 접근성이 상대적으로 더 우수함
-- 군집 label은 이후 `Station별 하루 대여량 예측`의 보조 feature로 활용 가능
-- 다만 상업지구·출퇴근형 해석은 추가 POI와 시간대 지표 보강 후 재검토가 필요함
+- 기초 이용 패턴 분석과 지구판단 피처 결합을 통해 대여소의 공간 역할을 설명하는 통합 군집화를 완성했다
+- 최종 발표 메인 결과는 `기본 통합 군집화(k=5)`를 사용한다
+- 환경 보강 실험은 고저차·녹지·하천 접근성이 외곽형 해석을 보강한다는 점을 보여줬다
 
-## 다음 단계
+## 이후 계획
 
-- `station-day` 회귀 모델 학습
-- 군집 label 포함/제외 성능 비교
-- 발표 이후 지도 웹 서비스와 API 설계 고도화
+- 군집별로 날씨·생활인구·고저차 피처를 선별해 `station-day` 수요 예측으로 연결
+- 최종 평가는 `RMSE`, `MAE`, `R²`로 수행
 
-<div class="callout">핵심 결론 = 군집 도출 + 공간적 의미 설명 가능</div>
+<div class="callout">군집화의 최종 역할 = 예측 모델에 들어갈 환경 피처를 더 정교하게 고르는 기준을 제공하는 것</div>

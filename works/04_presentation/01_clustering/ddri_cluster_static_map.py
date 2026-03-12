@@ -6,9 +6,26 @@ import pandas as pd
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
-FEATURE_PATH = PROJECT_ROOT / "works" / "01_clustering" / "06_data" / "ddri_station_cluster_features_train_with_labels.csv"
-STATION_PATH = PROJECT_ROOT / "works" / "01_clustering" / "06_data" / "ddri_common_station_master.csv"
-REPRESENTATIVE_PATH = PROJECT_ROOT / "works" / "01_clustering" / "03_environment" / "data" / "ddri_cluster_representative_stations.csv"
+FEATURE_PATH = (
+    PROJECT_ROOT
+    / "works"
+    / "01_clustering"
+    / "archive_1st"
+    / "06_data"
+    / "ddri_station_cluster_features_train_with_labels.csv"
+)
+STATION_PATH = (
+    PROJECT_ROOT / "works" / "01_clustering" / "08_integrated" / "source_data" / "ddri_common_station_master.csv"
+)
+REPRESENTATIVE_PATH = (
+    PROJECT_ROOT
+    / "works"
+    / "01_clustering"
+    / "archive_1st"
+    / "03_environment"
+    / "data"
+    / "ddri_cluster_representative_stations.csv"
+)
 OUTPUT_PATH = PROJECT_ROOT / "works" / "04_presentation" / "01_clustering" / "ddri_cluster_static_map.png"
 
 

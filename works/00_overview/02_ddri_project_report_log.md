@@ -1272,3 +1272,216 @@ K 탐색 결과:
 - `works/03_prediction/03_images/ddri_prediction_feature_correlation_heatmap.png`
 - `works/03_prediction/03_images/ddri_holiday_weekend_rental_comparison.png`
 - `works/03_prediction/03_images/ddri_monthly_avg_rental_trend.png`
+
+---
+
+### Decision 017. 군집화는 1차/2차를 분리 제시하지 않고, 지구판단 중심 통합 군집화 결과로 정리
+
+#### 결정 내용
+
+- 기존 이용량 중심 baseline 결과 위에 반납 시간대, 순유입, 교통 접근성, 생활인구를 결합한 `통합 군집화`를 최종 결과로 사용한다.
+- 보고서와 발표에서는 `1차 한계 -> 2차 보완` 구조보다, `기초 패턴 분석 + 지구판단 피처 고도화 + 최종 통합 결과` 흐름으로 설명한다.
+- 최종 군집화의 메인 입력은 아래 7개로 확정했다.
+  - `arrival_7_10_ratio` (07~10시 반납 비율)
+  - `arrival_11_14_ratio` (11~14시 반납 비율)
+  - `arrival_17_20_ratio` (17~20시 반납 비율)
+  - `morning_net_inflow` (아침 순유입)
+  - `evening_net_inflow` (저녁 순유입)
+  - `subway_distance_m` (최근접 지하철 거리)
+  - `bus_stop_count_300m` (300m 내 버스정류장 수)
+
+#### 결정 이유
+
+- 이용량 규모만으로는 업무지구/주거지구/상권의 공간적 역할 해석이 약했다.
+- 반납 시간대와 순유입은 `도착 지구 역할`을 직접적으로 보여준다.
+- 교통 접근성은 역세권/생활권/외곽형 해석을 보강한다.
+
+#### 내부 확인 근거
+
+- 최종 통합 피처:
+  - `works/01_clustering/08_integrated/final/features/ddri_final_district_clustering_features_train_2023_2024.csv`
+  - `works/01_clustering/08_integrated/final/features/ddri_final_district_clustering_features_test_2025.csv`
+- 통합 군집화 입력 생성:
+  - `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_second_cluster_ready_input_train_2023_2024.csv`
+  - `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_second_cluster_ready_input_test_2025.csv`
+
+#### 지표 원천
+
+- `arrival_*_ratio`, `net_inflow`: `서울 열린데이터광장 공공자전거 이용정보`
+- `subway_distance_m`: `서울 열린데이터광장 서울시 역사마스터 정보`
+- `bus_stop_count_300m`: `서울 열린데이터광장 서울시 버스정류소 위치정보`
+- `life_pop_*`: `서울 생활인구(내국인) 데이터` + `서울시 행정동코드 매핑표`
+
+#### 보고서/PPT에 넣을 수 있는 메시지
+
+- “군집화는 이용량 규모 분류에 머물지 않고, 반납 시간대와 순유입을 결합해 대여소의 지구 역할을 읽는 통합 구조로 확장했다.”
+- “최종 입력은 아침·점심·저녁 도착 비율과 순유입, 교통 접근성을 중심으로 구성했다.”
+
+#### 필요한 시각화/표
+
+- [x] 2025 반납 시간대 지도 3장
+- [x] k 탐색 차트
+- [x] PCA scatter
+- [x] 군집 프로파일 heatmap
+- [x] 사분면 해석 차트
+- [x] 군집 정적 지도
+
+#### 시각화 저장 경로
+
+- `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_7_10.png`
+- `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_11_14.png`
+- `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_17_20.png`
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_kmeans_elbow_silhouette.png`
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_kmeans_pca_scatter.png`
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_profile_heatmap.png`
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_quadrant_views.png`
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_static_map.png`
+
+---
+
+### Decision 018. 기본 통합 군집화는 k=5를 메인 결과로 채택
+
+#### 결정 내용
+
+- 통합 군집화는 `k=5 ~ 7` 범위에서 탐색했고, 최종 메인 결과는 `k=5`를 사용한다.
+- 현재 해석 초안은 아래와 같다.
+  - Cluster 0: 업무/상업 혼합형
+  - Cluster 1: 초강한 아침 도착 업무 거점형
+  - Cluster 2: 주거 도착형
+  - Cluster 3: 생활·상권 혼합형
+  - Cluster 4: 외곽 주거형
+
+#### 결정 이유
+
+- 사용자 요구상 5개 이상 군집을 우선 검토했다.
+- `k=5`가 검토 범위 내에서 가장 높은 silhouette를 보였다.
+- 발표와 이후 예측 연결성을 고려할 때, 5개 군집은 지구 역할 구분과 군집 규모의 균형이 가장 좋았다.
+
+#### 내부 확인 근거
+
+- `k=5`: `0.2033`
+- `k=6`: `0.1795`
+- `k=7`: `0.1708`
+- 결과 저장:
+  - `works/01_clustering/08_integrated/final/results/second_clustering_results/data/ddri_second_kmeans_search_metrics.csv`
+  - `works/01_clustering/08_integrated/final/results/second_clustering_results/data/ddri_second_cluster_summary.csv`
+  - `works/01_clustering/08_integrated/final/results/second_clustering_results/data/ddri_second_cluster_train_with_labels.csv`
+
+#### 보고서/PPT에 넣을 수 있는 메시지
+
+- “5개 군집은 업무/상업, 강한 아침 도착 허브, 주거 도착형, 생활·상권 혼합형, 외곽 주거형을 구분하는 데 가장 균형적이었다.”
+
+#### 필요한 시각화/표
+
+- [x] k별 inertia/silhouette 표
+- [x] 군집별 station 수
+- [x] 군집별 대표 대여소 표
+- [x] 군집 가설 cross-tab
+
+#### 시각화/표 저장 경로
+
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/data/ddri_second_cluster_representative_stations.csv`
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/data/ddri_second_cluster_hypothesis_crosstab.csv`
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_size.png`
+- `works/01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_hypothesis_crosstab.png`
+
+---
+
+### Decision 019. 표고·녹지·하천경계 기반 환경 보강 실험은 보조 근거로 유지
+
+#### 결정 내용
+
+- 환경 보강 피처를 추가한 별도 군집화 실험을 수행했다.
+- 추가한 피처는 아래와 같다.
+  - `station_elevation_m` (대여소 표고)
+  - `elevation_diff_nearest_subway_m` (최근접 지하철 대비 고도차)
+  - `nearest_park_area_sqm` (최근접 공원 면적)
+  - `distance_naturepark_m` (도시자연공원구역 거리)
+  - `distance_river_boundary_m` (최근접 하천경계 거리)
+- 현재 단계에서는 환경 보강 버전을 메인 군집화로 채택하지 않고, `외곽형/녹지형 해석 보강` 근거로 사용한다.
+
+#### 결정 이유
+
+- 환경 피처는 외곽 주거형과 대형 녹지 인접형의 해석을 강화했다.
+- 그러나 전체 군집 분리도는 기본 통합 군집화보다 개선되지 않았다.
+- 따라서 발표 메인 구조는 반납 시간대 기반 통합 군집화를 유지하고, 환경 보강은 `고도화 실험 결과`로 제시하는 것이 안전하다.
+
+#### 내부 확인 근거
+
+- 환경 보강 silhouette
+  - `k=5`: `0.1569`
+  - `k=6`: `0.1577`
+  - `k=7`: `0.1456`
+- 결과 저장:
+  - `works/01_clustering/08_integrated/intermediate/enriched_second_clustering_results/data/ddri_enriched_kmeans_search_metrics.csv`
+  - `works/01_clustering/08_integrated/intermediate/enriched_second_clustering_results/enriched_vs_base_comparison.md`
+
+#### 지표 원천
+
+- `station_elevation_m`, `elevation_diff_*`: `Open-Meteo Elevation API`
+- `nearest_park_area_sqm`: `강남구 공원 정보 공공데이터`
+- `distance_naturepark_m`: `서울 열린데이터광장 도시자연공원구역`
+  - https://data.seoul.go.kr/dataList/OA-21135/S/1/datasetView.do
+- `distance_river_boundary_m`: `브이월드/국토정보지리원 연속수치지형도 하천경계 데이터`
+  - https://www.vworld.kr/dtmk/dtmk_ntads_s002.do?svcCde=MK&dsId=30248
+
+#### 보고서/PPT에 넣을 수 있는 메시지
+
+- “표고·녹지·하천경계 접근성은 외곽 군집의 공간 해석을 강화했지만, 메인 군집 구조를 대체할 정도의 분리도 개선은 보이지 않았다.”
+
+#### 필요한 시각화/표
+
+- [x] 환경 보강 feature 평균 차트
+- [x] 환경 보강 k 탐색 차트
+- [x] 기본 결과와의 비교 메모
+
+#### 시각화/표 저장 경로
+
+- `works/01_clustering/08_integrated/intermediate/enriched_second_clustering_results/images/ddri_enriched_cluster_feature_means.png`
+- `works/01_clustering/08_integrated/intermediate/enriched_second_clustering_results/images/ddri_enriched_kmeans_elbow_silhouette.png`
+- `works/01_clustering/08_integrated/intermediate/enriched_second_clustering_results/enriched_vs_base_comparison.md`
+
+---
+
+### Decision 020. 군집화 작업물은 08_integrated를 기준으로 final / intermediate / pipeline / source_data 구조로 재정리
+
+#### 결정 내용
+
+- 개인 작업 폴더였던 `cheng80/`의 산출물을 `works/01_clustering/08_integrated` 아래로 이관했다.
+- `works/01_clustering`의 활성 구조는 아래 기준으로 단순화했다.
+  - `08_integrated`: 현재 최신 통합 군집화 작업 루트
+  - `archive_1st`: 기존 1차 군집화 결과 보관본
+- `08_integrated` 내부는 다시 아래 4개 역할로 나눴다.
+  - `pipeline/`: 스크립트, 노트북, 작업 메모
+  - `source_data/`: 공통 기준표
+  - `final/`: 최종 입력과 최종 결과
+  - `intermediate/`: 반납 시간대, 환경 보강, 비교 실험 중간 산출물
+
+#### 결정 이유
+
+- 기존 구조에서는 최신 통합 군집화 산출물이 개인 작업 폴더와 공식 폴더에 나뉘어 있어 추적이 어려웠다.
+- `final`과 `intermediate`를 구분하면 작업자가 최종본과 중간 산출물을 혼동하지 않는다.
+- `pipeline`을 따로 두면 재실행 경로가 명확해진다.
+
+#### 내부 확인 근거
+
+- 구조 정리 후 핵심 실행 검증 완료:
+  - `05_build_return_time_district_features.py`
+  - `06_build_second_clustering_ready_inputs.py`
+  - `07_run_integrated_second_clustering.py`
+  - `08_build_environment_enrichment_features.py`
+  - `09_analyze_environment_enrichment.py`
+  - `10_build_enriched_clustering_inputs.py`
+  - `11_run_enriched_second_clustering.py`
+  - `13_build_presentation_quadrant_charts.py`
+- `py_compile` 검증 완료
+
+#### 관련 문서
+
+- `works/README.md`
+- `works/01_clustering/README.md`
+- `works/01_clustering/08_integrated/README.md`
+
+#### 보고서/PPT에 넣을 수 있는 메시지
+
+- “통합 군집화 작업물은 최종 결과, 중간 산출물, 재생성 파이프라인을 분리해 재현성과 열람성을 함께 확보했다.”
