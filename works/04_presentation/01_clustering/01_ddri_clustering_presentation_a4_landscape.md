@@ -112,39 +112,88 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 4. 반납 시간대 지도 근거
+# 4. 07~10시 반납 근거
 
-<div class="chart-block tight">
-  <img class="chart-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_hypothesis_crosstab.png" alt="cluster hypothesis crosstab">
+<div class="image-row tight">
+  <img class="half-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_7_10_safari.png" alt="2025 07-10 return html map">
+  <img class="half-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_top_2025_7_10.png" alt="2025 07-10 top returns">
 </div>
 
-## 해석 기준
-
-- `07~10시 반납 집중`: 출근 도착형, 업무/상업지구 후보
-- `11~14시 반납 집중`: 점심 상권/업무지구 후보
-- `17~20시 반납 집중`: 귀가 도착형, 주거지구 후보
-
-<div class="chart-block">
-  <img class="chart-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_7_10.png" alt="2025 07-10 return map">
+<div class="text-card-row">
+  <div class="text-card">
+    <h3>상위 반납 대여소</h3>
+    <ul>
+      <li>`포스코사거리(기업은행)`</li>
+      <li>`수서역 5번출구`</li>
+      <li>`3호선 매봉역 3번출구앞`</li>
+    </ul>
+  </div>
+  <div class="text-card">
+    <h3>해석 포인트</h3>
+    <ul>
+      <li>`07~10시 반납 집중`은 출근 도착형으로, 업무/상업지구 후보 해석의 핵심 근거다.</li>
+      <li>강남 중심 업무축과 수서권 거점이 함께 드러난다.</li>
+    </ul>
+  </div>
 </div>
-
-<div class="chart-block">
-  <img class="chart-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_11_14.png" alt="2025 11-14 return map">
-</div>
-
-<div class="chart-block">
-  <img class="chart-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_17_20.png" alt="2025 17-20 return map">
-</div>
-
-## 인터랙티브 원본
-
-- `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_7_10.html`
-- `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_11_14.html`
-- `works/01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_17_20.html`
 
 <div class="page-break"></div>
 
-# 5. 군집 수 선택 결과
+# 5. 11~14시 반납 근거
+
+<div class="image-row tight">
+  <img class="half-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_11_14_safari.png" alt="2025 11-14 return html map">
+  <img class="half-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_top_2025_11_14.png" alt="2025 11-14 top returns">
+</div>
+
+<div class="text-card-row">
+  <div class="text-card">
+    <h3>상위 반납 대여소</h3>
+    <ul>
+      <li>`수서역 5번출구`</li>
+      <li>`3호선 매봉역 3번출구앞`</li>
+      <li>`선릉역3번출구`</li>
+    </ul>
+  </div>
+  <div class="text-card">
+    <h3>해석 포인트</h3>
+    <ul>
+      <li>`11~14시 반납 집중`은 점심 상권 또는 업무지 내부 이동 수요를 읽는 근거다.</li>
+      <li>업무축 외에도 생활·상권 혼합형 분포가 넓어지는 특징이 보인다.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+# 6. 17~20시 반납 근거
+
+<div class="image-row tight">
+  <img class="half-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_17_20_safari.png" alt="2025 17-20 return html map">
+  <img class="half-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_top_2025_17_20.png" alt="2025 17-20 top returns">
+</div>
+
+<div class="text-card-row">
+  <div class="text-card">
+    <h3>상위 반납 대여소</h3>
+    <ul>
+      <li>`압구정역 2번 출구 옆`</li>
+      <li>`3호선 매봉역 3번출구앞`</li>
+      <li>`자곡사거리`</li>
+    </ul>
+  </div>
+  <div class="text-card">
+    <h3>해석 포인트</h3>
+    <ul>
+      <li>`17~20시 반납 집중`은 귀가 도착형으로, 주거지구 후보 해석의 핵심 근거다.</li>
+      <li>외곽과 주거 밀집 축에서 저녁 반납 집중이 커지며 주거 도착형 군집 해석을 뒷받침한다.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+# 7. 군집 수 선택 결과
 
 | k | silhouette |
 |---|---:|
@@ -163,7 +212,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 6. 군집 결과와 분포
+# 8. 군집 결과와 분포
 
 | 군집 | station 수 | 07-10 비율 | 11-14 비율 | 17-20 비율 | 해석 초안 |
 |---|---:|---:|---:|---:|---|
@@ -180,7 +229,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 7. 군집 프로파일
+# 9. 군집 프로파일
 
 <div class="chart-block">
   <img class="chart-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_profile_heatmap.png" alt="integrated cluster profile heatmap">
@@ -198,7 +247,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 8. 군집 대표 대여소와 군집 지도
+# 10. 군집 대표 대여소와 군집 지도
 
 <div class="chart-block">
   <img class="appendix-map-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_static_map.png" alt="integrated cluster static map">
@@ -213,13 +262,13 @@ pdf_options:
 - 주거 도착형: `청담역 13번 출구 앞`, `현대아파트 정문 앞`
 - 외곽 주거형: `더시그넘하우스 앞`, `세곡동 사거리`
 
-## 인터랙티브 지도
+## 참고
 
-- `works/01_clustering/08_integrated/final/results/second_clustering_results/ddri_second_cluster_map.html`
+- 군집 지도는 정적 이미지로 본문에 제시했고, 분석용 인터랙티브 HTML은 별도 산출물로 관리했다.
 
 <div class="page-break"></div>
 
-# 9. 환경 보강 실험
+# 11. 환경 보강 실험
 
 ## 추가한 환경 피처와 원천
 
@@ -245,7 +294,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 10. 결론과 다음 단계
+# 12. 결론과 다음 단계
 
 ## 결론
 

@@ -48,6 +48,16 @@ FEATURE_LABELS = {
     "bus_stop_count_300m": "300m 버스정류장 수",
 }
 
+CLUSTER_NAME_MAP = {
+    0: "업무/상업 혼합형",
+    1: "초강한 아침 도착 업무 거점형",
+    2: "주거 도착형",
+    3: "생활·상권 혼합형",
+    4: "외곽 주거형",
+    5: "확장 군집 5",
+    6: "확장 군집 6",
+}
+
 
 def load_inputs() -> tuple[pd.DataFrame, pd.DataFrame]:
     train = pd.read_csv(INPUT_DIR / "ddri_second_cluster_ready_input_train_2023_2024.csv")
@@ -206,15 +216,16 @@ def save_cluster_map(train_labeled: pd.DataFrame) -> None:
     for _, row in plot_df.iterrows():
         cluster = int(row["cluster"])
         color = palette[cluster % len(palette)]
+        cluster_name = CLUSTER_NAME_MAP.get(cluster, f"군집 {cluster}")
         popup = folium.Popup(
             (
-                f"군집: {cluster}<br>"
+                f"군집: {cluster} ({cluster_name})<br>"
                 f"대여소번호: {int(row['station_id'])}<br>"
                 f"대여소명: {row['station_name']}<br>"
                 f"07-10 비율: {row['arrival_7_10_ratio']:.3f}<br>"
                 f"11-14 비율: {row['arrival_11_14_ratio']:.3f}<br>"
                 f"17-20 비율: {row['arrival_17_20_ratio']:.3f}<br>"
-                f"지구 가설: {row['district_hypothesis']}"
+                f"대여소별 도착시간 가설: {row['district_hypothesis']}"
             ),
             max_width=320,
         )
@@ -228,6 +239,41 @@ def save_cluster_map(train_labeled: pd.DataFrame) -> None:
             weight=1,
             popup=popup,
         ).add_to(fmap)
+
+    legend_rows = []
+    for cluster in sorted(plot_df["cluster"].unique()):
+        color = palette[int(cluster) % len(palette)]
+        cluster_name = CLUSTER_NAME_MAP.get(int(cluster), f"군집 {int(cluster)}")
+        legend_rows.append(
+            f"""
+            <div style="display:flex; align-items:center; gap:8px; margin:4px 0;">
+              <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:{color}; border:1px solid #555;"></span>
+              <span style="font-size:12px; color:#222;">Cluster {int(cluster)}: {cluster_name}</span>
+            </div>
+            """
+        )
+    legend_html = f"""
+    <div style="
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        z-index: 9999;
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+        padding: 12px 14px;
+        min-width: 220px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    ">
+      <div style="font-size:13px; font-weight:700; color:#111827; margin-bottom:6px;">군집 범례</div>
+      {''.join(legend_rows)}
+      <div style="margin-top:8px; font-size:11px; color:#475569;">
+        팝업의 지구 가설은 개별 대여소의 도착시간대 우세 패턴입니다.
+      </div>
+    </div>
+    """
+    fmap.get_root().html.add_child(folium.Element(legend_html))
 
     fmap.save(OUTPUT_DIR / "ddri_second_cluster_map.html")
 
