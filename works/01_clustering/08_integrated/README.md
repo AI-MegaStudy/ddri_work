@@ -20,6 +20,12 @@
     │   └── 반납 시간대 기반 지구판단 중간 산출물
     ├── environment_enrichment/
     │   └── 표고·공원·하천경계 등 환경 보강 중간 산출물
+    ├── poi_features/
+    │   └── 서울시 사업장 CSV 기반 POI 후보 피처
+    ├── poi_enriched_clustering/
+    │   └── POI 보강 군집화 입력 테이블
+    ├── poi_enriched_second_clustering_results/
+    │   └── POI 보강 군집화 비교 결과
     ├── enriched_second_clustering/
     │   └── 환경 보강 입력 테이블
     └── enriched_second_clustering_results/

@@ -53,7 +53,17 @@ pdf_options:
 - `distance_naturepark_m` (도시자연공원구역 거리)
 - `distance_river_boundary_m` (최근접 하천경계 거리)
 
-<div class="callout compact">메인 군집화는 7개 지구판단 피처로 수행했고, 환경 보강 피처는 후속 실험으로 분리해 해석력만 비교했다.</div>
+## POI 보강 실험 피처
+
+- `log1p_restaurant_count_300m` (log1p 300m 내 일반음식점 수)
+- `log1p_cafe_count_300m` (log1p 300m 내 커피숍 수)
+- `log1p_convenience_store_count_300m` (log1p 300m 내 편의점 수)
+- `log1p_pharmacy_count_300m` (log1p 300m 내 약국 수)
+- `log1p_food_retail_count_1000m` (log1p 1000m 내 식품판매업(기타) 수)
+- `log1p_fitness_count_500m` (log1p 500m 내 체력단련장 수)
+- `log1p_cinema_count_1000m` (log1p 1000m 내 영화상영관 수)
+
+<div class="callout compact">메인 군집화는 7개 지구판단 피처로 수행했고, 환경 보강 피처와 POI 보강 피처는 후속 실험으로 분리해 해석력만 비교했다.</div>
 
 <div class="page-break"></div>
 
@@ -321,6 +331,36 @@ pdf_options:
 - 다만 `외곽 주거형`, `녹지/하천 인접형` 해석은 더 강해짐
 
 <div class="callout compact">환경 피처는 메인 군집 구조를 대체하기보다 외곽성·녹지성 해석을 보강하는 근거로 유효했다.</div>
+
+## POI 보강 실험
+
+### 사용한 POI 피처와 원천
+
+- 공식 원천: `지방행정 인허가 데이터개방`
+- 공식 URL: `https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001`
+
+- `log1p_restaurant_count_300m` (log1p 300m 내 일반음식점 수)
+- `log1p_cafe_count_300m` (log1p 300m 내 커피숍 수)
+- `log1p_convenience_store_count_300m` (log1p 300m 내 편의점 수)
+- `log1p_pharmacy_count_300m` (log1p 300m 내 약국 수)
+- `log1p_food_retail_count_1000m` (log1p 1000m 내 식품판매업(기타) 수)
+- `log1p_fitness_count_500m` (log1p 500m 내 체력단련장 수)
+- `log1p_cinema_count_1000m` (log1p 1000m 내 영화상영관 수)
+
+### 제외한 POI 피처
+
+- `hospital_count_500m` (500m 내 병원 수): 실험 시 silhouette가 더 낮아져 제외
+- `golf_practice_count_1000m` (1000m 내 골프연습장 수): 따릉이 목적지 직접성이 낮아 제외
+- `bakery_count_300m` (300m 내 제과점 수): 카페와 중복이 커 제외
+- 온라인 성격 업종: 오프라인 상권 해석과 맞지 않아 후보 단계부터 제외
+
+### POI 보강 결과
+
+- POI 보강 실험은 별도 탐색에서 `k = 5`가 가장 높았고, silhouette는 `0.1576`이었다
+- 기본 통합 군집화(`0.2033`)보다 분리도가 낮아 메인 군집화 피처로 채택하지 않았다
+- 다만 `일반음식점`, `식품판매업(기타)`, `커피숍`은 상권 밀집도를 설명하는 보조 근거로는 의미가 있었다
+
+<div class="callout compact">POI 피처는 상권 해석 보조로는 유효했지만, 메인 군집 피처로 채택할 만큼 분리도 개선을 보이지 못했다.</div>
 
 <div class="page-break"></div>
 

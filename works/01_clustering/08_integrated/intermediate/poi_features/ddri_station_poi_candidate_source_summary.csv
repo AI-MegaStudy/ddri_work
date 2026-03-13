@@ -1,0 +1,11 @@
+feature_name,feature_name_ko,source_name,source_url,source_file,radius_m,poi_rows_used
+restaurant_count_300m,300m 내 일반음식점 수,지방행정 인허가 데이터개방,https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001,6110000_서울특별시_07_24_04_P_일반음식점.csv,300,12259
+cafe_count_300m,300m 내 커피숍 수,지방행정 인허가 데이터개방,https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001,6110000_서울특별시_07_24_05_P_휴게음식점.csv,300,1489
+convenience_store_count_300m,300m 내 편의점 수,지방행정 인허가 데이터개방,https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001,6110000_서울특별시_07_24_05_P_휴게음식점.csv,300,622
+bakery_count_300m,300m 내 제과점 수,지방행정 인허가 데이터개방,https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001,6110000_서울특별시_07_22_18_P_제과점영업.csv,300,466
+pharmacy_count_300m,300m 내 약국 수,지방행정 인허가 데이터개방,https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001,6110000_서울특별시_01_01_06_P_약국.csv,300,562
+food_retail_count_1000m,1000m 내 식품판매업(기타) 수,지방행정 인허가 데이터개방,https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001,6110000_서울특별시_07_22_13_P_식품판매업기타.csv,1000,43
+fitness_count_500m,500m 내 체력단련장 수,지방행정 인허가 데이터개방,https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001,6110000_서울특별시_10_42_01_P_체력단련장업.csv,500,585
+hospital_count_500m,500m 내 병원 수,지방행정 인허가 데이터개방,https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001,6110000_서울특별시_01_01_01_P_병원.csv,500,65
+cinema_count_1000m,1000m 내 영화상영관 수,지방행정 인허가 데이터개방,https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001,6110000_서울특별시_03_13_02_P_영화상영관.csv,1000,88
+golf_practice_count_1000m,1000m 내 골프연습장 수,지방행정 인허가 데이터개방,https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001,6110000_서울특별시_10_31_01_P_골프연습장업.csv,1000,300

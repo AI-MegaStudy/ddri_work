@@ -1,0 +1,3873 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7b4ca29c1ac29178dbde701ed7954acd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7b4ca29c1ac29178dbde701ed7954acd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7b4ca29c1ac29178dbde701ed7954acd = L.map(
+                "map_7b4ca29c1ac29178dbde701ed7954acd",
+                {
+                    center: [37.49921938262195, 127.05756136280489],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8d33e5acea85f40ab9690898409f7774 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8d33e5acea85f40ab9690898409f7774.addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+            var circle_marker_01cad3165f865298f6ad53874f1a0543 = L.circleMarker(
+                [37.52407074, 127.02178955],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d2839e68238332f2ec34e0c81b4918c8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_930c26e84eb55b3115a67ce06f897b20 = $(`<div id="html_930c26e84eb55b3115a67ce06f897b20" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2301<br>대여소명:  현대고등학교 건너편<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.996<br>log1p(편의점): 1.946</div>`)[0];
+                popup_d2839e68238332f2ec34e0c81b4918c8.setContent(html_930c26e84eb55b3115a67ce06f897b20);
+            
+        
+
+        circle_marker_01cad3165f865298f6ad53874f1a0543.bindPopup(popup_d2839e68238332f2ec34e0c81b4918c8)
+        ;
+
+        
+    
+    
+            var circle_marker_256cae9759da374ccbe1f4f09c3e100b = L.circleMarker(
+                [37.5055809, 127.02427673],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_9d24ca76514046444bb2a8eb1642516d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_aab6eae7c90585073d7013149a244a4c = $(`<div id="html_aab6eae7c90585073d7013149a244a4c" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2302<br>대여소명:  교보타워 버스정류장(신논현역 3번출구 후면)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.833<br>log1p(편의점): 1.946</div>`)[0];
+                popup_9d24ca76514046444bb2a8eb1642516d.setContent(html_aab6eae7c90585073d7013149a244a4c);
+            
+        
+
+        circle_marker_256cae9759da374ccbe1f4f09c3e100b.bindPopup(popup_9d24ca76514046444bb2a8eb1642516d)
+        ;
+
+        
+    
+    
+            var circle_marker_03049a28324d21183db29a9fc83bfc0f = L.circleMarker(
+                [37.51137161, 127.02146149],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_bc8b69fa3f0e4332ff6a8244a1f1b415 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5fba0bf0c81b0a3e2d3d17c8deade17d = $(`<div id="html_5fba0bf0c81b0a3e2d3d17c8deade17d" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2303<br>대여소명:  논현역 10번출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.890<br>log1p(편의점): 2.079</div>`)[0];
+                popup_bc8b69fa3f0e4332ff6a8244a1f1b415.setContent(html_5fba0bf0c81b0a3e2d3d17c8deade17d);
+            
+        
+
+        circle_marker_03049a28324d21183db29a9fc83bfc0f.bindPopup(popup_bc8b69fa3f0e4332ff6a8244a1f1b415)
+        ;
+
+        
+    
+    
+            var circle_marker_3dffd7e656900ba31e4cb040e1e2c03d = L.circleMarker(
+                [37.5116272, 127.03565216],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_051f228ecad862abe438c36d9bdbcf62 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_93fce0687ddd1f59eedda30fe7f70ea3 = $(`<div id="html_93fce0687ddd1f59eedda30fe7f70ea3" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2304<br>대여소명:  대현그린타워<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.639<br>log1p(편의점): 2.303</div>`)[0];
+                popup_051f228ecad862abe438c36d9bdbcf62.setContent(html_93fce0687ddd1f59eedda30fe7f70ea3);
+            
+        
+
+        circle_marker_3dffd7e656900ba31e4cb040e1e2c03d.bindPopup(popup_051f228ecad862abe438c36d9bdbcf62)
+        ;
+
+        
+    
+    
+            var circle_marker_61a0e4112e691b232b6a517c57d617a4 = L.circleMarker(
+                [37.52064133, 127.03450775],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_7c1ad96f29d9f6b5fc3393440aaf3ad5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_85e8e025e8dd36308afc1ee8d473bc0c = $(`<div id="html_85e8e025e8dd36308afc1ee8d473bc0c" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2305<br>대여소명:  MCM 본사 직영점 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.944<br>log1p(편의점): 2.197</div>`)[0];
+                popup_7c1ad96f29d9f6b5fc3393440aaf3ad5.setContent(html_85e8e025e8dd36308afc1ee8d473bc0c);
+            
+        
+
+        circle_marker_61a0e4112e691b232b6a517c57d617a4.bindPopup(popup_7c1ad96f29d9f6b5fc3393440aaf3ad5)
+        ;
+
+        
+    
+    
+            var circle_marker_2f876d77b055315432f984ac612aa8a7 = L.circleMarker(
+                [37.5271225, 127.02871704],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_b0d25a8b9c63f89de321dd5dd9ff2558 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_14107467737ecb1a3ce2e03ebacd3405 = $(`<div id="html_14107467737ecb1a3ce2e03ebacd3405" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2306<br>대여소명:  압구정역 2번 출구 옆<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.638<br>log1p(편의점): 2.079</div>`)[0];
+                popup_b0d25a8b9c63f89de321dd5dd9ff2558.setContent(html_14107467737ecb1a3ce2e03ebacd3405);
+            
+        
+
+        circle_marker_2f876d77b055315432f984ac612aa8a7.bindPopup(popup_b0d25a8b9c63f89de321dd5dd9ff2558)
+        ;
+
+        
+    
+    
+            var circle_marker_6c9276bf48917dc04995056261fd17e6 = L.circleMarker(
+                [37.52838135, 127.03901672],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_e6c629199ff23a4340a5899c36ba7fa0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_018a5463b1315b2493fc8ded5ee870df = $(`<div id="html_018a5463b1315b2493fc8ded5ee870df" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2307<br>대여소명:  압구정 한양 3차 아파트<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.178<br>log1p(편의점): 2.303</div>`)[0];
+                popup_e6c629199ff23a4340a5899c36ba7fa0.setContent(html_018a5463b1315b2493fc8ded5ee870df);
+            
+        
+
+        circle_marker_6c9276bf48917dc04995056261fd17e6.bindPopup(popup_e6c629199ff23a4340a5899c36ba7fa0)
+        ;
+
+        
+    
+    
+            var circle_marker_2224b215f2863bb965265fc12515afda = L.circleMarker(
+                [37.52930069, 127.03559875],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_908ebf4b8d61be78be261580b3358b44 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a6ace5c2907b1631b548dc1e9dd18f77 = $(`<div id="html_a6ace5c2907b1631b548dc1e9dd18f77" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2308<br>대여소명:  압구정파출소 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.996<br>log1p(편의점): 2.197</div>`)[0];
+                popup_908ebf4b8d61be78be261580b3358b44.setContent(html_a6ace5c2907b1631b548dc1e9dd18f77);
+            
+        
+
+        circle_marker_2224b215f2863bb965265fc12515afda.bindPopup(popup_908ebf4b8d61be78be261580b3358b44)
+        ;
+
+        
+    
+    
+            var circle_marker_7f51279ea3e1f74877f4cdb43bd1235f = L.circleMarker(
+                [37.51890182, 127.04938507],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d0ca8a43626b5262776341ecc02503fa = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2b7b9b644a2f2a771af1c40ad2c2f5db = $(`<div id="html_2b7b9b644a2f2a771af1c40ad2c2f5db" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2309<br>대여소명:  청담역(우리들병원 앞)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.833<br>log1p(편의점): 2.398</div>`)[0];
+                popup_d0ca8a43626b5262776341ecc02503fa.setContent(html_2b7b9b644a2f2a771af1c40ad2c2f5db);
+            
+        
+
+        circle_marker_7f51279ea3e1f74877f4cdb43bd1235f.bindPopup(popup_d0ca8a43626b5262776341ecc02503fa)
+        ;
+
+        
+    
+    
+            var circle_marker_5947d363d7f0461f0935cd94f5452de7 = L.circleMarker(
+                [37.52361298, 127.04017639],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_79e53c5d9ec5d393630d0bd059afa6da = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ee152f88e0362cc6bfe3fb385698c749 = $(`<div id="html_ee152f88e0362cc6bfe3fb385698c749" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2310<br>대여소명:  청담동 맥도날드 옆(위치)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.833<br>log1p(편의점): 2.485</div>`)[0];
+                popup_79e53c5d9ec5d393630d0bd059afa6da.setContent(html_ee152f88e0362cc6bfe3fb385698c749);
+            
+        
+
+        circle_marker_5947d363d7f0461f0935cd94f5452de7.bindPopup(popup_79e53c5d9ec5d393630d0bd059afa6da)
+        ;
+
+        
+    
+    
+            var circle_marker_c9b0c3418452efc0334165cfb6630242 = L.circleMarker(
+                [37.51777267, 127.04302216],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_e706ebba8566b029d39fd2401690387c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8db3598c31a8d5532070d8baa92ad982 = $(`<div id="html_8db3598c31a8d5532070d8baa92ad982" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2311<br>대여소명:  학동로 래미안 아파트 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.258<br>log1p(편의점): 2.197</div>`)[0];
+                popup_e706ebba8566b029d39fd2401690387c.setContent(html_8db3598c31a8d5532070d8baa92ad982);
+            
+        
+
+        circle_marker_c9b0c3418452efc0334165cfb6630242.bindPopup(popup_e706ebba8566b029d39fd2401690387c)
+        ;
+
+        
+    
+    
+            var circle_marker_426a7ba735d9dd1ce49c090c83a3ac19 = L.circleMarker(
+                [37.52058029, 127.05632782],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_8cd4fdc337bc28898c6a75c1a388df82 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0693c76ff3528fa9c0c028dde849331f = $(`<div id="html_0693c76ff3528fa9c0c028dde849331f" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2312<br>대여소명:  청담역 13번 출구 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.303<br>log1p(편의점): 2.197</div>`)[0];
+                popup_8cd4fdc337bc28898c6a75c1a388df82.setContent(html_0693c76ff3528fa9c0c028dde849331f);
+            
+        
+
+        circle_marker_426a7ba735d9dd1ce49c090c83a3ac19.bindPopup(popup_8cd4fdc337bc28898c6a75c1a388df82)
+        ;
+
+        
+    
+    
+            var circle_marker_73723987be384d021af8e6918dcd16c9 = L.circleMarker(
+                [37.52511597, 127.05246735],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_e7bd9a87c1e5faad7b11aae048d854ee = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_274da5763f7bd9e294635a7706e19269 = $(`<div id="html_274da5763f7bd9e294635a7706e19269" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2313<br>대여소명:  금원빌딩 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.890<br>log1p(편의점): 1.792</div>`)[0];
+                popup_e7bd9a87c1e5faad7b11aae048d854ee.setContent(html_274da5763f7bd9e294635a7706e19269);
+            
+        
+
+        circle_marker_73723987be384d021af8e6918dcd16c9.bindPopup(popup_e7bd9a87c1e5faad7b11aae048d854ee)
+        ;
+
+        
+    
+    
+            var circle_marker_381f5da91bff28f1657021c009aeda34 = L.circleMarker(
+                [37.52101517, 127.06015015],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_9562ca6b73ca1f459a23e504d84c2f14 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b0b67dc7ff947fddbcf5c35847cf79f8 = $(`<div id="html_b0b67dc7ff947fddbcf5c35847cf79f8" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2314<br>대여소명:  청담나들목입구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.099<br>log1p(편의점): 1.386</div>`)[0];
+                popup_9562ca6b73ca1f459a23e504d84c2f14.setContent(html_b0b67dc7ff947fddbcf5c35847cf79f8);
+            
+        
+
+        circle_marker_381f5da91bff28f1657021c009aeda34.bindPopup(popup_9562ca6b73ca1f459a23e504d84c2f14)
+        ;
+
+        
+    
+    
+            var circle_marker_e7b2567f6cfef8fc153ea9e04fa12fdb = L.circleMarker(
+                [37.51424789, 127.06111908],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_8b992a23b298c7e70c5d2bb37b64c3ef = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a723864ebf8f052dfdfc4e6c48cd001d = $(`<div id="html_a723864ebf8f052dfdfc4e6c48cd001d" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2315<br>대여소명:  봉은사역 5번출구 옆<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.497<br>log1p(편의점): 2.708</div>`)[0];
+                popup_8b992a23b298c7e70c5d2bb37b64c3ef.setContent(html_a723864ebf8f052dfdfc4e6c48cd001d);
+            
+        
+
+        circle_marker_e7b2567f6cfef8fc153ea9e04fa12fdb.bindPopup(popup_8b992a23b298c7e70c5d2bb37b64c3ef)
+        ;
+
+        
+    
+    
+            var circle_marker_e65bac3b07c9c7afb2bd40b684fdc228 = L.circleMarker(
+                [37.51588821, 127.06620026],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_277ce532c7a239adc2f4df31347c9c11 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_aad9cc72fb97645a58bb7b6416cad565 = $(`<div id="html_aad9cc72fb97645a58bb7b6416cad565" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2317<br>대여소명:  삼성도로공원<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.609<br>log1p(편의점): 1.609</div>`)[0];
+                popup_277ce532c7a239adc2f4df31347c9c11.setContent(html_aad9cc72fb97645a58bb7b6416cad565);
+            
+        
+
+        circle_marker_e65bac3b07c9c7afb2bd40b684fdc228.bindPopup(popup_277ce532c7a239adc2f4df31347c9c11)
+        ;
+
+        
+    
+    
+            var circle_marker_0c82d7ad9ba6a0df3bfd5b9c464137ff = L.circleMarker(
+                [37.51357651, 127.05503082],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_81bbb94cf9f877191b8472533374bcaa = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_de0b52bcc99e446d65cb3af4d021c011 = $(`<div id="html_de0b52bcc99e446d65cb3af4d021c011" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2318<br>대여소명:  삼성중앙역4번출구(문화센터더 리빌)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.609<br>log1p(편의점): 1.609</div>`)[0];
+                popup_81bbb94cf9f877191b8472533374bcaa.setContent(html_de0b52bcc99e446d65cb3af4d021c011);
+            
+        
+
+        circle_marker_0c82d7ad9ba6a0df3bfd5b9c464137ff.bindPopup(popup_81bbb94cf9f877191b8472533374bcaa)
+        ;
+
+        
+    
+    
+            var circle_marker_f44184afc90967c79b1bd86bd1ce67f3 = L.circleMarker(
+                [37.50660706, 127.05467987],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_9ca039b4e3e22fa11046831470d35515 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4fae8a1bd76b4ca8277e0bfe4dcf7908 = $(`<div id="html_4fae8a1bd76b4ca8277e0bfe4dcf7908" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2319<br>대여소명:  포스코사거리 서측(수협 삼성동 지점)<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.807<br>log1p(편의점): 2.708</div>`)[0];
+                popup_9ca039b4e3e22fa11046831470d35515.setContent(html_4fae8a1bd76b4ca8277e0bfe4dcf7908);
+            
+        
+
+        circle_marker_f44184afc90967c79b1bd86bd1ce67f3.bindPopup(popup_9ca039b4e3e22fa11046831470d35515)
+        ;
+
+        
+    
+    
+            var circle_marker_f5debc18836ea4bf8cc1ba676f6b6050 = L.circleMarker(
+                [37.4919281, 127.05696869],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_6fad21a0e236def204e515e08dc1108c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_798ee9e6240d6119f360395b23de1a75 = $(`<div id="html_798ee9e6240d6119f360395b23de1a75" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2320<br>대여소명:  도곡역 대치지구대 방향<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.609<br>log1p(편의점): 1.386</div>`)[0];
+                popup_6fad21a0e236def204e515e08dc1108c.setContent(html_798ee9e6240d6119f360395b23de1a75);
+            
+        
+
+        circle_marker_f5debc18836ea4bf8cc1ba676f6b6050.bindPopup(popup_6fad21a0e236def204e515e08dc1108c)
+        ;
+
+        
+    
+    
+            var circle_marker_f88f05a7ce427605db0a3cced5944d6a = L.circleMarker(
+                [37.49611664, 127.06944275],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_acdc215dfd514a778f487f728de35465 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ad9ce0b5b08d1087c18937afce885a9e = $(`<div id="html_ad9ce0b5b08d1087c18937afce885a9e" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2321<br>대여소명:  학여울역 사거리<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.609<br>log1p(편의점): 1.386</div>`)[0];
+                popup_acdc215dfd514a778f487f728de35465.setContent(html_ad9ce0b5b08d1087c18937afce885a9e);
+            
+        
+
+        circle_marker_f88f05a7ce427605db0a3cced5944d6a.bindPopup(popup_acdc215dfd514a778f487f728de35465)
+        ;
+
+        
+    
+    
+            var circle_marker_9504eea49125d4c8827946f294415008 = L.circleMarker(
+                [37.50221252, 127.06720734],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d9ab1ce9caabfcc83c7d43a790eea4c2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8ffddac7978fc3aac38b5cc16c0b70ce = $(`<div id="html_8ffddac7978fc3aac38b5cc16c0b70ce" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2323<br>대여소명:  주식회사 오뚜기 정문 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.303<br>log1p(편의점): 1.099</div>`)[0];
+                popup_d9ab1ce9caabfcc83c7d43a790eea4c2.setContent(html_8ffddac7978fc3aac38b5cc16c0b70ce);
+            
+        
+
+        circle_marker_9504eea49125d4c8827946f294415008.bindPopup(popup_d9ab1ce9caabfcc83c7d43a790eea4c2)
+        ;
+
+        
+    
+    
+            var circle_marker_2976e5720f69c1752e72f9cf575fc236 = L.circleMarker(
+                [37.50043869, 127.06622314],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_164aeeaf56f6d68633b6acb1b553ba16 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_aa10d4949fbbf6fe3ed574ee5ac39477 = $(`<div id="html_aa10d4949fbbf6fe3ed574ee5ac39477" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2324<br>대여소명:  천주교 대치 2동 교회 옆<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.398<br>log1p(편의점): 1.792</div>`)[0];
+                popup_164aeeaf56f6d68633b6acb1b553ba16.setContent(html_aa10d4949fbbf6fe3ed574ee5ac39477);
+            
+        
+
+        circle_marker_2976e5720f69c1752e72f9cf575fc236.bindPopup(popup_164aeeaf56f6d68633b6acb1b553ba16)
+        ;
+
+        
+    
+    
+            var circle_marker_339c681d666eff4a585b645da191b024 = L.circleMarker(
+                [37.4986496, 127.05931854],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_bf67bf50a4db3c312f94843533d07dce = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e4af662659ea4f46f77aacce0794d5e1 = $(`<div id="html_e4af662659ea4f46f77aacce0794d5e1" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2325<br>대여소명:  대치삼성아파트 앞 교차로<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.258<br>log1p(편의점): 2.708</div>`)[0];
+                popup_bf67bf50a4db3c312f94843533d07dce.setContent(html_e4af662659ea4f46f77aacce0794d5e1);
+            
+        
+
+        circle_marker_339c681d666eff4a585b645da191b024.bindPopup(popup_bf67bf50a4db3c312f94843533d07dce)
+        ;
+
+        
+    
+    
+            var circle_marker_5846c00793f49c152f2dbc2535feb69c = L.circleMarker(
+                [37.50239563, 127.05879974],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d81549e98a447a24ec8f435daf2a9c7e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2e3e4e6b1b3d126f2e181837e2bb3f20 = $(`<div id="html_2e3e4e6b1b3d126f2e181837e2bb3f20" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2326<br>대여소명:  대치동 삼성로<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.296<br>log1p(편의점): 1.792</div>`)[0];
+                popup_d81549e98a447a24ec8f435daf2a9c7e.setContent(html_2e3e4e6b1b3d126f2e181837e2bb3f20);
+            
+        
+
+        circle_marker_5846c00793f49c152f2dbc2535feb69c.bindPopup(popup_d81549e98a447a24ec8f435daf2a9c7e)
+        ;
+
+        
+    
+    
+            var circle_marker_da2c6654b12c3ef71a9c0de8bd7d9da7 = L.circleMarker(
+                [37.49055099, 127.03146362],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_9b83874d67ae1247f94a40f7a7a4de1a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ff242a9671521ae51f262f5fa706beb1 = $(`<div id="html_ff242a9671521ae51f262f5fa706beb1" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2327<br>대여소명:  뱅뱅사거리 랜드마크타워 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.332<br>log1p(편의점): 1.792</div>`)[0];
+                popup_9b83874d67ae1247f94a40f7a7a4de1a.setContent(html_ff242a9671521ae51f262f5fa706beb1);
+            
+        
+
+        circle_marker_da2c6654b12c3ef71a9c0de8bd7d9da7.bindPopup(popup_9b83874d67ae1247f94a40f7a7a4de1a)
+        ;
+
+        
+    
+    
+            var circle_marker_ac1750ac479fa3e3d6ccfd88036457b2 = L.circleMarker(
+                [37.50321198, 127.04273224],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_6033d181f35640c8e48fe23b4bb83fac = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5b1822ac75ba63a3093c09eef95e72d2 = $(`<div id="html_5b1822ac75ba63a3093c09eef95e72d2" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2328<br>대여소명:  르네상스 호텔 사거리 역삼지하보도 7번출구 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.466<br>log1p(편의점): 2.890</div>`)[0];
+                popup_6033d181f35640c8e48fe23b4bb83fac.setContent(html_5b1822ac75ba63a3093c09eef95e72d2);
+            
+        
+
+        circle_marker_ac1750ac479fa3e3d6ccfd88036457b2.bindPopup(popup_6033d181f35640c8e48fe23b4bb83fac)
+        ;
+
+        
+    
+    
+            var circle_marker_f786f5c28b046237353f0c82b6a86c60 = L.circleMarker(
+                [37.50235748, 127.04319],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_3ff27569266918ac93495039c88a532c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_625a0f3afd6affb5b56b0da93182252c = $(`<div id="html_625a0f3afd6affb5b56b0da93182252c" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2329<br>대여소명:  르네상스호텔사거리 역삼지하보도 2번출구<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.738<br>log1p(편의점): 2.890</div>`)[0];
+                popup_3ff27569266918ac93495039c88a532c.setContent(html_625a0f3afd6affb5b56b0da93182252c);
+            
+        
+
+        circle_marker_f786f5c28b046237353f0c82b6a86c60.bindPopup(popup_3ff27569266918ac93495039c88a532c)
+        ;
+
+        
+    
+    
+            var circle_marker_16b5f202cd539c43c90259a93ff54541 = L.circleMarker(
+                [37.49219894, 127.03945923],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_f6eda93a3253a83eedcafaf18f7dce68 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6c5d845564cd49cf6d5acb67f979b2d2 = $(`<div id="html_6c5d845564cd49cf6d5acb67f979b2d2" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2330<br>대여소명:  역삼월드메르디앙아파트 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.833<br>log1p(편의점): 2.485</div>`)[0];
+                popup_f6eda93a3253a83eedcafaf18f7dce68.setContent(html_6c5d845564cd49cf6d5acb67f979b2d2);
+            
+        
+
+        circle_marker_16b5f202cd539c43c90259a93ff54541.bindPopup(popup_f6eda93a3253a83eedcafaf18f7dce68)
+        ;
+
+        
+    
+    
+            var circle_marker_240eec5fbcc28a7244e09a51a59ce290 = L.circleMarker(
+                [37.49805069, 127.04460144],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_0792b77dace54ebd0f9b15f4eb0af5aa = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8356fe231f02eed4614bbeba56884fcb = $(`<div id="html_8356fe231f02eed4614bbeba56884fcb" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2331<br>대여소명:  동영문화센터앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.944<br>log1p(편의점): 2.303</div>`)[0];
+                popup_0792b77dace54ebd0f9b15f4eb0af5aa.setContent(html_8356fe231f02eed4614bbeba56884fcb);
+            
+        
+
+        circle_marker_240eec5fbcc28a7244e09a51a59ce290.bindPopup(popup_0792b77dace54ebd0f9b15f4eb0af5aa)
+        ;
+
+        
+    
+    
+            var circle_marker_642bd89bff07b6c094b33c02396dfd1c = L.circleMarker(
+                [37.50400925, 127.0490799],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_44317124953e264bb2cf0533990aabed = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3aab4c43c6bf5c9b1e4f3694c6400a06 = $(`<div id="html_3aab4c43c6bf5c9b1e4f3694c6400a06" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2332<br>대여소명:  선릉역3번출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 4.025<br>log1p(편의점): 3.045</div>`)[0];
+                popup_44317124953e264bb2cf0533990aabed.setContent(html_3aab4c43c6bf5c9b1e4f3694c6400a06);
+            
+        
+
+        circle_marker_642bd89bff07b6c094b33c02396dfd1c.bindPopup(popup_44317124953e264bb2cf0533990aabed)
+        ;
+
+        
+    
+    
+            var circle_marker_d25c0e80ae9e36de985b0d98df6e3fbd = L.circleMarker(
+                [37.48515701, 127.03407288],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a2e16b720c83fcd3537245559748366e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_605730db4497ace364508fee955803f0 = $(`<div id="html_605730db4497ace364508fee955803f0" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2333<br>대여소명:  양재역 3번출구 주변<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.708<br>log1p(편의점): 1.609</div>`)[0];
+                popup_a2e16b720c83fcd3537245559748366e.setContent(html_605730db4497ace364508fee955803f0);
+            
+        
+
+        circle_marker_d25c0e80ae9e36de985b0d98df6e3fbd.bindPopup(popup_a2e16b720c83fcd3537245559748366e)
+        ;
+
+        
+    
+    
+            var circle_marker_d4b1e22ce2f907a53017585686240c80 = L.circleMarker(
+                [37.49375916, 127.04589844],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_bbf8766565d1b5d24c3a1ce4e33979c9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2c249793a16d2d25abc9e00f39789f65 = $(`<div id="html_2c249793a16d2d25abc9e00f39789f65" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2334<br>대여소명:  삼호아파트 2동 ( 간선도로)<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.639<br>log1p(편의점): 1.609</div>`)[0];
+                popup_bbf8766565d1b5d24c3a1ce4e33979c9.setContent(html_2c249793a16d2d25abc9e00f39789f65);
+            
+        
+
+        circle_marker_d4b1e22ce2f907a53017585686240c80.bindPopup(popup_bbf8766565d1b5d24c3a1ce4e33979c9)
+        ;
+
+        
+    
+    
+            var circle_marker_9e401859d7b84b0461ad125b53e1d76f = L.circleMarker(
+                [37.48676682, 127.04676056],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_2c7440ef0becdb6a244f471a9d89f490 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_58bb72aed1925b7ec5f00d1fe2a89e62 = $(`<div id="html_58bb72aed1925b7ec5f00d1fe2a89e62" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2335<br>대여소명:  3호선 매봉역 3번출구앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.398<br>log1p(편의점): 1.792</div>`)[0];
+                popup_2c7440ef0becdb6a244f471a9d89f490.setContent(html_58bb72aed1925b7ec5f00d1fe2a89e62);
+            
+        
+
+        circle_marker_9e401859d7b84b0461ad125b53e1d76f.bindPopup(popup_2c7440ef0becdb6a244f471a9d89f490)
+        ;
+
+        
+    
+    
+            var circle_marker_c554a36702b076f909b18e334ff45445 = L.circleMarker(
+                [37.49423599, 127.04746246],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a306fcd240194649a5fd74c171308a6e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_743843b2c98fbf560b4b56dc51671f69 = $(`<div id="html_743843b2c98fbf560b4b56dc51671f69" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2336<br>대여소명:  강남세브란스교차로 래미안그레이튼 104동 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.197<br>log1p(편의점): 1.386</div>`)[0];
+                popup_a306fcd240194649a5fd74c171308a6e.setContent(html_743843b2c98fbf560b4b56dc51671f69);
+            
+        
+
+        circle_marker_c554a36702b076f909b18e334ff45445.bindPopup(popup_a306fcd240194649a5fd74c171308a6e)
+        ;
+
+        
+    
+    
+            var circle_marker_5d2f0884f25d3b63f1b8f1b891e8287d = L.circleMarker(
+                [37.49207687, 127.07197571],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_eaf680ed8eace69dacb09956a382a536 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1221039ac1b42b59fa5bb09db756e01d = $(`<div id="html_1221039ac1b42b59fa5bb09db756e01d" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2337<br>대여소명:  대모산입구역 2번출구 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.000<br>log1p(편의점): 0.000</div>`)[0];
+                popup_eaf680ed8eace69dacb09956a382a536.setContent(html_1221039ac1b42b59fa5bb09db756e01d);
+            
+        
+
+        circle_marker_5d2f0884f25d3b63f1b8f1b891e8287d.bindPopup(popup_eaf680ed8eace69dacb09956a382a536)
+        ;
+
+        
+    
+    
+            var circle_marker_a1cb143eb3ffd46ab5314d73dd4b7ba7 = L.circleMarker(
+                [37.48326111, 127.0522995],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_2800bd028bbb3d8c073a255742b912c2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_97266739bb5d1d4b5dc6838b9a1742a9 = $(`<div id="html_97266739bb5d1d4b5dc6838b9a1742a9" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2339<br>대여소명:  현대아파트 정문 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.099<br>log1p(편의점): 1.099</div>`)[0];
+                popup_2800bd028bbb3d8c073a255742b912c2.setContent(html_97266739bb5d1d4b5dc6838b9a1742a9);
+            
+        
+
+        circle_marker_a1cb143eb3ffd46ab5314d73dd4b7ba7.bindPopup(popup_2800bd028bbb3d8c073a255742b912c2)
+        ;
+
+        
+    
+    
+            var circle_marker_d4d1c80f31adeebc50343a1ad5de4fde = L.circleMarker(
+                [37.47750854, 127.04517365],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_902ac9c6047bce4f180c13d3b0456304 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2011dbf30a3e7b653c35baf686d7cf9f = $(`<div id="html_2011dbf30a3e7b653c35baf686d7cf9f" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2340<br>대여소명:  삼호물산버스정류장(23370) 옆<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.485<br>log1p(편의점): 1.792</div>`)[0];
+                popup_902ac9c6047bce4f180c13d3b0456304.setContent(html_2011dbf30a3e7b653c35baf686d7cf9f);
+            
+        
+
+        circle_marker_d4d1c80f31adeebc50343a1ad5de4fde.bindPopup(popup_902ac9c6047bce4f180c13d3b0456304)
+        ;
+
+        
+    
+    
+            var circle_marker_43128007bdb4979855f360300c607c38 = L.circleMarker(
+                [37.4833107, 127.08493805],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_ad4f4f1143b68c53796603788a8df292 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a7454d33f52a90dadbba0cc087612593 = $(`<div id="html_a7454d33f52a90dadbba0cc087612593" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2341<br>대여소명:  일원역 4~5번 출구 사이<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.609<br>log1p(편의점): 1.792</div>`)[0];
+                popup_ad4f4f1143b68c53796603788a8df292.setContent(html_a7454d33f52a90dadbba0cc087612593);
+            
+        
+
+        circle_marker_43128007bdb4979855f360300c607c38.bindPopup(popup_ad4f4f1143b68c53796603788a8df292)
+        ;
+
+        
+    
+    
+            var circle_marker_3acf7d835e555d79d0823e53e0f837b8 = L.circleMarker(
+                [37.49400711, 127.07951355],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_3d307f0f3e062b2015bfa00e29fd4d7e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_52c66f7fd997ea19a162fb6d1748cca0 = $(`<div id="html_52c66f7fd997ea19a162fb6d1748cca0" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2342<br>대여소명:  대청역 1번출구 뒤<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.079<br>log1p(편의점): 1.386</div>`)[0];
+                popup_3d307f0f3e062b2015bfa00e29fd4d7e.setContent(html_52c66f7fd997ea19a162fb6d1748cca0);
+            
+        
+
+        circle_marker_3acf7d835e555d79d0823e53e0f837b8.bindPopup(popup_3d307f0f3e062b2015bfa00e29fd4d7e)
+        ;
+
+        
+    
+    
+            var circle_marker_046ec927b9c6f2ac1a5b7f6553fb0d73 = L.circleMarker(
+                [37.46506119, 127.10119629],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a601f56912261b414e1bc068d7404bbc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b818bb1a49cac4c1fe541dfbb864cf38 = $(`<div id="html_b818bb1a49cac4c1fe541dfbb864cf38" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2344<br>대여소명:  리엔파크 2단지 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.398<br>log1p(편의점): 1.099</div>`)[0];
+                popup_a601f56912261b414e1bc068d7404bbc.setContent(html_b818bb1a49cac4c1fe541dfbb864cf38);
+            
+        
+
+        circle_marker_046ec927b9c6f2ac1a5b7f6553fb0d73.bindPopup(popup_a601f56912261b414e1bc068d7404bbc)
+        ;
+
+        
+    
+    
+            var circle_marker_444beac2ce70905f87fddb74f260a9d4 = L.circleMarker(
+                [37.51863861, 127.03540039],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_de3625ccceeb4fe3f2712bb55ae1d9bb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_26001cdb87521237fb62e6a77f5fd385 = $(`<div id="html_26001cdb87521237fb62e6a77f5fd385" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2347<br>대여소명:  두산건설 본사<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.045<br>log1p(편의점): 1.946</div>`)[0];
+                popup_de3625ccceeb4fe3f2712bb55ae1d9bb.setContent(html_26001cdb87521237fb62e6a77f5fd385);
+            
+        
+
+        circle_marker_444beac2ce70905f87fddb74f260a9d4.bindPopup(popup_de3625ccceeb4fe3f2712bb55ae1d9bb)
+        ;
+
+        
+    
+    
+            var circle_marker_71c439f96a49fda61e4cc3d1b5a4cf43 = L.circleMarker(
+                [37.50723267, 127.05685425],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_5d8d2a54bd4757fae9a0307de7379f8d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_012c735712ba63833e816a3daa20a362 = $(`<div id="html_012c735712ba63833e816a3daa20a362" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2348<br>대여소명:  포스코사거리(기업은행)<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.738<br>log1p(편의점): 2.833</div>`)[0];
+                popup_5d8d2a54bd4757fae9a0307de7379f8d.setContent(html_012c735712ba63833e816a3daa20a362);
+            
+        
+
+        circle_marker_71c439f96a49fda61e4cc3d1b5a4cf43.bindPopup(popup_5d8d2a54bd4757fae9a0307de7379f8d)
+        ;
+
+        
+    
+    
+            var circle_marker_928a68dd4916ce70c3fdf586b8e4b817 = L.circleMarker(
+                [37.50154495, 127.03856659],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_c0f3e76f5e2b23168cfaa36fac1863ee = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c94983b4baeacc950b48a616e9354eea = $(`<div id="html_c94983b4baeacc950b48a616e9354eea" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2349<br>대여소명:  역삼빌딩 앞(하나은행 옆)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.970<br>log1p(편의점): 3.045</div>`)[0];
+                popup_c0f3e76f5e2b23168cfaa36fac1863ee.setContent(html_c94983b4baeacc950b48a616e9354eea);
+            
+        
+
+        circle_marker_928a68dd4916ce70c3fdf586b8e4b817.bindPopup(popup_c0f3e76f5e2b23168cfaa36fac1863ee)
+        ;
+
+        
+    
+    
+            var circle_marker_394688a90de3c944ff07c607ba75ef48 = L.circleMarker(
+                [37.49482346, 127.04790497],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_edb8d6afd9713b4802c3a90bd5f0690c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a384bdbef1ab546bb05cf1ce2d0e76b8 = $(`<div id="html_a384bdbef1ab546bb05cf1ce2d0e76b8" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2350<br>대여소명:  래미안그레이튼102동앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.197<br>log1p(편의점): 1.609</div>`)[0];
+                popup_edb8d6afd9713b4802c3a90bd5f0690c.setContent(html_a384bdbef1ab546bb05cf1ce2d0e76b8);
+            
+        
+
+        circle_marker_394688a90de3c944ff07c607ba75ef48.bindPopup(popup_edb8d6afd9713b4802c3a90bd5f0690c)
+        ;
+
+        
+    
+    
+            var circle_marker_32be2305d5fe6fee6e48ccec395f48b8 = L.circleMarker(
+                [37.48387909, 127.0890274],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_63de22bb1fb52a0377662842ad39a0ce = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bfd58ecfc0462d7c5f679f77c259af5e = $(`<div id="html_bfd58ecfc0462d7c5f679f77c259af5e" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2351<br>대여소명:  청소년수련관(수영장)앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.693<br>log1p(편의점): 1.099</div>`)[0];
+                popup_63de22bb1fb52a0377662842ad39a0ce.setContent(html_bfd58ecfc0462d7c5f679f77c259af5e);
+            
+        
+
+        circle_marker_32be2305d5fe6fee6e48ccec395f48b8.bindPopup(popup_63de22bb1fb52a0377662842ad39a0ce)
+        ;
+
+        
+    
+    
+            var circle_marker_fa825ef9620eae370e9e6e4f1329dcb7 = L.circleMarker(
+                [37.51758957, 127.03502655],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_f1061a9befde74a07ff9404995a76f53 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4d75aa9a472c7295f26a14936c7da8a1 = $(`<div id="html_4d75aa9a472c7295f26a14936c7da8a1" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2352<br>대여소명:  서울본부세관(건설회관 앞)<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.135<br>log1p(편의점): 1.386</div>`)[0];
+                popup_f1061a9befde74a07ff9404995a76f53.setContent(html_4d75aa9a472c7295f26a14936c7da8a1);
+            
+        
+
+        circle_marker_fa825ef9620eae370e9e6e4f1329dcb7.bindPopup(popup_f1061a9befde74a07ff9404995a76f53)
+        ;
+
+        
+    
+    
+            var circle_marker_132e4f3c9cbe30d73643dceee3a9f649 = L.circleMarker(
+                [37.51681137, 127.04047394],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_5cb9b62ffa8220a37f75aecfbaaa9046 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9ad1c5936a41233127a045af683b227b = $(`<div id="html_9ad1c5936a41233127a045af683b227b" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2353<br>대여소명:  강남구청역 2번출구 뒤<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.526<br>log1p(편의점): 2.398</div>`)[0];
+                popup_5cb9b62ffa8220a37f75aecfbaaa9046.setContent(html_9ad1c5936a41233127a045af683b227b);
+            
+        
+
+        circle_marker_132e4f3c9cbe30d73643dceee3a9f649.bindPopup(popup_5cb9b62ffa8220a37f75aecfbaaa9046)
+        ;
+
+        
+    
+    
+            var circle_marker_e0f484230523b0e6406f263b8a9f912d = L.circleMarker(
+                [37.51978683, 127.0567627],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_38b59c2dbfc397b520f961bef2a08841 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3d9f1201c01c8fc07bc9ca8e98b18991 = $(`<div id="html_3d9f1201c01c8fc07bc9ca8e98b18991" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2354<br>대여소명:  청담역 2번출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.303<br>log1p(편의점): 2.197</div>`)[0];
+                popup_38b59c2dbfc397b520f961bef2a08841.setContent(html_3d9f1201c01c8fc07bc9ca8e98b18991);
+            
+        
+
+        circle_marker_e0f484230523b0e6406f263b8a9f912d.bindPopup(popup_38b59c2dbfc397b520f961bef2a08841)
+        ;
+
+        
+    
+    
+            var circle_marker_8bfe8c41d9642d0925f9be91d24d36e1 = L.circleMarker(
+                [37.51807022, 127.04711914],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_8f6becc7344208a36a2b9bea2158ca89 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_60665a57b750a2b87fcb088089a66db4 = $(`<div id="html_60665a57b750a2b87fcb088089a66db4" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2356<br>대여소명:  강남구청<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.890<br>log1p(편의점): 2.303</div>`)[0];
+                popup_8f6becc7344208a36a2b9bea2158ca89.setContent(html_60665a57b750a2b87fcb088089a66db4);
+            
+        
+
+        circle_marker_8bfe8c41d9642d0925f9be91d24d36e1.bindPopup(popup_8f6becc7344208a36a2b9bea2158ca89)
+        ;
+
+        
+    
+    
+            var circle_marker_f8e8db2a5de20217cbfc4692c413e950 = L.circleMarker(
+                [37.50166321, 127.04297638],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_f6d78d528b6c431d619e605ab4e5a27b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_69762f01aa4fbf0a978195b6f2fd7706 = $(`<div id="html_69762f01aa4fbf0a978195b6f2fd7706" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2357<br>대여소명:  르네상스호텔사거리 역삼지하보도 3번출구 앞 (더 오번 빌딩 명동칼국수 앞)<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.555<br>log1p(편의점): 2.773</div>`)[0];
+                popup_f6d78d528b6c431d619e605ab4e5a27b.setContent(html_69762f01aa4fbf0a978195b6f2fd7706);
+            
+        
+
+        circle_marker_f8e8db2a5de20217cbfc4692c413e950.bindPopup(popup_f6d78d528b6c431d619e605ab4e5a27b)
+        ;
+
+        
+    
+    
+            var circle_marker_c8aa4ad271bf36144387ea5f1115ddcf = L.circleMarker(
+                [37.48138428, 127.05391693],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_4a245d1ca1d45e1a77909f038b1e17bb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_02d72ec30b3e0155616a34f2fcf81246 = $(`<div id="html_02d72ec30b3e0155616a34f2fcf81246" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2358<br>대여소명:  구룡초사거리 (현대아파트10동 앞 )<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.693<br>log1p(편의점): 0.693</div>`)[0];
+                popup_4a245d1ca1d45e1a77909f038b1e17bb.setContent(html_02d72ec30b3e0155616a34f2fcf81246);
+            
+        
+
+        circle_marker_c8aa4ad271bf36144387ea5f1115ddcf.bindPopup(popup_4a245d1ca1d45e1a77909f038b1e17bb)
+        ;
+
+        
+    
+    
+            var circle_marker_ce2e4a26d1262577f7131a182944053e = L.circleMarker(
+                [37.47560501, 127.05037689],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a3929043b711cd8d3fdbce8d8d922e02 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e65cbf983b0da9965ae7d68f4cb3e782 = $(`<div id="html_e65cbf983b0da9965ae7d68f4cb3e782" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2359<br>대여소명:  국립국악중,고교 정문 맞은편<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.639<br>log1p(편의점): 1.792</div>`)[0];
+                popup_a3929043b711cd8d3fdbce8d8d922e02.setContent(html_e65cbf983b0da9965ae7d68f4cb3e782);
+            
+        
+
+        circle_marker_ce2e4a26d1262577f7131a182944053e.bindPopup(popup_a3929043b711cd8d3fdbce8d8d922e02)
+        ;
+
+        
+    
+    
+            var circle_marker_0c6d7d4736d6ea25e81aef54dab202ac = L.circleMarker(
+                [37.4928093, 127.04138947],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_6aad7b569355bc0335ac9fa2fa7b13f2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_76daf1f9fa8c8e28b2b2bfc958d35bec = $(`<div id="html_76daf1f9fa8c8e28b2b2bfc958d35bec" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2360<br>대여소명:  도곡1동 주민센터 교차로<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.708<br>log1p(편의점): 2.197</div>`)[0];
+                popup_6aad7b569355bc0335ac9fa2fa7b13f2.setContent(html_76daf1f9fa8c8e28b2b2bfc958d35bec);
+            
+        
+
+        circle_marker_0c6d7d4736d6ea25e81aef54dab202ac.bindPopup(popup_6aad7b569355bc0335ac9fa2fa7b13f2)
+        ;
+
+        
+    
+    
+            var circle_marker_0b98cdeee2f901f4349768b569adf11f = L.circleMarker(
+                [37.51763535, 127.02245331],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a4ec65526261fe635448c89e1bd1bde1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7a805276c11c204b993074309c50aba5 = $(`<div id="html_7a805276c11c204b993074309c50aba5" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2362<br>대여소명:  신사동 가로수길 입구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.611<br>log1p(편의점): 2.639</div>`)[0];
+                popup_a4ec65526261fe635448c89e1bd1bde1.setContent(html_7a805276c11c204b993074309c50aba5);
+            
+        
+
+        circle_marker_0b98cdeee2f901f4349768b569adf11f.bindPopup(popup_a4ec65526261fe635448c89e1bd1bde1)
+        ;
+
+        
+    
+    
+            var circle_marker_fd0d502b26fe59c711f6977568212754 = L.circleMarker(
+                [37.51913834, 127.02751923],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_03b04aec070a64b13be00a6c75edcd5d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_80cab37b8056369040ee8da66ef05af3 = $(`<div id="html_80cab37b8056369040ee8da66ef05af3" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2363<br>대여소명:  강남 을지병원 교차로<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.135<br>log1p(편의점): 2.303</div>`)[0];
+                popup_03b04aec070a64b13be00a6c75edcd5d.setContent(html_80cab37b8056369040ee8da66ef05af3);
+            
+        
+
+        circle_marker_fd0d502b26fe59c711f6977568212754.bindPopup(popup_03b04aec070a64b13be00a6c75edcd5d)
+        ;
+
+        
+    
+    
+            var circle_marker_6e114edb5417a00fa24d95e707f520c4 = L.circleMarker(
+                [37.52124023, 127.0318985],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_fb7fde7709ddec4c8be16c1cb8393903 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_80c7fe614e9bf7301bc52bb8eb64fe4d = $(`<div id="html_80c7fe614e9bf7301bc52bb8eb64fe4d" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2364<br>대여소명:  도산공원교차로<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.091<br>log1p(편의점): 2.197</div>`)[0];
+                popup_fb7fde7709ddec4c8be16c1cb8393903.setContent(html_80c7fe614e9bf7301bc52bb8eb64fe4d);
+            
+        
+
+        circle_marker_6e114edb5417a00fa24d95e707f520c4.bindPopup(popup_fb7fde7709ddec4c8be16c1cb8393903)
+        ;
+
+        
+    
+    
+            var circle_marker_2d17327e486cd30911e9ca7a030abf1b = L.circleMarker(
+                [37.52330017, 127.03847504],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_c3437d57335507cba14113b7b47d6c7e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_21acd2aa54bfe7ea16e27eb314f3d551 = $(`<div id="html_21acd2aa54bfe7ea16e27eb314f3d551" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2365<br>대여소명:  K+ 타워 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.045<br>log1p(편의점): 2.303</div>`)[0];
+                popup_c3437d57335507cba14113b7b47d6c7e.setContent(html_21acd2aa54bfe7ea16e27eb314f3d551);
+            
+        
+
+        circle_marker_2d17327e486cd30911e9ca7a030abf1b.bindPopup(popup_c3437d57335507cba14113b7b47d6c7e)
+        ;
+
+        
+    
+    
+            var circle_marker_e83d65ad1359751618a2f8c271301baa = L.circleMarker(
+                [37.48934174, 127.04129791],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_8857eb4c16f3243d833b323bd2d728e8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_752f9bed8d94512a0f09ad99b115a962 = $(`<div id="html_752f9bed8d94512a0f09ad99b115a962" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2368<br>대여소명:  도곡동 경남아파트 건너편<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.386<br>log1p(편의점): 1.792</div>`)[0];
+                popup_8857eb4c16f3243d833b323bd2d728e8.setContent(html_752f9bed8d94512a0f09ad99b115a962);
+            
+        
+
+        circle_marker_e83d65ad1359751618a2f8c271301baa.bindPopup(popup_8857eb4c16f3243d833b323bd2d728e8)
+        ;
+
+        
+    
+    
+            var circle_marker_498323b5156d785f0db2595784e24c4a = L.circleMarker(
+                [37.50542831, 127.0528717],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_91d012b323f1c80747713594eb16b609 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e4aed664c5d7950b488899ec12302586 = $(`<div id="html_e4aed664c5d7950b488899ec12302586" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2369<br>대여소명:  KT선릉타워<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.892<br>log1p(편의점): 3.045</div>`)[0];
+                popup_91d012b323f1c80747713594eb16b609.setContent(html_e4aed664c5d7950b488899ec12302586);
+            
+        
+
+        circle_marker_498323b5156d785f0db2595784e24c4a.bindPopup(popup_91d012b323f1c80747713594eb16b609)
+        ;
+
+        
+    
+    
+            var circle_marker_2908ab478bea718b4032c678a36c25fa = L.circleMarker(
+                [37.49655151, 127.0542984],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_ce5cb268db20c9418b33a20adf26ac1f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cedc2a6dc9a93d2871b2a163a84138d3 = $(`<div id="html_cedc2a6dc9a93d2871b2a163a84138d3" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2370<br>대여소명:  한티역 3번출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.434<br>log1p(편의점): 2.303</div>`)[0];
+                popup_ce5cb268db20c9418b33a20adf26ac1f.setContent(html_cedc2a6dc9a93d2871b2a163a84138d3);
+            
+        
+
+        circle_marker_2908ab478bea718b4032c678a36c25fa.bindPopup(popup_ce5cb268db20c9418b33a20adf26ac1f)
+        ;
+
+        
+    
+    
+            var circle_marker_6351b183192c8be478c4cae89467bf43 = L.circleMarker(
+                [37.51474762, 127.03513336],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_50da02ea194468d30b299887c34a12f6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_768fd132e92979cbc293b0dc5b58368e = $(`<div id="html_768fd132e92979cbc293b0dc5b58368e" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2371<br>대여소명:  한국우편사업진흥원<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.296<br>log1p(편의점): 1.946</div>`)[0];
+                popup_50da02ea194468d30b299887c34a12f6.setContent(html_768fd132e92979cbc293b0dc5b58368e);
+            
+        
+
+        circle_marker_6351b183192c8be478c4cae89467bf43.bindPopup(popup_50da02ea194468d30b299887c34a12f6)
+        ;
+
+        
+    
+    
+            var circle_marker_fe74890076aa756fd9e0533555c748bc = L.circleMarker(
+                [37.49449921, 127.063797],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_4d87fd4b821228b029d22b202c9d03c7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2be1dc8d22bc37963f3298445219edd2 = $(`<div id="html_2be1dc8d22bc37963f3298445219edd2" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2372<br>대여소명:  대치역 사거리<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.197<br>log1p(편의점): 1.792</div>`)[0];
+                popup_4d87fd4b821228b029d22b202c9d03c7.setContent(html_2be1dc8d22bc37963f3298445219edd2);
+            
+        
+
+        circle_marker_fe74890076aa756fd9e0533555c748bc.bindPopup(popup_4d87fd4b821228b029d22b202c9d03c7)
+        ;
+
+        
+    
+    
+            var circle_marker_c474bf4eb7fb880df5307c7327862cb8 = L.circleMarker(
+                [37.48927689, 127.06557465],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d4b5889617adbccd71d98e3096940105 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_27deb0e0311c7970c2941d2ba2d5445d = $(`<div id="html_27deb0e0311c7970c2941d2ba2d5445d" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2373<br>대여소명:  개포동역 사거리<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.946<br>log1p(편의점): 1.386</div>`)[0];
+                popup_d4b5889617adbccd71d98e3096940105.setContent(html_27deb0e0311c7970c2941d2ba2d5445d);
+            
+        
+
+        circle_marker_c474bf4eb7fb880df5307c7327862cb8.bindPopup(popup_d4b5889617adbccd71d98e3096940105)
+        ;
+
+        
+    
+    
+            var circle_marker_28b7f3b2bd43e5f4250442e6b0147f12 = L.circleMarker(
+                [37.48735046, 127.10099792],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_050c21f003be31b94bab0fc82c1770ca = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b7e4c65a046a51ea97a226f11559596c = $(`<div id="html_b7e4c65a046a51ea97a226f11559596c" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2375<br>대여소명:  수서역 1번출구 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.135<br>log1p(편의점): 1.946</div>`)[0];
+                popup_050c21f003be31b94bab0fc82c1770ca.setContent(html_b7e4c65a046a51ea97a226f11559596c);
+            
+        
+
+        circle_marker_28b7f3b2bd43e5f4250442e6b0147f12.bindPopup(popup_050c21f003be31b94bab0fc82c1770ca)
+        ;
+
+        
+    
+    
+            var circle_marker_96d3718b07a4a8b2f60be9ea4f5a22b4 = L.circleMarker(
+                [37.48677826, 127.10051727],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_5ac7b828c85e491db5b919c3f44ad286 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5f912dce714845bdf495538d3e42a40a = $(`<div id="html_5f912dce714845bdf495538d3e42a40a" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2376<br>대여소명:  수서역 6번출구 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.135<br>log1p(편의점): 1.946</div>`)[0];
+                popup_5ac7b828c85e491db5b919c3f44ad286.setContent(html_5f912dce714845bdf495538d3e42a40a);
+            
+        
+
+        circle_marker_96d3718b07a4a8b2f60be9ea4f5a22b4.bindPopup(popup_5ac7b828c85e491db5b919c3f44ad286)
+        ;
+
+        
+    
+    
+            var circle_marker_962557eb5e6491de54c095f2da282e32 = L.circleMarker(
+                [37.48735046, 127.10232544],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_0d8bcf8cf70d7d915875cea8e2c8b524 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_844343c55cf69aaa7be02168719a1f73 = $(`<div id="html_844343c55cf69aaa7be02168719a1f73" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2377<br>대여소명:  수서역 5번출구<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.178<br>log1p(편의점): 1.946</div>`)[0];
+                popup_0d8bcf8cf70d7d915875cea8e2c8b524.setContent(html_844343c55cf69aaa7be02168719a1f73);
+            
+        
+
+        circle_marker_962557eb5e6491de54c095f2da282e32.bindPopup(popup_0d8bcf8cf70d7d915875cea8e2c8b524)
+        ;
+
+        
+    
+    
+            var circle_marker_62107dd6e00e8270e1d3487478f07a6a = L.circleMarker(
+                [37.51169586, 127.04934692],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_11fe967b439b6d67c5b68624610db507 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bc1e3498ba3b745dbdb0bc5c0c023d8a = $(`<div id="html_bc1e3498ba3b745dbdb0bc5c0c023d8a" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2380<br>대여소명:  삼성동베이직하우스앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.045<br>log1p(편의점): 1.792</div>`)[0];
+                popup_11fe967b439b6d67c5b68624610db507.setContent(html_bc1e3498ba3b745dbdb0bc5c0c023d8a);
+            
+        
+
+        circle_marker_62107dd6e00e8270e1d3487478f07a6a.bindPopup(popup_11fe967b439b6d67c5b68624610db507)
+        ;
+
+        
+    
+    
+            var circle_marker_48904d473e14d78808989bc9990c1172 = L.circleMarker(
+                [37.50636673, 127.03452301],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_f73d49a93de24c63a451da292ea6bcb0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_db87fdcea92ea80b66c25237ba69dc1a = $(`<div id="html_db87fdcea92ea80b66c25237ba69dc1a" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2381<br>대여소명:  언주역 6번출구앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.526<br>log1p(편의점): 2.890</div>`)[0];
+                popup_f73d49a93de24c63a451da292ea6bcb0.setContent(html_db87fdcea92ea80b66c25237ba69dc1a);
+            
+        
+
+        circle_marker_48904d473e14d78808989bc9990c1172.bindPopup(popup_f73d49a93de24c63a451da292ea6bcb0)
+        ;
+
+        
+    
+    
+            var circle_marker_bd9a85482180757841bd3617bcf72dbe = L.circleMarker(
+                [37.50122833, 127.05036163],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_dbac406ce828eace2501606333442a16 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_46d2bc439d945cf351c3e3e34d7dc25d = $(`<div id="html_46d2bc439d945cf351c3e3e34d7dc25d" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2382<br>대여소명:  역삼동 sk뷰 501동앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.367<br>log1p(편의점): 2.485</div>`)[0];
+                popup_dbac406ce828eace2501606333442a16.setContent(html_46d2bc439d945cf351c3e3e34d7dc25d);
+            
+        
+
+        circle_marker_bd9a85482180757841bd3617bcf72dbe.bindPopup(popup_dbac406ce828eace2501606333442a16)
+        ;
+
+        
+    
+    
+            var circle_marker_ee6e9b6d81a25efa470d694a95080bfe = L.circleMarker(
+                [37.46632767, 127.09488678],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_64a111b247941f8ce7942e3313c0f04c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e28e5d1a4d6112c1f9e72290200a8fc9 = $(`<div id="html_e28e5d1a4d6112c1f9e72290200a8fc9" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2383<br>대여소명:  보금자리정원<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.386<br>log1p(편의점): 0.693</div>`)[0];
+                popup_64a111b247941f8ce7942e3313c0f04c.setContent(html_e28e5d1a4d6112c1f9e72290200a8fc9);
+            
+        
+
+        circle_marker_ee6e9b6d81a25efa470d694a95080bfe.bindPopup(popup_64a111b247941f8ce7942e3313c0f04c)
+        ;
+
+        
+    
+    
+            var circle_marker_844b2204e7f8c9036be1d8aad9c8604b = L.circleMarker(
+                [37.47602844, 127.10594177],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_05dd669017b5a25f6cb5d254bfb484db = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d06a06d5cbf625290580aa1aad3c649c = $(`<div id="html_d06a06d5cbf625290580aa1aad3c649c" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2384<br>대여소명:  자곡사거리<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.197<br>log1p(편의점): 1.792</div>`)[0];
+                popup_05dd669017b5a25f6cb5d254bfb484db.setContent(html_d06a06d5cbf625290580aa1aad3c649c);
+            
+        
+
+        circle_marker_844b2204e7f8c9036be1d8aad9c8604b.bindPopup(popup_05dd669017b5a25f6cb5d254bfb484db)
+        ;
+
+        
+    
+    
+            var circle_marker_f5d0322db6f75bc9d1b69bb890966b33 = L.circleMarker(
+                [37.51395035, 127.03015137],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_e922fac745d3ec9ad956a0f556427be2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6028296a15acb0516d33782736d2942a = $(`<div id="html_6028296a15acb0516d33782736d2942a" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2385<br>대여소명:  학동역<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.135<br>log1p(편의점): 2.773</div>`)[0];
+                popup_e922fac745d3ec9ad956a0f556427be2.setContent(html_6028296a15acb0516d33782736d2942a);
+            
+        
+
+        circle_marker_f5d0322db6f75bc9d1b69bb890966b33.bindPopup(popup_e922fac745d3ec9ad956a0f556427be2)
+        ;
+
+        
+    
+    
+            var circle_marker_6d12d3e94e96b909b4ac35f2814d1acf = L.circleMarker(
+                [37.50958633, 127.04090881],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_5706f38ee307a108eb1692f481516c00 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cdf1591abfdede4a2a6724d6a175c3d8 = $(`<div id="html_cdf1591abfdede4a2a6724d6a175c3d8" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2386<br>대여소명:  크린랩 본사<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.773<br>log1p(편의점): 2.398</div>`)[0];
+                popup_5706f38ee307a108eb1692f481516c00.setContent(html_cdf1591abfdede4a2a6724d6a175c3d8);
+            
+        
+
+        circle_marker_6d12d3e94e96b909b4ac35f2814d1acf.bindPopup(popup_5706f38ee307a108eb1692f481516c00)
+        ;
+
+        
+    
+    
+            var circle_marker_a784740f62a051e5414ce1d83d1703ea = L.circleMarker(
+                [37.47245407, 127.09607697],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_55dc05543ea378aa2de6cc26101ffaf3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1dd4a5afa68ae3f2b6267634903a2444 = $(`<div id="html_1dd4a5afa68ae3f2b6267634903a2444" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2387<br>대여소명:  래미안강남힐즈 사거리<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.609<br>log1p(편의점): 1.099</div>`)[0];
+                popup_55dc05543ea378aa2de6cc26101ffaf3.setContent(html_1dd4a5afa68ae3f2b6267634903a2444);
+            
+        
+
+        circle_marker_a784740f62a051e5414ce1d83d1703ea.bindPopup(popup_55dc05543ea378aa2de6cc26101ffaf3)
+        ;
+
+        
+    
+    
+            var circle_marker_ddd9f3ebf35f88727217b7390ef0965b = L.circleMarker(
+                [37.51678467, 127.05161285],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_be06339616bb8cf51f8d8f392d9bf007 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5a78485a17316a2860ed91513ce60fe2 = $(`<div id="html_5a78485a17316a2860ed91513ce60fe2" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2388<br>대여소명:  강남구 도시관리공단<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.398<br>log1p(편의점): 1.792</div>`)[0];
+                popup_be06339616bb8cf51f8d8f392d9bf007.setContent(html_5a78485a17316a2860ed91513ce60fe2);
+            
+        
+
+        circle_marker_ddd9f3ebf35f88727217b7390ef0965b.bindPopup(popup_be06339616bb8cf51f8d8f392d9bf007)
+        ;
+
+        
+    
+    
+            var circle_marker_ac3d8c4d8f1a448724b396a4784866e6 = L.circleMarker(
+                [37.48616028, 127.06723785],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_82492c847a1a7e3802f896349ba3797d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d6f30c8356f78049e969f218303ef581 = $(`<div id="html_d6f30c8356f78049e969f218303ef581" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2389<br>대여소명:  경기여자고등학교 후문 (삼성로3길 입구)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.386<br>log1p(편의점): 1.099</div>`)[0];
+                popup_82492c847a1a7e3802f896349ba3797d.setContent(html_d6f30c8356f78049e969f218303ef581);
+            
+        
+
+        circle_marker_ac3d8c4d8f1a448724b396a4784866e6.bindPopup(popup_82492c847a1a7e3802f896349ba3797d)
+        ;
+
+        
+    
+    
+            var circle_marker_6b2054c16110a28a71f95f130eefaf07 = L.circleMarker(
+                [37.48088074, 127.06304169],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_e9c451320ea5d480ce6dc3d8c131ec18 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1c592ef6cb3cf0e65716aca10b500d80 = $(`<div id="html_1c592ef6cb3cf0e65716aca10b500d80" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2390<br>대여소명:  구룡마을 입구 (래미안블레스티지 아파트)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.792<br>log1p(편의점): 0.693</div>`)[0];
+                popup_e9c451320ea5d480ce6dc3d8c131ec18.setContent(html_1c592ef6cb3cf0e65716aca10b500d80);
+            
+        
+
+        circle_marker_6b2054c16110a28a71f95f130eefaf07.bindPopup(popup_e9c451320ea5d480ce6dc3d8c131ec18)
+        ;
+
+        
+    
+    
+            var circle_marker_b0da9e7900abdb9b7853e519d37362cd = L.circleMarker(
+                [37.47598648, 127.05962372],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_422b68823c993deea79e7ec688e5c9b4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d91006c3abeac2dfc311d5330c4c4dd1 = $(`<div id="html_d91006c3abeac2dfc311d5330c4c4dd1" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2391<br>대여소명:  구룡터널 입구(개포1단지아파트)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.000<br>log1p(편의점): 0.000</div>`)[0];
+                popup_422b68823c993deea79e7ec688e5c9b4.setContent(html_d91006c3abeac2dfc311d5330c4c4dd1);
+            
+        
+
+        circle_marker_b0da9e7900abdb9b7853e519d37362cd.bindPopup(popup_422b68823c993deea79e7ec688e5c9b4)
+        ;
+
+        
+    
+    
+            var circle_marker_561bdb9357d5c24143cba39becd1e583 = L.circleMarker(
+                [37.47447205, 127.05545044],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d6d87940daf7a749b5e0257e0db5c523 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3d08ef739212203088c996b6361480c2 = $(`<div id="html_3d08ef739212203088c996b6361480c2" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2392<br>대여소명:  구룡산 입구 (구룡산 서울둘레길 입구)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.693<br>log1p(편의점): 0.693</div>`)[0];
+                popup_d6d87940daf7a749b5e0257e0db5c523.setContent(html_3d08ef739212203088c996b6361480c2);
+            
+        
+
+        circle_marker_561bdb9357d5c24143cba39becd1e583.bindPopup(popup_d6d87940daf7a749b5e0257e0db5c523)
+        ;
+
+        
+    
+    
+            var circle_marker_c6e225a64d2b8bfd1f81b88396fae0d0 = L.circleMarker(
+                [37.48025131, 127.05419159],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_19d89ee77a2b97986188f59dc6f81060 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8d9a302bd78d848c924cd9d26126eb5a = $(`<div id="html_8d9a302bd78d848c924cd9d26126eb5a" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2394<br>대여소명:  개포래미안포레스트아파트 107동 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.946<br>log1p(편의점): 1.099</div>`)[0];
+                popup_19d89ee77a2b97986188f59dc6f81060.setContent(html_8d9a302bd78d848c924cd9d26126eb5a);
+            
+        
+
+        circle_marker_c6e225a64d2b8bfd1f81b88396fae0d0.bindPopup(popup_19d89ee77a2b97986188f59dc6f81060)
+        ;
+
+        
+    
+    
+            var circle_marker_6bb3798ac787c1023313bb481992bdad = L.circleMarker(
+                [37.48574066, 127.05104828],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_2e8d71d55e79c9a3ea387cbc3d5d2bd8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f0db84bf5c12e77d3bdeb509c3e90e34 = $(`<div id="html_f0db84bf5c12e77d3bdeb509c3e90e34" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2396<br>대여소명:  영동3교 북단(우성캐릭터 앞 보도)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.609<br>log1p(편의점): 1.386</div>`)[0];
+                popup_2e8d71d55e79c9a3ea387cbc3d5d2bd8.setContent(html_f0db84bf5c12e77d3bdeb509c3e90e34);
+            
+        
+
+        circle_marker_6bb3798ac787c1023313bb481992bdad.bindPopup(popup_2e8d71d55e79c9a3ea387cbc3d5d2bd8)
+        ;
+
+        
+    
+    
+            var circle_marker_052321aa3f7253ce493e5c988ebcc41b = L.circleMarker(
+                [37.50811005, 127.0394516],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_538104557909d7f7c2de45ce3dd91e4e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fed807df2abefc79a19c919afa6ec244 = $(`<div id="html_fed807df2abefc79a19c919afa6ec244" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2398<br>대여소명:  더라움<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.219<br>log1p(편의점): 2.485</div>`)[0];
+                popup_538104557909d7f7c2de45ce3dd91e4e.setContent(html_fed807df2abefc79a19c919afa6ec244);
+            
+        
+
+        circle_marker_052321aa3f7253ce493e5c988ebcc41b.bindPopup(popup_538104557909d7f7c2de45ce3dd91e4e)
+        ;
+
+        
+    
+    
+            var circle_marker_3de216297c460f935eb4ad7a9beedd11 = L.circleMarker(
+                [37.48656082, 127.08267212],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_8e17e451e1b49aca2a5444419f0c666f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9853d2caa5d1546bff525009e00e2e8e = $(`<div id="html_9853d2caa5d1546bff525009e00e2e8e" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2401<br>대여소명:  밀알학교 입구 (삼성서울병원 입구)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.693<br>log1p(편의점): 0.693</div>`)[0];
+                popup_8e17e451e1b49aca2a5444419f0c666f.setContent(html_9853d2caa5d1546bff525009e00e2e8e);
+            
+        
+
+        circle_marker_3de216297c460f935eb4ad7a9beedd11.bindPopup(popup_8e17e451e1b49aca2a5444419f0c666f)
+        ;
+
+        
+    
+    
+            var circle_marker_41ed40edee052fc01cff7d8c8503a806 = L.circleMarker(
+                [37.48871994, 127.07453918],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a6aa38d2aa4d677d3f199204e980df02 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7ab20059cfe020d7140c77297c97fbe7 = $(`<div id="html_7ab20059cfe020d7140c77297c97fbe7" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2403<br>대여소명:  공무원연금매점 교차로 (개포주공9단지 입구)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.946<br>log1p(편의점): 0.693</div>`)[0];
+                popup_a6aa38d2aa4d677d3f199204e980df02.setContent(html_7ab20059cfe020d7140c77297c97fbe7);
+            
+        
+
+        circle_marker_41ed40edee052fc01cff7d8c8503a806.bindPopup(popup_a6aa38d2aa4d677d3f199204e980df02)
+        ;
+
+        
+    
+    
+            var circle_marker_0cd627d12ceb4ce8678d700f27a6ad97 = L.circleMarker(
+                [37.49180984, 127.07315826],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_b18317b0b529b436d75a170686fc0e6b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_45b292b91c88400521cbf33ee7d6dd83 = $(`<div id="html_45b292b91c88400521cbf33ee7d6dd83" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2404<br>대여소명:  대모산입구역 4번 출구 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.197<br>log1p(편의점): 1.099</div>`)[0];
+                popup_b18317b0b529b436d75a170686fc0e6b.setContent(html_45b292b91c88400521cbf33ee7d6dd83);
+            
+        
+
+        circle_marker_0cd627d12ceb4ce8678d700f27a6ad97.bindPopup(popup_b18317b0b529b436d75a170686fc0e6b)
+        ;
+
+        
+    
+    
+            var circle_marker_290754c537d42c2a7300fd1e128b701f = L.circleMarker(
+                [37.51871109, 127.05084991],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_cfe040e1d456102933eb1498851581ef = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_19c969df03518623bb604b84317f7b6b = $(`<div id="html_19c969df03518623bb604b84317f7b6b" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2405<br>대여소명:  청담공원앞 교차로<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.773<br>log1p(편의점): 2.303</div>`)[0];
+                popup_cfe040e1d456102933eb1498851581ef.setContent(html_19c969df03518623bb604b84317f7b6b);
+            
+        
+
+        circle_marker_290754c537d42c2a7300fd1e128b701f.bindPopup(popup_cfe040e1d456102933eb1498851581ef)
+        ;
+
+        
+    
+    
+            var circle_marker_1451a2858df27fc448facbea46a1d84b = L.circleMarker(
+                [37.5175705, 127.02364349],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_ad97c55eaeaf16ff805292816cc340f4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4db99aa3b198e32b5cbd98692b4298b2 = $(`<div id="html_4db99aa3b198e32b5cbd98692b4298b2" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2406<br>대여소명:  논현동 광명빌딩 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.434<br>log1p(편의점): 2.708</div>`)[0];
+                popup_ad97c55eaeaf16ff805292816cc340f4.setContent(html_4db99aa3b198e32b5cbd98692b4298b2);
+            
+        
+
+        circle_marker_1451a2858df27fc448facbea46a1d84b.bindPopup(popup_ad97c55eaeaf16ff805292816cc340f4)
+        ;
+
+        
+    
+    
+            var circle_marker_45c8587f8d2cb0bde08d30370e2c5765 = L.circleMarker(
+                [37.49847031, 127.03011322],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_93dbe5718f812a624f67f87148ead6e2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_912a7dfdcf3169f1a177a7e5d476ac7b = $(`<div id="html_912a7dfdcf3169f1a177a7e5d476ac7b" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2407<br>대여소명:  역삼서초삼성 세무서 앞 (역삼빌딩 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.738<br>log1p(편의점): 2.944</div>`)[0];
+                popup_93dbe5718f812a624f67f87148ead6e2.setContent(html_912a7dfdcf3169f1a177a7e5d476ac7b);
+            
+        
+
+        circle_marker_45c8587f8d2cb0bde08d30370e2c5765.bindPopup(popup_93dbe5718f812a624f67f87148ead6e2)
+        ;
+
+        
+    
+    
+            var circle_marker_18fb54eab09bbee854f77e98b06571ca = L.circleMarker(
+                [37.4773407, 127.11327362],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d7eed3278934e05e92754b246d867325 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7361db40d05adcfe893f12ada8c5018b = $(`<div id="html_7361db40d05adcfe893f12ada8c5018b" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2408<br>대여소명:  강남한양수자인아파트<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.000<br>log1p(편의점): 0.693</div>`)[0];
+                popup_d7eed3278934e05e92754b246d867325.setContent(html_7361db40d05adcfe893f12ada8c5018b);
+            
+        
+
+        circle_marker_18fb54eab09bbee854f77e98b06571ca.bindPopup(popup_d7eed3278934e05e92754b246d867325)
+        ;
+
+        
+    
+    
+            var circle_marker_1d371b3f65453d56157d6246a4ef86a3 = L.circleMarker(
+                [37.49206161, 127.03074646],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_cf82c1aeee92095a20b6f450d48aa762 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cae0d815fbb4e54771bb276a1deda800 = $(`<div id="html_cae0d815fbb4e54771bb276a1deda800" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2409<br>대여소명:  역삼동 디오슈페리움 (우성아파트 사거리)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.258<br>log1p(편의점): 2.079</div>`)[0];
+                popup_cf82c1aeee92095a20b6f450d48aa762.setContent(html_cae0d815fbb4e54771bb276a1deda800);
+            
+        
+
+        circle_marker_1d371b3f65453d56157d6246a4ef86a3.bindPopup(popup_cf82c1aeee92095a20b6f450d48aa762)
+        ;
+
+        
+    
+    
+            var circle_marker_e66d49aad03b2d1dd96ec8a2b06572fe = L.circleMarker(
+                [37.49959946, 127.03375244],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_09fc552474699354c302cf17026825a7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d24a80d91f9070bceadb4c0878c311f4 = $(`<div id="html_d24a80d91f9070bceadb4c0878c311f4" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2410<br>대여소명:  포스코피앤에스타워 (역삼역 3번출구 부근)<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.951<br>log1p(편의점): 3.178</div>`)[0];
+                popup_09fc552474699354c302cf17026825a7.setContent(html_d24a80d91f9070bceadb4c0878c311f4);
+            
+        
+
+        circle_marker_e66d49aad03b2d1dd96ec8a2b06572fe.bindPopup(popup_09fc552474699354c302cf17026825a7)
+        ;
+
+        
+    
+    
+            var circle_marker_270d1d78cc5ee08a1eb3729ac7dd57d5 = L.circleMarker(
+                [37.47296906, 127.11222839],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a3921f2c91ef3b2373a3933ed550b2a9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_be912f97e1259a53080c92b8010cf233 = $(`<div id="html_be912f97e1259a53080c92b8010cf233" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2411<br>대여소명:  세곡동 성당<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.000<br>log1p(편의점): 0.693</div>`)[0];
+                popup_a3921f2c91ef3b2373a3933ed550b2a9.setContent(html_be912f97e1259a53080c92b8010cf233);
+            
+        
+
+        circle_marker_270d1d78cc5ee08a1eb3729ac7dd57d5.bindPopup(popup_a3921f2c91ef3b2373a3933ed550b2a9)
+        ;
+
+        
+    
+    
+            var circle_marker_3d79d2cfc6775e3e6224f9f3b348cdd6 = L.circleMarker(
+                [37.49095917, 127.05498505],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_27177d081b51e0da2a9129a1abe33abd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_13d963cb1c2c4422918eece4565870fa = $(`<div id="html_13d963cb1c2c4422918eece4565870fa" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2413<br>대여소명: 도곡역 1번 출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.946<br>log1p(편의점): 1.099</div>`)[0];
+                popup_27177d081b51e0da2a9129a1abe33abd.setContent(html_13d963cb1c2c4422918eece4565870fa);
+            
+        
+
+        circle_marker_3d79d2cfc6775e3e6224f9f3b348cdd6.bindPopup(popup_27177d081b51e0da2a9129a1abe33abd)
+        ;
+
+        
+    
+    
+            var circle_marker_e69a2863a73bd39a090c71dc9b934779 = L.circleMarker(
+                [37.48897171, 127.05182648],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_c54e7c05fb69c7da31c1547ce0611967 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_70195c412f52627ef7f6c90a5fa390b5 = $(`<div id="html_70195c412f52627ef7f6c90a5fa390b5" style="width: 100.0%; height: 100.0%;">군집: 0<br>대여소번호: 2414<br>대여소명:  도곡역 아카데미스위트 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.485<br>log1p(편의점): 1.792</div>`)[0];
+                popup_c54e7c05fb69c7da31c1547ce0611967.setContent(html_70195c412f52627ef7f6c90a5fa390b5);
+            
+        
+
+        circle_marker_e69a2863a73bd39a090c71dc9b934779.bindPopup(popup_c54e7c05fb69c7da31c1547ce0611967)
+        ;
+
+        
+    
+    
+            var circle_marker_b03850315e3229083c3cccee953e962c = L.circleMarker(
+                [37.49667358, 127.05342865],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_111180d0cb0e8553912a42856383b5eb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b7df5ce36eef178e53f73d3e28962910 = $(`<div id="html_b7df5ce36eef178e53f73d3e28962910" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2415<br>대여소명: 한티역 롯데백화점 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.555<br>log1p(편의점): 2.398</div>`)[0];
+                popup_111180d0cb0e8553912a42856383b5eb.setContent(html_b7df5ce36eef178e53f73d3e28962910);
+            
+        
+
+        circle_marker_b03850315e3229083c3cccee953e962c.bindPopup(popup_111180d0cb0e8553912a42856383b5eb)
+        ;
+
+        
+    
+    
+            var circle_marker_f6b3fafe4c679b2439ffcc8c192c21f8 = L.circleMarker(
+                [37.4958992, 127.05219269],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_3e16b53ee4aeb93c9502b17fbc2e2958 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bdb7f702952df99419bdcb61efffd4ea = $(`<div id="html_bdb7f702952df99419bdcb61efffd4ea" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2416<br>대여소명: 한티역 6번 출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.178<br>log1p(편의점): 2.079</div>`)[0];
+                popup_3e16b53ee4aeb93c9502b17fbc2e2958.setContent(html_bdb7f702952df99419bdcb61efffd4ea);
+            
+        
+
+        circle_marker_f6b3fafe4c679b2439ffcc8c192c21f8.bindPopup(popup_3e16b53ee4aeb93c9502b17fbc2e2958)
+        ;
+
+        
+    
+    
+            var circle_marker_93a0da31d64561bde79e469d5e05e409 = L.circleMarker(
+                [37.50799942, 127.04524994],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_6e9d3974206d5a7ab2dbbb54302c9651 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_74e35caadec9bcea72668e3c90ee57aa = $(`<div id="html_74e35caadec9bcea72668e3c90ee57aa" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2417<br>대여소명: 선정릉 디캠프(D.CAMP)앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.303<br>log1p(편의점): 1.609</div>`)[0];
+                popup_6e9d3974206d5a7ab2dbbb54302c9651.setContent(html_74e35caadec9bcea72668e3c90ee57aa);
+            
+        
+
+        circle_marker_93a0da31d64561bde79e469d5e05e409.bindPopup(popup_6e9d3974206d5a7ab2dbbb54302c9651)
+        ;
+
+        
+    
+    
+            var circle_marker_258ef9c8b44b7ba7e550c6cd96ce0cff = L.circleMarker(
+                [37.51393509, 127.05982208],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d935f505deb41928e81a60936a0c05b2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_42628b5b3ba0262d47f2dd8e630ea5d5 = $(`<div id="html_42628b5b3ba0262d47f2dd8e630ea5d5" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2418<br>대여소명: 봉은사역 7번 출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.434<br>log1p(편의점): 2.565</div>`)[0];
+                popup_d935f505deb41928e81a60936a0c05b2.setContent(html_42628b5b3ba0262d47f2dd8e630ea5d5);
+            
+        
+
+        circle_marker_258ef9c8b44b7ba7e550c6cd96ce0cff.bindPopup(popup_d935f505deb41928e81a60936a0c05b2)
+        ;
+
+        
+    
+    
+            var circle_marker_f3814c6f01b6dc4c4b6c0c28954bac48 = L.circleMarker(
+                [37.51430893, 127.05970001],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_1300176b9cbfd1ad61ea0bbb81ec527f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ae5bc50649f0e8fd14baff39b18aae1a = $(`<div id="html_ae5bc50649f0e8fd14baff39b18aae1a" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2419<br>대여소명: 봉은사역 1,2번 출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.434<br>log1p(편의점): 2.565</div>`)[0];
+                popup_1300176b9cbfd1ad61ea0bbb81ec527f.setContent(html_ae5bc50649f0e8fd14baff39b18aae1a);
+            
+        
+
+        circle_marker_f3814c6f01b6dc4c4b6c0c28954bac48.bindPopup(popup_1300176b9cbfd1ad61ea0bbb81ec527f)
+        ;
+
+        
+    
+    
+            var circle_marker_f7a5cd65ae1fb005c8170a8abe078978 = L.circleMarker(
+                [37.49689484, 127.07013702],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_458357fb013f3a9a8b1f327d1cdde8a7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bb354810dcceb2da6753d8b3a9cb227b = $(`<div id="html_bb354810dcceb2da6753d8b3a9cb227b" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2420<br>대여소명: 학여울역 사거리(LG베스트샵 앞)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.609<br>log1p(편의점): 1.386</div>`)[0];
+                popup_458357fb013f3a9a8b1f327d1cdde8a7.setContent(html_bb354810dcceb2da6753d8b3a9cb227b);
+            
+        
+
+        circle_marker_f7a5cd65ae1fb005c8170a8abe078978.bindPopup(popup_458357fb013f3a9a8b1f327d1cdde8a7)
+        ;
+
+        
+    
+    
+            var circle_marker_a8adba501ac154427a7c79bc6290042e = L.circleMarker(
+                [37.504673, 127.02579498],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_f69e1620808799ea4c4f3fa7a12fc4ee = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0760722ee80ac57561ef4d82ca78d1f9 = $(`<div id="html_0760722ee80ac57561ef4d82ca78d1f9" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2421<br>대여소명:  신논현역 4번출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.611<br>log1p(편의점): 2.303</div>`)[0];
+                popup_f69e1620808799ea4c4f3fa7a12fc4ee.setContent(html_0760722ee80ac57561ef4d82ca78d1f9);
+            
+        
+
+        circle_marker_a8adba501ac154427a7c79bc6290042e.bindPopup(popup_f69e1620808799ea4c4f3fa7a12fc4ee)
+        ;
+
+        
+    
+    
+            var circle_marker_613227e19613c1a753af70acff196e1c = L.circleMarker(
+                [37.48416901, 127.09484863],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_776ec32b94e453d5eac76b4f8717e57c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e10b9092435f3dca4ab0ce94b06a69ef = $(`<div id="html_e10b9092435f3dca4ab0ce94b06a69ef" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2422<br>대여소명: 수서동 성당 맞은편<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.693<br>log1p(편의점): 0.693</div>`)[0];
+                popup_776ec32b94e453d5eac76b4f8717e57c.setContent(html_e10b9092435f3dca4ab0ce94b06a69ef);
+            
+        
+
+        circle_marker_613227e19613c1a753af70acff196e1c.bindPopup(popup_776ec32b94e453d5eac76b4f8717e57c)
+        ;
+
+        
+    
+    
+            var circle_marker_7220c84965066262ab26dc7484d462bb = L.circleMarker(
+                [37.4908371, 127.08065033],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_9f08a17fc8c1a8efe3a01ecc61880b1e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1a9f1f67c3114bb24afbc032641fc6ac = $(`<div id="html_1a9f1f67c3114bb24afbc032641fc6ac" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2423<br>대여소명: 영희초교 사거리(래미안개포루체하임)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.565<br>log1p(편의점): 1.792</div>`)[0];
+                popup_9f08a17fc8c1a8efe3a01ecc61880b1e.setContent(html_1a9f1f67c3114bb24afbc032641fc6ac);
+            
+        
+
+        circle_marker_7220c84965066262ab26dc7484d462bb.bindPopup(popup_9f08a17fc8c1a8efe3a01ecc61880b1e)
+        ;
+
+        
+    
+    
+            var circle_marker_3718df9c9c3ef333b9ad97d980091da4 = L.circleMarker(
+                [37.46461868, 127.10684967],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_f0cd32be7fc25bf2bc83d111bd7cf142 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_01b2889eb302a4f621a0b20ca574398f = $(`<div id="html_01b2889eb302a4f621a0b20ca574398f" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2425<br>대여소명: 세곡동 사거리(대왕초등학교 정류장)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.099<br>log1p(편의점): 0.693</div>`)[0];
+                popup_f0cd32be7fc25bf2bc83d111bd7cf142.setContent(html_01b2889eb302a4f621a0b20ca574398f);
+            
+        
+
+        circle_marker_3718df9c9c3ef333b9ad97d980091da4.bindPopup(popup_f0cd32be7fc25bf2bc83d111bd7cf142)
+        ;
+
+        
+    
+    
+            var circle_marker_b55734e9002536e83e920b912d161ccb = L.circleMarker(
+                [37.46829605, 127.10469818],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_31ff7f700bef2f5a0f56fd4443117939 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_eba4ac4fd34bb2b7046e0552a5036fef = $(`<div id="html_eba4ac4fd34bb2b7046e0552a5036fef" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 2426<br>대여소명: 강남한신휴플러스 6단지<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.099<br>log1p(편의점): 0.693</div>`)[0];
+                popup_31ff7f700bef2f5a0f56fd4443117939.setContent(html_eba4ac4fd34bb2b7046e0552a5036fef);
+            
+        
+
+        circle_marker_b55734e9002536e83e920b912d161ccb.bindPopup(popup_31ff7f700bef2f5a0f56fd4443117939)
+        ;
+
+        
+    
+    
+            var circle_marker_5806cb3a69a99825514db63cf8a4095d = L.circleMarker(
+                [37.48485184, 127.0583725],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_1e64123af999d4cfc7bc7383b11e66b7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e44c568f0d8297ebf99817c75d439d25 = $(`<div id="html_e44c568f0d8297ebf99817c75d439d25" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 2427<br>대여소명: 개포고등학교 정문앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.099<br>log1p(편의점): 0.693</div>`)[0];
+                popup_1e64123af999d4cfc7bc7383b11e66b7.setContent(html_e44c568f0d8297ebf99817c75d439d25);
+            
+        
+
+        circle_marker_5806cb3a69a99825514db63cf8a4095d.bindPopup(popup_1e64123af999d4cfc7bc7383b11e66b7)
+        ;
+
+        
+    
+    
+            var circle_marker_23c3c6fb42062c440f725aef6bb00735 = L.circleMarker(
+                [37.50024414, 127.03605652],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_883463ea88f74821809f80b971c25bc0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a8ca33b63ed4c48d01d2310201858cad = $(`<div id="html_a8ca33b63ed4c48d01d2310201858cad" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 2430<br>대여소명: 강남파이낸스센터앞(역삼역2번출구)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 4.111<br>log1p(편의점): 2.996</div>`)[0];
+                popup_883463ea88f74821809f80b971c25bc0.setContent(html_a8ca33b63ed4c48d01d2310201858cad);
+            
+        
+
+        circle_marker_23c3c6fb42062c440f725aef6bb00735.bindPopup(popup_883463ea88f74821809f80b971c25bc0)
+        ;
+
+        
+    
+    
+            var circle_marker_81c2a992b056da6f555c93231aa4b3bc = L.circleMarker(
+                [37.49411774, 127.06290436],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d1d121ab79676a012ef173d49abdef8c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1a1888e2a1391fecbd1c74014eb7a5cd = $(`<div id="html_1a1888e2a1391fecbd1c74014eb7a5cd" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 2431<br>대여소명: 대치역 7번출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.398<br>log1p(편의점): 2.079</div>`)[0];
+                popup_d1d121ab79676a012ef173d49abdef8c.setContent(html_1a1888e2a1391fecbd1c74014eb7a5cd);
+            
+        
+
+        circle_marker_81c2a992b056da6f555c93231aa4b3bc.bindPopup(popup_d1d121ab79676a012ef173d49abdef8c)
+        ;
+
+        
+    
+    
+            var circle_marker_daf3a7c564421738d7e79c14203a3254 = L.circleMarker(
+                [37.49229431, 127.09433746],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_857ce7e62198ce324a6a94d0e22a12c7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f592db5481cf38e235ebb4bdeeda4573 = $(`<div id="html_f592db5481cf38e235ebb4bdeeda4573" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3602<br>대여소명:  한국지역난방공사강남지사<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 0.000<br>log1p(편의점): 0.000</div>`)[0];
+                popup_857ce7e62198ce324a6a94d0e22a12c7.setContent(html_f592db5481cf38e235ebb4bdeeda4573);
+            
+        
+
+        circle_marker_daf3a7c564421738d7e79c14203a3254.bindPopup(popup_857ce7e62198ce324a6a94d0e22a12c7)
+        ;
+
+        
+    
+    
+            var circle_marker_dc3114efa7f9d21e2181baa3d90a8d22 = L.circleMarker(
+                [37.51296234, 127.05386353],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_b5f48b6f6030422b21dc94c3102d9cec = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8f1b88046a9b8d32e7eb2b04624f8ac7 = $(`<div id="html_8f1b88046a9b8d32e7eb2b04624f8ac7" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3604<br>대여소명:  삼성중앙역 5번출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.485<br>log1p(편의점): 1.946</div>`)[0];
+                popup_b5f48b6f6030422b21dc94c3102d9cec.setContent(html_8f1b88046a9b8d32e7eb2b04624f8ac7);
+            
+        
+
+        circle_marker_dc3114efa7f9d21e2181baa3d90a8d22.bindPopup(popup_b5f48b6f6030422b21dc94c3102d9cec)
+        ;
+
+        
+    
+    
+            var circle_marker_abf24b155a2aee6e870a5e09eba7116a = L.circleMarker(
+                [37.52422714, 127.02285004],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_3b128772fc297c5fc5658506c39a7ca8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a1764b3ee56007a8addfb5d2edf66939 = $(`<div id="html_a1764b3ee56007a8addfb5d2edf66939" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3606<br>대여소명:  신사동주민센터 옆<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.135<br>log1p(편의점): 1.792</div>`)[0];
+                popup_3b128772fc297c5fc5658506c39a7ca8.setContent(html_a1764b3ee56007a8addfb5d2edf66939);
+            
+        
+
+        circle_marker_abf24b155a2aee6e870a5e09eba7116a.bindPopup(popup_3b128772fc297c5fc5658506c39a7ca8)
+        ;
+
+        
+    
+    
+            var circle_marker_02c742cbff28cfc43eb8dd5731179874 = L.circleMarker(
+                [37.48536682, 127.03849792],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_2ac39f13d902ddc0b77016a01aa491ed = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_879db1714da5b415e6df92cfa5afb192 = $(`<div id="html_879db1714da5b415e6df92cfa5afb192" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3609<br>대여소명:  언주초등학교 입구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.639<br>log1p(편의점): 0.693</div>`)[0];
+                popup_2ac39f13d902ddc0b77016a01aa491ed.setContent(html_879db1714da5b415e6df92cfa5afb192);
+            
+        
+
+        circle_marker_02c742cbff28cfc43eb8dd5731179874.bindPopup(popup_2ac39f13d902ddc0b77016a01aa491ed)
+        ;
+
+        
+    
+    
+            var circle_marker_0db218be437353e87a800b4b44acbb70 = L.circleMarker(
+                [37.46534729, 127.1088028],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_6f33273e62ed97d42a6801152bc048fb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2325b9c8171793628ec303a54be2712a = $(`<div id="html_2325b9c8171793628ec303a54be2712a" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3610<br>대여소명:  윗반마을 입구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.099<br>log1p(편의점): 0.000</div>`)[0];
+                popup_6f33273e62ed97d42a6801152bc048fb.setContent(html_2325b9c8171793628ec303a54be2712a);
+            
+        
+
+        circle_marker_0db218be437353e87a800b4b44acbb70.bindPopup(popup_6f33273e62ed97d42a6801152bc048fb)
+        ;
+
+        
+    
+    
+            var circle_marker_b7d4dcf87b498c9e0ff17ad8ab477159 = L.circleMarker(
+                [37.47123337, 127.10721588],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_e9f7a16b14b8d09456ac188897ff56b1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2da0c7e93cb7b1a87c6e961e1c31bf01 = $(`<div id="html_2da0c7e93cb7b1a87c6e961e1c31bf01" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3611<br>대여소명:  방죽마을 입구<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 1.792<br>log1p(편의점): 1.099</div>`)[0];
+                popup_e9f7a16b14b8d09456ac188897ff56b1.setContent(html_2da0c7e93cb7b1a87c6e961e1c31bf01);
+            
+        
+
+        circle_marker_b7d4dcf87b498c9e0ff17ad8ab477159.bindPopup(popup_e9f7a16b14b8d09456ac188897ff56b1)
+        ;
+
+        
+    
+    
+            var circle_marker_5d78f9febb64c060f88b2376ddbe47a7 = L.circleMarker(
+                [37.46726227, 127.09801483],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_94d2d35d63371d5f971d31685bfea4e9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6436aab877a1a26531caddcd11a9cd99 = $(`<div id="html_6436aab877a1a26531caddcd11a9cd99" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3612<br>대여소명:  은곡마을<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.639<br>log1p(편의점): 1.099</div>`)[0];
+                popup_94d2d35d63371d5f971d31685bfea4e9.setContent(html_6436aab877a1a26531caddcd11a9cd99);
+            
+        
+
+        circle_marker_5d78f9febb64c060f88b2376ddbe47a7.bindPopup(popup_94d2d35d63371d5f971d31685bfea4e9)
+        ;
+
+        
+    
+    
+            var circle_marker_0c629d92ef1e403687dfcc582b2d626a = L.circleMarker(
+                [37.49840164, 127.06093597],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_b906fa8e7c8a28f3e7908281a490f04a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d408ea98a689288970a5496096c8266c = $(`<div id="html_d408ea98a689288970a5496096c8266c" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3614<br>대여소명:  은마아파트 입구 사거리<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.367<br>log1p(편의점): 2.565</div>`)[0];
+                popup_b906fa8e7c8a28f3e7908281a490f04a.setContent(html_d408ea98a689288970a5496096c8266c);
+            
+        
+
+        circle_marker_0c629d92ef1e403687dfcc582b2d626a.bindPopup(popup_b906fa8e7c8a28f3e7908281a490f04a)
+        ;
+
+        
+    
+    
+            var circle_marker_85c4500a7a172a85cdf845e2696145ff = L.circleMarker(
+                [37.51446152, 127.0326004],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_4b20ef73325b7ddeb5cc2437f2f5db93 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_99b9cb2b76f3db16d934625f27b44933 = $(`<div id="html_99b9cb2b76f3db16d934625f27b44933" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3615<br>대여소명:  서울 논현동우체국 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.401<br>log1p(편의점): 2.398</div>`)[0];
+                popup_4b20ef73325b7ddeb5cc2437f2f5db93.setContent(html_99b9cb2b76f3db16d934625f27b44933);
+            
+        
+
+        circle_marker_85c4500a7a172a85cdf845e2696145ff.bindPopup(popup_4b20ef73325b7ddeb5cc2437f2f5db93)
+        ;
+
+        
+    
+    
+            var circle_marker_f04efcd8029c9eb81908297370a5adf2 = L.circleMarker(
+                [37.49526215, 127.04950714],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_2d6f14b3d155470b2d7d6405c643b14f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7def5a9c9b8162b2729cef2fa9fe4d46 = $(`<div id="html_7def5a9c9b8162b2729cef2fa9fe4d46" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3616<br>대여소명:  역삼중학교 앞(체육관 방향)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.792<br>log1p(편의점): 1.609</div>`)[0];
+                popup_2d6f14b3d155470b2d7d6405c643b14f.setContent(html_7def5a9c9b8162b2729cef2fa9fe4d46);
+            
+        
+
+        circle_marker_f04efcd8029c9eb81908297370a5adf2.bindPopup(popup_2d6f14b3d155470b2d7d6405c643b14f)
+        ;
+
+        
+    
+    
+            var circle_marker_a725e09434c2cdbcd3895300680ce320 = L.circleMarker(
+                [37.47364044, 127.10702515],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_b3e60bf025bc21af327793aebf8bba41 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d75c9fdfd4e7687f6f9bc9a5a65cd5f6 = $(`<div id="html_d75c9fdfd4e7687f6f9bc9a5a65cd5f6" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3618<br>대여소명:  서울율현초교 삼거리<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.398<br>log1p(편의점): 2.079</div>`)[0];
+                popup_b3e60bf025bc21af327793aebf8bba41.setContent(html_d75c9fdfd4e7687f6f9bc9a5a65cd5f6);
+            
+        
+
+        circle_marker_a725e09434c2cdbcd3895300680ce320.bindPopup(popup_b3e60bf025bc21af327793aebf8bba41)
+        ;
+
+        
+    
+    
+            var circle_marker_5ecc991ce3329dc14ff4cca7f8c89e91 = L.circleMarker(
+                [37.51925659, 127.0515976],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_41e6aae9aed8971223c7fe10bada4ee1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f377802498af157293fa74dca4493c53 = $(`<div id="html_f377802498af157293fa74dca4493c53" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3620<br>대여소명:  청담역 11번 출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.708<br>log1p(편의점): 2.079</div>`)[0];
+                popup_41e6aae9aed8971223c7fe10bada4ee1.setContent(html_f377802498af157293fa74dca4493c53);
+            
+        
+
+        circle_marker_5ecc991ce3329dc14ff4cca7f8c89e91.bindPopup(popup_41e6aae9aed8971223c7fe10bada4ee1)
+        ;
+
+        
+    
+    
+            var circle_marker_c8cb6e2342fe96afdd6f298695e36628 = L.circleMarker(
+                [37.50286484, 127.06594086],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_33dbcf9a874bee28c1bb14047146bf94 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_75370b5ba9ad042d4b81a6ff73141d79 = $(`<div id="html_75370b5ba9ad042d4b81a6ff73141d79" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3621<br>대여소명:  휘문고교 사거리<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.485<br>log1p(편의점): 0.693</div>`)[0];
+                popup_33dbcf9a874bee28c1bb14047146bf94.setContent(html_75370b5ba9ad042d4b81a6ff73141d79);
+            
+        
+
+        circle_marker_c8cb6e2342fe96afdd6f298695e36628.bindPopup(popup_33dbcf9a874bee28c1bb14047146bf94)
+        ;
+
+        
+    
+    
+            var circle_marker_5351ca4162250517d3e0ae41baa0e64b = L.circleMarker(
+                [37.49986649, 127.0605011],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_8078fa0a4a9f2445a8b4f5aadf9ecc23 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_92845631f63a5c5c2a98da53beafa379 = $(`<div id="html_92845631f63a5c5c2a98da53beafa379" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3622<br>대여소명:  은마아파트입구 사거리(1)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.497<br>log1p(편의점): 2.639</div>`)[0];
+                popup_8078fa0a4a9f2445a8b4f5aadf9ecc23.setContent(html_92845631f63a5c5c2a98da53beafa379);
+            
+        
+
+        circle_marker_5351ca4162250517d3e0ae41baa0e64b.bindPopup(popup_8078fa0a4a9f2445a8b4f5aadf9ecc23)
+        ;
+
+        
+    
+    
+            var circle_marker_7b7df1d4641998a38b96f7b8e46f4146 = L.circleMarker(
+                [37.49587631, 127.08650208],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_c97ce05aac157ee19e661737f7a8263e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_42728d1a55c93bf3f07e0485dd10d616 = $(`<div id="html_42728d1a55c93bf3f07e0485dd10d616" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3623<br>대여소명:  일원에코파크 앞(개포로 방면)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.609<br>log1p(편의점): 1.099</div>`)[0];
+                popup_c97ce05aac157ee19e661737f7a8263e.setContent(html_42728d1a55c93bf3f07e0485dd10d616);
+            
+        
+
+        circle_marker_7b7df1d4641998a38b96f7b8e46f4146.bindPopup(popup_c97ce05aac157ee19e661737f7a8263e)
+        ;
+
+        
+    
+    
+            var circle_marker_4326a8e32a1e07269aafbce3ea126a4f = L.circleMarker(
+                [37.49017715, 127.07305908],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_c78d2637fa1e6cbbd8e98d29ca672b65 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9ad2b8392ed26f392191d597c6ba8db8 = $(`<div id="html_9ad2b8392ed26f392191d597c6ba8db8" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3624<br>대여소명:  대모산입구역 7번 출구 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.792<br>log1p(편의점): 0.693</div>`)[0];
+                popup_c78d2637fa1e6cbbd8e98d29ca672b65.setContent(html_9ad2b8392ed26f392191d597c6ba8db8);
+            
+        
+
+        circle_marker_4326a8e32a1e07269aafbce3ea126a4f.bindPopup(popup_c78d2637fa1e6cbbd8e98d29ca672b65)
+        ;
+
+        
+    
+    
+            var circle_marker_14833737288b78c7261cb065eed56d0a = L.circleMarker(
+                [37.53075027, 127.04160309],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_90df388975b9c6a0fa59e2434f4cd711 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_964fc7b85988e7314f8d176dd31f3c62 = $(`<div id="html_964fc7b85988e7314f8d176dd31f3c62" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3627<br>대여소명:  압구정나들목<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.792<br>log1p(편의점): 0.693</div>`)[0];
+                popup_90df388975b9c6a0fa59e2434f4cd711.setContent(html_964fc7b85988e7314f8d176dd31f3c62);
+            
+        
+
+        circle_marker_14833737288b78c7261cb065eed56d0a.bindPopup(popup_90df388975b9c6a0fa59e2434f4cd711)
+        ;
+
+        
+    
+    
+            var circle_marker_e810a63d81ad1a62e79dfcddfbd15689 = L.circleMarker(
+                [37.49521255, 127.03302765],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_9a7c3e1fad8d01053e063b34e9058822 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_17637edb457a3742f9c58ae7aec89086 = $(`<div id="html_17637edb457a3742f9c58ae7aec89086" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3628<br>대여소명:  역삼1동 주민센터<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.258<br>log1p(편의점): 2.708</div>`)[0];
+                popup_9a7c3e1fad8d01053e063b34e9058822.setContent(html_17637edb457a3742f9c58ae7aec89086);
+            
+        
+
+        circle_marker_e810a63d81ad1a62e79dfcddfbd15689.bindPopup(popup_9a7c3e1fad8d01053e063b34e9058822)
+        ;
+
+        
+    
+    
+            var circle_marker_d396eb065e981979af2bfc6fc1537a9b = L.circleMarker(
+                [37.52416229, 127.0489502],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_35a60ee82e0c54cb2e51dcbfc639cc0a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0bd76745152edd29be70674bf48272f2 = $(`<div id="html_0bd76745152edd29be70674bf48272f2" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 3629<br>대여소명:  청담사거리(신한오피스텔빌딩 앞)<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.219<br>log1p(편의점): 1.946</div>`)[0];
+                popup_35a60ee82e0c54cb2e51dcbfc639cc0a.setContent(html_0bd76745152edd29be70674bf48272f2);
+            
+        
+
+        circle_marker_d396eb065e981979af2bfc6fc1537a9b.bindPopup(popup_35a60ee82e0c54cb2e51dcbfc639cc0a)
+        ;
+
+        
+    
+    
+            var circle_marker_69cae46a202095ba822fca5b9d60c1d1 = L.circleMarker(
+                [37.47685623, 127.05536652],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_ae708b8172db5a5e26a603b1bf8da0d3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7016aa89cb4c63aba9e10fa65f4a7f34 = $(`<div id="html_7016aa89cb4c63aba9e10fa65f4a7f34" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3630<br>대여소명:  개포우성6차아파트 정문 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.386<br>log1p(편의점): 0.693</div>`)[0];
+                popup_ae708b8172db5a5e26a603b1bf8da0d3.setContent(html_7016aa89cb4c63aba9e10fa65f4a7f34);
+            
+        
+
+        circle_marker_69cae46a202095ba822fca5b9d60c1d1.bindPopup(popup_ae708b8172db5a5e26a603b1bf8da0d3)
+        ;
+
+        
+    
+    
+            var circle_marker_5574495437cc107d15a70aa4d23e3c10 = L.circleMarker(
+                [37.47402191, 127.04844666],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_0d03a15180ac4075b9be234d4bb8d0bb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9100d8c30c0956d78fb172d2846f9870 = $(`<div id="html_9100d8c30c0956d78fb172d2846f9870" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3634<br>대여소명:  국악고교 앞 교차로<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.485<br>log1p(편의점): 1.792</div>`)[0];
+                popup_0d03a15180ac4075b9be234d4bb8d0bb.setContent(html_9100d8c30c0956d78fb172d2846f9870);
+            
+        
+
+        circle_marker_5574495437cc107d15a70aa4d23e3c10.bindPopup(popup_0d03a15180ac4075b9be234d4bb8d0bb)
+        ;
+
+        
+    
+    
+            var circle_marker_60ac94c70aee126c1b0d9fe1d2d8bd69 = L.circleMarker(
+                [37.51264191, 127.05156708],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_967e45873b410afdf48e00cc579a0823 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_298cae1d666044a3da57717e66ca0ba1 = $(`<div id="html_298cae1d666044a3da57717e66ca0ba1" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3636<br>대여소명:  삼성중앙역·플래티넘아파트 정류소<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.091<br>log1p(편의점): 1.946</div>`)[0];
+                popup_967e45873b410afdf48e00cc579a0823.setContent(html_298cae1d666044a3da57717e66ca0ba1);
+            
+        
+
+        circle_marker_60ac94c70aee126c1b0d9fe1d2d8bd69.bindPopup(popup_967e45873b410afdf48e00cc579a0823)
+        ;
+
+        
+    
+    
+            var circle_marker_5d56c5193336f63fa8677b691641e4a2 = L.circleMarker(
+                [37.46072388, 127.10287476],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a5201e247b4cc4546284cc638483179a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e0ad1c35f1b2813abec60ed505dbe568 = $(`<div id="html_e0ad1c35f1b2813abec60ed505dbe568" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3637<br>대여소명:  세곡데이케어센터<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.099<br>log1p(편의점): 0.693</div>`)[0];
+                popup_a5201e247b4cc4546284cc638483179a.setContent(html_e0ad1c35f1b2813abec60ed505dbe568);
+            
+        
+
+        circle_marker_5d56c5193336f63fa8677b691641e4a2.bindPopup(popup_a5201e247b4cc4546284cc638483179a)
+        ;
+
+        
+    
+    
+            var circle_marker_82e8ab9097d0af25cc5de1a20f891d5c = L.circleMarker(
+                [37.52796173, 127.05162811],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_7e0639e9cf3e14b79ef0af23893c0e7e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c8619bbb02bc800be1784f42f08c795a = $(`<div id="html_c8619bbb02bc800be1784f42f08c795a" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3638<br>대여소명:  신청담나들목<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.303<br>log1p(편의점): 1.099</div>`)[0];
+                popup_7e0639e9cf3e14b79ef0af23893c0e7e.setContent(html_c8619bbb02bc800be1784f42f08c795a);
+            
+        
+
+        circle_marker_82e8ab9097d0af25cc5de1a20f891d5c.bindPopup(popup_7e0639e9cf3e14b79ef0af23893c0e7e)
+        ;
+
+        
+    
+    
+            var circle_marker_fb3cdcf98f024d97709d1a1515805bbc = L.circleMarker(
+                [37.4909668, 127.08836365],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_80a7524e11b9dc2ea8dc45802a6b4aef = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bec77e613ad7c30085a297c7059cca0a = $(`<div id="html_bec77e613ad7c30085a297c7059cca0a" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3640<br>대여소명:  일원1동주민센터앞 사거리<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.386<br>log1p(편의점): 1.386</div>`)[0];
+                popup_80a7524e11b9dc2ea8dc45802a6b4aef.setContent(html_bec77e613ad7c30085a297c7059cca0a);
+            
+        
+
+        circle_marker_fb3cdcf98f024d97709d1a1515805bbc.bindPopup(popup_80a7524e11b9dc2ea8dc45802a6b4aef)
+        ;
+
+        
+    
+    
+            var circle_marker_95b1bfc569834c0ca684592cdd905e62 = L.circleMarker(
+                [37.49370575, 127.0799942],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_13a945c413b72c375700809f52d481f7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_77e63d39fa480488bfd17f9d89dbbf79 = $(`<div id="html_77e63d39fa480488bfd17f9d89dbbf79" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3641<br>대여소명:  대청역<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.398<br>log1p(편의점): 1.386</div>`)[0];
+                popup_13a945c413b72c375700809f52d481f7.setContent(html_77e63d39fa480488bfd17f9d89dbbf79);
+            
+        
+
+        circle_marker_95b1bfc569834c0ca684592cdd905e62.bindPopup(popup_13a945c413b72c375700809f52d481f7)
+        ;
+
+        
+    
+    
+            var circle_marker_33a3cad3c6f2507862162086894925e0 = L.circleMarker(
+                [37.47092819, 127.08970642],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a43ba3e956137d894d33857b121056fd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1e402723b76322ee45e6221d38540a54 = $(`<div id="html_1e402723b76322ee45e6221d38540a54" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3642<br>대여소명:  LH강남힐스테이트아파트<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.693<br>log1p(편의점): 1.099</div>`)[0];
+                popup_a43ba3e956137d894d33857b121056fd.setContent(html_1e402723b76322ee45e6221d38540a54);
+            
+        
+
+        circle_marker_33a3cad3c6f2507862162086894925e0.bindPopup(popup_a43ba3e956137d894d33857b121056fd)
+        ;
+
+        
+    
+    
+            var circle_marker_f2324fae8fad62c752e4cf71fa3d981e = L.circleMarker(
+                [37.47267914, 127.10375977],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_6a6005a3e60789b3f8bc13f0f87fd129 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_541b8fc011d19e1454a5d197c1269981 = $(`<div id="html_541b8fc011d19e1454a5d197c1269981" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 3643<br>대여소명:  더시그넘하우스 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.079<br>log1p(편의점): 1.946</div>`)[0];
+                popup_6a6005a3e60789b3f8bc13f0f87fd129.setContent(html_541b8fc011d19e1454a5d197c1269981);
+            
+        
+
+        circle_marker_f2324fae8fad62c752e4cf71fa3d981e.bindPopup(popup_6a6005a3e60789b3f8bc13f0f87fd129)
+        ;
+
+        
+    
+    
+            var circle_marker_3fbb5c727449d5a859116dcd789a7ee0 = L.circleMarker(
+                [37.48276138, 127.08042145],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_0500cfb46fe43376bafd59a9eceb8555 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c2570f4dd434d71beaf70cdc47b5fa61 = $(`<div id="html_c2570f4dd434d71beaf70cdc47b5fa61" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3644<br>대여소명:  상록수아파트<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.000<br>log1p(편의점): 0.693</div>`)[0];
+                popup_0500cfb46fe43376bafd59a9eceb8555.setContent(html_c2570f4dd434d71beaf70cdc47b5fa61);
+            
+        
+
+        circle_marker_3fbb5c727449d5a859116dcd789a7ee0.bindPopup(popup_0500cfb46fe43376bafd59a9eceb8555)
+        ;
+
+        
+    
+    
+            var circle_marker_f3fa647695061ec66bbd1fd3c15badf8 = L.circleMarker(
+                [37.5097847, 127.04277039],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_719d08dc33e66b1523334db9fb931275 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_84f9c8911cf6cf887ee1d4fc1c4a61b0 = $(`<div id="html_84f9c8911cf6cf887ee1d4fc1c4a61b0" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 3646<br>대여소명:  선정릉역 4번 출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.565<br>log1p(편의점): 2.303</div>`)[0];
+                popup_719d08dc33e66b1523334db9fb931275.setContent(html_84f9c8911cf6cf887ee1d4fc1c4a61b0);
+            
+        
+
+        circle_marker_f3fa647695061ec66bbd1fd3c15badf8.bindPopup(popup_719d08dc33e66b1523334db9fb931275)
+        ;
+
+        
+    
+    
+            var circle_marker_1043cc6c20b576182acf11fd221628f3 = L.circleMarker(
+                [37.48642349, 127.05931854],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_37eebff935d6fbb3f5612b118ba7a7c4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_78a99af84db31d290c457f7e10c0616e = $(`<div id="html_78a99af84db31d290c457f7e10c0616e" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3647<br>대여소명:  구룡역 1번 출구<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 0.693<br>log1p(편의점): 0.000</div>`)[0];
+                popup_37eebff935d6fbb3f5612b118ba7a7c4.setContent(html_78a99af84db31d290c457f7e10c0616e);
+            
+        
+
+        circle_marker_1043cc6c20b576182acf11fd221628f3.bindPopup(popup_37eebff935d6fbb3f5612b118ba7a7c4)
+        ;
+
+        
+    
+    
+            var circle_marker_c5801d5db9596d53d15a48ddaf38e29d = L.circleMarker(
+                [37.48670578, 127.0605011],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_f12723bed6254760770458b81f5e21da = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_41fffa2c6260d3a041bfc818b8feb644 = $(`<div id="html_41fffa2c6260d3a041bfc818b8feb644" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3648<br>대여소명:  구룡역 4번 출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.000<br>log1p(편의점): 0.000</div>`)[0];
+                popup_f12723bed6254760770458b81f5e21da.setContent(html_41fffa2c6260d3a041bfc818b8feb644);
+            
+        
+
+        circle_marker_c5801d5db9596d53d15a48ddaf38e29d.bindPopup(popup_f12723bed6254760770458b81f5e21da)
+        ;
+
+        
+    
+    
+            var circle_marker_e655ae9b7ab379ed17d967686139708a = L.circleMarker(
+                [37.48607635, 127.05921936],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_0b57e7dfd02464620975710738973ac9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b60f7885108c77b4f3532d538bbc128a = $(`<div id="html_b60f7885108c77b4f3532d538bbc128a" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3649<br>대여소명:  구룡역 5번 출구<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 0.693<br>log1p(편의점): 0.000</div>`)[0];
+                popup_0b57e7dfd02464620975710738973ac9.setContent(html_b60f7885108c77b4f3532d538bbc128a);
+            
+        
+
+        circle_marker_e655ae9b7ab379ed17d967686139708a.bindPopup(popup_0b57e7dfd02464620975710738973ac9)
+        ;
+
+        
+    
+    
+            var circle_marker_0338b8faa73097a8598dfe52df6aa3e3 = L.circleMarker(
+                [37.48929596, 127.06616974],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_491c3b0f9f990a3f887de5765caeab6f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_265a1147634b1f849b25fa09f33ce670 = $(`<div id="html_265a1147634b1f849b25fa09f33ce670" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 3651<br>대여소명:  개포동역 4번출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.946<br>log1p(편의점): 1.386</div>`)[0];
+                popup_491c3b0f9f990a3f887de5765caeab6f.setContent(html_265a1147634b1f849b25fa09f33ce670);
+            
+        
+
+        circle_marker_0338b8faa73097a8598dfe52df6aa3e3.bindPopup(popup_491c3b0f9f990a3f887de5765caeab6f)
+        ;
+
+        
+    
+    
+            var circle_marker_ff4c09bedf78b5c63198293eaa00ef54 = L.circleMarker(
+                [37.50687408, 127.06473541],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_2d18647368ce8cb9b644e2f2fc7a714c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b6d7d154b893b7a6b2edd71c56c57371 = $(`<div id="html_b6d7d154b893b7a6b2edd71c56c57371" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4901<br>대여소명: KT&G타워 옆(상상마당 대치아트홀)<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.178<br>log1p(편의점): 2.398</div>`)[0];
+                popup_2d18647368ce8cb9b644e2f2fc7a714c.setContent(html_b6d7d154b893b7a6b2edd71c56c57371);
+            
+        
+
+        circle_marker_ff4c09bedf78b5c63198293eaa00ef54.bindPopup(popup_2d18647368ce8cb9b644e2f2fc7a714c)
+        ;
+
+        
+    
+    
+            var circle_marker_2d8dd1bf817efa06835d059cad291b05 = L.circleMarker(
+                [37.49524307, 127.03937531],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_56764437f818b36123294deb642511af = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_44da5d195cb5b6f18a910aba312cfb66 = $(`<div id="html_44da5d195cb5b6f18a910aba312cfb66" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4902<br>대여소명:  구역삼세무서 교차로<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.332<br>log1p(편의점): 2.565</div>`)[0];
+                popup_56764437f818b36123294deb642511af.setContent(html_44da5d195cb5b6f18a910aba312cfb66);
+            
+        
+
+        circle_marker_2d8dd1bf817efa06835d059cad291b05.bindPopup(popup_56764437f818b36123294deb642511af)
+        ;
+
+        
+    
+    
+            var circle_marker_6163f110a6f6c05dd0f7e7b563d4e4a1 = L.circleMarker(
+                [37.51916885, 127.0189743],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_b6bd3990944d4235883e9a48fdc347be = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_84f183da995adb748ef47bbc64873838 = $(`<div id="html_84f183da995adb748ef47bbc64873838" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4903<br>대여소명:  신사스퀘어<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.944<br>log1p(편의점): 1.609</div>`)[0];
+                popup_b6bd3990944d4235883e9a48fdc347be.setContent(html_84f183da995adb748ef47bbc64873838);
+            
+        
+
+        circle_marker_6163f110a6f6c05dd0f7e7b563d4e4a1.bindPopup(popup_b6bd3990944d4235883e9a48fdc347be)
+        ;
+
+        
+    
+    
+            var circle_marker_6b6d046eeeebfc3761d5ad5af1518d75 = L.circleMarker(
+                [37.50971985, 127.06679535],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_f8c31b196b2d6da2195448e76992f041 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b2dd6c79f2f088270cff5667018df835 = $(`<div id="html_b2dd6c79f2f088270cff5667018df835" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4905<br>대여소명:  강남경찰서<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.639<br>log1p(편의점): 2.079</div>`)[0];
+                popup_f8c31b196b2d6da2195448e76992f041.setContent(html_b2dd6c79f2f088270cff5667018df835);
+            
+        
+
+        circle_marker_6b6d046eeeebfc3761d5ad5af1518d75.bindPopup(popup_f8c31b196b2d6da2195448e76992f041)
+        ;
+
+        
+    
+    
+            var circle_marker_dc20b5021b85c08ba46213793bed978b = L.circleMarker(
+                [37.50767136, 127.06017303],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a13d68f73778dd96757105cb8b2aac37 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_14adfd3ff797385c0e97efaceedb2063 = $(`<div id="html_14adfd3ff797385c0e97efaceedb2063" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4906<br>대여소명:  섬유센터 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.784<br>log1p(편의점): 2.708</div>`)[0];
+                popup_a13d68f73778dd96757105cb8b2aac37.setContent(html_14adfd3ff797385c0e97efaceedb2063);
+            
+        
+
+        circle_marker_dc20b5021b85c08ba46213793bed978b.bindPopup(popup_a13d68f73778dd96757105cb8b2aac37)
+        ;
+
+        
+    
+    
+            var circle_marker_c173fda353a61074ef7ca90f27417b63 = L.circleMarker(
+                [37.5257225, 127.02588654],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_db818f3dd8a1e956cbee3a4e197d2308 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5a457fe81f8f2ea38f8cc724c40dfcc5 = $(`<div id="html_5a457fe81f8f2ea38f8cc724c40dfcc5" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 4907<br>대여소명:  극동스포츠 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.526<br>log1p(편의점): 1.792</div>`)[0];
+                popup_db818f3dd8a1e956cbee3a4e197d2308.setContent(html_5a457fe81f8f2ea38f8cc724c40dfcc5);
+            
+        
+
+        circle_marker_c173fda353a61074ef7ca90f27417b63.bindPopup(popup_db818f3dd8a1e956cbee3a4e197d2308)
+        ;
+
+        
+    
+    
+            var circle_marker_12bf85f666815389413262266e4072ed = L.circleMarker(
+                [37.52210999, 127.03646088],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_6367e15221a0132f9f5730bdd1edd51b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2a83e69df686ceace0560eb4b6ba77a3 = $(`<div id="html_2a83e69df686ceace0560eb4b6ba77a3" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4908<br>대여소명:  SB타워 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.833<br>log1p(편의점): 2.303</div>`)[0];
+                popup_6367e15221a0132f9f5730bdd1edd51b.setContent(html_2a83e69df686ceace0560eb4b6ba77a3);
+            
+        
+
+        circle_marker_12bf85f666815389413262266e4072ed.bindPopup(popup_6367e15221a0132f9f5730bdd1edd51b)
+        ;
+
+        
+    
+    
+            var circle_marker_b636d9d6981b919e426a968ad546fd3b = L.circleMarker(
+                [37.50570297, 127.02919769],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_e39cbb7d58bc66201e125379d714b981 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0e767c5e88415cde2ba4d80fcf6ea69c = $(`<div id="html_0e767c5e88415cde2ba4d80fcf6ea69c" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 4909<br>대여소명:  노보텔 앰배서더 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.466<br>log1p(편의점): 2.565</div>`)[0];
+                popup_e39cbb7d58bc66201e125379d714b981.setContent(html_0e767c5e88415cde2ba4d80fcf6ea69c);
+            
+        
+
+        circle_marker_b636d9d6981b919e426a968ad546fd3b.bindPopup(popup_e39cbb7d58bc66201e125379d714b981)
+        ;
+
+        
+    
+    
+            var circle_marker_fb17015a44ba7c5fec562764b0ddfbe7 = L.circleMarker(
+                [37.51292038, 127.056427],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_cbd3ad05f265cf11957cb08514d472cf = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_53972af0f4072bda8a234626bda8a632 = $(`<div id="html_53972af0f4072bda8a234626bda8a632" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4913<br>대여소명:  레베쌍트 빌딩 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 3.401<br>log1p(편의점): 2.565</div>`)[0];
+                popup_cbd3ad05f265cf11957cb08514d472cf.setContent(html_53972af0f4072bda8a234626bda8a632);
+            
+        
+
+        circle_marker_fb17015a44ba7c5fec562764b0ddfbe7.bindPopup(popup_cbd3ad05f265cf11957cb08514d472cf)
+        ;
+
+        
+    
+    
+            var circle_marker_5919b7acb43af8f7f856aeacaea17030 = L.circleMarker(
+                [37.50999069, 127.05847168],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_87f86b743ba07b7a2604e3a9fd850797 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d78ef36da16e17b3dea3c632947e76ea = $(`<div id="html_d78ef36da16e17b3dea3c632947e76ea" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4914<br>대여소명:  도심공항타워 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 4.025<br>log1p(편의점): 2.773</div>`)[0];
+                popup_87f86b743ba07b7a2604e3a9fd850797.setContent(html_d78ef36da16e17b3dea3c632947e76ea);
+            
+        
+
+        circle_marker_5919b7acb43af8f7f856aeacaea17030.bindPopup(popup_87f86b743ba07b7a2604e3a9fd850797)
+        ;
+
+        
+    
+    
+            var circle_marker_80ba39451cfd4c8b9ebddb8973ef3e97 = L.circleMarker(
+                [37.49775314, 127.03857422],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_5fcf2c766a5d16a6fe4d473a98b74203 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4f2c966fabdf7c13f3069170389fa353 = $(`<div id="html_4f2c966fabdf7c13f3069170389fa353" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4915<br>대여소명:  영동중앙교회 버스정류장<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.466<br>log1p(편의점): 2.398</div>`)[0];
+                popup_5fcf2c766a5d16a6fe4d473a98b74203.setContent(html_4f2c966fabdf7c13f3069170389fa353);
+            
+        
+
+        circle_marker_80ba39451cfd4c8b9ebddb8973ef3e97.bindPopup(popup_5fcf2c766a5d16a6fe4d473a98b74203)
+        ;
+
+        
+    
+    
+            var circle_marker_f6b4a28ee6609d32f2fc7e0421a49d24 = L.circleMarker(
+                [37.51973724, 127.05767822],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_eb8aef88ba3cd29f8b3e7b46ffe6c48a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1fac5628b1931a7e5a95c7d60ed53e62 = $(`<div id="html_1fac5628b1931a7e5a95c7d60ed53e62" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 4916<br>대여소명:  청담역 1번출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.079<br>log1p(편의점): 1.946</div>`)[0];
+                popup_eb8aef88ba3cd29f8b3e7b46ffe6c48a.setContent(html_1fac5628b1931a7e5a95c7d60ed53e62);
+            
+        
+
+        circle_marker_f6b4a28ee6609d32f2fc7e0421a49d24.bindPopup(popup_eb8aef88ba3cd29f8b3e7b46ffe6c48a)
+        ;
+
+        
+    
+    
+            var circle_marker_f1c785f70e24d24d9e603337a10d5019 = L.circleMarker(
+                [37.49404526, 127.08678436],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_be988276250c41839e43447778ace1c6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f5072d1e06ad0ef549c5b58b739aa1d2 = $(`<div id="html_f5072d1e06ad0ef549c5b58b739aa1d2" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 4917<br>대여소명: 일원에코파크 주차장<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.946<br>log1p(편의점): 1.946</div>`)[0];
+                popup_be988276250c41839e43447778ace1c6.setContent(html_f5072d1e06ad0ef549c5b58b739aa1d2);
+            
+        
+
+        circle_marker_f1c785f70e24d24d9e603337a10d5019.bindPopup(popup_be988276250c41839e43447778ace1c6)
+        ;
+
+        
+    
+    
+            var circle_marker_b1729a581a96aa9e472c040755def0ea = L.circleMarker(
+                [37.48661041, 127.04550934],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_8c61822584d818ac1a6716b7471f2b2d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6f289440a4aca948576b636cb3c6cd6b = $(`<div id="html_6f289440a4aca948576b636cb3c6cd6b" style="width: 100.0%; height: 100.0%;">군집: 4<br>대여소번호: 4918<br>대여소명: 매봉역 1번출구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.565<br>log1p(편의점): 1.609</div>`)[0];
+                popup_8c61822584d818ac1a6716b7471f2b2d.setContent(html_6f289440a4aca948576b636cb3c6cd6b);
+            
+        
+
+        circle_marker_b1729a581a96aa9e472c040755def0ea.bindPopup(popup_8c61822584d818ac1a6716b7471f2b2d)
+        ;
+
+        
+    
+    
+            var circle_marker_0d4cb006166631ea97c982bf7ddc78c3 = L.circleMarker(
+                [37.49665833, 127.06938171],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_920dd1bb732d563d87f401735fb8d29f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5aece74d927d62a4c310c4d680106d6d = $(`<div id="html_5aece74d927d62a4c310c4d680106d6d" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 4919<br>대여소명: 학여울역사거리(은마아파트)<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.609<br>log1p(편의점): 1.386</div>`)[0];
+                popup_920dd1bb732d563d87f401735fb8d29f.setContent(html_5aece74d927d62a4c310c4d680106d6d);
+            
+        
+
+        circle_marker_0d4cb006166631ea97c982bf7ddc78c3.bindPopup(popup_920dd1bb732d563d87f401735fb8d29f)
+        ;
+
+        
+    
+    
+            var circle_marker_a9f1bda064a3b3416dc5bd1dce8c81bc = L.circleMarker(
+                [37.49861526, 127.0683136],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d72f79abcb2105ba99fa420445e02b01 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f78fb1d65bacd6459b0116c132441ca5 = $(`<div id="html_f78fb1d65bacd6459b0116c132441ca5" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 4923<br>대여소명: 수협대치동지점<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 2.197<br>log1p(편의점): 1.792</div>`)[0];
+                popup_d72f79abcb2105ba99fa420445e02b01.setContent(html_f78fb1d65bacd6459b0116c132441ca5);
+            
+        
+
+        circle_marker_a9f1bda064a3b3416dc5bd1dce8c81bc.bindPopup(popup_d72f79abcb2105ba99fa420445e02b01)
+        ;
+
+        
+    
+    
+            var circle_marker_30aa3eccbbcd56d4f10f9e557538745a = L.circleMarker(
+                [37.51280975, 127.02636719],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_b7f11026924e59af59b785b25a3a70a8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0c19ac1d984619cf9946e5fb12181579 = $(`<div id="html_0c19ac1d984619cf9946e5fb12181579" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4924<br>대여소명: 논현동가구거리<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.944<br>log1p(편의점): 2.197</div>`)[0];
+                popup_b7f11026924e59af59b785b25a3a70a8.setContent(html_0c19ac1d984619cf9946e5fb12181579);
+            
+        
+
+        circle_marker_30aa3eccbbcd56d4f10f9e557538745a.bindPopup(popup_b7f11026924e59af59b785b25a3a70a8)
+        ;
+
+        
+    
+    
+            var circle_marker_2d8ceceaa202b332ab0dc5363cf24044 = L.circleMarker(
+                [37.52390289, 127.04660797],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_a5dc37aa38899f2dab98fbae7949f0c1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8fb7f59352366ae466c64c6099e82b7b = $(`<div id="html_8fb7f59352366ae466c64c6099e82b7b" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4925<br>대여소명: 청담백영빌딩 앞<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 2.773<br>log1p(편의점): 2.079</div>`)[0];
+                popup_a5dc37aa38899f2dab98fbae7949f0c1.setContent(html_8fb7f59352366ae466c64c6099e82b7b);
+            
+        
+
+        circle_marker_2d8ceceaa202b332ab0dc5363cf24044.bindPopup(popup_a5dc37aa38899f2dab98fbae7949f0c1)
+        ;
+
+        
+    
+    
+            var circle_marker_8e5aeda25f8a3fa3465346ec67bde19f = L.circleMarker(
+                [37.50099564, 127.06803894],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_197c8b31a3a09642f4e77ca2aa39b7dd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7fab6179cea4ced6855549ac3bbc5019 = $(`<div id="html_7fab6179cea4ced6855549ac3bbc5019" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 4926<br>대여소명: 대치우성아파트 사거리<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 1.792<br>log1p(편의점): 1.099</div>`)[0];
+                popup_197c8b31a3a09642f4e77ca2aa39b7dd.setContent(html_7fab6179cea4ced6855549ac3bbc5019);
+            
+        
+
+        circle_marker_8e5aeda25f8a3fa3465346ec67bde19f.bindPopup(popup_197c8b31a3a09642f4e77ca2aa39b7dd)
+        ;
+
+        
+    
+    
+            var circle_marker_6a796949d7d18de14116fe93cdff665b = L.circleMarker(
+                [37.4818573, 127.10456085],
+                {"bubblingMouseEvents": true, "color": "#fee090", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee090", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_80349de11ddea3dd19a08e1f91c6b826 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_259589a694aad3e5f6d4eaa42e4bb719 = $(`<div id="html_259589a694aad3e5f6d4eaa42e4bb719" style="width: 100.0%; height: 100.0%;">군집: 2<br>대여소번호: 4928<br>대여소명: 교수마을 입구<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 0.693<br>log1p(편의점): 1.099</div>`)[0];
+                popup_80349de11ddea3dd19a08e1f91c6b826.setContent(html_259589a694aad3e5f6d4eaa42e4bb719);
+            
+        
+
+        circle_marker_6a796949d7d18de14116fe93cdff665b.bindPopup(popup_80349de11ddea3dd19a08e1f91c6b826)
+        ;
+
+        
+    
+    
+            var circle_marker_b89f9db1b2f2738af45554711a3cf605 = L.circleMarker(
+                [37.52464676, 127.04914856],
+                {"bubblingMouseEvents": true, "color": "#91bfdb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91bfdb", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_12f8ee6193609e7ae5084079ed5d99da = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b1ffe70dc8f206fab8ff7676053d59a5 = $(`<div id="html_b1ffe70dc8f206fab8ff7676053d59a5" style="width: 100.0%; height: 100.0%;">군집: 3<br>대여소번호: 4929<br>대여소명: 파스쿠찌 청담사거리점 앞<br>대여소별 도착시간 가설: 주거지구 후보<br>log1p(커피숍): 3.296<br>log1p(편의점): 2.079</div>`)[0];
+                popup_12f8ee6193609e7ae5084079ed5d99da.setContent(html_b1ffe70dc8f206fab8ff7676053d59a5);
+            
+        
+
+        circle_marker_b89f9db1b2f2738af45554711a3cf605.bindPopup(popup_12f8ee6193609e7ae5084079ed5d99da)
+        ;
+
+        
+    
+    
+            var circle_marker_8ec3e7468c666f99a907deab458d7ac5 = L.circleMarker(
+                [37.49662018, 127.07099915],
+                {"bubblingMouseEvents": true, "color": "#fc8d59", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc8d59", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_7b4ca29c1ac29178dbde701ed7954acd);
+        
+    
+        var popup_d1d2c9773dc5c7fdafebab9237eb9241 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_45d0088ed5ccc3e4867a427e7b16ea00 = $(`<div id="html_45d0088ed5ccc3e4867a427e7b16ea00" style="width: 100.0%; height: 100.0%;">군집: 1<br>대여소번호: 4930<br>대여소명: 학여울역 1번 출구<br>대여소별 도착시간 가설: 업무/상업지구 후보<br>log1p(커피숍): 1.386<br>log1p(편의점): 1.099</div>`)[0];
+                popup_d1d2c9773dc5c7fdafebab9237eb9241.setContent(html_45d0088ed5ccc3e4867a427e7b16ea00);
+            
+        
+
+        circle_marker_8ec3e7468c666f99a907deab458d7ac5.bindPopup(popup_d1d2c9773dc5c7fdafebab9237eb9241)
+        ;
+
+        
+    
+</script>
+</html>

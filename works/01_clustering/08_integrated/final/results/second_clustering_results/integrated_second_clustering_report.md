@@ -16,13 +16,13 @@
 
 군집화 핵심 입력 7개:
 
-- `arrival_7_10_ratio`
-- `arrival_11_14_ratio`
-- `arrival_17_20_ratio`
-- `morning_net_inflow`
-- `evening_net_inflow`
-- `subway_distance_m`
-- `bus_stop_count_300m`
+- `arrival_7_10_ratio` : 07~10시 반납 비율
+- `arrival_11_14_ratio` : 11~14시 반납 비율
+- `arrival_17_20_ratio` : 17~20시 반납 비율
+- `morning_net_inflow` : 아침 순유입
+- `evening_net_inflow` : 저녁 순유입
+- `subway_distance_m` : 최근접 지하철 거리
+- `bus_stop_count_300m` : 300m 내 버스정류장 수
 
 보조 해석 컬럼:
 
@@ -33,6 +33,12 @@
 - `dominant_ratio`
 - `district_hypothesis`
 - `life_pop_*`
+
+메인 피처 해석 원칙:
+
+- 반납 시간대 3개는 `언제 해당 대여소로 사람이 모이는가`를 본다.
+- 순유입 2개는 `언제 자전거가 실제로 들어오고 빠져나가는가`를 본다.
+- 교통 접근성 2개는 `지하철/버스 접근이 좋은 중심축인지`를 본다.
 
 ## 3. 군집 수 탐색
 
@@ -136,7 +142,46 @@
 - `data/ddri_second_cluster_representative_stations.csv`
 - `data/ddri_second_cluster_hypothesis_crosstab.csv`
 
-## 7. 이후 예측 모델로의 연결
+## 7. POI 보강 실험 결과
+
+상권 해석을 더 직접적으로 보강하기 위해 서울시 사업장 인허가 원천에서 오프라인 상권/생활편의 POI를 별도 가공해 군집화 비교 실험을 수행했다.
+
+공식 원천:
+
+- `지방행정 인허가 데이터개방`
+- https://www.localdata.go.kr/devcenter/dataDown.do?menuNo=20001
+
+POI 보강 실험에 실제 사용한 피처:
+
+- `log1p_restaurant_count_300m` : log1p(300m 내 일반음식점 수)
+- `log1p_cafe_count_300m` : log1p(300m 내 커피숍 수)
+- `log1p_convenience_store_count_300m` : log1p(300m 내 편의점 수)
+- `log1p_pharmacy_count_300m` : log1p(300m 내 약국 수)
+- `log1p_food_retail_count_1000m` : log1p(1000m 내 식품판매업(기타) 수)
+- `log1p_fitness_count_500m` : log1p(500m 내 체력단련장 수)
+- `log1p_cinema_count_1000m` : log1p(1000m 내 영화상영관 수)
+
+후보로 검토했지만 최종 적용에서 제외한 피처:
+
+- `golf_practice_count_1000m` : 골프연습장 수, 따릉이 목적지 직접성이 낮아 제외
+- `bakery_count_300m` : 제과점 수, 카페와 중복이 커 제외
+- `hospital_count_500m` : 병원 수, 후보로 실험했으나 silhouette를 더 낮춰 제외
+- `통신판매업` 계열: 온라인 판매 성격이 강해 오프라인 상권 피처로 부적절
+
+실험 결과:
+
+| 실험 | k | 최고 silhouette |
+|---|---:|---:|
+| 메인 통합 군집화 | 5 | 0.2033 |
+| POI 보강 실험 | 5 | 0.1576 |
+
+판단:
+
+- `restaurant`와 `food_retail`을 포함하면 상권 밀집도 설명은 더 자연스러워진다.
+- 그러나 현재는 시간대/순유입/교통 접근성 중심 메인 피처보다 분리도가 낮다.
+- 즉 POI 피처는 `후반 실험 결과`와 `상권 해석 보조 근거`로는 유효하지만, 이번 단계에서 메인 군집화 피처로 채택할 수준은 아니었다.
+
+## 8. 이후 예측 모델로의 연결
 
 이 군집화의 목적은 군집 자체가 아니라 이후 `station-day 수요 예측`으로 연결되는 것이다.
 
