@@ -25,10 +25,10 @@ PALETTE = ["#d73027", "#fc8d59", "#fee090", "#91bfdb", "#4575b4", "#7b3294", "#1
 def add_quadrant_labels_ratio(ax, x_mean: float, y_mean: float) -> None:
     ax.axvline(x_mean, color="#666666", linestyle="--", linewidth=1)
     ax.axhline(y_mean, color="#666666", linestyle="--", linewidth=1)
-    ax.text(x_mean * 0.55, y_mean * 1.35, "아침·주거 약형", fontsize=10, color="#555555")
-    ax.text(x_mean * 1.08, y_mean * 1.35, "아침 도착형", fontsize=10, color="#555555")
-    ax.text(x_mean * 0.55, y_mean * 0.55, "저강도 균형형", fontsize=10, color="#555555")
-    ax.text(x_mean * 1.08, y_mean * 0.55, "저녁 도착형", fontsize=10, color="#555555")
+    ax.text(x_mean * 0.45, y_mean * 1.28, "저녁 도착형", fontsize=10, color="#555555")
+    ax.text(x_mean * 1.06, y_mean * 1.28, "양시간대 혼합형", fontsize=10, color="#555555")
+    ax.text(x_mean * 0.45, y_mean * 0.52, "저강도 균형형", fontsize=10, color="#555555")
+    ax.text(x_mean * 1.06, y_mean * 0.52, "아침 도착형", fontsize=10, color="#555555")
 
 
 def add_quadrant_labels_flow(ax) -> None:
@@ -70,8 +70,8 @@ def main() -> None:
     y_mean = df["arrival_17_20_ratio"].mean()
     add_quadrant_labels_ratio(ax, x_mean, y_mean)
     ax.set_title("아침 반납 비율 vs 저녁 반납 비율")
-    ax.set_xlabel("arrival_7_10_ratio")
-    ax.set_ylabel("arrival_17_20_ratio")
+    ax.set_xlabel("07~10시 반납 비율")
+    ax.set_ylabel("17~20시 반납 비율")
 
     # Panel 2: net inflow quadrant
     ax = axes[1]
@@ -91,8 +91,8 @@ def main() -> None:
 
     add_quadrant_labels_flow(ax)
     ax.set_title("아침 순유입 vs 저녁 순유입")
-    ax.set_xlabel("morning_net_inflow")
-    ax.set_ylabel("evening_net_inflow")
+    ax.set_xlabel("아침 순유입")
+    ax.set_ylabel("저녁 순유입")
 
     fig.suptitle("통합 군집화 핵심 사분면 해석", fontsize=18, weight="bold")
     fig.tight_layout()

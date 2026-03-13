@@ -27,7 +27,37 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 1. 통합 군집화 접근
+# 1. 분석 타겟과 피처 구성
+
+## 이번 군집화의 타겟
+
+- 타겟 단위: `station-level`
+- 타겟 의미: 각 대여소를 `업무/상업형`, `주거형`, `생활·상권 혼합형`, `외곽형` 같은 공간 역할 기준으로 분류
+- 활용 목적: 이후 `station-day` 수요 예측에서 군집별 환경 피처를 선별하는 기준으로 사용
+
+## 메인 군집화 피처 7개
+
+- `arrival_7_10_ratio` (07~10시 반납 비율)
+- `arrival_11_14_ratio` (11~14시 반납 비율)
+- `arrival_17_20_ratio` (17~20시 반납 비율)
+- `morning_net_inflow` (아침 순유입)
+- `evening_net_inflow` (저녁 순유입)
+- `subway_distance_m` (최근접 지하철 거리)
+- `bus_stop_count_300m` (300m 내 버스정류장 수)
+
+## 환경 보강 실험 피처
+
+- `station_elevation_m` (대여소 표고)
+- `elevation_diff_nearest_subway_m` (최근접 지하철 대비 고도차)
+- `nearest_park_area_sqm` (최근접 공원 면적)
+- `distance_naturepark_m` (도시자연공원구역 거리)
+- `distance_river_boundary_m` (최근접 하천경계 거리)
+
+<div class="callout compact">메인 군집화는 7개 지구판단 피처로 수행했고, 환경 보강 피처는 후속 실험으로 분리해 해석력만 비교했다.</div>
+
+<div class="page-break"></div>
+
+# 2. 통합 군집화 접근
 
 ## 분석 고도화 흐름
 
@@ -45,7 +75,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 2. 데이터 기준과 전처리
+# 3. 데이터 기준과 전처리
 
 ## 분석 범위
 
@@ -80,13 +110,13 @@ pdf_options:
   - `동일 대여소 반납 && 5분 이하`: `22,394건 (0.77%)`
 - 분석 대상 제외
   - 공통 기준 밖 대여소: `72,406건 (2.50%)`
-  - 강남구 외 반납: `0건`
+  - 강남구 외 반납: `0건(1차 정제 데이터)`
 
 <div class="callout compact">5분 이하 즉시 반납만 제거하고, 나머지 self-return은 유지했다.</div>
 
 <div class="page-break"></div>
 
-# 3. 최종 군집화 입력과 원천
+# 4. 최종 군집화 입력과 원천
 
 ## 메인 입력 7개
 
@@ -112,7 +142,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 4. 07~10시 반납 근거
+# 5. 07~10시 반납 근거
 
 <div class="image-row tight">
   <img class="half-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_7_10_safari.png" alt="2025 07-10 return html map">
@@ -139,7 +169,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 5. 11~14시 반납 근거
+# 6. 11~14시 반납 근거
 
 <div class="image-row tight">
   <img class="half-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_11_14_safari.png" alt="2025 11-14 return html map">
@@ -166,7 +196,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 6. 17~20시 반납 근거
+# 7. 17~20시 반납 근거
 
 <div class="image-row tight">
   <img class="half-image" src="../../01_clustering/08_integrated/intermediate/return_time_district/ddri_return_map_2025_17_20_safari.png" alt="2025 17-20 return html map">
@@ -193,9 +223,9 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 7. 군집 수 선택 결과
+# 8. 군집 수 선택 결과
 
-| k | silhouette |
+| 군집 개수 후보 k | silhouette |
 |---|---:|
 | 5 | 0.2033 |
 | 6 | 0.1795 |
@@ -208,16 +238,17 @@ pdf_options:
 <ul class="compact-list">
   <li>`k = 5`에서 silhouette가 가장 높음</li>
   <li>이번 군집화는 지구판단 해석력을 우선해 `k >= 5` 범위를 탐색함</li>
+  <li>최종 메인 군집은 `k = 5`이므로 실제 군집 라벨은 `Cluster 0~4`만 사용함</li>
 </ul>
 
 <div class="page-break"></div>
 
-# 8. 군집 결과와 분포
+# 9. 군집 결과와 분포
 
 | 군집 | station 수 | 07-10 비율 | 11-14 비율 | 17-20 비율 | 해석 초안 |
 |---|---:|---:|---:|---:|---|
 | Cluster 0 | 49 | 0.283 | 0.187 | 0.233 | 업무/상업 혼합형 |
-| Cluster 1 | 3 | 0.486 | 0.160 | 0.161 | 초강한 아침 도착 업무 거점형 |
+| Cluster 1 | 3 | 0.486 | 0.160 | 0.161 | 아침 도착 업무 집중형 |
 | Cluster 2 | 32 | 0.113 | 0.150 | 0.383 | 주거 도착형 |
 | Cluster 3 | 61 | 0.153 | 0.198 | 0.307 | 생활·상권 혼합형 |
 | Cluster 4 | 19 | 0.157 | 0.159 | 0.312 | 외곽 주거형 |
@@ -229,7 +260,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 9. 군집 프로파일
+# 10. 군집 프로파일
 
 <div class="chart-block">
   <img class="chart-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_profile_heatmap.png" alt="integrated cluster profile heatmap">
@@ -240,14 +271,16 @@ pdf_options:
 </div>
 
 <ul class="compact-list">
-  <li>Cluster 1은 아침 도착 집중과 순유입이 매우 강한 업무 거점</li>
-  <li>Cluster 2와 4는 저녁 도착형으로 주거지 성격이 강함</li>
-  <li>Cluster 3은 점심 비율도 상대적으로 높아 생활·상권 혼합형으로 해석 가능</li>
+  <li>왼쪽 사분면 차트는 `07~10시 반납 비율`과 `17~20시 반납 비율`의 상대적 강도를 비교한다. 오른쪽 아래로 갈수록 아침 도착형, 왼쪽 위로 갈수록 저녁 도착형 해석이 강해진다.</li>
+  <li>Cluster 1은 `07~10시 반납 비율 0.486`, `17~20시 반납 비율 0.161`로 아침 도착형 사분면에 가장 뚜렷하게 위치한다.</li>
+  <li>Cluster 2는 `07~10시 0.113`, `17~20시 0.383`으로 저녁 도착형이 가장 강하고, Cluster 4도 저녁 반납이 높아 외곽 주거형 해석을 뒷받침한다.</li>
+  <li>오른쪽 사분면 차트는 `아침 순유입`과 `저녁 순유입`을 함께 보며, Cluster 1은 아침 순유입이 크고 저녁에는 순유출로 돌아서 업무 중심축 성격을 보인다.</li>
+  <li>Cluster 3은 저녁 반납이 높으면서도 점심 비율이 상대적으로 높아 생활·상권 혼합형으로 읽을 수 있다.</li>
 </ul>
 
 <div class="page-break"></div>
 
-# 10. 군집 대표 대여소와 군집 지도
+# 11. 군집 대표 대여소와 군집 지도
 
 <div class="chart-block">
   <img class="appendix-map-image" src="../../01_clustering/08_integrated/final/results/second_clustering_results/images/ddri_second_cluster_static_map.png" alt="integrated cluster static map">
@@ -258,7 +291,7 @@ pdf_options:
 ## 대표 예시
 
 - 업무/상업 혼합형: `SB타워 앞`, `역삼지하보도 7번출구 앞`
-- 초강한 아침 도착 업무 거점형: `수서역 5번출구`, `포스코사거리(기업은행)`
+- 아침 도착 업무 집중형: `수서역 5번출구`, `포스코사거리(기업은행)`
 - 주거 도착형: `청담역 13번 출구 앞`, `현대아파트 정문 앞`
 - 외곽 주거형: `더시그넘하우스 앞`, `세곡동 사거리`
 
@@ -268,7 +301,7 @@ pdf_options:
 
 <div class="page-break"></div>
 
-# 11. 환경 보강 실험
+# 12. 환경 보강 실험
 
 ## 추가한 환경 피처와 원천
 
@@ -282,19 +315,16 @@ pdf_options:
 
 ## 환경 보강 결과
 
+- 환경 보강 실험은 별도 탐색에서 `k = 6`이 가장 높았고, 따라서 실험 군집 라벨은 `Cluster 0~5`가 될 수 있음
 - 보강 군집화 최고 silhouette: `0.1577`
 - 기본 통합 군집화(`0.2033`)보다 분리도는 낮음
 - 다만 `외곽 주거형`, `녹지/하천 인접형` 해석은 더 강해짐
-
-<div class="chart-block">
-  <img class="chart-image" src="../../01_clustering/08_integrated/intermediate/enriched_second_clustering_results/images/ddri_enriched_cluster_feature_means.png" alt="enriched standardized feature means">
-</div>
 
 <div class="callout compact">환경 피처는 메인 군집 구조를 대체하기보다 외곽성·녹지성 해석을 보강하는 근거로 유효했다.</div>
 
 <div class="page-break"></div>
 
-# 12. 결론과 다음 단계
+# 13. 결론과 다음 단계
 
 ## 결론
 
