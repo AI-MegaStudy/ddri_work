@@ -5,13 +5,15 @@
 ## 1. 사용 파일
 
 - 결과 취합 CSV:
-  - `ddri_cluster_model_metrics_collection_template.csv`
+  - `summary_aggregation/output/data/ddri_cluster_model_metrics_collection_template.csv`
 - 군집별 실행 노트북:
   - `cluster00/01_cluster_modeling.ipynb`
   - `cluster01/01_cluster_modeling.ipynb`
   - `cluster02/01_cluster_modeling.ipynb`
   - `cluster03/01_cluster_modeling.ipynb`
   - `cluster04/01_cluster_modeling.ipynb`
+- 취합 노트북:
+  - `summary_aggregation/11_ddri_cluster_result_collection.ipynb`
 
 ## 2. 취합 절차
 

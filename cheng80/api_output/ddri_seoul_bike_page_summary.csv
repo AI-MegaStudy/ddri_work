@@ -1,0 +1,6 @@
+﻿start_index,end_index,result_code,result_message,list_total_count,returned_rows
+1,1000,INFO-000,정상 처리되었습니다.,1000.0,1000
+1001,2000,INFO-000,정상 처리되었습니다.,1000.0,1000
+2001,3000,INFO-000,정상 처리되었습니다.,684.0,684
+3001,4000,,,,0
+4001,5000,,,,0

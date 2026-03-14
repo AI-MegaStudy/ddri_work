@@ -21,13 +21,13 @@
 
 ## 2. 1차 결과 핵심
 
-| 군집 코드 | 군집명 | 1차 우세 모델 | Test RMSE | Test R² | 1차 해석 |
-|---|---|---|---:|---:|---|
-| `cluster00` | 업무/상업 혼합형 | `LightGBM_RMSE` | 0.8113 | 0.3212 | 중간 수준, 추가 개선 여지 있음 |
-| `cluster01` | 아침 도착 업무 집중형 | `LightGBM_RMSE` | 1.3462 | 0.6398 | 가장 어려운 군집 |
-| `cluster02` | 주거 도착형 | `LightGBM_RMSE` | 0.8088 | 0.4987 | 비교적 안정적 |
-| `cluster03` | 생활권 혼합형 | `LightGBM_RMSE` | 0.6901 | 0.1802 | 오차는 낮지만 설명력은 낮음 |
-| `cluster04` | 외곽 주거형 | `LightGBM_RMSE` | 0.7160 | 0.3785 | 무난하게 예측되는 군집 |
+| 군집 코드 | 군집명 | 1차 우세 모델 | Test RMSE | Test MAE | Test R² | 1차 해석 |
+|---|---|---|---:|---:|---:|---|
+| `cluster00` | 업무/상업 혼합형 | `LightGBM_RMSE` | 0.8113 | 0.5439 | 0.3212 | 중간 수준, 추가 개선 여지 있음 |
+| `cluster01` | 아침 도착 업무 집중형 | `LightGBM_RMSE` | 1.3462 | 0.8042 | 0.6398 | 가장 어려운 군집 |
+| `cluster02` | 주거 도착형 | `LightGBM_RMSE` | 0.8088 | 0.5059 | 0.4987 | 비교적 안정적 |
+| `cluster03` | 생활권 혼합형 | `LightGBM_RMSE` | 0.6901 | 0.4928 | 0.1802 | 오차는 낮지만 설명력은 낮음 |
+| `cluster04` | 외곽 주거형 | `LightGBM_RMSE` | 0.7160 | 0.4425 | 0.3785 | 무난하게 예측되는 군집 |
 
 1차 결론:
 
@@ -49,13 +49,13 @@
 
 ## 4. 1차 vs 2차 비교
 
-| 군집 코드 | 군집명 | 1차 Test RMSE | 2차 Test RMSE | RMSE 변화 | 2차 해석 |
-|---|---|---:|---:|---:|---|
-| `cluster00` | 업무/상업 혼합형 | 0.8113 | 0.8085 | -0.0028 | 아주 작은 개선 |
-| `cluster01` | 아침 도착 업무 집중형 | 1.3462 | 1.3324 | -0.0138 | 가장 의미 있는 개선 |
-| `cluster02` | 주거 도착형 | 0.8088 | 0.8059 | -0.0028 | 작지만 안정적인 개선 |
-| `cluster03` | 생활권 혼합형 | 0.6901 | 0.6882 | -0.0019 | 미세 개선 |
-| `cluster04` | 외곽 주거형 | 0.7160 | 0.7145 | -0.0015 | 거의 변화 없는 수준의 개선 |
+| 군집 코드 | 군집명 | 1차 Test RMSE | 2차 Test RMSE | RMSE 변화 | 1차 Test MAE | 2차 Test MAE | MAE 변화 | 2차 해석 |
+|---|---|---:|---:|---:|---:|---:|---:|---|
+| `cluster00` | 업무/상업 혼합형 | 0.8113 | 0.8085 | -0.0028 | 0.5439 | 0.5403 | -0.0036 | 아주 작은 개선 |
+| `cluster01` | 아침 도착 업무 집중형 | 1.3462 | 1.3324 | -0.0138 | 0.8042 | 0.7868 | -0.0173 | 가장 의미 있는 개선 |
+| `cluster02` | 주거 도착형 | 0.8088 | 0.8059 | -0.0028 | 0.5059 | 0.5053 | -0.0006 | 작지만 안정적인 개선 |
+| `cluster03` | 생활권 혼합형 | 0.6901 | 0.6882 | -0.0019 | 0.4928 | 0.4882 | -0.0046 | 미세 개선 |
+| `cluster04` | 외곽 주거형 | 0.7160 | 0.7145 | -0.0015 | 0.4425 | 0.4427 | +0.0002 | 거의 변화 없는 수준의 개선 |
 
 2차 결론:
 
@@ -75,11 +75,11 @@
 
 결과:
 
-| 라운드 | 최종 모델 | Test RMSE | Test R² | 해석 |
-|---|---|---:|---:|---|
-| 1차 | `LightGBM_RMSE` | 1.3462 | 0.6398 | baseline |
-| 2차 | `LightGBM_RMSE` | 1.3324 | 0.6471 | 소폭 개선 |
-| 3차 | `LightGBM_Poisson` | 1.3189 | 0.6543 | 가장 좋은 결과 |
+| 라운드 | 최종 모델 | Test RMSE | Test MAE | Test R² | 해석 |
+|---|---|---:|---:|---:|---|
+| 1차 | `LightGBM_RMSE` | 1.3462 | 0.8042 | 0.6398 | baseline |
+| 2차 | `LightGBM_RMSE` | 1.3324 | 0.7868 | 0.6471 | 소폭 개선 |
+| 3차 | `LightGBM_Poisson` | 1.3189 | 0.7745 | 0.6543 | 가장 좋은 결과 |
 
 3차 결론:
 
@@ -103,15 +103,41 @@
 2. 군집별 추가 피처 2차 실험
 3. `cluster01` 심화 최적화 사례 제시
 
-## 7. 바로 참고할 파일
+## 7. 예측력은 어떤 점수로 확인하나
+
+현재 프로젝트에서는 예측력을 아래 3개 지표로 함께 본다.
+
+- `RMSE`
+  - 기본 대표 지표
+  - 큰 오차에 더 민감해서, 모델 선택의 1차 기준으로 사용한다
+- `MAE`
+  - 평균적으로 몇 대 정도 빗나가는지 직관적으로 보여준다
+  - “평균 오차 크기”를 설명할 때 가장 읽기 쉽다
+- `R²`
+  - 패턴 설명력을 보여준다
+  - 특히 `cluster03`처럼 RMSE는 낮지만 구조 설명력이 낮은 경우를 구분할 때 유용하다
+
+현재 해석 원칙:
+
+1. 최우선 비교는 `RMSE`
+2. 실제 체감 오차 해석은 `MAE`
+3. 패턴 설명력 보조 해석은 `R²`
+
+## 8. 바로 참고할 파일
 
 - 1차:
   - `01_ddri_cluster_result_collection.md`
+  - 재생성 노트북: `summary_aggregation/11_ddri_cluster_result_collection.ipynb`
+  - 집계 CSV: `summary_aggregation/output/data/ddri_cluster_model_metrics_collection_template.csv`
 - 2차:
   - `04_ddri_second_round_result_summary.md`
+  - 재생성 노트북: `summary_aggregation/12_ddri_cluster_second_round_comparison.ipynb`
+  - 집계 CSV: `summary_aggregation/output/data/ddri_cluster_second_round_comparison_summary.csv`
 - 3차:
   - `05_ddri_cluster01_third_round_summary.md`
+  - 재생성 노트북: `summary_aggregation/13_ddri_cluster01_third_round_progression.ipynb`
+  - 집계 CSV: `summary_aggregation/output/data/cluster01_third_round_progression_summary.csv`
 
-## 8. 한 줄 결론
+## 9. 한 줄 결론
 
 군집별 실험은 1차에서 구조를 확인했고, 2차에서 전 군집 소폭 개선을 만들었으며, 3차에서는 `cluster01`에서 추가 최적화 가능성까지 확인했다.

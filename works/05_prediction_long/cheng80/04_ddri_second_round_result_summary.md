@@ -164,6 +164,7 @@
 
 ## 7. 관련 파일
 
-- `ddri_cluster_second_round_comparison_summary.csv`
+- `summary_aggregation/output/data/ddri_cluster_second_round_comparison_summary.csv`
 - `03_ddri_cluster_feature_candidate_recommendations.md`
 - `02_ddri_second_round_experiment_criteria.md`
+- `summary_aggregation/12_ddri_cluster_second_round_comparison.ipynb`

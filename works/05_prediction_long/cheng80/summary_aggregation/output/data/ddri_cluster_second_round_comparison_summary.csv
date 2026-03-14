@@ -1,0 +1,6 @@
+﻿cluster_code,station_group,first_round_best_model,first_round_test_rmse,first_round_test_mae,first_round_test_r2,second_round_best_model,second_round_test_rmse,second_round_test_mae,second_round_test_r2,rmse_delta,mae_delta,r2_delta
+cluster00,업무/상업 혼합형,LightGBM_RMSE,0.8113,0.5439,0.3212,LightGBM_RMSE,0.8085,0.5403,0.3259,-0.0028,-0.0036,0.0047
+cluster01,아침 도착 업무 집중형,LightGBM_RMSE,1.3462,0.8042,0.6398,LightGBM_RMSE,1.3324,0.7868,0.6471,-0.0138,-0.0174,0.0073
+cluster02,주거 도착형,LightGBM_RMSE,0.8088,0.5059,0.4987,LightGBM_RMSE,0.8059,0.5053,0.5022,-0.0029,-0.0006,0.0035
+cluster03,생활권 혼합형,LightGBM_RMSE,0.6901,0.4928,0.1802,LightGBM_RMSE,0.6882,0.4882,0.1848,-0.0019,-0.0046,0.0046
+cluster04,외곽 주거형,LightGBM_RMSE,0.716,0.4425,0.3785,LightGBM_RMSE,0.7145,0.4427,0.3811,-0.0015,0.0002,0.0026

@@ -1,0 +1,5 @@
+﻿url,http_status,result_code,result_message,returned_rows,first_station_name
+http://openapi.seoul.go.kr:8088/6776635665636865343076784d5562/json/bikeList/1/5/2312,200,INFO-200,해당하는 데이터가 없습니다.,0,
+http://openapi.seoul.go.kr:8088/6776635665636865343076784d5562/json/bikeList/1/5/stationId/2312,200,INFO-200,해당하는 데이터가 없습니다.,0,
+http://openapi.seoul.go.kr:8088/6776635665636865343076784d5562/json/bikeList/1/5/?stationId=2312,200,INFO-000,정상 처리되었습니다.,5,102. 망원역 1번출구 앞
+http://openapi.seoul.go.kr:8088/6776635665636865343076784d5562/json/bikeList/1/5/?stationId=ST-795,200,INFO-000,정상 처리되었습니다.,5,102. 망원역 1번출구 앞

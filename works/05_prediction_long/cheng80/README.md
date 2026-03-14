@@ -29,16 +29,29 @@
 
 취합/후속 문서:
 
-- `ddri_cluster_model_metrics_collection_template.csv`
+- `summary_aggregation/output/data/ddri_cluster_model_metrics_collection_template.csv`
 - `01_ddri_cluster_result_collection.md`
 - `02_ddri_second_round_experiment_criteria.md`
 - `03_ddri_cluster_feature_candidate_recommendations.md`
-- `ddri_cluster_second_round_comparison_summary.csv`
+- `summary_aggregation/output/data/ddri_cluster_second_round_comparison_summary.csv`
 - `04_ddri_second_round_result_summary.md`
-- `cluster01_third_round_progression_summary.csv`
+- `summary_aggregation/output/data/cluster01_third_round_progression_summary.csv`
 - `05_ddri_cluster01_third_round_summary.md`
 - `06_ddri_cluster_experiment_overall_summary.md`
 - `07_ddri_cluster_final_recommendation.md`
+
+루트 집계 전용 폴더:
+
+- `summary_aggregation`
+  - 루트 집계 CSV 재생성 노트북 보관
+  - CSV 산출물은 `summary_aggregation/output/data/`에 저장
+
+별도 분석 폴더:
+
+- `rep15_error_analysis`
+  - 대표 15개 스테이션 오류 우선순위와 시간대 패턴 해석 전용 폴더
+  - 노트북/문서: `rep15_error_analysis/`
+  - CSV 산출물: `rep15_error_analysis/output/data/`
 
 2차 실험용 통합 피처모음:
 
@@ -56,3 +69,4 @@
 - 각 폴더는 해당 군집만 담당한다.
 - 결과 해석과 저장은 공통 프로토콜을 그대로 따른다.
 - 팀원 결과와 혼동하지 않도록, 이 경로는 `cheng80` 개인 대리 실험 트랙으로만 사용한다.
+- 군집별 학습 결과와 별도 목적 분석은 루트에 섞어 두지 않고, 목적별 서브폴더를 만들어 관리한다.

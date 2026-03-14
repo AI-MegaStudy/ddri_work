@@ -26,3 +26,8 @@
 - 전체 프로젝트 기준으로는 2차 실험까지를 공통 결과로 둔다.
 - `cluster01`만 3차 심화 사례로 별도 제시한다.
 - 이 결과는 “가장 어려운 군집은 추가 최적화 여지가 크다”는 메시지를 뒷받침한다.
+
+## 관련 파일
+
+- `summary_aggregation/output/data/cluster01_third_round_progression_summary.csv`
+- `summary_aggregation/13_ddri_cluster01_third_round_progression.ipynb`

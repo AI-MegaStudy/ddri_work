@@ -1,0 +1,4 @@
+﻿round,model,test_rmse,test_mae,test_r2,rmse_delta_vs_first,mae_delta_vs_first,r2_delta_vs_first
+first,LightGBM_RMSE,1.3462,0.8042,0.6398,0.0,0.0,0.0
+second,LightGBM_RMSE,1.3324,0.7868,0.6471,-0.0138,-0.0174,0.0073
+third,LightGBM_Poisson,1.3189032088559514,0.7745139184383719,0.6542696179410719,-0.027297,-0.029686,0.01447

@@ -31,6 +31,55 @@
 
 ## 3. 주요 의사결정 로그
 
+### Decision 0XY. 실시간 따릉이 API는 `OA-15493 bikeList`를 기준으로 사용하고, 161개 스테이션 매핑 테이블을 별도 고정
+
+#### 결정 내용
+
+- 실시간 재고 입력의 기준 API는 `OA-15493 bikeList`로 사용한다.
+- 비공식 `bikeseoul` 검증은 제외한다.
+- `stationId` 선택 파라미터는 현재 검증한 호출 형식에서는 동작하지 않았으므로, 수집 방식은 `서울 전체 페이지 조회 -> 강남/대상 스테이션 로컬 필터링`으로 고정한다.
+- 서비스 대상 161개 스테이션에 대해 `station_id ↔ ST-xxxx ↔ 운영 상태`를 담은 매핑 테이블을 별도 CSV로 생성한다.
+- `bikeList` 미매칭이지만 마스터 API에 존재하는 스테이션은 `실시간 비노출 / 비활성 후보`로 분류한다.
+
+#### 결정 이유
+
+- 공식 API `bikeList`는 실제로 정상 응답하며, 현재 재고/거치대 수/좌표를 제공한다.
+- 비공식 `bikeseoul`은 일부 강남구 대상 스테이션 매칭 누락이 있어 정본 소스로 쓰기 어렵다.
+- `stationId` 필터가 실제로 동작하지 않으면, 호출 최적화는 API 필터가 아니라 로컬 매핑 테이블로 해결하는 것이 더 안정적이다.
+- `tbCycleStationInfo`와 `bikeStationMaster`를 함께 보면, 실시간 API 누락 스테이션도 마스터 기준 식별과 예외 처리가 가능하다.
+
+#### 내부 확인 근거
+
+- 공식 API 검증 노트북:
+  - `cheng80/01_ddri_api_verification.ipynb`
+- 161개 매핑 검증:
+  - `cheng80/api_output/ddri_full161_station_api_validation_official.csv`
+- 누락 스테이션 마스터 대조:
+  - `cheng80/api_output/ddri_unmatched_station_master_crosscheck.csv`
+- 상세 매핑 테이블:
+  - `cheng80/api_output/ddri_full161_station_api_mapping_table.csv`
+- 경량 lookup:
+  - `cheng80/api_output/ddri_station_id_api_lookup.csv`
+
+#### 보고서/PPT에 넣을 수 있는 메시지
+
+- “실시간 재고 입력은 공식 `bikeList` API를 기준으로 정리했다.”
+- “서비스 대상 161개 스테이션 중 158개는 실시간 매칭되었고, 3개는 실시간 비노출 예외 스테이션으로 분리했다.”
+- “추가 호출을 줄이기 위해 `station_id ↔ API stationId` 매핑 테이블을 사전 구축했다.”
+
+#### 필요한 시각화/표
+
+- [ ] 실시간 API 페이지네이션 요약 표
+- [ ] 161개 스테이션 실시간 매칭/예외 현황 표
+- [ ] 예외 스테이션 3개 상세 표
+
+#### 시각화 저장 경로
+
+- `cheng80/api_output/ddri_seoul_bike_page_summary.csv`
+- `cheng80/api_output/ddri_full161_station_api_mapping_table.csv`
+
+---
+
 ### Decision 0XX. 군집별 최종 권장안은 `공통 baseline + cluster01 우선 커스텀`으로 정리
 
 #### 결정 내용

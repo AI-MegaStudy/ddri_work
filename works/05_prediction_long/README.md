@@ -62,15 +62,23 @@
 팀원 실험과 별개로, `cheng80`가 군집별 대리 실행을 할 수 있도록 아래 경로를 별도로 만든다.
 
 - `cheng80/README.md`
-- `cheng80/ddri_cluster_model_metrics_collection_template.csv`
+- `cheng80/summary_aggregation/11_ddri_cluster_result_collection.ipynb`
+- `cheng80/summary_aggregation/output/data/ddri_cluster_model_metrics_collection_template.csv`
 - `cheng80/01_ddri_cluster_result_collection.md`
 - `cheng80/02_ddri_second_round_experiment_criteria.md`
 - `cheng80/03_ddri_cluster_feature_candidate_recommendations.md`
-- `cheng80/ddri_cluster_second_round_comparison_summary.csv`
+- `cheng80/summary_aggregation/12_ddri_cluster_second_round_comparison.ipynb`
+- `cheng80/summary_aggregation/output/data/ddri_cluster_second_round_comparison_summary.csv`
 - `cheng80/04_ddri_second_round_result_summary.md`
+- `cheng80/summary_aggregation/13_ddri_cluster01_third_round_progression.ipynb`
+- `cheng80/summary_aggregation/output/data/cluster01_third_round_progression_summary.csv`
 - `cheng80/05_ddri_cluster01_third_round_summary.md`
 - `cheng80/06_ddri_cluster_experiment_overall_summary.md`
 - `cheng80/07_ddri_cluster_final_recommendation.md`
+- `cheng80/rep15_error_analysis/10_ddri_rep15_station_error_analysis.ipynb`
+- `cheng80/rep15_error_analysis/output/data/ddri_rep15_station_error_priority_table.csv`
+- `cheng80/rep15_error_analysis/output/data/ddri_rep15_station_error_cluster_summary.csv`
+- `cheng80/rep15_error_analysis/output/data/ddri_rep15_top2_station_hourly_error_patterns.csv`
 - `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/ddri_prediction_long_train_2023_2024_second_round_feature_collection.csv`
 - `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/ddri_prediction_long_test_2025_second_round_feature_collection.csv`
 - `cheng80/cluster00/01_cluster_modeling.ipynb`
@@ -80,6 +88,13 @@
 - `cheng80/cluster04/01_cluster_modeling.ipynb`
 
 각 노트북은 공통 템플릿 복사본이며, 담당 `station_group`이 미리 고정되어 있다.
+
+보조 폴더:
+
+- `cheng80/summary_aggregation/`
+  - 군집 1차/2차/3차 집계 CSV 재생성 노트북과 `output/data/` 보관
+- `cheng80/rep15_error_analysis/`
+  - 대표 15개 오류 우선순위와 시간대 패턴 분석 노트북 및 산출물 보관
 
 ## 대표 대여소 구성
 

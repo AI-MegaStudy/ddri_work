@@ -177,11 +177,20 @@
 - 실시간 API는 `현재 재고/운영상태`를 준다
 - 두 값을 결합해야 `예상 잔여 자전거 수`와 `재배치 필요성`을 계산할 수 있다
 
+추가 확인 결과:
+
+- 실시간 재고 정본 후보는 현재 `OA-15493 bikeList`로 좁혀졌다
+- 비공식 `bikeseoul`은 일부 스테이션 매칭 누락으로 정본 소스에서 제외했다
+- `bikeList`는 현재 `stationId` 필터가 검증한 호출 형식에서는 동작하지 않아, `전체 페이지 조회 후 대상 스테이션 로컬 필터링` 전략이 필요하다
+- 서비스 대상 161개 스테이션 중 `158개`는 실시간 매칭되지만, `2314`, `2323`, `3628`은 `bikeList` 미노출 상태다
+- 위 3개는 `tbCycleStationInfo`, `bikeStationMaster`, 강남구 연도별 대여소 정보에는 존재하므로 현재는 `실시간 비노출 / 비활성 후보`로 해석한다
+- `cheng80/api_output/ddri_station_id_api_lookup.csv`를 이용하면 `station_id -> ST-xxxx -> 운영상태` 매핑을 추가 호출 없이 바로 적용할 수 있다
+
 ## 7. 1차 권장 구현 순서
 
 1. `station-day` 모델로 기본 수요 예측 성능 확보
 2. 전체 공통 스테이션 `station-hour` 모델로 시간대 수요 예측 실험
-3. 따릉이 실시간 API에서 `현재 재고` 입력 구조 확인
+3. 공식 실시간 API 매핑 테이블과 예외 스테이션 규칙 고정
 4. 운영자용 `risk_score`와 `reallocation_priority` 규칙 정의
 5. 일반 사용자용 `predicted_remaining_bikes` 계산식 초안 확정
 6. 웹/API 출력 스키마 확정
