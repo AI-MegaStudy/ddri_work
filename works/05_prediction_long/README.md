@@ -9,10 +9,10 @@
 - 단위 행: `station_id + date + hour`
 - 타깃 변수: `rental_count`
 
-생성 파일:
+생성/참조 파일:
 
-- `data/ddri_prediction_long_train_2023_2024.csv`
-- `data/ddri_prediction_long_test_2025.csv`
+- `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_train_2023_2024.csv`
+- `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_test_2025.csv`
 - `build_prediction_long_dataset.ipynb`
 - `03_ddri_station_hour_model_comparison.ipynb`
 - `05_ddri_team_cluster_modeling_protocol.md`
@@ -23,10 +23,12 @@
 
 ## 폴더 운영 원칙
 
-혼선을 줄이기 위해 원본 데이터와 생성 산출물을 분리한다.
+혼선을 줄이기 위해 대용량 원본 데이터는 저장소 밖의 공유폴더로 분리하고, 저장소 안에는 노트북/문서/산출물만 유지한다.
 
-- `data/`
-  - 원본 학습/테스트 long-format CSV만 유지
+- `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/`
+  - 원본 학습/테스트 long-format CSV
+- `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/`
+  - 팀 공용 2차 실험용 통합 피처모음 CSV
 - `output/data/`
   - 모델 성능표, 오류 요약표, 비교표 등 생성 CSV
 - `output/images/`
@@ -54,6 +56,30 @@
 - 파일명을 담당 군집에 맞게 변경
 - `TARGET_STATION_GROUP` 값을 수정
 - 프로토콜 문서 순서대로 실험 수행
+
+## cheng80 대리 실험 트랙
+
+팀원 실험과 별개로, `cheng80`가 군집별 대리 실행을 할 수 있도록 아래 경로를 별도로 만든다.
+
+- `cheng80/README.md`
+- `cheng80/ddri_cluster_model_metrics_collection_template.csv`
+- `cheng80/01_ddri_cluster_result_collection.md`
+- `cheng80/02_ddri_second_round_experiment_criteria.md`
+- `cheng80/03_ddri_cluster_feature_candidate_recommendations.md`
+- `cheng80/ddri_cluster_second_round_comparison_summary.csv`
+- `cheng80/04_ddri_second_round_result_summary.md`
+- `cheng80/05_ddri_cluster01_third_round_summary.md`
+- `cheng80/06_ddri_cluster_experiment_overall_summary.md`
+- `cheng80/07_ddri_cluster_final_recommendation.md`
+- `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/ddri_prediction_long_train_2023_2024_second_round_feature_collection.csv`
+- `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/ddri_prediction_long_test_2025_second_round_feature_collection.csv`
+- `cheng80/cluster00/01_cluster_modeling.ipynb`
+- `cheng80/cluster01/01_cluster_modeling.ipynb`
+- `cheng80/cluster02/01_cluster_modeling.ipynb`
+- `cheng80/cluster03/01_cluster_modeling.ipynb`
+- `cheng80/cluster04/01_cluster_modeling.ipynb`
+
+각 노트북은 공통 템플릿 복사본이며, 담당 `station_group`이 미리 고정되어 있다.
 
 ## 대표 대여소 구성
 
@@ -248,7 +274,7 @@
 현재 기준 처리 상태:
 
 - 학습용 2024 날씨 파일은 `2024-01-01 00:00:00 ~ 2024-12-31 23:00:00` 전체를 포함한다.
-- 따라서 현재 `works/05_prediction_long/data/ddri_prediction_long_train_2023_2024.csv`에는 `2024-01-01` 날씨 결측이 없다.
+- 따라서 현재 `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_train_2023_2024.csv`에는 `2024-01-01` 날씨 결측이 없다.
 - 테스트용 날씨도 결측 없이 유지된다.
 
 대여량은 전체 시간축을 생성한 뒤 관측되지 않은 시각을 `0`으로 채웠기 때문에 `rental_count` 결측은 없다.
@@ -257,7 +283,7 @@
 
 ### 학습 데이터
 
-- 파일: `data/ddri_prediction_long_train_2023_2024.csv`
+- 파일: `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_train_2023_2024.csv`
 - 크기: `263,160행 x 15컬럼`
 
 계산:
@@ -270,7 +296,7 @@
 
 ### 테스트 데이터
 
-- 파일: `data/ddri_prediction_long_test_2025.csv`
+- 파일: `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_test_2025.csv`
 - 크기: `131,400행 x 15컬럼`
 
 계산:

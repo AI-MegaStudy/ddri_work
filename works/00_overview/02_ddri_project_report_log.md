@@ -31,6 +31,50 @@
 
 ## 3. 주요 의사결정 로그
 
+### Decision 0XX. 군집별 최종 권장안은 `공통 baseline + cluster01 우선 커스텀`으로 정리
+
+#### 결정 내용
+
+- 군집별 1차 baseline, 2차 추가 피처 실험, `cluster01` 3차 심화 실험을 종합한 결과,
+  현재 최종 권장안은 아래처럼 정리한다.
+  - 공통 기본 모델: `LightGBM_RMSE`
+  - 우선 커스텀 적용 후보: `cluster01`의 `LightGBM_Poisson`
+  - 나머지 군집: 2차 피처 보강안을 `군집별 커스텀 초안`으로 유지
+
+#### 결정 이유
+
+- 2차 실험에서 5개 군집 모두 성능이 소폭 개선되었다.
+- 다만 대부분 개선폭은 작아 전 군집 완성형 커스텀 모델로 확정하기에는 근거가 약하다.
+- `cluster01`은 3차 실험에서 추가 개선이 확인되어 별도 심화 사례로 제시할 가치가 있다.
+
+#### 내부 확인 근거
+
+- 1차/2차/3차 종합 문서:
+  - `works/05_prediction_long/cheng80/06_ddri_cluster_experiment_overall_summary.md`
+- 최종 권장안 문서:
+  - `works/05_prediction_long/cheng80/07_ddri_cluster_final_recommendation.md`
+- 2차 비교표:
+  - `works/05_prediction_long/cheng80/ddri_cluster_second_round_comparison_summary.csv`
+- `cluster01` 3차 진행표:
+  - `works/05_prediction_long/cheng80/cluster01_third_round_progression_summary.csv`
+
+#### 보고서/PPT에 넣을 수 있는 메시지
+
+- “군집별 맞춤 피처 보강은 전 군집에서 일관된 소폭 개선을 만들었다.”
+- “전 군집 완성형 커스텀 모델보다는, 공통 baseline 위에 `cluster01` 심화 사례를 우선 적용하는 전략이 현실적이다.”
+- “군집별 커스텀 모델은 완성이라기보다, 적용 가능한 고도화 방향이 확인된 상태다.”
+
+#### 필요한 시각화/표
+
+- [ ] 군집별 1차/2차/3차 단계별 성능 변화 표
+- [ ] 군집별 최종 권장 모델/적용 수준 요약 표
+
+#### 시각화 저장 경로
+
+- 권장안 문서: `works/05_prediction_long/cheng80/07_ddri_cluster_final_recommendation.md`
+
+---
+
 ### Decision 001. 1차 군집화 기준 대여소는 2023~2025 공통 대여소 169개로 고정
 
 #### 결정 내용
@@ -1670,9 +1714,9 @@ K 탐색 결과:
 #### 사용 데이터
 
 - 학습:
-  - `works/05_prediction_long/data/ddri_prediction_long_train_2023_2024.csv`
+  - `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_train_2023_2024.csv`
 - 테스트:
-  - `works/05_prediction_long/data/ddri_prediction_long_test_2025.csv`
+  - `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_test_2025.csv`
 
 #### 생성 feature
 
@@ -1707,10 +1751,10 @@ K 탐색 결과:
 - 모델 비교 노트북:
   - `works/05_prediction_long/03_ddri_station_hour_model_comparison.ipynb`
 - 성능 비교표:
-  - `works/05_prediction_long/data/ddri_station_hour_model_metrics.csv`
+  - `works/05_prediction_long/output/data/ddri_station_hour_model_metrics.csv`
 - LightGBM 중요도:
-  - `works/05_prediction_long/data/ddri_station_hour_lightgbm_feature_importance.csv`
-  - `works/05_prediction_long/images/ddri_station_hour_lightgbm_feature_importance.png`
+  - `works/05_prediction_long/output/data/ddri_station_hour_lightgbm_feature_importance.csv`
+  - `works/05_prediction_long/output/images/ddri_station_hour_lightgbm_feature_importance.png`
 
 #### 내부 실행 결과
 
@@ -2028,12 +2072,12 @@ LightGBM 기준 상위 피처:
 - 근거 차트 노트북:
   - `works/05_prediction_long/04_ddri_station_hour_evidence_charts.ipynb`
 - 요약표:
-  - `works/05_prediction_long/data/ddri_station_hour_hourly_actual_vs_predicted.csv`
-  - `works/05_prediction_long/data/ddri_station_hour_station_group_error_summary.csv`
-  - `works/05_prediction_long/data/ddri_station_hour_station_error_summary.csv`
+  - `works/05_prediction_long/output/data/ddri_station_hour_hourly_actual_vs_predicted.csv`
+  - `works/05_prediction_long/output/data/ddri_station_hour_station_group_error_summary.csv`
+  - `works/05_prediction_long/output/data/ddri_station_hour_station_error_summary.csv`
 - 차트:
-  - `works/05_prediction_long/images/ddri_station_hour_model_comparison_test_rmse.png`
-  - `works/05_prediction_long/images/ddri_station_hour_hourly_actual_vs_predicted.png`
+  - `works/05_prediction_long/output/images/ddri_station_hour_model_comparison_test_rmse.png`
+  - `works/05_prediction_long/output/images/ddri_station_hour_hourly_actual_vs_predicted.png`
   - `works/05_prediction_long/images/ddri_station_hour_station_group_mae.png`
   - `works/05_prediction_long/images/ddri_station_hour_residual_distribution.png`
   - `works/05_prediction_long/images/ddri_station_hour_actual_vs_predicted_scatter.png`
@@ -2101,7 +2145,7 @@ LightGBM 기준 상위 피처:
 
 #### 배경
 
-- `works/05_prediction_long/data` 안에는 원본 train/test long-format CSV와 모델 성능표, 오류 요약표가 함께 섞여 있었다.
+- `3조 공유폴더/대표대여소_예측데이터_15개/raw_data` 안에는 원본 train/test long-format CSV와 모델 성능표, 오류 요약표가 함께 섞여 있었다.
 - 이렇게 두면 나중에 원본 데이터와 실험 생성물을 구분하기 어렵고, 폴더 해석도 불명확해진다.
 
 #### 결정 내용
@@ -2116,8 +2160,46 @@ LightGBM 기준 상위 피처:
 
 #### 현재 해석
 
-- `works/05_prediction_long/data`는 이제 원본 데이터 전용 경로다.
+- `3조 공유폴더/대표대여소_예측데이터_15개/raw_data`는 이제 원본 데이터 전용 경로다.
 - 실험 결과 표와 차트는 `output/` 아래에서 확인하는 것이 맞다.
+
+---
+
+### Decision 0XY. 대표 대여소 15개 원본/2차 데이터는 공유폴더로 이동
+
+#### 결정 내용
+
+- 대표 대여소 15개 `station-hour` 원본 long 데이터와 2차 실험용 통합 피처모음 CSV를 저장소 밖 공유폴더로 이동한다.
+- 정본 경로는 아래처럼 고정한다.
+  - `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/`
+  - `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/`
+
+#### 결정 이유
+
+- GitHub 100MB 제한 때문에 2차 통합 피처 train CSV가 원격 푸시를 막았다.
+- 대용량 정본 데이터는 공유폴더에서 관리하고, 저장소에는 노트북/문서/산출물만 유지하는 편이 안정적이다.
+- 팀원들도 같은 공유 경로를 보게 되어 실험 입력 경로가 더 명확해진다.
+
+#### 내부 확인 근거
+
+- 이동 후 정본 경로:
+  - `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_train_2023_2024.csv`
+  - `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_test_2025.csv`
+  - `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/ddri_prediction_long_train_2023_2024_second_round_feature_collection.csv`
+  - `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/ddri_prediction_long_test_2025_second_round_feature_collection.csv`
+
+#### 보고서/PPT에 넣을 수 있는 메시지
+
+- “대용량 실험 입력 데이터는 GitHub가 아니라 공유폴더 정본으로 관리해 재현성과 협업성을 동시에 확보했다.”
+- “저장소에는 분석 노트북, 결과 표, 해석 문서만 유지했다.”
+
+#### 필요한 시각화/표
+
+- [ ] 대표 대여소 15개 데이터 경로 구조 요약 표
+
+#### 시각화 저장 경로
+
+- 정본 설명 문서: `works/05_prediction_long/README.md`
 
 ---
 
@@ -2265,6 +2347,186 @@ LightGBM 기준 상위 피처:
 #### 현재 해석
 
 - `2024-02-29`는 윤년으로 인해 정상 포함되는 날짜이고, `2024-01-01` 결측은 원천 파일 오류였다.
-- 현재 `works/05_prediction_long/data/ddri_prediction_long_train_2023_2024.csv` 기준으로는 `2024-01-01` 날씨 결측이 제거되었다.
+- 현재 `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_train_2023_2024.csv` 기준으로는 `2024-01-01` 날씨 결측이 제거되었다.
 - 현재 `3조 공유폴더/군집별 데이터_전체 스테이션/full_data/ddri_prediction_long_train_2023_2024.csv` 기준으로도 `2024-01-01` 날씨 결측이 제거되었다.
 - `works/06_prediction_long_full`의 baseline/objective 비교 산출물도 새 원본 기준으로 다시 생성되었고, 점수 자체는 기존과 동일하게 유지되었다.
+
+---
+
+### Decision 038. 팀원 실험과 별개로 `cheng80` 개인 대리 실험 트랙을 대표 대여소 경로 아래에 준비한다
+
+#### 배경
+
+- 팀원들이 각자 군집 실험을 진행하더라도, 실제로는 일부 실험이 지연되거나 누락될 수 있다.
+- 이를 대비해 `cheng80`가 같은 프로토콜로 군집별 실험을 직접 대리 수행할 수 있는 작업 경로가 필요하다.
+
+#### 결정 내용
+
+- 아래 경로를 추가한다.
+  - `works/05_prediction_long/cheng80/`
+- 이 안에 군집별 폴더 5개를 만든다.
+  - `cluster00`
+  - `cluster01`
+  - `cluster02`
+  - `cluster03`
+  - `cluster04`
+- 각 폴더에는 공통 템플릿 복사본 `01_cluster_modeling.ipynb`를 두고, `TARGET_STATION_GROUP`을 각 군집에 맞게 미리 설정한다.
+
+#### 현재 해석
+
+- 팀원 실험과 별개로 `cheng80` 개인 실행 트랙이 준비되었다.
+- 이후 대리 실험을 시작할 때는 `works/05_prediction_long/cheng80/` 아래 폴더별 노트북만 바로 실행하면 된다.
+
+---
+
+### Decision 039. `cheng80` 루트에 군집별 결과 취합 문서와 2차 실험 판단 문서를 추가한다
+
+#### 배경
+
+- 군집별 노트북 5개를 준비한 뒤에는, 결과를 한 번에 모을 취합 틀과 다음 실험으로 넘어갈 판단 기준도 필요하다.
+- 이를 미리 만들어 두면 팀원 실험 결과와 `cheng80` 대리 실험 결과를 같은 형식으로 모을 수 있다.
+
+#### 결정 내용
+
+- 아래 파일을 추가한다.
+  - `works/05_prediction_long/cheng80/ddri_cluster_model_metrics_collection_template.csv`
+  - `works/05_prediction_long/cheng80/01_ddri_cluster_result_collection.md`
+  - `works/05_prediction_long/cheng80/02_ddri_second_round_experiment_criteria.md`
+
+#### 현재 해석
+
+- 이제 `cheng80` 루트에는 실행 노트북뿐 아니라 결과 취합과 후속 판단 기준까지 갖춰졌다.
+- 다음부터는 군집별 노트북 실행 후 이 문서들에 바로 결과를 적재하면 된다.
+
+---
+
+### Decision 040. `cheng80` 대리 실험 트랙에서 5개 군집 1차 실험을 모두 실행하고 취합표를 채운다
+
+#### 배경
+
+- 팀원 실험과 별개로, `cheng80` 대리 실험 트랙이 실제로 작동하는지 검증할 필요가 있었다.
+- 결과 취합 문서와 CSV도 빈 틀로만 두지 않고 실제 값으로 채워야 다음 비교가 가능하다.
+
+#### 결정 내용
+
+- 아래 노트북 5개를 실행한다.
+  - `works/05_prediction_long/cheng80/cluster00/01_cluster_modeling.ipynb`
+  - `works/05_prediction_long/cheng80/cluster01/01_cluster_modeling.ipynb`
+  - `works/05_prediction_long/cheng80/cluster02/01_cluster_modeling.ipynb`
+  - `works/05_prediction_long/cheng80/cluster03/01_cluster_modeling.ipynb`
+  - `works/05_prediction_long/cheng80/cluster04/01_cluster_modeling.ipynb`
+- 결과 CSV를 읽어 아래 취합 파일을 채운다.
+  - `works/05_prediction_long/cheng80/ddri_cluster_model_metrics_collection_template.csv`
+  - `works/05_prediction_long/cheng80/01_ddri_cluster_result_collection.md`
+
+#### 현재 해석
+
+- 5개 군집 모두 `LightGBM_RMSE`가 validation 기준 우세 모델로 확인되었다.
+- 현재 가장 어려운 군집은 `cluster01(아침 도착 업무 집중형)`이다.
+- `cluster02(주거 도착형)`은 test `R²`가 가장 높아 상대적으로 안정적이다.
+- `cluster03(생활권 혼합형)`은 RMSE는 낮지만 설명력은 낮아 2차 피처 검토 후보로 볼 수 있다.
+
+---
+
+### Decision 041. 2차 실험용 통합 피처모음 CSV를 `cheng80` 루트에 생성한다
+
+#### 배경
+
+- 1차 군집별 실험은 기본 피처만으로 끝났고, 다음 단계는 군집 특성에 맞는 추가 피처를 붙여보는 2차 실험이다.
+- 이때 매번 원본 long 데이터와 군집화 정적 피처를 다시 붙이는 작업을 반복하면 비효율적이다.
+
+#### 결정 내용
+
+- 아래 2개 CSV를 생성한다.
+  - `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/ddri_prediction_long_train_2023_2024_second_round_feature_collection.csv`
+  - `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/ddri_prediction_long_test_2025_second_round_feature_collection.csv`
+- 포함 기준:
+  - 기존 대표 대여소 long-format 기본 컬럼
+  - 정적 교통/환경 피처
+  - 정적 POI 피처
+  - 공통 파생 후보 피처
+    - `is_weekend`
+    - `is_commute_hour`
+    - `is_lunch_hour`
+    - `is_night_hour`
+    - `is_rainy`
+    - `heavy_rain_flag`
+    - `hour_sin`, `hour_cos`
+    - `season`
+    - `temperature_bin`
+    - `is_holiday_eve`
+    - `is_after_holiday`
+    - `lag_48h`
+    - `rolling_mean_6h`
+    - `rolling_std_6h`
+- 대기자료는 현재 공식 실험에서 제외하므로 포함하지 않는다.
+
+#### 현재 해석
+
+- 이제 2차 실험은 원본 결합 작업 없이 이 통합 피처모음 CSV를 바로 읽어 시작하면 된다.
+- `cluster01`, `cluster03`, `cluster00` 순으로 2차 실험을 진행하기 좋은 상태가 되었다.
+
+---
+
+### Decision 042. 2차 실험은 5개 군집 모두 병렬 실행하고 1차 대비 비교표로 정리한다
+
+#### 배경
+
+- 2차 실험용 통합 피처모음이 준비되었으므로, 군집별 추천 피처셋이 실제로 개선을 만드는지 확인할 차례였다.
+- 사용자가 병렬 처리 가능하면 병렬로 진행하길 원했다.
+
+#### 결정 내용
+
+- 아래 노트북 5개를 병렬 실행한다.
+  - `works/05_prediction_long/cheng80/cluster00/02_cluster_modeling_second_round.ipynb`
+  - `works/05_prediction_long/cheng80/cluster01/02_cluster_modeling_second_round.ipynb`
+  - `works/05_prediction_long/cheng80/cluster02/02_cluster_modeling_second_round.ipynb`
+  - `works/05_prediction_long/cheng80/cluster03/02_cluster_modeling_second_round.ipynb`
+  - `works/05_prediction_long/cheng80/cluster04/02_cluster_modeling_second_round.ipynb`
+- `cluster03`는 `temperature_bin`이 LightGBM 입력에서 object dtype 문제를 일으켜, 해당 피처를 제외하고 재실행한다.
+- 결과는 아래 파일로 취합한다.
+  - `works/05_prediction_long/cheng80/ddri_cluster_second_round_comparison_summary.csv`
+  - `works/05_prediction_long/cheng80/04_ddri_second_round_result_summary.md`
+
+#### 현재 해석
+
+- 5개 군집 모두 2차 실험에서 test RMSE가 소폭 개선되었다.
+- 개선폭이 가장 큰 군집은 `cluster01(아침 도착 업무 집중형)`이었다.
+- 즉 현재 기준으로는 `cluster01`에 대한 추가 피처 추천 방향이 가장 유효했다.
+
+추가 정리:
+
+- 처음 생성한 2차 요약 문서는 비교표 중심이라 설명력이 부족했다.
+- 이후 `04_ddri_second_round_result_summary.md`를 `10_ddri_model_score_summary.md`와 유사한 밀도로 보강했다.
+- 보강 항목:
+  - 전체 요약
+  - 공통 해석
+  - 군집별 추가 해석
+  - 다음 판단 우선순위
+
+---
+
+### Decision 043. 3차 실험은 전 군집이 아니라 `cluster01` 심화 사례로만 수행한다
+
+#### 배경
+
+- 2차 실험까지로도 전체 흐름은 충분하지만, `cluster01`은 가장 어려운 군집이면서 2차 개선폭도 가장 컸다.
+- 따라서 전 군집 3차 실험은 과하지만, `cluster01` 하나만 심화 실험하는 것은 의미가 있다.
+
+#### 결정 내용
+
+- `cluster01`에 대해 3차 심화 노트북을 추가 실행한다.
+  - `works/05_prediction_long/cheng80/cluster01/03_cluster_modeling_third_round.ipynb`
+- 추가 내용:
+  - 출근형 세분 피처
+  - 단기 추세 보강 피처
+  - `LightGBM_Poisson` 목적함수 비교
+- 결과는 아래 파일로 정리한다.
+  - `works/05_prediction_long/cheng80/cluster01_third_round_progression_summary.csv`
+  - `works/05_prediction_long/cheng80/05_ddri_cluster01_third_round_summary.md`
+
+#### 현재 해석
+
+- `cluster01` 3차 실험의 최종 우세 모델은 `LightGBM_Poisson`이었다.
+- test RMSE는 `1.3462 -> 1.3324 -> 1.3189`로 단계적으로 개선되었다.
+- 따라서 3차 실험은 공통 필수 단계는 아니지만, `cluster01`을 군집별 심화 최적화 사례로 보여주기에는 충분히 가치가 있다.
