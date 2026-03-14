@@ -27,6 +27,11 @@
 - `3조 공유폴더/군집별 데이터_전체 스테이션/full_data/ddri_prediction_long_test_2025.csv`
 - `3조 공유폴더/군집별 데이터_전체 스테이션/full_data/build_prediction_long_full_dataset.ipynb`
 
+날씨 원천 관련 참고:
+
+- `2024` 날씨 파일은 `Open-Meteo Archive API` 기준으로 다시 받아 정정한 버전을 사용한다.
+- 따라서 현재 원본 학습 CSV에는 과거에 문제였던 `2024-01-01` 날씨 24시간 결측이 없다.
+
 ## 관리 원칙
 
 - 대표 대여소 15개 실험은 `works/05_prediction_long`에서만 관리한다.
@@ -38,7 +43,7 @@
 
 - 전체 스테이션 `station-hour` 모델링 노트북
 - 모델 성능 비교표
-- feature importance
+- 피처 중요도
 - 시간대/스테이션별 오류 분석 차트
 
 ## 현재 산출물
@@ -66,6 +71,15 @@
 - Final Train: `2023 + 2024`
 - Test: `2025`
 
+시계열 파생 피처 해석:
+
+- `lag_1h`: 1시간 전 동일 스테이션 대여량
+- `lag_24h`: 24시간 전, 즉 하루 전 동일 시각 대여량
+- `lag_168h`: 168시간 전, 즉 1주 전 동일 요일·동일 시각 대여량
+- `rolling_mean_24h`: 최근 24시간 이동평균
+- `rolling_mean_168h`: 최근 168시간, 즉 1주 기준 이동평균
+- `rolling_std_24h`: 최근 24시간 이동표준편차
+
 성능:
 
 - validation `RMSE=0.9735`, `MAE=0.6234`, `R²=0.4463`
@@ -85,7 +99,7 @@
 
 - 전체 161개 스테이션 기준에서도 `station_id`, `hour`, 과거 수요 lag, 날씨가 핵심 설명 변수로 확인되었다.
 - 대표 대여소 15개 실험보다 설명력은 다소 낮아졌지만, 전체 서비스 범위로 확장한 baseline으로는 의미 있는 기준선을 확보했다.
-- `Poisson objective` 비교 결과도 `RMSE objective`보다 우세하지 않았다.
+- `Poisson 목적함수` 비교 결과도 `RMSE 목적함수`보다 우세하지 않았다.
 - 따라서 현재 전체 161개 스테이션 기본 모델은 `LightGBM_RMSE_Full`로 유지한다.
 - `CatBoost`는 전체 데이터 전체 반복 학습 시 계산비용이 커서, 필요하면 축소 실험이나 하이퍼파라미터 경량화 조건으로 별도 분리한다.
 
@@ -106,5 +120,5 @@
 
 해석:
 
-- 전체 161개 기준에서는 `RMSE objective`가 `Poisson objective`보다 validation/test 모두 우세했다.
-- 따라서 full-data 트랙의 기본 objective는 `RMSE`로 고정한다.
+- 전체 161개 기준에서는 `RMSE 목적함수`가 `Poisson 목적함수`보다 검증/테스트 모두 우세했다.
+- 따라서 전체 스테이션 트랙의 기본 목적함수는 `RMSE`로 고정한다.

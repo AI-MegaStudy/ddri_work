@@ -15,6 +15,9 @@
 7. `07_ddri_notebook_and_evidence_chart_policy.md`
 8. `08_ddri_service_output_logic_draft.md`
 9. `09_ddri_cluster_specific_modeling_strategy.md`
+10. `10_ddri_model_score_summary.md`
+11. `works/05_prediction_long/05_ddri_team_cluster_modeling_protocol.md`
+12. `works/05_prediction_long/06_ddri_cluster_modeling_template.ipynb`
 
 직접 열람 링크:
 
@@ -27,6 +30,9 @@
 - [07_ddri_notebook_and_evidence_chart_policy.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/07_ddri_notebook_and_evidence_chart_policy.md)
 - [08_ddri_service_output_logic_draft.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/08_ddri_service_output_logic_draft.md)
 - [09_ddri_cluster_specific_modeling_strategy.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/09_ddri_cluster_specific_modeling_strategy.md)
+- [10_ddri_model_score_summary.md](/Users/cheng80/Desktop/ddri_work/works/00_overview/10_ddri_model_score_summary.md)
+- [05_ddri_team_cluster_modeling_protocol.md](/Users/cheng80/Desktop/ddri_work/works/05_prediction_long/05_ddri_team_cluster_modeling_protocol.md)
+- [06_ddri_cluster_modeling_template.ipynb](/Users/cheng80/Desktop/ddri_work/works/05_prediction_long/06_ddri_cluster_modeling_template.ipynb)
 
 이 폴더를 프로젝트 전체 기준 문서의 실제 경로로 사용한다.
 
@@ -39,3 +45,6 @@
 5. 노트북/차트 운영 기준: `07`
 6. 서비스 출력 로직 초안: `08`
 7. 군집별 모델링 전략: `09`
+8. 모델 점수 요약표: `10`
+9. 팀 공통 군집별 실험 프로토콜: `works/05_prediction_long/05`
+10. 팀 공통 군집별 실험 템플릿: `works/05_prediction_long/06`

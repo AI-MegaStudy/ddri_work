@@ -15,6 +15,8 @@
 - `data/ddri_prediction_long_test_2025.csv`
 - `build_prediction_long_dataset.ipynb`
 - `03_ddri_station_hour_model_comparison.ipynb`
+- `05_ddri_team_cluster_modeling_protocol.md`
+- `06_ddri_cluster_modeling_template.ipynb`
 - `output/data/ddri_station_hour_model_metrics.csv`
 - `output/data/ddri_station_hour_lightgbm_feature_importance.csv`
 - `output/images/ddri_station_hour_lightgbm_feature_importance.png`
@@ -28,7 +30,30 @@
 - `output/data/`
   - 모델 성능표, 오류 요약표, 비교표 등 생성 CSV
 - `output/images/`
-  - 모델 비교 차트, 오차 차트, feature importance 등 생성 이미지
+  - 모델 비교 차트, 오차 차트, 피처 중요도 등 생성 이미지
+
+## 팀 실험 공통 규약
+
+대표 대여소 15개를 팀원별 군집 담당 실험으로 나눠 진행할 때는 아래 문서를 공통 기준으로 사용한다.
+
+- `05_ddri_team_cluster_modeling_protocol.md`
+- `06_ddri_cluster_modeling_template.ipynb`
+
+이 문서에는 아래가 고정되어 있다.
+
+- 공통 입력 데이터 경로
+- 전처리 규칙
+- lag/rolling 피처 생성 규칙
+- `2023 train / 2024 validation / 2025 test` 정책
+- 필수 모델 비교 순서
+- `RMSE`, `MAE`, `R²` 공통 평가 방식
+
+노트북 템플릿 사용 순서:
+
+- `06_ddri_cluster_modeling_template.ipynb`를 복사
+- 파일명을 담당 군집에 맞게 변경
+- `TARGET_STATION_GROUP` 값을 수정
+- 프로토콜 문서 순서대로 실험 수행
 
 ## 대표 대여소 구성
 
@@ -215,19 +240,16 @@
 
 2024년은 윤년이므로 전체 시간축을 `366일`, 즉 `8,784시간`으로 생성했다.
 
-2024년 날씨 원천 파일은 `2024-01-01 00:00:00 ~ 2024-01-01 23:00:00` 24시간이 누락되어 있다.
+중요:
 
-처리 원칙:
+- `2024-02-29`는 윤년으로 인해 정상 포함되는 날짜다.
+- 과거에는 `2024-01-01` 24시간이 날씨 원천 파일에서 누락되어 있었지만, 이후 `Open-Meteo Archive API` 기준으로 2024년 파일을 다시 받아 정정했다.
 
-- 시간축은 유지
-- 날씨 결측은 임의 보간하지 않음
-- 해당 구간의 `temperature`, `humidity`, `precipitation`, `wind_speed`는 `NaN` 유지
+현재 기준 처리 상태:
 
-결측 건수:
-
-- 학습용 날씨 결측: `360건`
-- 계산식: `15개 대여소 x 24시간`
-- 테스트용 날씨 결측: `0건`
+- 학습용 2024 날씨 파일은 `2024-01-01 00:00:00 ~ 2024-12-31 23:00:00` 전체를 포함한다.
+- 따라서 현재 `works/05_prediction_long/data/ddri_prediction_long_train_2023_2024.csv`에는 `2024-01-01` 날씨 결측이 없다.
+- 테스트용 날씨도 결측 없이 유지된다.
 
 대여량은 전체 시간축을 생성한 뒤 관측되지 않은 시각을 `0`으로 채웠기 때문에 `rental_count` 결측은 없다.
 
@@ -289,6 +311,15 @@
 - Final Train: `2023 + 2024`
 - Test: `2025`
 
+시계열 파생 피처 해석:
+
+- `lag_1h`: 1시간 전 동일 스테이션 대여량
+- `lag_24h`: 24시간 전, 즉 하루 전 동일 시각 대여량
+- `lag_168h`: 168시간 전, 즉 1주 전 동일 요일·동일 시각 대여량
+- `rolling_mean_24h`: 최근 24시간 이동평균
+- `rolling_mean_168h`: 최근 168시간, 즉 1주 기준 이동평균
+- `rolling_std_24h`: 최근 24시간 이동표준편차
+
 결과 파일:
 
 - `output/data/ddri_station_hour_model_metrics.csv`
@@ -312,7 +343,7 @@
 
 ## 근거 차트 보강
 
-대표 대여소 실험은 초입 baseline 단계였기 때문에 처음에는 feature importance 차트만 있었다.
+대표 대여소 실험은 초입 기준선 단계였기 때문에 처음에는 피처 중요도 차트만 있었다.
 
 이후 설명 근거를 보강하기 위해 아래 노트북과 차트를 추가했다.
 

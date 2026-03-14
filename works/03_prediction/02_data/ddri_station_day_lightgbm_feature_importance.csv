@@ -1,24 +1,24 @@
-﻿feature,importance
-station_id,2596
-temperature_max,1067
-rolling_mean_7,942
-humidity_mean,844
-precipitation_sum,766
-temperature_mean,728
-wind_speed_mean,607
-rental_count_lag1,603
-temperature_min,585
-day,526
-rental_count_lag7,490
-rolling_std_7,487
-day_of_week,472
-month,366
-is_business_holiday,285
-year,161
-위도,156
-경도,129
-holiday_count,90
-cluster_label,36
-is_holiday,22
-is_weekend,22
-is_rainy_day,20
+﻿feature,importance,feature_kr
+station_id,2596,대여소 ID(Station ID)
+temperature_max,1067,최고 기온(Temperature)(Temperature Max)
+rolling_mean_7,942,7일 이동평균(Rolling Mean 7)
+humidity_mean,844,평균 습도(Humidity)(Humidity Mean)
+precipitation_sum,766,강수량(Precipitation) 합계(Precipitation Sum)
+temperature_mean,728,평균 기온(Temperature)(Temperature Mean)
+wind_speed_mean,607,평균 풍속(Wind Speed)(Wind Speed Mean)
+rental_count_lag1,603,전일 대여량(Lag 1 Day)
+temperature_min,585,temperature_min
+day,526,day
+rental_count_lag7,490,7일 전 대여량(Lag 7 Day)
+rolling_std_7,487,7일 이동표준편차(Rolling Std 7)
+day_of_week,472,요일(Weekday)
+month,366,월(Month)
+is_business_holiday,285,is_business_holiday
+year,161,year
+위도,156,위도
+경도,129,경도
+holiday_count,90,holiday_count
+cluster_label,36,군집(Cluster) 라벨(Cluster Label)
+is_holiday,22,공휴일 여부(Holiday)
+is_weekend,22,주말 여부(Is Weekend)
+is_rainy_day,20,is_rainy_day
