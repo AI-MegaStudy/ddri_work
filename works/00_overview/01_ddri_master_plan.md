@@ -94,6 +94,13 @@
 13. 팀 공통 군집별 모델링 프로토콜을 대표 대여소 실험 경로에 배치 완료
 14. 군집별 담당자용 공통 노트북 템플릿 추가 완료
 15. Open-Meteo 기준 2024 날씨 원천 파일 정정 및 대표/전체 학습 데이터 재생성 완료
+16. `cheng80` 개인 대리 실험용 군집별 폴더 5개 준비 완료
+17. `cheng80` 개인 대리 실험용 결과 취합/2차 실험 판단 문서 추가 완료
+18. `cheng80` 개인 대리 실험 5개 군집 1차 실행 및 결과 취합 완료
+19. `cheng80` 2차 실험용 통합 피처모음 train/test CSV 생성 완료
+20. `cheng80` 5개 군집 2차 실험 병렬 실행 및 1차 대비 비교표 생성 완료
+21. `cluster01` 3차 심화 실험 완료 및 1~3차 비교 요약 생성 완료
+22. 군집별 현재 권장 모델/적용 수준을 정리한 최종 권장안 문서 추가 완료
 
 핵심 결과 위치:
 
@@ -105,6 +112,8 @@
   - `works/03_prediction/02_data/`
 - 대표 대여소 station-hour 예측 데이터:
   - `works/05_prediction_long/`
+  - 군집별 권장안:
+    - `works/05_prediction_long/cheng80/07_ddri_cluster_final_recommendation.md`
 - 전체 스테이션 station-hour 예측 데이터:
   - `3조 공유폴더/군집별 데이터_전체 스테이션/full_data/`
 - 전체 스테이션 station-hour 실험 관리:
@@ -193,8 +202,8 @@
   - `works/03_prediction/02_data/ddri_station_day_train_baseline_dataset.csv`
   - `works/03_prediction/02_data/ddri_station_day_test_baseline_dataset.csv`
 - 대표 대여소 station-hour long-format:
-  - `works/05_prediction_long/data/ddri_prediction_long_train_2023_2024.csv`
-  - `works/05_prediction_long/data/ddri_prediction_long_test_2025.csv`
+  - `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_train_2023_2024.csv`
+  - `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_test_2025.csv`
 - 전체 공통 스테이션 station-hour long-format:
   - `3조 공유폴더/군집별 데이터_전체 스테이션/full_data/ddri_prediction_long_train_2023_2024.csv`
   - `3조 공유폴더/군집별 데이터_전체 스테이션/full_data/ddri_prediction_long_test_2025.csv`
@@ -243,6 +252,13 @@
 - 팀원 분업 실험을 바로 시작할 수 있도록 `works/05_prediction_long`에 공통 노트북 템플릿을 추가함
 - `2024-01-01` 날씨 누락 원천 파일을 `Open-Meteo Archive API`로 다시 받아 정정했고, 대표 대여소 학습 CSV와 전체 스테이션 `full_data` 학습 CSV를 재생성해 해당 날짜 날씨 결측을 제거함
 - `works/06_prediction_long_full` 실험 노트북도 새 원본 기준으로 재실행해 데이터-실험 기준을 일치시킴
+- 팀원 참여가 지연될 경우를 대비해 `works/05_prediction_long/cheng80/` 아래 군집별 대리 실험 폴더 5개와 사전 설정 노트북을 준비함
+- `cheng80` 루트에는 결과 취합 CSV 템플릿, 결과 비교 문서, 2차 실험 판단 기준 문서를 추가해 후속 분석 준비를 완료함
+- `cheng80` 대리 실험 기준 5개 군집 모두 `LightGBM_RMSE`가 validation 우세 모델로 확인되었고, 현재 가장 어려운 군집은 `cluster01(아침 도착 업무 집중형)`으로 해석됨
+- 팀 공용 사용을 위해 `3조 공유폴더/대표대여소_예측데이터_15개/second_round_data/` 경로에 기본 long 데이터 + 정적 교통/환경/POI + 공통 후보 파생 피처를 합친 2차 실험용 통합 피처모음 CSV를 train/test로 생성함
+- `cheng80` 2차 실험 기준 5개 군집 모두 test RMSE가 소폭 개선되었고, 개선폭은 `cluster01`이 가장 컸다
+- `cluster01` 3차 심화 실험에서는 `LightGBM_Poisson`이 test RMSE `1.3189`로 1차/2차보다 더 개선되어, 군집별 심화 최적화 사례로 사용할 수 있게 됨
+- 대표 대여소 15개 raw/2차 데이터는 GitHub 대용량 제한을 피하기 위해 `3조 공유폴더/대표대여소_예측데이터_15개/` 아래로 이동하고, 노트북/문서 참조 경로를 모두 해당 공유폴더 기준으로 정리함
 - 따라서 Phase 4는 `베이스라인 1차 완료, 후속 고도화 및 오류 분석 미완료` 상태로 본다
 
 ## 8. Phase 5. 웹/서비스 설계 문서화

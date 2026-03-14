@@ -80,8 +80,8 @@
 
 파일:
 
-- `works/05_prediction_long/data/ddri_prediction_long_train_2023_2024.csv`
-- `works/05_prediction_long/data/ddri_prediction_long_test_2025.csv`
+- `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_train_2023_2024.csv`
+- `3조 공유폴더/대표대여소_예측데이터_15개/raw_data/ddri_prediction_long_test_2025.csv`
 
 특징:
 
